@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="9b84d182-1f2f-4acf-bbf2-a2111a197797" name="CrazyDomain" url="http://27.124.120.1/~skasia/sk8.tech">
-        <fileTransfer host="27.124.120.1" port="21" rootFolder="/public_html/sk8.tech" password="dff3dfd8dfd2df92dffddfc2dffbdfdadfefdfd9" username="skasia">
+      <webServer id="9b84d182-1f2f-4acf-bbf2-a2111a197797" name="CrazyDomain" url="http://27.124.120.1/">
+        <fileTransfer host="27.124.120.1" port="21" password="dff3dfd8dfd2df92dffddfc2dffbdfdadfefdfd9" username="skasia">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

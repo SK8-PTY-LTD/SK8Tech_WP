@@ -5,7 +5,7 @@
       <paths name="CrazyDomain">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/public_html/sk8.tech/" local="$PROJECT_DIR$" web="/~skasia/sk8.tech/" />
           </mappings>
         </serverdata>
       </paths>
