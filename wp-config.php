@@ -20,15 +20,12 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-//define( 'DB_NAME', 'sk8tech' );
 define( 'DB_NAME', 'skasia_wp1' );
 
 /** MySQL database username */
-// define('DB_USER', 'root');
 define( 'DB_USER', 'skasia_wp1' );
 
 /** MySQL database password */
-// define('DB_PASSWORD', '');
 define( 'DB_PASSWORD', 'Q@KQMKRC]sv(mgDmyQ&85]*5' );
 
 /** MySQL hostname */
@@ -68,8 +65,8 @@ define('WP_TEMP_DIR',dirname(__FILE__).'/wp-content/uploads');
  * Turn off automatic updates since these are managed upstream.
  */
 define('AUTOMATIC_UPDATER_DISABLED', true);
-define('WP_HOME','http://27.124.120.1/~skasia/sk8.tech');
-define('WP_SITEURL','http://27.124.120.1/~skasia/sk8.tech');
+define( 'WP_HOME', 'http://sk8.tech' );
+define( 'WP_SITEURL', 'http://sk8.tech' );
 
 /**#@-*/
 
