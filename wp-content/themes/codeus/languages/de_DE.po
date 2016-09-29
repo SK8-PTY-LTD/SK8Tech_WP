@@ -1,0 +1,3981 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Codex Themes\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-27 16:56+0300\n"
+"PO-Revision-Date: 2014-03-27 17:28+0300\n"
+"Last-Translator: \n"
+"Language-Team: Codex Themes\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n;_ex\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../page_blog_sidebar_left.php:69
+#: ../page_blog.php:60
+#: ../page.php:63
+#: ../page_sidebar.php:70
+#: ../single-codeus_portfolios.php:74
+#: ../page_sidebar_left.php:69
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: ../search.php:17
+msgid "Nothing Found"
+msgstr "Nichts gefunden"
+
+#: ../search.php:50
+msgid "Sorry, but nothing matched your search terms. Please try again with different keywords."
+msgstr " Zu Ihrer Suche wurden leider keine Ergebnisse gefunden. Bitte versuchen Sie es mit einem anderen Suchbegriff noch einmal."
+
+#: ../comments.php:8
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Dieser Beitrag ist durch ein Passwort geschützt. Geben Sie das Passwort ein, um Kommentare lesen zu können."
+
+#: ../comments.php:22
+msgid "COMMENTS"
+msgstr "KOMMENTARE"
+
+#: ../comments.php:22
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Antwort an %s schreiben"
+
+#: ../comments.php:44
+msgid "Comments are closed."
+msgstr "Kommentare sind deaktiviert."
+
+#: ../comments.php:60
+msgid "Name"
+msgstr "Name"
+
+#: ../comments.php:60
+#: ../comments.php:61
+msgid " <b>(required)</b>"
+msgstr " <b>(benötigt)</b>"
+
+#: ../comments.php:61
+msgid "Mail"
+msgstr "E-Mail"
+
+#: ../comments.php:62
+msgid "Website"
+msgstr "Webseite"
+
+#: ../comments.php:67
+#: ../comments.php:72
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Sie müssen < href=\"%s\"> eingeloggt sein </a>, um einen Kommentar schreiben zu können."
+
+#: ../comments.php:68
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>."
+msgstr "Eingeloggt als <a href=\"%1$s\">%2$s</a>."
+
+#: ../comments.php:68
+msgid "Log out &raquo;"
+msgstr "Ausloggen &raquo;"
+
+#: ../comments.php:69
+msgid "Send"
+msgstr "Absenden"
+
+#: ../comments.php:70
+msgid "Leave a reply"
+msgstr "Antworten"
+
+#: ../comments.php:71
+#, php-format
+msgid "Comment to %s"
+msgstr "Kommentar zu %s"
+
+#: ../home.php:74
+msgid "Codeus Multi-Purpose Theme"
+msgstr "Codeus Multi-Purpose Theme"
+
+#: ../home.php:77
+#, php-format
+msgid "Log in to <a href=\"%s\">wordpress</a> admin and set up your starting page using <a href=\"%s\">Home Constructor</a>."
+msgstr "Loggen Sie sich in <a href=\"%s\">Wordpress Backend</a> ein und konfigurieren Sie Ihre Startseite mittels <a href=\"%s\">Home Constructor</a>."
+
+#: ../home.php:79
+msgid "Please refer to Codeus documentation <b>(Getting Started &mdash; Setting Up Homepage)</b> in order to learn how to use Home Constructor."
+msgstr "Bitte entnehmen Sie alle Konfigurationseinstellungen des Home Constructors der Codeus-Anleitung."
+
+#: ../home.php:81
+msgid "Additionally you can use demo content included in Codeus to quickly setup a demo of your starting page."
+msgstr "Zusätzlich können Sie die Demo-Inhalte aus dem Codeus-Theme verwenden um schnell eine Demo-Startseite aufzubauen."
+
+#: ../header.php:57
+msgid "Menu"
+msgstr "Menü"
+
+#: ../functions.php:15
+msgid "Primary Menu"
+msgstr "Primäres Menü"
+
+#: ../functions.php:16
+msgid "Footer Menu"
+msgstr "Footer Menü"
+
+#: ../functions.php:137
+msgid "Page Sidebar"
+msgstr "Seiten-Sidebar"
+
+#: ../functions.php:139
+#: ../functions.php:148
+msgid "Appears on posts and pages except the optional Front Page template, which has its own widgets"
+msgstr "Erscheint auf Posts und Seiten, ausser dem optionalen Front Seiten template, welches seine eigenen widgets hat"
+
+#: ../functions.php:146
+msgid "Blog Post Sidebar"
+msgstr "Blog Beitrag-Sidebar"
+
+#: ../functions.php:161
+msgid "Theme options"
+msgstr "Theme Optionen"
+
+#: ../functions.php:185
+msgid "Get all from font."
+msgstr "Hole alle von der Schriftart."
+
+#: ../functions.php:187
+msgid "et colors, backgrounds and fonts options to default?"
+msgstr "Farb-, Hintergrund- und Schriftoptionen auf Standard setzen?"
+
+#: ../functions.php:188
+msgid "Update backup data?"
+msgstr "Backup-Daten aktualisieren?"
+
+#: ../functions.php:189
+msgid "Restore settings from backup data?"
+msgstr "Einstellungen von Backup-Daten zurückspielen?"
+
+#: ../functions.php:190
+msgid "Import settings?"
+msgstr "Einstellungen importieren?"
+
+#: ../functions.php:209
+#: ../functions.php:282
+msgid "Save Changes"
+msgstr "Änderungen speichern"
+
+#: ../functions.php:219
+msgid "Backup"
+msgstr "Backup"
+
+#: ../functions.php:249
+msgid "Backup and Restore Theme Settings"
+msgstr "Theme-Einstellungen sichern und zurückspielen"
+
+#: ../functions.php:252
+msgid "If you would like to experiment with the settings of your theme and don't want to loose your previous settings, use the \"Backup Settings\"-button to backup your current theme options. You can restore these options later using the button \"Restore Settings\"."
+msgstr "Wenn du mit den Einstellungen des Themes experimentieren und dabei die vorhergehenden Einstellungen nicht verlieren willst, nutze den \"Einstellungen sichern\"-Button um die aktuellen Theme-Einstellungen zu sichern. Du kannst diese Optionen später mit dem \"Einstellungen zurückspielen\"-Button wiederherstellen."
+
+#: ../functions.php:254
+#: ../functions.php:256
+msgid "Last backup"
+msgstr "Letzte Sicherung"
+
+#: ../functions.php:256
+msgid "No backups yet"
+msgstr "Noch keine Sicherungen"
+
+#: ../functions.php:259
+msgid "Backup Settings"
+msgstr "Einstellungen sichern"
+
+#: ../functions.php:260
+msgid "Restore Settings"
+msgstr "Einstellungen zurückspielen"
+
+#: ../functions.php:264
+msgid "In order to apply the settings of another Codeus theme used in a different install just copy and paste the settings in the text box and click on \"Import Settings\"."
+msgstr "Um die Einstellungen eines anderen Themes aus einer anderen Installation zu aktivieren, kopiere die Einstellungen einfach mit Copy and Paste in die Textbox und klicke auf \"Einstellungen importieren\"."
+
+#: ../functions.php:270
+msgid "Import Settings"
+msgstr "Einstellungen importieren"
+
+#: ../functions.php:282
+msgid "Reset Style Settings"
+msgstr "Style-Einstellungen zurücksetzen"
+
+#: ../functions.php:375
+msgid "Fonts Manager"
+msgstr " Fonts Manager"
+
+#: ../functions.php:392
+msgid "Font Manager"
+msgstr "Font Manager"
+
+#: ../functions.php:396
+#: ../functions.php:425
+msgid "Remove"
+msgstr "Enternen"
+
+#: ../functions.php:398
+#: ../functions.php:427
+msgid "Font name"
+msgstr "Schriftfamilie"
+
+#: ../functions.php:402
+#: ../functions.php:431
+msgid "Font file EOT url"
+msgstr ""
+
+#: ../functions.php:406
+#: ../functions.php:435
+msgid "Font file SVG url"
+msgstr ""
+
+#: ../functions.php:410
+#: ../functions.php:439
+msgid "ID inside SVG"
+msgstr ""
+
+#: ../functions.php:414
+#: ../functions.php:443
+msgid "Font file TTF url"
+msgstr ""
+
+#: ../functions.php:418
+#: ../functions.php:447
+msgid "Font file WOFF url"
+msgstr ""
+
+#: ../functions.php:453
+msgid "+ Add new"
+msgstr "Neues Set hinzufügen"
+
+#: ../functions.php:454
+msgid "Save"
+msgstr "Speichern"
+
+#: ../functions.php:508
+msgid "Page Slideshow"
+msgstr "Seiten-Slideshow"
+
+#: ../functions.php:509
+msgid "Page Quickfinder"
+msgstr "Seiten-Quickfinder"
+
+#: ../functions.php:510
+msgid "Page Portfolio"
+msgstr "Seiten-Portfolio"
+
+#: ../functions.php:511
+msgid "Page Gallery"
+msgstr "Seite-Galerie"
+
+#: ../functions.php:512
+#: ../functions.php:518
+#, fuzzy
+msgid "Page Title"
+msgstr "Pager Text"
+
+#: ../functions.php:513
+#: ../functions.php:519
+msgid "Lazy Loading Options"
+msgstr ""
+
+#: ../functions.php:514
+msgid "Slideshow"
+msgstr "Slideshow"
+
+#: ../functions.php:515
+msgid "Quickfinder"
+msgstr "Quickfinder"
+
+#: ../functions.php:516
+msgid "Additional Portfolio Sets"
+msgstr "Zusätzliche Portfolio-Sets"
+
+#: ../functions.php:517
+msgid "Gallery"
+msgstr "Galerie"
+
+#: ../functions.php:537
+msgid "Slideshow Type"
+msgstr "Slideshowtyp"
+
+#: ../functions.php:539
+msgid "NivoSlider"
+msgstr "NivoSlider"
+
+#: ../functions.php:540
+msgid "LayerSlider"
+msgstr "LayerSlider"
+
+#: ../functions.php:544
+#: ../functions.php:558
+msgid "Select Slideshow"
+msgstr "Slideshow auswählen"
+
+#: ../functions.php:546
+#: ../functions.php:560
+#: ../functions.php:591
+#: ../functions.php:624
+#: ../functions.php:671
+msgid "None"
+msgstr "None"
+
+#: ../functions.php:547
+msgid "All Slides"
+msgstr "Alle Slides"
+
+#: ../functions.php:553
+#: ../functions.php:566
+msgid "No slideshows found."
+msgstr "Kein Slideshow gefunden"
+
+#: ../functions.php:591
+msgid "Quickfinder bar above"
+msgstr "Quickfinder-Bar oberhalb"
+
+#: ../functions.php:591
+#: ../functions.php:624
+msgid "Inside content"
+msgstr "Inside Inhalt"
+
+#: ../functions.php:591
+msgid "Quickfinder bar below"
+msgstr "Quickfinder-Bar unterhalb"
+
+#: ../functions.php:595
+msgid "Quickfinder position"
+msgstr "Quickfinder Position"
+
+#: ../functions.php:604
+msgid "Select Quickfinder"
+msgstr "Quickfinder auswählen"
+
+#: ../functions.php:624
+msgid "Slider-bar above"
+msgstr "Slider-Bar oberhalb"
+
+#: ../functions.php:624
+msgid "Slider-bar below"
+msgstr "Slider-Bar unterhalb"
+
+#: ../functions.php:626
+msgid "Small Thumbs (222 x 177)"
+msgstr "Kleine Vorschau(222 x 177)"
+
+#: ../functions.php:626
+msgid "Medium Thumbs (302 x 207)"
+msgstr "Mittlere Vorschau (302 x 207)"
+
+#: ../functions.php:626
+msgid "Big Thumbs (464 x 306)"
+msgstr "Große Vorschau (464 x 306)"
+
+#: ../functions.php:626
+msgid "One column list"
+msgstr "Einzelkollumnenliste"
+
+#: ../functions.php:633
+msgid "Portfolio position"
+msgstr "Portfolio Position"
+
+#: ../functions.php:639
+msgid "Thumbnail size"
+msgstr "Miniaturbildgröße"
+
+#: ../functions.php:645
+msgid "Items per page"
+msgstr "Sätze pro Seite"
+
+#: ../functions.php:647
+msgid "Title"
+msgstr "Titel"
+
+#: ../functions.php:652
+msgid "Select Portfolios"
+msgstr "Portfolios Auswählen"
+
+#: ../functions.php:653
+msgid "Select all"
+msgstr "Alle auswählen"
+
+#: ../functions.php:658
+msgid "Activate Filter"
+msgstr "Filter aktivieren"
+
+#: ../functions.php:671
+msgid "Gallery above"
+msgstr "Galerie oberhalb"
+
+#: ../functions.php:671
+msgid "Gallery below"
+msgstr "Galerie unterhalb"
+
+#: ../functions.php:673
+msgid "For Full-Width Pages"
+msgstr "Für Full-Width Pages"
+
+#: ../functions.php:673
+msgid "For Sidebar Pages"
+msgstr " For Sidebar Pages"
+
+#: ../functions.php:673
+msgid "Small Thumbs"
+msgstr "Kleine Vorschau"
+
+#: ../functions.php:673
+msgid "Medium Thumbs"
+msgstr "Mittlere Vorschau"
+
+#: ../functions.php:676
+msgid "without border"
+msgstr "ohne Rahmen"
+
+#: ../functions.php:677
+msgid "1px no margin"
+msgstr "1px ohne Rand"
+
+#: ../functions.php:678
+msgid "dark gray"
+msgstr "dunkelgrau"
+
+#: ../functions.php:679
+msgid "light gray"
+msgstr "hellgrau"
+
+#: ../functions.php:680
+msgid "shadow"
+msgstr " mit Schatten"
+
+#: ../functions.php:681
+msgid "shadowed border"
+msgstr " Rahmen mit Schatten"
+
+#: ../functions.php:682
+msgid "1px with margin"
+msgstr "1px mit Rand"
+
+#: ../functions.php:688
+msgid "Gallery position"
+msgstr "Galerieposition"
+
+#: ../functions.php:694
+msgid "Gallery type"
+msgstr "Galerie Typ"
+
+#: ../functions.php:703
+msgid "Select Gallery"
+msgstr "Gallerie auswählen"
+
+#: ../functions.php:710
+msgid "Select Style"
+msgstr "Style auswählen"
+
+#: ../functions.php:729
+#, fuzzy
+msgid "Background Image"
+msgstr "Hintergrundbilder"
+
+#: ../functions.php:736
+msgid "Background Color"
+msgstr "Hintergrundfarben"
+
+#: ../functions.php:738
+#, fuzzy
+msgid "Main Text Color"
+msgstr "Hauptmenü Textfarbe"
+
+#: ../functions.php:740
+msgid "Excerpt Color"
+msgstr "Farbe der Zusammenfassung"
+
+#: ../functions.php:765
+msgid "Lazy loading enabled"
+msgstr ""
+
+#: ../functions.php:1050
+msgid "Prev"
+msgstr "Zurück"
+
+#: ../functions.php:1060
+msgid "Next"
+msgstr "Weiter"
+
+#: ../single.php:57
+msgid "<span class=\"sep\">|</span>"
+msgstr "<span class=\"sep\">|</span>"
+
+#: ../single.php:66
+msgid "Previous post"
+msgstr "Vorheriger Beitrag"
+
+#: ../single.php:67
+msgid "Next post"
+msgstr "Nächster Beitrag"
+
+#: ../single.php:75
+msgid "Related Posts"
+msgstr "Verwandte Beiträge"
+
+#: ../footer.php:14
+msgid "Follow Us"
+msgstr "Uns folgen"
+
+#: ../footer.php:31
+msgid "Contact Us"
+msgstr "Kontakt"
+
+#: ../options.php:6
+msgid "General"
+msgstr "Allgemein"
+
+#: ../options.php:9
+msgid "Theme Color Skin"
+msgstr "Designfarbe"
+
+#: ../options.php:12
+msgid "Page Color Style"
+msgstr "Seiten-Farbstil"
+
+#: ../options.php:15
+msgid "Light"
+msgstr "Hell"
+
+#: ../options.php:16
+msgid "Dark"
+msgstr "Dunkel"
+
+#: ../options.php:19
+msgid "Select theme color style"
+msgstr " Wähle Design-Farbstil aus."
+
+#: ../options.php:24
+msgid "Theme Layout"
+msgstr "Design Layout"
+
+#: ../options.php:27
+msgid "Page Layout Style"
+msgstr "Seitenlayout"
+
+#: ../options.php:30
+msgid "Fullwidth Layout"
+msgstr "Volle Breite Layout"
+
+#: ../options.php:31
+msgid "Boxed Layout"
+msgstr "Boxen-Layout"
+
+#: ../options.php:34
+msgid "Select theme layout style"
+msgstr "Theme Layout-Stil auswählen"
+
+#: ../options.php:39
+msgid "Identity"
+msgstr "Identität"
+
+#: ../options.php:42
+msgid "Logo"
+msgstr "Logo"
+
+#: ../options.php:45
+#: ../options.php:51
+msgid "Upload or select image file for your logo"
+msgstr "Uploade oder wähle Bilddatei für Logo"
+
+#: ../options.php:48
+msgid "Small Logo"
+msgstr " Kleines Logo"
+
+#: ../options.php:54
+msgid "Logo Position"
+msgstr " Logo Position"
+
+#: ../options.php:57
+msgid "Left"
+msgstr "Links"
+
+#: ../options.php:58
+msgid "Right"
+msgstr "Rechts"
+
+#: ../options.php:61
+msgid "Select position of your logo in website header"
+msgstr "Wähle die Position des Logo im Webseiten-Header"
+
+#: ../options.php:64
+msgid "Favicon"
+msgstr "Favicon"
+
+#: ../options.php:66
+msgid "Upload or select file for your favicon"
+msgstr "Uploade oder wähle Datei für Favicon"
+
+#: ../options.php:71
+msgid "Advanced"
+msgstr "Erweitert"
+
+#: ../options.php:74
+msgid "Custom CSS"
+msgstr "Manuelles CSS"
+
+#: ../options.php:76
+msgid "Type your custom css here, which you would like to add to theme's css (or overwrite it)"
+msgstr "Manuelles CSS hier eingeben, das zum Theme-CSS hinzugefügt oder dieses überschreiben soll."
+
+#: ../options.php:79
+msgid "Google Analytics Code"
+msgstr "Google Analytics Code"
+
+#: ../options.php:81
+msgid "Paste your tracking code here (Google Analytics or others)"
+msgstr "Füge Tracking-Code hier ein (Google Analytics oder andere)"
+
+#: ../options.php:89
+msgid "Fonts"
+msgstr "Schriftarten"
+
+#: ../options.php:92
+msgid "Google Fonts"
+msgstr "Google Schriftarten"
+
+#: ../options.php:95
+msgid "Google Fonts File"
+msgstr " Google Schriftarten Datei"
+
+#: ../options.php:97
+msgid "Upload or select you own google fonts file if you would like to use a different version than the theme's default"
+msgstr "Uploade oder wähle eigene Google Fonts-Datei wenn du eine andere als die Standard-Version des Themes nutzen willst"
+
+#: ../options.php:102
+msgid "Main Menu Font"
+msgstr "Hauptmenü Schriftar"
+
+#: ../options.php:105
+#: ../options.php:142
+#: ../options.php:179
+#: ../options.php:216
+#: ../options.php:253
+#: ../options.php:290
+#: ../options.php:327
+#: ../options.php:364
+#: ../options.php:401
+#: ../options.php:438
+#: ../options.php:475
+#: ../options.php:512
+#: ../options.php:549
+#: ../options.php:586
+#: ../options.php:623
+#: ../options.php:660
+#: ../options.php:697
+#: ../options.php:734
+#: ../options.php:771
+msgid "Font Family"
+msgstr "Schriftfamilie"
+
+#: ../options.php:107
+#: ../options.php:144
+#: ../options.php:181
+#: ../options.php:218
+#: ../options.php:255
+#: ../options.php:292
+#: ../options.php:329
+#: ../options.php:366
+#: ../options.php:403
+#: ../options.php:440
+#: ../options.php:477
+#: ../options.php:514
+#: ../options.php:551
+#: ../options.php:588
+#: ../options.php:625
+#: ../options.php:662
+#: ../options.php:699
+#: ../options.php:736
+#: ../options.php:773
+msgid "Select font family you would like to use. On the top of the fonts list you'll find web safe fonts"
+msgstr "Wähle die Schriftfamilie welche genutzt werden soll. Oberhalb der Schriftarten-Liste findest du websichere Schriftarten."
+
+#: ../options.php:110
+#: ../options.php:147
+#: ../options.php:184
+#: ../options.php:221
+#: ../options.php:258
+#: ../options.php:295
+#: ../options.php:332
+#: ../options.php:369
+#: ../options.php:406
+#: ../options.php:443
+#: ../options.php:480
+#: ../options.php:517
+#: ../options.php:554
+#: ../options.php:591
+#: ../options.php:628
+#: ../options.php:665
+#: ../options.php:702
+#: ../options.php:739
+#: ../options.php:776
+msgid "Font Style"
+msgstr "Schriftstil"
+
+#: ../options.php:112
+#: ../options.php:149
+#: ../options.php:186
+#: ../options.php:223
+#: ../options.php:260
+#: ../options.php:297
+#: ../options.php:334
+#: ../options.php:371
+#: ../options.php:408
+#: ../options.php:445
+#: ../options.php:482
+#: ../options.php:519
+#: ../options.php:556
+#: ../options.php:593
+#: ../options.php:630
+#: ../options.php:667
+#: ../options.php:704
+#: ../options.php:741
+#: ../options.php:778
+msgid "Select font style for your font"
+msgstr "Schriftstil für die Schriftart auswählen"
+
+#: ../options.php:115
+#: ../options.php:152
+#: ../options.php:189
+#: ../options.php:226
+#: ../options.php:263
+#: ../options.php:300
+#: ../options.php:337
+#: ../options.php:374
+#: ../options.php:411
+#: ../options.php:448
+#: ../options.php:485
+#: ../options.php:522
+#: ../options.php:559
+#: ../options.php:596
+#: ../options.php:633
+#: ../options.php:670
+#: ../options.php:707
+#: ../options.php:744
+#: ../options.php:781
+msgid "Font Sets"
+msgstr "Schriften-Sets"
+
+#: ../options.php:117
+#: ../options.php:154
+#: ../options.php:191
+#: ../options.php:228
+#: ../options.php:265
+#: ../options.php:302
+#: ../options.php:339
+#: ../options.php:376
+#: ../options.php:413
+#: ../options.php:450
+#: ../options.php:487
+#: ../options.php:524
+#: ../options.php:561
+#: ../options.php:598
+#: ../options.php:635
+#: ../options.php:672
+#: ../options.php:709
+#: ../options.php:746
+#: ../options.php:783
+msgid "Type in or load additional font sets which you would like to use with your chosen google font (latin-ext is loaded by default)"
+msgstr "Zusätzliche Font-Sets eingeben oder laden, welche mit dem gewählten Google Font genutzt werden sollen (latin-ext ist standardmäßig geladen)"
+
+#: ../options.php:121
+#: ../options.php:158
+#: ../options.php:195
+#: ../options.php:232
+#: ../options.php:269
+#: ../options.php:306
+#: ../options.php:343
+#: ../options.php:380
+#: ../options.php:417
+#: ../options.php:454
+#: ../options.php:491
+#: ../options.php:528
+#: ../options.php:565
+#: ../options.php:602
+#: ../options.php:639
+#: ../options.php:676
+#: ../options.php:713
+#: ../options.php:750
+#: ../options.php:787
+msgid "Font Size"
+msgstr "Schriftgröße"
+
+#: ../options.php:122
+#: ../options.php:159
+#: ../options.php:196
+#: ../options.php:233
+#: ../options.php:270
+#: ../options.php:307
+#: ../options.php:344
+#: ../options.php:381
+#: ../options.php:418
+#: ../options.php:455
+#: ../options.php:492
+#: ../options.php:529
+#: ../options.php:566
+#: ../options.php:603
+#: ../options.php:640
+#: ../options.php:677
+#: ../options.php:714
+#: ../options.php:751
+#: ../options.php:788
+msgid "Select the font size"
+msgstr "Schriftgröße auswählen"
+
+#: ../options.php:129
+#: ../options.php:166
+#: ../options.php:203
+#: ../options.php:240
+#: ../options.php:277
+#: ../options.php:314
+#: ../options.php:351
+#: ../options.php:388
+#: ../options.php:425
+#: ../options.php:462
+#: ../options.php:499
+#: ../options.php:536
+#: ../options.php:573
+#: ../options.php:610
+#: ../options.php:647
+#: ../options.php:684
+#: ../options.php:721
+#: ../options.php:758
+#: ../options.php:795
+msgid "Line Height"
+msgstr "Zeilenhöhe"
+
+#: ../options.php:130
+#: ../options.php:167
+#: ../options.php:204
+#: ../options.php:241
+#: ../options.php:278
+#: ../options.php:315
+#: ../options.php:352
+#: ../options.php:389
+#: ../options.php:426
+#: ../options.php:463
+#: ../options.php:500
+#: ../options.php:537
+#: ../options.php:574
+#: ../options.php:611
+#: ../options.php:648
+#: ../options.php:685
+#: ../options.php:722
+#: ../options.php:759
+#: ../options.php:796
+msgid "Select the line height"
+msgstr "Zeilenhöhe auswählen"
+
+#: ../options.php:139
+msgid "Submenu Font"
+msgstr "Untermenü Schriftart"
+
+#: ../options.php:176
+msgid "H1 Font"
+msgstr "H1 Schriftart"
+
+#: ../options.php:213
+msgid "H2 Font"
+msgstr "H2 Schriftart"
+
+#: ../options.php:250
+msgid "H3 Font"
+msgstr " H3 Schriftart"
+
+#: ../options.php:287
+msgid "H4 Font"
+msgstr " H4 Schriftart"
+
+#: ../options.php:324
+msgid "H5 Font"
+msgstr "H5 Schriftart"
+
+#: ../options.php:361
+msgid "H6 Font"
+msgstr "H6 Schriftart"
+
+#: ../options.php:398
+msgid "Body Font"
+msgstr "Body Schriftart"
+
+#: ../options.php:435
+msgid "Widget Tile Font"
+msgstr "Widget Titel-Schriftart"
+
+#: ../options.php:472
+msgid "Button Font"
+msgstr "Button Schriftart"
+
+#: ../options.php:509
+msgid "Slideshow Title Font"
+msgstr "Slideshow Titel-Schriftart"
+
+#: ../options.php:546
+msgid "Slideshow Description Font"
+msgstr "Slideshow Beschreibungs-Schriftart"
+
+#: ../options.php:583
+msgid "Portfolio Title Font"
+msgstr "Portfolio Titel-Schriftart"
+
+#: ../options.php:620
+msgid "Portfolio Description Font"
+msgstr "Portfolio Beschreibung-Schriftart"
+
+#: ../options.php:657
+msgid "Quickfinder Title Font"
+msgstr "Quickfinder Titel-Schriftart"
+
+#: ../options.php:694
+msgid "Quickfinder Description Font"
+msgstr "Quickfinder Beschreibung-Schriftart"
+
+#: ../options.php:731
+msgid "Gallery Title Font"
+msgstr "Galerie Titel-Schriftart"
+
+#: ../options.php:768
+msgid "Gallery Description Font"
+msgstr "Galerie Beschreibung-Schriftart"
+
+#: ../options.php:808
+msgid "Colors"
+msgstr "Farben"
+
+#: ../options.php:811
+msgid "Background Colors"
+msgstr "Hintergrundfarben"
+
+#: ../options.php:814
+msgid "Background Color For Boxed Layout"
+msgstr "Hintergrundfarbe für \"Boxed Layout\""
+
+#: ../options.php:816
+msgid "Select website's backround color in boxed layout"
+msgstr "Wähle Webseiten-Hintergrundfarbe im \"Boxed Layout\""
+
+#: ../options.php:819
+msgid "Basic background color for website"
+msgstr "Basis-Hintergrundfarbe für Webseite"
+
+#: ../options.php:821
+msgid "Basic background color is the continuous background color underlaying the whole webpage. By default it is visible for example in slideshow area, quickfinder area, portfolio-slider"
+msgstr "Basis-Hintergrundfarbe ist die dauerhafte Hintergrundfarbe, welche unter der ganzen Internetseite liegt. Standardmäßig ist sie beispielsweise im Slideshow-Bereich, Qucikfinder-Bereich und Portfolio-Slider sichtbar."
+
+#: ../options.php:824
+msgid "Top Background Color"
+msgstr "Obere Hintergrundfarbe"
+
+#: ../options.php:826
+msgid "Select color for website's top background"
+msgstr "Wähle Farbe für oberen Webseiten-Hintergrund"
+
+#: ../options.php:829
+msgid "Main Content Background Color"
+msgstr "Hauptinhaltsbereich Hintergrundfarbe"
+
+#: ../options.php:831
+msgid "Select color for website's main content background"
+msgstr "Wähle Farbe für den Hauptinhaltsbereich-Hintergrund"
+
+#: ../options.php:834
+msgid "Contact Background Color"
+msgstr "Kontakt Hintergrundfarbe"
+
+#: ../options.php:836
+msgid "Select color contact us & follow us bar at website's bottom"
+msgstr "Wähle Farbe für Kontakt / Follow Us-Bar im unteren Bereich der Webseite"
+
+#: ../options.php:839
+msgid "Footer Background Color"
+msgstr "Fußzeilen Hintergrundfarbe"
+
+#: ../options.php:841
+msgid "Select color footer bar at website's bottom"
+msgstr "Wähle Farbe für Fußzeile im unteren Bereich der Webseite"
+
+#: ../options.php:844
+msgid "Styled Element Default Background Color"
+msgstr "Standard-Hintergrundfarbe für Styled Element"
+
+#: ../options.php:846
+msgid "Default background color which is used in following elements: text boxes, alert boxes, tables, news, tabs, galleries, rounded backgrounds in testimonials, recent posts, author block"
+msgstr ""
+
+#: ../options.php:849
+msgid "Divider Default Color"
+msgstr ""
+
+#: ../options.php:851
+msgid "Default color for dividers used in theme: content dividers, widget dividers, blog & news posts dividers etc."
+msgstr ""
+
+#: ../options.php:854
+#, fuzzy
+msgid "Image Box Border Color"
+msgstr "Galerie und Bilder-Box Rahmenfarbe"
+
+#: ../options.php:856
+#, fuzzy
+msgid "Choose border color for displaying images in styled image"
+msgstr "Wähle Rahmenfarbe für das anzeigen von Bildern in Galerie und gestalteten Bildern"
+
+#: ../options.php:861
+msgid "Menu Colors"
+msgstr "Menü Farben"
+
+#: ../options.php:864
+msgid "Main Menu Text Color"
+msgstr "Hauptmenü Textfarbe"
+
+#: ../options.php:868
+msgid "Main Menu Hover Text Color"
+msgstr "Hauptmenü Hover-Textfarbe"
+
+#: ../options.php:872
+msgid "Main Menu Active Text Color"
+msgstr "Hauptmenü Aktiv-Textfarbe"
+
+#: ../options.php:876
+msgid "Main Menu Active Background Color"
+msgstr "Hauptmenü Aktiv-Hintergrundfarbe"
+
+#: ../options.php:880
+msgid "Submenu Text Color"
+msgstr "Untermenü-Textfarbe"
+
+#: ../options.php:884
+msgid "Submenu Hover Text Color"
+msgstr "Untermenü-Hover-Textfarbe"
+
+#: ../options.php:892
+msgid "Submenu Hover Background Color"
+msgstr "Submenü Hover Hintergrundfarbe"
+
+#: ../options.php:898
+msgid "Text Colors"
+msgstr "Textfarben"
+
+#: ../options.php:901
+msgid "Body Color"
+msgstr "Body Farbe"
+
+#: ../options.php:905
+msgid "H1 Color"
+msgstr "H1 Farbe"
+
+#: ../options.php:909
+msgid "H2 Color"
+msgstr "H2 Farbe"
+
+#: ../options.php:913
+msgid "H3 Color"
+msgstr "H3 Farbe"
+
+#: ../options.php:917
+msgid "H4 Color"
+msgstr "H4 Farbe"
+
+#: ../options.php:921
+msgid "H5 Color"
+msgstr "H5 Farbe"
+
+#: ../options.php:925
+msgid "H6 Color"
+msgstr "H6 Farbe"
+
+#: ../options.php:929
+msgid "Link Color"
+msgstr "Linkfarbe"
+
+#: ../options.php:933
+msgid "Hover Link Color"
+msgstr "Hover-Linkfarbe"
+
+#: ../options.php:937
+msgid "Active Link Color"
+msgstr "Aktiv-Linkfarbe"
+
+#: ../options.php:941
+msgid "Footer Text Color"
+msgstr "Footer Textfarbe"
+
+#: ../options.php:945
+msgid "Copyright Text Color"
+msgstr "Copyright Textfarbe"
+
+#: ../options.php:949
+msgid "Copyright Link Color"
+msgstr "Copyright Linkfarbe"
+
+#: ../options.php:953
+msgid "Portfolio & Clients Slider Bar Title"
+msgstr "Portfolio Slider & Kontakt-Bar Titel"
+
+#: ../options.php:957
+msgid "Contact Bar Title"
+msgstr "Kontakt-Titel"
+
+#: ../options.php:961
+msgid "Contact Bar Text Color"
+msgstr "Kontakt-Bar Textfarbe"
+
+#: ../options.php:967
+msgid "Button Colors"
+msgstr "Button Farbe"
+
+#: ../options.php:970
+msgid "Basic Text Color"
+msgstr "Basic Textfarbe"
+
+#: ../options.php:974
+msgid "Hover Text Color"
+msgstr "Hover-Textfarbe"
+
+#: ../options.php:978
+msgid "Active Text Color"
+msgstr " Aktiv-Textfarbe"
+
+#: ../options.php:982
+msgid "Basic Background Color"
+msgstr "Basic Hintergrundfarbe"
+
+#: ../options.php:986
+msgid "Hover Background Color"
+msgstr " Hover Hintergrundfarbe"
+
+#: ../options.php:990
+msgid "Active Background Color"
+msgstr " Aktiv-Hintergrundfarbe"
+
+#: ../options.php:996
+msgid "Widgets Colors"
+msgstr "Widgets Farben"
+
+#: ../options.php:999
+msgid "Widget Background Color"
+msgstr "Widget Hintergrundfarbe"
+
+#: ../options.php:1001
+msgid "Choose background color for following widgets - SUBMENU, TEAM, CATEGORIES, CUSTOM MENU, RECENT POSTS, POPULAR POSTS, FLICKR"
+msgstr "Wähle Hintergrundfarbe für die folgenden Widgets - SUBMENU, TEAM, CATEGORIES, CUSTOM MENU, RECENT POSTS, POPULAR POSTS, FLICKR"
+
+#: ../options.php:1004
+msgid "Widget Title Background Color"
+msgstr "Widget Titel Hintergrundfarbe"
+
+#: ../options.php:1006
+msgid "Choose title bar background color for following widgets - SUBMENU, TEAM, CATEGORIES, CUSTOM MENU, RECENT POSTS, POPULAR POSTS, FLICKR"
+msgstr "Wähle Titelbar Hintergrundfarbe für die folgenden Widgets - SUBMENU, TEAM, CATEGORIES, CUSTOM MENU, RECENT POSTS, POPULAR POSTS, FLICKR"
+
+#: ../options.php:1009
+msgid "Widget Title Color"
+msgstr "Widget Titelfarbe"
+
+#: ../options.php:1011
+msgid "Choose color of widget titles"
+msgstr "Wähle Farbe für Widget-Titel"
+
+#: ../options.php:1014
+msgid "Widget Link Color"
+msgstr "Widget Linkfarbe"
+
+#: ../options.php:1016
+msgid "Choose color of links in widgets"
+msgstr "Wähle Farbe der Links in Widgets"
+
+#: ../options.php:1019
+msgid "Widget Hover Link Color"
+msgstr "Widget Hover Linkfarbe"
+
+#: ../options.php:1023
+msgid "Widget Active Link Color"
+msgstr "Widget Aktiv Linkfarbe"
+
+#: ../options.php:1027
+msgid "Widgets Custom Field Text Color"
+msgstr "Widget benutzerdefinierte Felder Textfarbe"
+
+#: ../options.php:1029
+msgid "Select body text color for PROJECT INFO / CUSTOM FIELDS widget"
+msgstr "Wähle body-Textfarbe für PROJECT INFO / CUSTOM FIELDS Widget"
+
+#: ../options.php:1034
+msgid "Portfolio Colors"
+msgstr "Portfoliofarben"
+
+#: ../options.php:1037
+#: ../options.php:1285
+msgid "Portfolio Slider Bar Background"
+msgstr "Portfolio Sliderbar Hintergrund"
+
+#: ../options.php:1039
+msgid "Choose background color for portfolio sliders"
+msgstr "Wähle Hintergrundfarbe für Portfolio-Slider"
+
+#: ../options.php:1042
+msgid "Portfolio Slider Title Background"
+msgstr "Portfolio Slider Titelhintergrund"
+
+#: ../options.php:1044
+msgid "Select title & description background color for portfolio sliders"
+msgstr "Wähle Titel / Beschreibung Hintergrundfarbe für Portfolioslider"
+
+#: ../options.php:1047
+msgid "Portfolio Slider Title Text"
+msgstr "Portfolio Slider Titeltext"
+
+#: ../options.php:1049
+msgid "Choose portfolio item's title color for portfolio slider"
+msgstr "Wähle Portfolio Titelfarbe für Portfolioslider"
+
+#: ../options.php:1052
+msgid "Portfolio Slider Description Text"
+msgstr "Portfolio Slider Beschreibungstext"
+
+#: ../options.php:1054
+msgid "Select portfolio item's description color for portfolio slider"
+msgstr "Wähle Portfolio Beschreibung-Farbe für Portfolio Slider"
+
+#: ../options.php:1057
+msgid "Portfolio Slider Arrow Border"
+msgstr "Rahmen für Portfolio Slider Pfeil"
+
+#: ../options.php:1059
+msgid "Choose border color for slider's arrow"
+msgstr "Wähle Rahmen-Farbe für für Slider Pfeil"
+
+#: ../options.php:1062
+msgid "Portfolio Slider Arrow"
+msgstr "Portfolio Slider Pfeil"
+
+#: ../options.php:1064
+msgid "Select color of slider's arrow"
+msgstr "Wähle Farbe des Slider Pfeil"
+
+#: ../options.php:1067
+msgid "Portfolio Overview Title Background"
+msgstr "Portfolio Übersicht Titel Hintergrund"
+
+#: ../options.php:1069
+msgid "Choose title & description background color for grid-style portfolio overviews"
+msgstr "Wähle Titel / Beschreibung Hintergrundfarbe für Tabellen-Stil Portfolio Übersichten"
+
+#: ../options.php:1072
+msgid "Portfolio Overview Title Text"
+msgstr "Portfolio Übersicht Titel Text"
+
+#: ../options.php:1074
+msgid "Select portfolio item's title color for grid-style portfolio overviews"
+msgstr "Wähle Portfolio Titelfarbe für Tabellen-Stil Porrtfolio Übersichten"
+
+#: ../options.php:1077
+msgid "Portfolio Overview Description Text"
+msgstr "Portfolio Übersichten Beschreibungstext"
+
+#: ../options.php:1079
+msgid "Choose portfolio item's description color for grid-style portfolio overviews"
+msgstr "Wähle Portfolio Beschreibungsfarbe für Tabellen-Stil Porrtfolio Übersichten"
+
+#: ../options.php:1082
+msgid "Sharing Button Background"
+msgstr ""
+
+#: ../options.php:1084
+msgid "Choose background color for sharing button in portfolio overviews"
+msgstr ""
+
+#: ../options.php:1087
+msgid "Portfolio Date Color"
+msgstr ""
+
+#: ../options.php:1089
+msgid "Font color for showing the date in portfolio overviews"
+msgstr ""
+
+#: ../options.php:1094
+msgid "Gallery And Image Box Colors"
+msgstr "Galerie und Bilder-Box Farben"
+
+#: ../options.php:1097
+msgid "Gallery Caption Background"
+msgstr "Galerie Untertitel Hintergrund"
+
+#: ../options.php:1099
+msgid "Select background color for image description in gallery"
+msgstr "Wähle Hintergrundfarbe für Bild-Beschreibung in Galerie"
+
+#: ../options.php:1102
+msgid "Gallery Title Text"
+msgstr "Galerie Titeltext"
+
+#: ../options.php:1104
+msgid "Choose title color for image description in gallery"
+msgstr "Wähle Titelfarbe für Bildbeschreibung in Galerie"
+
+#: ../options.php:1107
+msgid "Gallery Description Text"
+msgstr "Galerie Beschreibung Text"
+
+#: ../options.php:1109
+msgid "Select text color for image description in gallery"
+msgstr "Wähle Textfarbe für Bild Beschreibung in Galerie"
+
+#: ../options.php:1114
+msgid "Quickfinder Colors"
+msgstr "Quickfinder Farben"
+
+#: ../options.php:1117
+#: ../options.php:1290
+msgid "Quickfinder Bar Background"
+msgstr "Qucikfinder-Bar Hintergrund"
+
+#: ../options.php:1119
+msgid "Select background color for the bar/panel with quickfinders"
+msgstr "Wähle Hintergrundfarbe für die Bar/das Panel mit Quickfindern"
+
+#: ../options.php:1122
+msgid "Quickfinder Bar Title Text"
+msgstr "Quickfinder Bar Titel Text"
+
+#: ../options.php:1124
+msgid "Choose title color for the bar/panel with quickfinders"
+msgstr "Wähle Titelfarbe für die Bar/das Panel mit Quickfindern"
+
+#: ../options.php:1127
+msgid "Quickfinder Bar Description Text"
+msgstr "Quickfinder Bar Beschreibung Text"
+
+#: ../options.php:1129
+msgid "Select text color for the bar/panel with quickfinders"
+msgstr "Wähle Textfarbe für die Bar/das Panel mit Quickfindern"
+
+#: ../options.php:1132
+msgid "Quickfinder Title Text"
+msgstr "Qucikfinder Titel Text"
+
+#: ../options.php:1136
+msgid "Quickfinder Description Text"
+msgstr "Quickfinder Beschreibung Text"
+
+#: ../options.php:1142
+msgid "Bullets, Icons, Dropcaps & Pager"
+msgstr "Bullets, Icons, Dropcaps & Pager"
+
+#: ../options.php:1145
+#, fuzzy
+msgid "Bullets Symbol"
+msgstr "Bullets & Dropcaps Symbole"
+
+#: ../options.php:1147
+#, fuzzy
+msgid "Select font color for bullets. The same color will be used as icon font color in \"active\" state"
+msgstr "Wähle Schriftfarbe für Bullets und Dropcaps. Die gleiche Farbe wird verwendet als Schriftfarbe im \"aktiven\" Status, Titel Hintergrundfarbe in Tabs und Symbol Hintergrundfarbe im Akkordeon"
+
+#: ../options.php:1150
+msgid "Dropcaps Default Border"
+msgstr ""
+
+#: ../options.php:1152
+#, fuzzy
+msgid "Select default backround color for dropcaps. The same border color will be used as border color for accordion's icons"
+msgstr "Wähle Schriftfarbe für Bullets und Dropcaps. Die gleiche Farbe wird verwendet als Schriftfarbe im \"aktiven\" Status, Titel Hintergrundfarbe in Tabs und Symbol Hintergrundfarbe im Akkordeon"
+
+#: ../options.php:1155
+#, fuzzy
+msgid "Dropcaps Default Background"
+msgstr "Bullets & Dropcaps Hintergrund"
+
+#: ../options.php:1157
+#, fuzzy
+msgid "Select backround color for dropcaps. The same color will be used as backround color for accordion's icons "
+msgstr "Wähle Hintergrundfarbe für Bullets und Dropcaps. Die gleiche Farbe wird verwendet als Icon-Hintergrund im \"aktiven\" Status, Titel Hintergrundfarbe in Tabs und Symbol Hintergrundfarbe im Akkordeon"
+
+#: ../options.php:1160
+msgid "Dropcaps Default Fontcolor"
+msgstr ""
+
+#: ../options.php:1162
+msgid "Select fontcolor for dropcaps"
+msgstr ""
+
+#: ../options.php:1165
+msgid "Icons Background"
+msgstr "Icons Hintergrund"
+
+#: ../options.php:1167
+msgid "Select icon backround color for \"normal\" state"
+msgstr "Wähle Icon Hintergrundfarbe für \"normalen\" Status"
+
+#: ../options.php:1170
+msgid "Icons Symbol"
+msgstr "Icons Symbol"
+
+#: ../options.php:1172
+msgid "Select icon font color for \"normal\" state"
+msgstr "Wähle Icon Schriftfarbe für \"normalen\" Status"
+
+#: ../options.php:1175
+msgid "Icons Border"
+msgstr "Border für Icons"
+
+#: ../options.php:1177
+#: ../options.php:1182
+msgid "???"
+msgstr ""
+
+#: ../options.php:1180
+msgid "Pager Element Border"
+msgstr ""
+
+#: ../options.php:1185
+#, fuzzy
+msgid "Pager Element Text"
+msgstr "Formularelemente Text"
+
+#: ../options.php:1187
+msgid "Select font color for pages in pager"
+msgstr "Wähle Schriftfarbe für Seiten in Pager"
+
+#: ../options.php:1190
+msgid "Active and Hover Pager Element Text"
+msgstr ""
+
+#: ../options.php:1192
+msgid "Select font color for active page in pager"
+msgstr "Wähle Schriftfarbe für aktive Seite in Pager"
+
+#: ../options.php:1195
+msgid "Icon Border For Slideshows & Hovers"
+msgstr ""
+
+#: ../options.php:1197
+msgid "Select icon border color for arrows in slideshow & hovers on portfolio items/gallery"
+msgstr ""
+
+#: ../options.php:1200
+msgid "Icon Font Color For Slideshows & Hovers"
+msgstr ""
+
+#: ../options.php:1202
+msgid "Select icon font color for arrows in slideshow & hovers on portfolio items/gallery"
+msgstr ""
+
+#: ../options.php:1207
+msgid "Form"
+msgstr "Formular"
+
+#: ../options.php:1210
+msgid "Form Elements Background"
+msgstr "Formularelemente Hintergrund"
+
+#: ../options.php:1214
+msgid "Form Elements Text"
+msgstr "Formularelemente Text"
+
+#: ../options.php:1223
+msgid "Backgrounds"
+msgstr "Hintergründe"
+
+#: ../options.php:1226
+msgid "Background Images"
+msgstr "Hintergrundbilder"
+
+#: ../options.php:1229
+msgid "Background for Boxed Layout"
+msgstr "Hintergrund für \"Boxed Layout\""
+
+#: ../options.php:1231
+msgid "Select or upload image file for website's backround in boxed layout"
+msgstr "Wähle oder uploade Bild-Datei für Webseitenhintergrund im \"Boxed Layout\""
+
+#: ../options.php:1234
+msgid "Background Patterns for Boxed Layout"
+msgstr "Hintergrundsmuster für den Boxed Layout"
+
+#: ../options.php:1248
+msgid "Cover complete background area (no cloning)"
+msgstr "Den Hintergrundsbereich komplett abdecken (ohne Vervielfältigung)"
+
+#: ../options.php:1252
+msgid "If checked, this option will use your chosen background image to cover the whole background area.  Otherwise your background image will be use in original sized and then cloned to cover the background area"
+msgstr "Wenn aktiviert, wird diese Option Ihr Hintergrundsbild automatisch an den verfügbaren Hintergrundsbereich anpassen (ziehen).  Sonst wird das Hintergrundsbild in Originalgrösse verwendet und dann ggf. vervielfältig"
+
+#: ../options.php:1255
+msgid "Basic background for website"
+msgstr "Basis Hintergrund für Webseite"
+
+#: ../options.php:1257
+msgid "Basic background is the continuous background underlaying the whole webpage. By default it is visible for example in slideshow area, quickfinder area, portfolio-slider"
+msgstr "Basis-Hintergrund ist der dauerhafte Hintergrund, welcher unter der ganzen Internetseite liegt. Standardmäßig ist er beispielsweise im Slideshow-Bereich, Qucikfinder-Bereich und Portfolio-Slider sichtbar."
+
+#: ../options.php:1260
+msgid "Header's Texture Pattern"
+msgstr "Header Textur"
+
+#: ../options.php:1262
+msgid "Select or upload texture pattern to use in website header. Please use PNGs with transparency"
+msgstr "Wähle oder uploade Texturen die im Header genutzt werden. Bitte nutze PNGs mit Transparenz"
+
+#: ../options.php:1265
+msgid "Top Background"
+msgstr "Oberer Hintergrund"
+
+#: ../options.php:1267
+msgid "Select or upload image file for website's top background"
+msgstr "Wähle oder uploade Bild-Datei für den oberen Hintergrund der Webseite"
+
+#: ../options.php:1270
+msgid "Main Content Background"
+msgstr "Hauptinhalt Hintergrund"
+
+#: ../options.php:1272
+msgid "Select or upload image file for website's main content background"
+msgstr "Wähle oder uploade Bild-Datei für den Hauptinhaltsbereich-Hintergrund."
+
+#: ../options.php:1275
+msgid "Contact Background"
+msgstr "Kontakt Hintergrund"
+
+#: ../options.php:1277
+msgid "Select or upload image file for contact us & follow us bar at website's bottom"
+msgstr "Wähle oder uploade Bild-Datei für Kontakt / Follow Us-Bar im unteren Webseiten-Bereich"
+
+#: ../options.php:1280
+msgid "Footer Background"
+msgstr "Fußzeile Hintergrund"
+
+#: ../options.php:1282
+msgid "Select or upload image file for footer bar at website's bottom"
+msgstr "Wähle oder uploade Bild-Datei für die Fußzeilen-Bar im unteren Webseiten-Bereich"
+
+#: ../options.php:1287
+msgid "Select or upload image to customize background in portfolio sliders"
+msgstr "Wähle oder uploade Bild um Hintergrund in Portfolio-Slidern zu definieren"
+
+#: ../options.php:1292
+msgid "Select or upload image to customize background in quickfinder area"
+msgstr "Wähle oder uploade Bild um Hintergrund in Quickfinder.Bereich zu definieren"
+
+#: ../options.php:1300
+#: ../options.php:1303
+msgid "Home Constructor"
+msgstr "Home Konstruktor"
+
+#: ../options.php:1306
+msgid "Activate Home Constructor"
+msgstr "Home Constructor aktivieren"
+
+#: ../options.php:1322
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: ../options.php:1323
+#: ../plugins/clients.php:8
+msgid "Clients"
+msgstr "Kunden"
+
+#: ../options.php:1324
+msgid "Pages"
+msgstr "Seiten"
+
+#: ../options.php:1325
+#: ../plugins/news.php:7
+#: ../plugins/news.php:8
+#: ../plugins/news.php:51
+msgid "News"
+msgstr "News"
+
+#: ../options.php:1327
+msgid "Drag-n-drop panels here to setup required order"
+msgstr "Drag-n-Drop Panels hier zum einstellen der benötigten Anordnung"
+
+#: ../options.php:1335
+#: ../options.php:1338
+msgid "NivoSlider Options"
+msgstr " NivoSlider Optionen"
+
+#: ../options.php:1341
+msgid "Effect"
+msgstr "Effekt"
+
+#: ../options.php:1364
+msgid "Slices"
+msgstr "Slices"
+
+#: ../options.php:1371
+msgid "Box Cols"
+msgstr "Box Spalten"
+
+#: ../options.php:1378
+msgid "Box Rows"
+msgstr "Box Spalten"
+
+#: ../options.php:1385
+msgid "Animation Speed ( x 100 milliseconds )"
+msgstr "Animationsgeschwindigkeit (x 100 Millisekunden)"
+
+#: ../options.php:1392
+msgid "Pause Time ( x 1000 milliseconds )"
+msgstr "Pausenzeit (x 1000 Millisekunden)"
+
+#: ../options.php:1399
+msgid "Direction Navigation"
+msgstr "Richtungs Navigation"
+
+#: ../options.php:1405
+msgid "Control Navigation"
+msgstr "Einstellungen Navigation"
+
+#: ../options.php:1416
+msgid "Blog & News"
+msgstr "Blog & News"
+
+#: ../options.php:1419
+msgid "Blog & News Options"
+msgstr "Blog & News Optionen"
+
+#: ../options.php:1422
+msgid "Show author"
+msgstr "Autor anzeigen"
+
+#: ../options.php:1428
+msgid "Post per page"
+msgstr "Posts pro Seite"
+
+#: ../options.php:1435
+msgid "Excerpt lenght"
+msgstr "Excerptlänge"
+
+#: ../options.php:1447
+msgid "Footer"
+msgstr "Fußzeile"
+
+#: ../options.php:1450
+msgid "Footer Options"
+msgstr "Footer Optionen"
+
+#: ../options.php:1453
+msgid "Activate footer"
+msgstr "Fußzeile aktivieren"
+
+#: ../options.php:1459
+msgid "Footer HTML"
+msgstr "Fußzeilen HTML"
+
+#: ../options.php:1468
+msgid "Contacts & Socials"
+msgstr "Kontakte und soziales"
+
+#: ../options.php:1471
+msgid "Follow Us / Contact Us Bar"
+msgstr "Uns folgen / uns kontaktieren -Bar"
+
+#: ../options.php:1474
+msgid "Activate Follow Us / Contact Us"
+msgstr "Uns folgen / uns kontaktieren aktivieren"
+
+#: ../options.php:1482
+msgid "Contacts"
+msgstr "Kontakte"
+
+#: ../options.php:1485
+msgid "Contact Us Title"
+msgstr "Uns kontaktieren Titel"
+
+#: ../options.php:1487
+msgid "Enter your custom title for Contact Us box at the website's bottom. \"Contact Us\" will be used if empty"
+msgstr "Hier benutzerdefinierten Titel für Kontakt-Box am unteren Teil der Webseite eingeben. \"Uns kontaktieren\" wird genutzt wenn leer."
+
+#: ../options.php:1490
+msgid "Contacts Us HTML"
+msgstr "Uns kontaktieren HTML"
+
+#: ../options.php:1492
+msgid "Define your contact data to be shown in contact box. You can use a simple text as well as HTML and shortcodes"
+msgstr "Definiere deine Kontaktdaten, die in der Kontaktbox angezeigt werden. Simpler Text, HTML und Shortcodes können verwendet werden"
+
+#: ../options.php:1495
+msgid "Admin E-mail"
+msgstr "Admin E-Mail"
+
+#: ../options.php:1497
+msgid "Define email address of website admin. All feedbacks from contact form will be forwarded on this email address"
+msgstr "Definiere die Mailadresse des Administrators. Sämtliches Feedback vom Kontaktformular wird an diese weitergeleitet"
+
+#: ../options.php:1500
+msgid "Display map on contact page"
+msgstr "Map auf der Kontaktseite anzeigen"
+
+#: ../options.php:1506
+msgid "Map height (px)"
+msgstr "Kartenhöhe"
+
+#: ../options.php:1510
+msgid "Map latitude"
+msgstr "Breitengrad"
+
+#: ../options.php:1512
+#: ../options.php:1517
+#, php-format
+msgid "<a href=\"%s\">Find here</a>"
+msgstr "<a href=\"%s\">Hier finden</a>"
+
+#: ../options.php:1515
+msgid "Map longitude"
+msgstr "Längengrad"
+
+#: ../options.php:1520
+msgid "Map zoom"
+msgstr "Kartenzoom"
+
+#: ../options.php:1529
+msgid "Socials"
+msgstr "Soziale"
+
+#: ../options.php:1532
+msgid "Follow Us Title"
+msgstr "Uns folgen Titel"
+
+#: ../options.php:1534
+msgid "Enter your custom title for Follow Us box at the website's bottom. \"Follow Us\" will be used if empty"
+msgstr "Benutzerdefinierten Titel für Uns folgen-Box am unteren Bereich der Webseite eingeben. \"Uns folgen\" wird benutzt wenn leer."
+
+#: ../options.php:1537
+msgid "Follow Us Text"
+msgstr "Uns folgen Text"
+
+#: ../options.php:1539
+msgid "Define your content to be shown in Follow Us box. You can use a simple text as well as HTML and shortcodes"
+msgstr "Definiere deinen Inhalt der in der Uns folgen-Box angezeigt wird. Simpler Text, HTML und Shortcodes sind möglich."
+
+#: ../options.php:1542
+msgid "Activate Twitter Icon"
+msgstr "Aktiviere Twitter-Icon"
+
+#: ../options.php:1548
+msgid "Activate Facebook Icon"
+msgstr "Aktiviere Facebook-Icon"
+
+#: ../options.php:1554
+msgid "Activate LinkedIn Icon"
+msgstr "Aktiviere LinkedIn-Icon"
+
+#: ../options.php:1560
+msgid "Activate Google Plus Icon"
+msgstr "Aktiviere Google Plus Icon"
+
+#: ../options.php:1566
+msgid "Activate StumbleUpon Icon"
+msgstr "Aktiviere StumbleUpon-Icon"
+
+#: ../options.php:1571
+msgid "Activate RSS Icon"
+msgstr "Aktiviere RSS-Icon"
+
+#: ../options.php:1577
+msgid "Twitter Profile Link"
+msgstr "Twitter Link"
+
+#: ../options.php:1580
+msgid "Enter URL to your twitter profile"
+msgstr "URL zum Twitter-Profil eingeben"
+
+#: ../options.php:1583
+msgid "Facebook Profile Link"
+msgstr "Facebook Link"
+
+#: ../options.php:1586
+msgid "Enter URL to your facebook profile"
+msgstr "URL zum Facebook-Profil eingeben"
+
+#: ../options.php:1589
+msgid "LinkedIn Profile Link"
+msgstr "LinkedIn Link"
+
+#: ../options.php:1592
+msgid "Enter URL to your linkedin profile"
+msgstr "URL zum LinkedIn-Profil eingeben"
+
+#: ../options.php:1595
+msgid "Google Plus Profile Link"
+msgstr "Google Plus Link"
+
+#: ../options.php:1598
+msgid "Enter URL to your google+ profile"
+msgstr "URL zum Google Plus-Profil eingeben"
+
+#: ../options.php:1601
+msgid "StumbleUpon Profile Link"
+msgstr "StumbleUpon Link"
+
+#: ../options.php:1604
+msgid "Enter URL to your stumbleupon profile"
+msgstr "URL zum StumbleUpon-Profil eingeben"
+
+#: ../options.php:1607
+msgid "RSS Link"
+msgstr "RSS Link"
+
+#: ../options.php:1612
+msgid "Display Links For Sharing Posts On Social Networks"
+msgstr "Zeige Links für das Teilen von Posts auf sozialen Netzwerken"
+
+#: ../options.php:1811
+msgid "Move content block down to activate it on your Home"
+msgstr "Move content block down to activate it on your Home"
+
+#: ../options.php:1812
+msgid "Selectable Content Blocks"
+msgstr "Auswählbare Inhaltsblöcke"
+
+#: ../options.php:1822
+msgid "Drag & drop blocks to define sort order. Open blocks to choose content."
+msgstr "Drag-and-Drop Blöcke um die Anordnung zu definieren. Öffne Blöcke um den Inhalt auszuwählen."
+
+#: ../options.php:1823
+msgid "Active Home Content"
+msgstr "Aktiver Home Content"
+
+#: ../options.php:1852
+msgid "Select Page"
+msgstr "Wähle Seite"
+
+#: ../options.php:1863
+#, fuzzy
+msgid "Select Slideshow Type"
+msgstr "Slideshow auswählen"
+
+#: ../options.php:1879
+#: ../options.php:1888
+#: ../options.php:1900
+#: ../options.php:1912
+#: ../options.php:1924
+msgid "Select"
+msgstr "Wähle"
+
+#: ../options.php:1897
+msgid "Select Portfolio"
+msgstr "Portfolio auswählen"
+
+#: ../options.php:1909
+msgid "Select Clients Sets"
+msgstr "Kunden-Sets wählen"
+
+#: ../options.php:1937
+msgid "News Count"
+msgstr "News Anzahl"
+
+#: ../options.php:1942
+msgid "All News Link"
+msgstr "Link für alle News zeigen"
+
+#: ../options.php:1943
+msgid "News Layout"
+msgstr "News Layout"
+
+#: ../options.php:1956
+msgid "Sidebar Header"
+msgstr "Sidebar Header"
+
+#: ../options.php:1960
+msgid "Sidebar Content"
+msgstr "Sidebar Inhalt"
+
+#: ../404.php:16
+msgid "Page not found."
+msgstr "Seite wurde nicht gefunden."
+
+#: ../404.php:18
+msgid "Sorry, but the page you requested could not be found."
+msgstr "Es tut uns leid, die angefragte Seite konnte nicht gefunden werden."
+
+#: ../page_contact.php:17
+msgid "Form  has required fields"
+msgstr "Das Formular hat Pflichtfelder"
+
+#: ../page_contact.php:25
+msgid "From"
+msgstr "Von"
+
+#: ../page_contact.php:26
+msgid "Contact form message"
+msgstr "Kontaktformular Nachricht"
+
+#: ../page_contact.php:28
+#: ../page_contact.php:29
+msgid "Email"
+msgstr "E-Mail"
+
+#: ../page_contact.php:30
+msgid "Message"
+msgstr "Nachricht"
+
+#: ../page_contact.php:32
+msgid "Sending failed."
+msgstr "Senden fehlgeschlagen."
+
+#: ../page_contact.php:63
+msgid "Your message has been sent."
+msgstr "Ihre Nachricht wurde versendet."
+
+#: ../page_contact.php:65
+msgid "ERROR"
+msgstr "FEHLER"
+
+#: ../page_contact.php:70
+#: ../page_contact.php:74
+msgid "(required)"
+msgstr "(wird benötigt)"
+
+#: ../page_contact.php:83
+msgid "Clear form"
+msgstr "Alle Felder leeren"
+
+#: ../plugins/blog.php:74
+#: ../plugins/blog.php:93
+#, php-format
+msgid "View all posts in %s"
+msgstr "Zeige alle Posts in %s"
+
+#: ../plugins/blog.php:102
+#, php-format
+msgid "<b>%d</b> comments"
+msgstr "<b>%d</b> Kommentare"
+
+#: ../plugins/blog.php:104
+#: ../plugins/shortcodes.php:468
+msgid "Read more"
+msgstr "Weiterlesen"
+
+#: ../plugins/blog.php:146
+#, php-format
+msgid "<span class=\"author\">%s</span>"
+msgstr "<span class=\"author\">%s</span>"
+
+#: ../plugins/blog.php:149
+#, php-format
+msgid "<span class=\"date\">%1$s %2$s</span>"
+msgstr "<span class=\"date\">%1$s %2$s</span>"
+
+#: ../plugins/blog.php:149
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: ../plugins/blog.php:155
+msgid "Your comment is awaiting moderation."
+msgstr "Ihr Kommentar wartet auf Moderation."
+
+#: ../plugins/diagram.php:48
+#: ../plugins/diagram.php:69
+#: ../plugins/testimonials.php:166
+msgid "Title:"
+msgstr "Titel:"
+
+#: ../plugins/diagram.php:50
+msgid "Amount (in percents):"
+msgstr "Menge (in Prozent):"
+
+#: ../plugins/diagram.php:52
+msgid "Color:"
+msgstr "Farben:"
+
+#: ../plugins/diagram.php:72
+msgid "Summary:"
+msgstr "Zusammenfassung"
+
+#: ../plugins/diagram.php:75
+msgid "Type:"
+msgstr "Typ:"
+
+#: ../plugins/diagram.php:77
+msgid "Circle"
+msgstr "Kreis"
+
+#: ../plugins/diagram.php:78
+msgid "Lines"
+msgstr "Balken"
+
+#: ../plugins/diagram.php:80
+msgid "Skills"
+msgstr "Skills"
+
+#: ../plugins/content_block.php:59
+msgid "No Page"
+msgstr "Keine Seite"
+
+#: ../plugins/gallery.php:7
+msgid "Galleries"
+msgstr "Galerien"
+
+#: ../plugins/gallery.php:9
+#: ../plugins/gallery.php:10
+msgid "Add New Gallery"
+msgstr "Galerie hinzufügen"
+
+#: ../plugins/gallery.php:11
+#: ../plugins/gallery.php:62
+msgid "Edit Gallery"
+msgstr "Galerie editieren"
+
+#: ../plugins/gallery.php:12
+msgid "New Gallery"
+msgstr "Neue Galerie"
+
+#: ../plugins/gallery.php:13
+msgid "View Gallery"
+msgstr "Galerie anzeigen"
+
+#: ../plugins/gallery.php:14
+msgid "Search Gallery"
+msgstr "Galerie durchsuchen"
+
+#: ../plugins/gallery.php:15
+msgid "No Gallery found"
+msgstr "Keine Galerie gefunden"
+
+#: ../plugins/gallery.php:16
+msgid "No Gallery found in Trash"
+msgstr "Keine Galerie gefunden im Papierkorb"
+
+#: ../plugins/gallery.php:38
+#, php-format
+msgid "Gallery Manager (ID = %s)"
+msgstr "Galerie-Manager (ID = %s)"
+
+#: ../plugins/gallery.php:64
+msgid "Upload"
+msgstr "Upload"
+
+#: ../plugins/gallery.php:96
+msgid "Enter the title of you gallery, click on Publish and start uploading your images"
+msgstr "Titel der Galerie eingeben, Publizieren klicken und uploaden der Bilder starten"
+
+#: ../plugins/clients.php:7
+#: ../plugins/clients.php:9
+msgid "Client"
+msgstr "Kunde"
+
+#: ../plugins/clients.php:10
+#: ../plugins/clients.php:11
+msgid "Add New Client"
+msgstr " Kunden hinzufügen"
+
+#: ../plugins/clients.php:12
+msgid "Edit Client"
+msgstr " Kunden bearbeiten"
+
+#: ../plugins/clients.php:13
+msgid "New Client"
+msgstr " Neuer Kunde"
+
+#: ../plugins/clients.php:14
+msgid "View Client"
+msgstr " Kunden anzeigen"
+
+#: ../plugins/clients.php:15
+msgid "Search Clients"
+msgstr " Kunden durchsuchen"
+
+#: ../plugins/clients.php:16
+msgid "No Clients found"
+msgstr " Keine Kunden gefunden"
+
+#: ../plugins/clients.php:17
+msgid "No Clients found in Trash"
+msgstr " Keine Kunden gefunden in Papierkorb"
+
+#: ../plugins/clients.php:36
+#: ../plugins/testimonials.php:36
+msgid "Sets"
+msgstr "Sets"
+
+#: ../plugins/clients.php:37
+#: ../plugins/testimonials.php:37
+msgid "Set"
+msgstr "Set"
+
+#: ../plugins/clients.php:38
+#: ../plugins/testimonials.php:38
+msgid "Search Sets"
+msgstr "Sets durchsuchen"
+
+#: ../plugins/clients.php:39
+#: ../plugins/testimonials.php:39
+msgid "All Sets"
+msgstr "Alle Sets"
+
+#: ../plugins/clients.php:40
+#: ../plugins/testimonials.php:40
+msgid "Parent Set"
+msgstr "Mutterset"
+
+#: ../plugins/clients.php:41
+#: ../plugins/testimonials.php:41
+msgid "Parent Set:"
+msgstr "Mutterset:"
+
+#: ../plugins/clients.php:42
+#: ../plugins/testimonials.php:42
+msgid "Edit Set"
+msgstr "Set editieren"
+
+#: ../plugins/clients.php:43
+#: ../plugins/testimonials.php:43
+msgid "Update Set"
+msgstr "Set updaten"
+
+#: ../plugins/clients.php:44
+#: ../plugins/testimonials.php:44
+msgid "Add New Set"
+msgstr "Neues Set hinzufügen"
+
+#: ../plugins/clients.php:45
+#: ../plugins/testimonials.php:45
+msgid "New Set Name"
+msgstr "Neues Set Name"
+
+#: ../plugins/clients.php:65
+msgid "Client Image"
+msgstr "Bild des Kunden"
+
+#: ../plugins/clients.php:71
+msgid "Client Settings"
+msgstr " Kunden-Einstellungen"
+
+#: ../plugins/clients.php:81
+#, fuzzy
+msgid "Client description"
+msgstr "Beschreibung"
+
+#: ../plugins/clients.php:82
+msgid "Client link"
+msgstr " Kunden-Link"
+
+#: ../plugins/clients.php:121
+msgid "Our Clients"
+msgstr " Unsere Kunden"
+
+#: ../plugins/clients.php:183
+msgid "Show All"
+msgstr "Alle anzeigen"
+
+#: ../plugins/clients.php:250
+#: ../plugins/clients.php:261
+msgid "Icon"
+msgstr "Icon"
+
+#: ../plugins/clients.php:252
+#: ../plugins/clients.php:264
+msgid "Enter icon code"
+msgstr "Icon Code eingeben"
+
+#: ../plugins/clients.php:252
+#: ../plugins/clients.php:264
+msgid "Icons info"
+msgstr "Icons Info"
+
+#: ../plugins/clients.php:252
+#: ../plugins/clients.php:264
+msgid "Show Icon Codes"
+msgstr "Icon Codes anzeigen"
+
+#: ../plugins/class-tgm-plugin-activation.php:155
+msgid "Install Required Plugins"
+msgstr "Erforderliche Plugins installieren"
+
+#: ../plugins/class-tgm-plugin-activation.php:156
+msgid "Install Plugins"
+msgstr "Plugins installieren"
+
+#: ../plugins/class-tgm-plugin-activation.php:157
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Plugin wird installiert: %s"
+
+#: ../plugins/class-tgm-plugin-activation.php:158
+msgid "Something went wrong."
+msgstr "Installation ist fehlgeschlagen."
+
+#: ../plugins/class-tgm-plugin-activation.php:169
+msgid "Return to Required Plugins Installer"
+msgstr "Zurück zum Installer der erforderlichen Plugins"
+
+#: ../plugins/class-tgm-plugin-activation.php:170
+msgid "Return to the dashboard"
+msgstr "Zurück zum Dashboard"
+
+#: ../plugins/class-tgm-plugin-activation.php:171
+#: ../plugins/class-tgm-plugin-activation.php:1840
+msgid "Plugin activated successfully."
+msgstr "Plugin wurde erfolgreich aktiviert."
+
+#: ../plugins/class-tgm-plugin-activation.php:172
+#: ../plugins/class-tgm-plugin-activation.php:1538
+msgid "The following plugin was activated successfully:"
+msgstr "Folgende Plugins wurden erfolgreich aktiviert:"
+
+#: ../plugins/class-tgm-plugin-activation.php:173
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Alle Plugins wurden erfolgreich aktiviert und installiert. %1$s"
+
+#: ../plugins/class-tgm-plugin-activation.php:174
+msgid "Dismiss this notice"
+msgstr "Meldung ignorieren"
+
+#: ../plugins/class-tgm-plugin-activation.php:1085
+msgid "External Link"
+msgstr "Externer Link"
+
+#: ../plugins/class-tgm-plugin-activation.php:1090
+msgid "Private Repository"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1093
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1097
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1100
+msgid "Required"
+msgstr "Wird benötigt"
+
+#: ../plugins/class-tgm-plugin-activation.php:1100
+msgid "Recommended"
+msgstr "Wird empfohlen"
+
+#: ../plugins/class-tgm-plugin-activation.php:1103
+msgid "Not Installed"
+msgstr "Nicht installiert"
+
+#: ../plugins/class-tgm-plugin-activation.php:1105
+msgid "Installed But Not Activated"
+msgstr "Installiert, jedoch nicht aktiviert "
+
+#: ../plugins/class-tgm-plugin-activation.php:1275
+#, php-format
+msgid "No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1291
+msgid "Plugin"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1292
+msgid "Source"
+msgstr "Quelle"
+
+#: ../plugins/class-tgm-plugin-activation.php:1293
+msgid "Type"
+msgstr "Typ"
+
+#: ../plugins/class-tgm-plugin-activation.php:1294
+msgid "Status"
+msgstr "Status"
+
+#: ../plugins/class-tgm-plugin-activation.php:1312
+msgid "Install"
+msgstr "Installieren"
+
+#: ../plugins/class-tgm-plugin-activation.php:1313
+msgid "Activate"
+msgstr "Aktivieren"
+
+#: ../plugins/class-tgm-plugin-activation.php:1823
+msgid "Install package not available."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1824
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1825
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1826
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1827
+msgid "Plugin install failed."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1828
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1839
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1949
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1950
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1950
+#: ../plugins/class-tgm-plugin-activation.php:1959
+msgid "Show Details"
+msgstr "Details anzeigen"
+
+#: ../plugins/class-tgm-plugin-activation.php:1950
+#: ../plugins/class-tgm-plugin-activation.php:1959
+msgid "Hide Details"
+msgstr " Details verbergen"
+
+#: ../plugins/class-tgm-plugin-activation.php:1951
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1952
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1956
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1957
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1958
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1959
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1960
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1961
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:2052
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: ../plugins/shortcodes.php:410
+msgid "More"
+msgstr "Mehr"
+
+#: ../plugins/testimonials.php:7
+msgid "Testimonials"
+msgstr "Testimonials"
+
+#: ../plugins/testimonials.php:8
+msgid "Testimonial"
+msgstr "Testimonial"
+
+#: ../plugins/testimonials.php:9
+#: ../plugins/testimonials.php:10
+msgid "Add New Testimonial"
+msgstr "Neues Testimonial hinzufügen"
+
+#: ../plugins/testimonials.php:11
+msgid "Edit Testimonial"
+msgstr "Testimonial editieren"
+
+#: ../plugins/testimonials.php:12
+msgid "New Testimonial"
+msgstr "Neues Testimonial"
+
+#: ../plugins/testimonials.php:13
+msgid "View Testimonial"
+msgstr "Testimonial anzeigen"
+
+#: ../plugins/testimonials.php:14
+msgid "Search Testimonials"
+msgstr "Testimonials durchsuchen"
+
+#: ../plugins/testimonials.php:15
+msgid "No Testimonial found"
+msgstr "Kein Testimonial gefunden"
+
+#: ../plugins/testimonials.php:16
+msgid "No Testimonial found in Trash"
+msgstr "Kein Testimonial gefunden in Papierkorb"
+
+#: ../plugins/testimonials.php:64
+msgid "Testimonial Settings"
+msgstr "Testimonial Einstellungen"
+
+#: ../plugins/testimonials.php:78
+msgid "Position"
+msgstr "Position"
+
+#: ../plugins/testimonials.php:79
+msgid "Company"
+msgstr "Firma"
+
+#: ../plugins/testimonials.php:80
+msgid "Tel."
+msgstr "Tel."
+
+#: ../plugins/testimonials.php:81
+msgid "Link to Company"
+msgstr "URL zur Firma"
+
+#: ../plugins/testimonials.php:170
+msgid "Sets:"
+msgstr "Sets:"
+
+#: ../plugins/news.php:9
+#: ../plugins/news.php:10
+msgid "Add New News"
+msgstr "News hinzufügen"
+
+#: ../plugins/news.php:11
+msgid "Edit News"
+msgstr "News editieren"
+
+#: ../plugins/news.php:12
+msgid "New News"
+msgstr "News anlegen"
+
+#: ../plugins/news.php:13
+msgid "View News"
+msgstr "News anzeigen"
+
+#: ../plugins/news.php:14
+msgid "Search News"
+msgstr "News durchsuchen"
+
+#: ../plugins/news.php:15
+#: ../plugins/news.php:54
+#: ../plugins/news.php:105
+msgid "No News found"
+msgstr "Keine News gefunden"
+
+#: ../plugins/news.php:16
+msgid "No News found in Trash"
+msgstr "Keine News gefunden in Papierkorb"
+
+#: ../plugins/news.php:75
+msgid "Read all news"
+msgstr "Alle News zeigen"
+
+#: ../plugins/quickfinder.php:7
+msgid "Quickfinders"
+msgstr "Quickfinder"
+
+#: ../plugins/quickfinder.php:9
+#: ../plugins/quickfinder.php:10
+msgid "Add New Quickfinder"
+msgstr " Neuen Quickfinder hinzufügen "
+
+#: ../plugins/quickfinder.php:11
+msgid "Edit Quickfinder"
+msgstr "Quickfinder editieren"
+
+#: ../plugins/quickfinder.php:12
+msgid "New Quickfinder"
+msgstr "Quickfinder anlegen"
+
+#: ../plugins/quickfinder.php:13
+msgid "View Quickfinder"
+msgstr "Quickfinder anzeigen"
+
+#: ../plugins/quickfinder.php:14
+msgid "Search Quickfinders"
+msgstr "Quickfinder durchsuchen"
+
+#: ../plugins/quickfinder.php:15
+msgid "No Quickfinder found"
+msgstr "Kein Quickfinder gefunden"
+
+#: ../plugins/quickfinder.php:16
+msgid "No Quickfinder found in Trash"
+msgstr "Kein Qucikfinder gefunden in Papierkorb"
+
+#: ../plugins/quickfinder.php:62
+msgid "Quickfinder Settings"
+msgstr "Quickfinder Einstellungen"
+
+#: ../plugins/quickfinder.php:75
+msgid "Quickfinder item description"
+msgstr "Quickfinder Beschreibung"
+
+#: ../plugins/quickfinder.php:76
+#, fuzzy
+msgid "Quickfinder item link"
+msgstr "Quickfinder Link"
+
+#: ../plugins/quickfinder.php:77
+#, fuzzy
+msgid "Quickfinder item background color"
+msgstr "Qucikfinder-Bar Hintergrund"
+
+#: ../plugins/quickfinder.php:78
+#, fuzzy
+msgid "Quickfinder item icon color"
+msgstr "Quickfinder Titel-Schriftart"
+
+#: ../plugins/quickfinder.php:79
+#, fuzzy
+msgid "Quickfinder item icon"
+msgstr "Quickfinder Titel-Schriftart"
+
+#: ../plugins/team.php:7
+#: ../plugins/team.php:8
+#: ../plugins/shortcode_generator.php:458
+msgid "Team"
+msgstr "Team"
+
+#: ../plugins/team.php:9
+#: ../plugins/team.php:10
+msgid "Add New Person"
+msgstr "Person hinzufügen"
+
+#: ../plugins/team.php:11
+msgid "Edit Person"
+msgstr "Person editieren"
+
+#: ../plugins/team.php:12
+msgid "New Person"
+msgstr "Neue Person"
+
+#: ../plugins/team.php:13
+msgid "View Person"
+msgstr "Person anzeigen"
+
+#: ../plugins/team.php:14
+msgid "Search Persons"
+msgstr "Personen suchen"
+
+#: ../plugins/team.php:15
+msgid "No Person found"
+msgstr "Keine Person gefunden"
+
+#: ../plugins/team.php:16
+msgid "No Person found in Trash"
+msgstr "Keine Person gefunden im Papierkorb"
+
+#: ../plugins/team.php:64
+msgid "Team Settings"
+msgstr "Team Einstellungen"
+
+#: ../plugins/team.php:82
+#: ../plugins/widgets.php:75
+msgid "Link"
+msgstr "Link"
+
+#: ../plugins/team.php:83
+msgid "Hide Email"
+msgstr "E-Mail verbergen"
+
+#: ../plugins/widgets.php:20
+msgid "Display Picture"
+msgstr "Bild anzeigen"
+
+#: ../plugins/widgets.php:21
+msgid "Picturebox"
+msgstr "Bilderbox"
+
+#: ../plugins/widgets.php:72
+msgid "Image link"
+msgstr "Grafiklink"
+
+#: ../plugins/widgets.php:74
+msgid "Description"
+msgstr "Beschreibung"
+
+#: ../plugins/widgets.php:84
+msgid "The popular posts with thumbnails"
+msgstr "Beliebte Posts mit Miniaturgrafiken"
+
+#: ../plugins/widgets.php:85
+#: ../plugins/widgets.php:100
+msgid "Popular Posts"
+msgstr "Beliebte Posts"
+
+#: ../plugins/widgets.php:127
+#: ../plugins/widgets.php:179
+msgid "Items (default 3)"
+msgstr "Sätze (Standard 3)"
+
+#: ../plugins/widgets.php:136
+msgid "The recent posts with thumbnails"
+msgstr "Die kürzlichen Posts mit Miniaturgrafiken"
+
+#: ../plugins/widgets.php:137
+#: ../plugins/widgets.php:152
+msgid "Recent Posts"
+msgstr "Kürzliche Posts"
+
+#: ../plugins/widgets.php:244
+msgid "Display your recent Flickr photos"
+msgstr "Kürzliche Flickr Fotos anzeigen"
+
+#: ../plugins/widgets.php:245
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../plugins/widgets.php:263
+msgid "Photostream"
+msgstr "Fotostream"
+
+#: ../plugins/widgets.php:305
+#, fuzzy, php-format
+msgid "Flickr ID <a href=\"%s\">Find your Flickr ID here</a>"
+msgstr "Flickr ID <a href=\"http://idgettr.com/\">Finde deine Flickr ID hier</a>"
+
+#: ../plugins/widgets.php:309
+msgid "Items (default 9)"
+msgstr "Sätze (Standard 9)"
+
+#: ../plugins/widgets.php:332
+msgid "No \"type\" parameter has been setup. Check your settings, or provide the parameter as an argument."
+msgstr "Kein \"type\" Parameter eingestelt. Überprüfe deine Einstellungen, oder stelle den Parameter als Argument zur Verfügung."
+
+#: ../plugins/widgets.php:398
+msgid "Submenu."
+msgstr "Untermenü."
+
+#: ../plugins/widgets.php:399
+msgid "Submenu"
+msgstr "Untermenü"
+
+#: ../plugins/widgets.php:429
+#, php-format
+msgid "No menus have been created yet. <a href=\"%s\">Create some</a>."
+msgstr "Keine Menüs angelegt. <a href=\"%s\">Erstelle welche</a>."
+
+#: ../plugins/widgets.php:434
+msgid "Select Menu"
+msgstr "Menü auswählen"
+
+#: ../plugins/widgets.php:666
+#, php-format
+msgid "<a href=\"%s\">Find or Create your Twitter App</a>"
+msgstr ""
+
+#: ../plugins/widgets.php:709
+msgid "Facebook page like box"
+msgstr "Facebook Like-Box"
+
+#: ../plugins/widgets.php:710
+msgid "Facebook Page"
+msgstr "Facebook Seite"
+
+#: ../plugins/widgets.php:724
+msgid "Find us on Facebook"
+msgstr "Finden Sie uns auf Facebook"
+
+#: ../plugins/widgets.php:749
+msgid "Facebook Page URL"
+msgstr "Facebook URL"
+
+#: ../plugins/portfolio.php:7
+msgid "Portfolio items"
+msgstr "Portfolio Items"
+
+#: ../plugins/portfolio.php:8
+msgid "Portfolios"
+msgstr "Portfolios"
+
+#: ../plugins/portfolio.php:9
+msgid "Portfolio item"
+msgstr "Portfolio Item"
+
+#: ../plugins/portfolio.php:10
+msgid "Items"
+msgstr "Items"
+
+#: ../plugins/portfolio.php:11
+#: ../plugins/portfolio.php:12
+msgid "Add New Item"
+msgstr "Item hinzufügen"
+
+#: ../plugins/portfolio.php:13
+msgid "Edit Item"
+msgstr "Item bearbeiten"
+
+#: ../plugins/portfolio.php:14
+msgid "New Item"
+msgstr "Neues Item"
+
+#: ../plugins/portfolio.php:15
+msgid "View Item"
+msgstr "Item anzeigen"
+
+#: ../plugins/portfolio.php:16
+msgid "Search Items"
+msgstr "Items suchen"
+
+#: ../plugins/portfolio.php:17
+msgid "No Items found"
+msgstr "Keine Items gefunden"
+
+#: ../plugins/portfolio.php:18
+msgid "No Items found in Trash"
+msgstr "Keine Items gefunden im Papierkorb"
+
+#: ../plugins/portfolio.php:64
+msgid "General Settings"
+msgstr "Haupteinstellungen"
+
+#: ../plugins/portfolio.php:73
+msgid "Portfolio Page"
+msgstr "Portfolio Seite"
+
+#: ../plugins/portfolio.php:73
+msgid "Internal Link"
+msgstr "Interner Link"
+
+#: ../plugins/portfolio.php:73
+msgid "Full-Size Image"
+msgstr "Volle Größe Bild"
+
+#: ../plugins/portfolio.php:73
+msgid "YouTube Video"
+msgstr "Youtube Video"
+
+#: ../plugins/portfolio.php:73
+#: ../plugins/shortcode_generator.php:541
+msgid "Vimeo Video"
+msgstr "Vimeo Video"
+
+#: ../plugins/portfolio.php:73
+msgid "Self-Hosted Video"
+msgstr "Selbst gehostetes Video"
+
+#: ../plugins/portfolio.php:76
+msgid "Alternative title (for portfolio overviews)"
+msgstr "Alterntaiver Titel (für Portfolio Übersicht)"
+
+#: ../plugins/portfolio.php:77
+msgid "Type of portfolio item"
+msgstr "Typ des Portfolio Items"
+
+#: ../plugins/portfolio.php:83
+msgid "Link to another page or video ID (for YouTube or Vimeo)"
+msgstr "Link zu einer anderen Seite oder Video-ID (YouTube oder Vimeo)"
+
+#: ../plugins/portfolio.php:176
+#: ../plugins/portfolio.php:306
+msgid "Share"
+msgstr "Teilen"
+
+#: ../plugins/portfolio.php:381
+#: ../plugins/portfolio.php:382
+msgid "Project Info / Contact Info / Custom Iconed Fields"
+msgstr "Projektinfo / Kontaktinfo / benutzerdefinierte \"Iconed Fields\""
+
+#: ../plugins/portfolio.php:391
+msgid "Project Preview"
+msgstr "Projektvorschau"
+
+#: ../plugins/portfolio.php:441
+msgid "Value"
+msgstr "Wert"
+
+#: ../plugins/portfolio.php:448
+msgid "Button URL"
+msgstr "Button URL"
+
+#: ../plugins/portfolio.php:449
+msgid "Button Text"
+msgstr "Button Text"
+
+#: ../plugins/shortcode_generator.php:36
+msgid "Accordion"
+msgstr "Akkordion"
+
+#: ../plugins/shortcode_generator.php:43
+msgid "No"
+msgstr "Nein"
+
+#: ../plugins/shortcode_generator.php:44
+msgid "Yes"
+msgstr "Ja"
+
+#: ../plugins/shortcode_generator.php:48
+msgid "Alert Box"
+msgstr "Alarmbox"
+
+#: ../plugins/shortcode_generator.php:61
+#: ../plugins/shortcode_generator.php:237
+#: ../plugins/shortcode_generator.php:263
+msgid "Icon Border Color"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:62
+#: ../plugins/shortcode_generator.php:238
+#: ../plugins/shortcode_generator.php:264
+msgid "Icon Background Color"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:63
+#: ../plugins/shortcode_generator.php:239
+#: ../plugins/shortcode_generator.php:265
+msgid "Icon Font Color"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:68
+msgid "Button"
+msgstr "Button"
+
+#: ../plugins/shortcode_generator.php:76
+msgid "Value for title attribute"
+msgstr "Wert für Titelattribut"
+
+#: ../plugins/shortcode_generator.php:77
+msgid "Value for target attribute"
+msgstr "Wert für Zielattribut"
+
+#: ../plugins/shortcode_generator.php:89
+msgid "Choose a set by entering clients set slug"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:92
+msgid "Clients Set Slug"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:93
+msgid "Filter disabled"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:98
+msgid "Divider"
+msgstr "Teiler"
+
+#: ../plugins/shortcode_generator.php:113
+msgid "Dropcap"
+msgstr "Dropcap"
+
+#: ../plugins/shortcode_generator.php:122
+#: ../plugins/shortcode_generator.php:441
+msgid "Border Color"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:124
+msgid "Font Color"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:128
+msgid "Four Columns"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:154
+#: ../plugins/shortcode_generator.php:377
+msgid "Below"
+msgstr "Unterhalb"
+
+#: ../plugins/shortcode_generator.php:157
+msgid "Gallery Post ID"
+msgstr "Galerie Post ID"
+
+#: ../plugins/shortcode_generator.php:159
+#: ../plugins/shortcode_generator.php:366
+msgid "Page Text Alignment"
+msgstr "Seitentext Fließrichtung"
+
+#: ../plugins/shortcode_generator.php:162
+msgid "Enter the gallery ID"
+msgstr "Galerie ID eingeben"
+
+#: ../plugins/shortcode_generator.php:163
+msgid "Choose the gallery type"
+msgstr "Galerie Typ eingeben"
+
+#: ../plugins/shortcode_generator.php:176
+msgid "Diagram"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:193
+msgid "Google Maps"
+msgstr "Google Maps"
+
+#: ../plugins/shortcode_generator.php:204
+msgid "Map width in pixels"
+msgstr "Kartenbreite in Pixel"
+
+#: ../plugins/shortcode_generator.php:205
+msgid "Map height in pixels"
+msgstr "Kartenhöhe in Pixel"
+
+#: ../plugins/shortcode_generator.php:206
+#, php-format
+msgid "Map latitude <a href=\"%s\">Find here</a>"
+msgstr "Karten-Breitengrad <a href=\"%s\">Find here</a>"
+
+#: ../plugins/shortcode_generator.php:207
+#, php-format
+msgid "Map longitude <a href=\"%s\">Find here</a>"
+msgstr "Karten-Längengrad <a href=\"%s\">Find here</a>"
+
+#: ../plugins/shortcode_generator.php:208
+msgid "Enter zoom number (1-16)"
+msgstr "Zoom-Grad eingeben (1-16)"
+
+#: ../plugins/shortcode_generator.php:212
+#: ../plugins/shortcode_generator.php:339
+#: ../plugins/shortcode_generator.php:526
+#: ../plugins/shortcode_generator.php:556
+msgid "Middle"
+msgstr "Mittel"
+
+#: ../plugins/shortcode_generator.php:243
+msgid "Icon With Text"
+msgstr "Icon mit Text"
+
+#: ../plugins/shortcode_generator.php:253
+#: ../plugins/shortcode_generator.php:492
+msgid "Default ( h5 )"
+msgstr "Standard ( h5 )"
+
+#: ../plugins/shortcode_generator.php:287
+msgid "Choose a set by entering portfolio set slug"
+msgstr "Wähle ein Set indem du den Slug des Portfolio-Sets eingibst"
+
+#: ../plugins/shortcode_generator.php:290
+msgid "Portfolio Set Slug"
+msgstr "Portfolio-Set Slug"
+
+#: ../plugins/shortcode_generator.php:309
+msgid "Choose a set by entering quickfinder set slug"
+msgstr "Wähle ein Set indem du den Slug des Qucikfinder-Sets eingibst"
+
+#: ../plugins/shortcode_generator.php:312
+msgid "Quickfinder Set Slug"
+msgstr "Quickfinder-Set Slug"
+
+#: ../plugins/shortcode_generator.php:317
+msgid "Quoted Text"
+msgstr "Zitierter Text"
+
+#: ../plugins/shortcode_generator.php:323
+msgid "Self-hosted Video"
+msgstr "Selbst gehostetes Video"
+
+#: ../plugins/shortcode_generator.php:333
+#: ../plugins/shortcode_generator.php:520
+#: ../plugins/shortcode_generator.php:550
+msgid "Video width in pixels"
+msgstr "Videobreite in Pixel"
+
+#: ../plugins/shortcode_generator.php:334
+#: ../plugins/shortcode_generator.php:521
+#: ../plugins/shortcode_generator.php:551
+msgid "Video height in pixels"
+msgstr "Video-Höhe in Pixel"
+
+#: ../plugins/shortcode_generator.php:335
+msgid "Video URL in mp4 or flv format"
+msgstr "Videoadresse in mp4 oder flv Format"
+
+#: ../plugins/shortcode_generator.php:354
+msgid "Styled Image"
+msgstr "Gestaltetes Bild"
+
+#: ../plugins/shortcode_generator.php:365
+msgid "Show lightbox with full-size image"
+msgstr "Lightbox mit full-size Bild anzeigen"
+
+#: ../plugins/shortcode_generator.php:367
+msgid "Choose Image"
+msgstr "Bild auswählen"
+
+#: ../plugins/shortcode_generator.php:370
+msgid "Image width in pixels"
+msgstr "Bildbreite in Pixel"
+
+#: ../plugins/shortcode_generator.php:371
+msgid "Image height in pixels"
+msgstr "Bildhöhe in Pixel"
+
+#: ../plugins/shortcode_generator.php:372
+msgid "Enter image URL"
+msgstr "Bildadresse eingeben"
+
+#: ../plugins/shortcode_generator.php:373
+msgid "Enter image Alt-text"
+msgstr "Bild-Alternativtext eingeben"
+
+#: ../plugins/shortcode_generator.php:392
+msgid "Styled List"
+msgstr "Styled Liste"
+
+#: ../plugins/shortcode_generator.php:399
+msgid "circle"
+msgstr "Kreis"
+
+#: ../plugins/shortcode_generator.php:400
+msgid "check"
+msgstr "Häkchen"
+
+#: ../plugins/shortcode_generator.php:401
+msgid "arrow"
+msgstr "Pfeil"
+
+#: ../plugins/shortcode_generator.php:402
+msgid "minus"
+msgstr "Minus"
+
+#: ../plugins/shortcode_generator.php:404
+msgid "Element 1"
+msgstr "Element 1"
+
+#: ../plugins/shortcode_generator.php:404
+msgid "Element 2"
+msgstr "Element 2"
+
+#: ../plugins/shortcode_generator.php:404
+msgid "Element 3"
+msgstr "Element 3"
+
+#: ../plugins/shortcode_generator.php:407
+msgid "Styled Table"
+msgstr "Styled Tabelle"
+
+#: ../plugins/shortcode_generator.php:412
+msgid "Title 1"
+msgstr "Titel 1"
+
+#: ../plugins/shortcode_generator.php:412
+msgid "Title 2"
+msgstr "Titel 2"
+
+#: ../plugins/shortcode_generator.php:412
+msgid "Title 3"
+msgstr "Titel 3"
+
+#: ../plugins/shortcode_generator.php:414
+msgid "Content 1 1"
+msgstr "Inhalt 1 1"
+
+#: ../plugins/shortcode_generator.php:414
+msgid "Content 1 2"
+msgstr "Inhalt 1 2"
+
+#: ../plugins/shortcode_generator.php:414
+msgid "Content 1 3"
+msgstr "Inhalt 1 3"
+
+#: ../plugins/shortcode_generator.php:415
+msgid "Content 2 1"
+msgstr "Inhalt 2 1"
+
+#: ../plugins/shortcode_generator.php:415
+msgid "Content 2 2"
+msgstr "Inhalt 2 2"
+
+#: ../plugins/shortcode_generator.php:415
+msgid "Content 2 3"
+msgstr "Inhalt 2 3"
+
+#: ../plugins/shortcode_generator.php:416
+msgid "Content 3 1"
+msgstr "Inhalt 3 1"
+
+#: ../plugins/shortcode_generator.php:416
+msgid "Content 3 2"
+msgstr "Inhalt 3 2"
+
+#: ../plugins/shortcode_generator.php:416
+msgid "Content 3 3"
+msgstr "Inhalt 3 3"
+
+#: ../plugins/shortcode_generator.php:420
+msgid "Styled Textbox"
+msgstr "Gestaltete Textbox"
+
+#: ../plugins/shortcode_generator.php:430
+#: ../plugins/shortcode_generator.php:431
+#: ../plugins/shortcode_generator.php:432
+#: ../plugins/shortcode_generator.php:433
+#: ../plugins/shortcode_generator.php:434
+msgid "Choose or enter color code, ex. #ffffff"
+msgstr "Wähle oder gebe Farbcode ein, bspw. #ffffff"
+
+#: ../plugins/shortcode_generator.php:437
+msgid "Title Background Color"
+msgstr "Titel Hintergrundfarbe"
+
+#: ../plugins/shortcode_generator.php:438
+msgid "Title Text Color"
+msgstr "Titel Textfarbe"
+
+#: ../plugins/shortcode_generator.php:439
+msgid "Content Background Color"
+msgstr "Inhalt Hintergrundfarbe"
+
+#: ../plugins/shortcode_generator.php:440
+msgid "Content Text Color"
+msgstr "Inhalt Textfarbe"
+
+#: ../plugins/shortcode_generator.php:444
+msgid "Enter content (can be normal text, HTML code or shortcode)"
+msgstr "Inhalt eingeben (kann normaler Test, HTML-Code oder ein Shortcode sein)"
+
+#: ../plugins/shortcode_generator.php:447
+msgid "Tabs"
+msgstr "Tabs"
+
+#: ../plugins/shortcode_generator.php:452
+msgid "Content 1"
+msgstr "Inhalt 1"
+
+#: ../plugins/shortcode_generator.php:453
+msgid "Content 2"
+msgstr "Inhalt 2"
+
+#: ../plugins/shortcode_generator.php:454
+msgid "Content 3"
+msgstr "Inhalt 3"
+
+#: ../plugins/shortcode_generator.php:466
+msgid "Team's Set"
+msgstr "Team-Set"
+
+#: ../plugins/shortcode_generator.php:470
+msgid "Enter slug of team's set"
+msgstr "Slug des Team-Set eingeben"
+
+#: ../plugins/shortcode_generator.php:471
+msgid "Enter title of team's block"
+msgstr "Titel des Team-Block eingeben"
+
+#: ../plugins/shortcode_generator.php:475
+msgid "Three Columns"
+msgstr "Drei Kollumnen"
+
+#: ../plugins/shortcode_generator.php:482
+msgid "Title With Icon"
+msgstr "Titel mit Icon"
+
+#: ../plugins/shortcode_generator.php:500
+msgid "Active"
+msgstr "Aktiv"
+
+#: ../plugins/shortcode_generator.php:504
+msgid "Two Columns"
+msgstr "Zwei Kollumnen"
+
+#: ../plugins/shortcode_generator.php:511
+msgid "Youtube Video"
+msgstr "Youtube Video"
+
+#: ../plugins/shortcode_generator.php:522
+msgid "Youtube video ID something like Js9Z8UQAA4E"
+msgstr "Youtube Video-ID, etwas wie Js9Z8UQAA4E"
+
+#: ../plugins/shortcode_generator.php:552
+msgid "Vimeo video ID something like 9380243"
+msgstr "Vimeo Video-ID, etwas wie 9380243"
+
+#: ../plugins/shortcode_generator.php:639
+msgid "Choose the shortcode from the list below and fill in the corresponding attributes &amp; values. After that click on \"Insert Shortcode\" and the generated shortcode will be automatically inserted in your content. Visit our demo website to see all shortcodes in action."
+msgstr "Wähle den Shortcode von der unteren Liste und fülle ihn mit den passenden Attributen &amp; Werten. Danach klicke auf \"Insert Shortcode\" und der Shortcode wird automatisiert in deinen Inhalt eingefügt. Besuche unsere demo Webseite um alle Shortcodes in Aktion zu sehen."
+
+#: ../plugins/shortcode_generator.php:642
+msgid "(no short code selected)"
+msgstr "(kein Shortcode ausgewählt)"
+
+#: ../plugins/shortcode_generator.php:687
+msgid "Your Content"
+msgstr "Dein Inhalt"
+
+#: ../plugins/shortcode_generator.php:811
+msgid "Insert Shortcode"
+msgstr "Shortcode einfügen"
+
+#: ../plugins/shortcode_generator.php:815
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: ../plugins/plugins.php:86
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../plugins/plugins.php:99
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: ../plugins/black-studio-tinymce-widget/black-studio-tinymce-widget.php:21
+msgid "Arbitrary text or HTML with visual editor"
+msgstr "Text oder HTML mit visüllem Editor"
+
+#: ../plugins/black-studio-tinymce-widget/black-studio-tinymce-widget.php:23
+msgid "Rich Text Editor / WYSIWYG"
+msgstr "Rich Text Editor / WYSIWYG"
+
+#: ../plugins/black-studio-tinymce-widget/black-studio-tinymce-widget.php:85
+msgid "HTML"
+msgstr "HTML"
+
+#: ../plugins/black-studio-tinymce-widget/black-studio-tinymce-widget.php:86
+msgid "Visual"
+msgstr "Visüll"
+
+#: ../plugins/wp-page-widget/wp-page-widgets.php:114
+msgid "Select an Image"
+msgstr "Ein Bild auswählen"
+
+#: ../plugins/wp-page-widget/wp-page-widgets.php:115
+msgid "Insert Into Widget"
+msgstr "Ins Widget einfügen"
+
+#: ../plugins/wp-page-widget/wp-page-widgets.php:256
+#: ../plugins/wp-page-widget/wp-page-widgets.php:315
+#: ../plugins/wp-page-widget/wp-page-widgets.php:443
+#: ../plugins/wp-page-widget/wp-page-widgets.php:498
+#: ../plugins/wp-page-widget/wp-page-widgets.php:576
+#: ../plugins/wp-page-widget/wp-page-widgets.php:633
+#: ../plugins/wp-page-widget/wp-page-widgets.php:712
+#: ../plugins/wp-page-widget/wp-page-widgets.php:770
+msgid "Inactive Widgets"
+msgstr "Inaktive Widgets"
+
+#: ../plugins/wp-page-widget/wp-page-widgets.php:300
+#: ../plugins/wp-page-widget/wp-page-widgets.php:483
+#: ../plugins/wp-page-widget/wp-page-widgets.php:618
+#: ../plugins/wp-page-widget/wp-page-widgets.php:755
+msgid "Available Widgets"
+msgstr "Verfügbare Widgets"
+
+#: ../plugins/wp-page-widget/wp-page-widgets.php:300
+#: ../plugins/wp-page-widget/wp-page-widgets.php:483
+#: ../plugins/wp-page-widget/wp-page-widgets.php:618
+#: ../plugins/wp-page-widget/wp-page-widgets.php:755
+msgid "Deactivate"
+msgstr "Deaktivieren"
+
+#: ../plugins/wp-page-widget/wp-page-widgets.php:303
+#: ../plugins/wp-page-widget/wp-page-widgets.php:486
+#: ../plugins/wp-page-widget/wp-page-widgets.php:621
+#: ../plugins/wp-page-widget/wp-page-widgets.php:758
+msgid "Drag widgets from here to a sidebar on the right to activate them. Drag widgets back here to deactivate them and delete their settings."
+msgstr "Ziehe Widgets von hier zu einer Sidebar auf der rechten Seite um sie zu aktivieren. Ziehe Widgets zurück um sie zu deaktiveren und ihre Einstellungen zu löschen."
+
+#: ../plugins/wp-page-widget/wp-page-widgets.php:330
+#: ../plugins/wp-page-widget/wp-page-widgets.php:512
+#: ../plugins/wp-page-widget/wp-page-widgets.php:647
+#: ../plugins/wp-page-widget/wp-page-widgets.php:784
+msgid "Drag widgets here to remove them from the sidebar but keep their settings."
+msgstr "Ziehe Widgets hierher um sie von der Sidebar zu entfernen, aber die Einstllungen beizubehalten."
+
+#: ../plugins/wp-page-widget/wp-page-widgets.php:1010
+msgid "An error has occured. Please reload the page and try again."
+msgstr "Ein Fehler ist aufgetreten. Bitte lade die Seite neu und versuche es nochmal."
+
+#: ../plugins/slideshow/slideshow.php:7
+#: ../plugins/slideshow/slideshow.php:8
+msgid "Slide"
+msgstr "Slide"
+
+#: ../plugins/slideshow/slideshow.php:10
+#: ../plugins/slideshow/slideshow.php:11
+msgid "Add New Slide"
+msgstr "Slide hinzufügen"
+
+#: ../plugins/slideshow/slideshow.php:12
+msgid "Edit Slide"
+msgstr "Slide bearbeiten"
+
+#: ../plugins/slideshow/slideshow.php:13
+msgid "New Slide"
+msgstr "Neues Slide"
+
+#: ../plugins/slideshow/slideshow.php:14
+msgid "View Slide"
+msgstr "Slide anzeigen"
+
+#: ../plugins/slideshow/slideshow.php:15
+msgid "Search Slides"
+msgstr "Slides durchsuchen"
+
+#: ../plugins/slideshow/slideshow.php:16
+msgid "No Slide found"
+msgstr "Kein Slide gefunden"
+
+#: ../plugins/slideshow/slideshow.php:17
+msgid "No Slide found in Trash"
+msgstr "Kein Slide gefunden in Papierkorb"
+
+#: ../plugins/slideshow/slideshow.php:38
+msgid "Search Slideshows"
+msgstr "Slideshows durchsuchen"
+
+#: ../plugins/slideshow/slideshow.php:39
+msgid "All Slideshows"
+msgstr "Alle Slideshows"
+
+#: ../plugins/slideshow/slideshow.php:40
+msgid "Parent Slideshow"
+msgstr "Mutterslideshow"
+
+#: ../plugins/slideshow/slideshow.php:41
+msgid "Parent Slideshow:"
+msgstr "Mutterslideshow:"
+
+#: ../plugins/slideshow/slideshow.php:42
+msgid "Edit Slideshow"
+msgstr "Slideshow bearbeiten"
+
+#: ../plugins/slideshow/slideshow.php:43
+msgid "Update Slideshow"
+msgstr "Slideshow updaten"
+
+#: ../plugins/slideshow/slideshow.php:44
+msgid "Add New Slideshow"
+msgstr "Neue Slideshow hinzufügen"
+
+#: ../plugins/slideshow/slideshow.php:45
+msgid "New Slideshow Name"
+msgstr "Neue Slideshow Name"
+
+#: ../plugins/slideshow/slideshow.php:63
+msgid "Slide Settings"
+msgstr "Slide Einstellungen"
+
+#: ../plugins/slideshow/slideshow.php:74
+msgid "Slide link"
+msgstr "Slide Link"
+
+#: ../plugins/slideshow/slideshow.php:75
+msgid "Slide text position"
+msgstr "Slide Textposition"
+
+#: ../plugins/video/video.php:34
+#, php-format
+msgid "Plugin \"JW Player for Flash & HTML5 Video\" is not active. Use this <a href=\"%s\">link</a> to activate it."
+msgstr "Plugin \"JW Player for Flash & HTML5 Video\" ist nicht aktiv. Nutze diesen <a href=\"%s\">Link</a> um es zu aktivieren."
+
+#: ../plugins/video/video.php:36
+#, php-format
+msgid "Plugin \"JW Player for Flash & HTML5 Video\" is not installed. Use this <a href=\"%s\">link</a> to install and activate it."
+msgstr "Plugin \"JW Player for Flash & HTML5 Video\" ist nicht installiert. Nutze diesen <a href=\"%s\">Link</a> um es zu installieren und zu aktivieren."
+
+#~ msgid "Mail (will not be published)"
+#~ msgstr "Mail (wird nicht angezeigt)"
+
+#~ msgid "Comment"
+#~ msgstr "Kommentar"
+
+#~ msgid "Slider Half-Width"
+#~ msgstr "Slider halbe Seite"
+
+#, fuzzy
+#~ msgid "Tags:"
+#~ msgstr "Tabs"
+
+#~ msgid "Blue"
+#~ msgstr "Blau"
+
+#~ msgid "Gray"
+#~ msgstr "Grau"
+
+#~ msgid "Portfolio Slider Arrow Background"
+#~ msgstr "Portfolio Slider Pfeil Hintergrund"
+
+#~ msgid "Pager Background"
+#~ msgstr "Pager Hintergrund"
+
+#~ msgid "Select backround color for active page in pager"
+#~ msgstr "Wähle Hintergrundfarbe für aktive Seite in Pager"
+
+#~ msgid "Pager Active Text"
+#~ msgstr "Pager aktiver Text"
+
+#~ msgid "Pager Arrow Background"
+#~ msgstr "Pager Pfeil Hintergrund"
+
+#~ msgid "Select background color for arrow icon in pager"
+#~ msgstr "Wähle Hintergrundfarbe für Pfeil-Icon in Pager"
+
+#~ msgid "Pager Arrow"
+#~ msgstr "Pager Pfeil"
+
+#~ msgid "Slideshow Options"
+#~ msgstr "Slideshow Optionen"
+
+#~ msgid "All fields are required."
+#~ msgstr "Alle Felder sind benötigt."
+
+#~ msgid "Your Name"
+#~ msgstr "Ihr Name"
+
+#~ msgid "Your Email"
+#~ msgstr "Ihre E-Mail"
+
+#~ msgid "Your Message"
+#~ msgstr "Ihre Nachricht"
+
+#~ msgid "Submit"
+#~ msgstr "Absenden"
+
+#~ msgid "Read more &raquo;"
+#~ msgstr "Weiterlesen &raquo;"
+
+#~ msgid "(Edit)"
+#~ msgstr "(editieren)"
+
+#~ msgid "Border With Shadow"
+#~ msgstr "Grenze mit Fenster"
+
+#~ msgid "disc"
+#~ msgstr "disc"
+
+#~ msgid "triangle"
+#~ msgstr "Triangel"
+
+#~ msgid "play"
+#~ msgstr "Play"
+
+#, fuzzy
+#~ msgid "Slide options"
+#~ msgstr "Slideshow Optionen"
+
+#, fuzzy
+#~ msgid "Image"
+#~ msgstr "Grafiklink"
+
+#, fuzzy
+#~ msgid "Thumbnail"
+#~ msgstr "Miniaturbildgröße"
+
+#, fuzzy
+#~ msgid "Slide delay"
+#~ msgstr "Slide Link"
+
+#, fuzzy
+#~ msgid "Slide transition"
+#~ msgstr "Slide Textposition"
+
+#, fuzzy
+#~ msgid "Transitions"
+#~ msgstr "Position"
+
+#, fuzzy
+#~ msgid "Direction"
+#~ msgstr "Beschreibung"
+
+#, fuzzy
+#~ msgid "right"
+#~ msgstr "Rechts"
+
+#, fuzzy
+#~ msgid "left"
+#~ msgstr "Links"
+
+#, fuzzy
+#~ msgid "Slide in"
+#~ msgstr "Slide Link"
+
+#, fuzzy
+#~ msgid "Duration"
+#~ msgstr "Beschreibung"
+
+#, fuzzy
+#~ msgid "Slide out"
+#~ msgstr "Slide"
+
+#, fuzzy
+#~ msgid "Delay out"
+#~ msgstr "News Layout"
+
+#, fuzzy
+#~ msgid "Link URL"
+#~ msgstr "Link"
+
+#, fuzzy
+#~ msgid "Misc"
+#~ msgstr "disc"
+
+#, fuzzy
+#~ msgid "Hidden"
+#~ msgstr "Mittel"
+
+#, fuzzy
+#~ msgid "Options"
+#~ msgstr "Footer Optionen"
+
+#, fuzzy
+#~ msgid "Style"
+#~ msgstr "Schriftstil"
+
+#, fuzzy
+#~ msgid "Div / Video"
+#~ msgstr "Teiler"
+
+#, fuzzy
+#~ msgid "Left (Slide from left)"
+#~ msgstr "Hole alle von der Schriftart."
+
+#, fuzzy
+#~ msgid "Delay"
+#~ msgstr "Play"
+
+#, fuzzy
+#~ msgid "Rotation"
+#~ msgstr "Position"
+
+#, fuzzy
+#~ msgid "Other options"
+#~ msgstr "Theme Optionen"
+
+#, fuzzy
+#~ msgid "Layout & Positions"
+#~ msgstr " Logo Position"
+
+#, fuzzy
+#~ msgid "Height"
+#~ msgstr "Rechts"
+
+#, fuzzy
+#~ msgid "Bottom"
+#~ msgstr "Button"
+
+#, fuzzy
+#~ msgid "Font"
+#~ msgstr "Schriftarten"
+
+#, fuzzy
+#~ msgid "Family"
+#~ msgstr "Schriftfamilie"
+
+#, fuzzy
+#~ msgid "Size"
+#~ msgstr "Slide"
+
+#, fuzzy
+#~ msgid "Line-height"
+#~ msgstr "Zeilenhöhe"
+
+#, fuzzy
+#~ msgid "Background"
+#~ msgstr "Hintergründe"
+
+#, fuzzy
+#~ msgid "Custom style settings"
+#~ msgstr "Style-Einstellungen zurücksetzen"
+
+#, fuzzy
+#~ msgid "Custom styles"
+#~ msgstr "Manülles CSS"
+
+#, fuzzy
+#~ msgid "Add new layer"
+#~ msgstr "Galerie hinzufügen"
+
+#, fuzzy
+#~ msgid "Edit this LayerSlider"
+#~ msgstr "Slide bearbeiten"
+
+#, fuzzy
+#~ msgid "Global Settings"
+#~ msgstr "Haupteinstellungen"
+
+#, fuzzy
+#~ msgid "Slides"
+#~ msgstr "Slide"
+
+#, fuzzy
+#~ msgid "Slider width"
+#~ msgstr "Slider ganze Breite"
+
+#, fuzzy
+#~ msgid "Slider height"
+#~ msgstr "Zeilenhöhe"
+
+#, fuzzy
+#~ msgid "The slider height in pixels."
+#~ msgstr "Video-Höhe in Pixel"
+
+#, fuzzy
+#~ msgid "Responsive"
+#~ msgstr "Enternen"
+
+#, fuzzy
+#~ msgid "Full-width slider"
+#~ msgstr "Volle Breite Layout"
+
+#, fuzzy
+#~ msgid "First slide"
+#~ msgstr "Slide bearbeiten"
+
+#, fuzzy
+#~ msgid "Random slideshow"
+#~ msgstr "Mutterslideshow"
+
+#, fuzzy
+#~ msgid "Two way slideshow"
+#~ msgstr "Neü Slideshow hinzufügen"
+
+#, fuzzy
+#~ msgid "Loops"
+#~ msgstr "Logo"
+
+#, fuzzy
+#~ msgid "Youtube preview"
+#~ msgstr "Youtube Video"
+
+#, fuzzy
+#~ msgid "Keyboard navigation"
+#~ msgstr "Einstellungen Navigation"
+
+#, fuzzy
+#~ msgid "Touch navigation"
+#~ msgstr "Einstellungen Navigation"
+
+#, fuzzy
+#~ msgid "Background color"
+#~ msgstr "Hintergrundfarben"
+
+#, fuzzy
+#~ msgid "Background image"
+#~ msgstr "Hintergrundbilder"
+
+#, fuzzy
+#~ msgid "Slider style"
+#~ msgstr "Slide Link"
+
+#, fuzzy
+#~ msgid "Navigation"
+#~ msgstr "Einstellungen Navigation"
+
+#, fuzzy
+#~ msgid "Show bar timer"
+#~ msgstr "Autor anzeigen"
+
+#, fuzzy
+#~ msgid "Thumbnail navigation"
+#~ msgstr "Miniaturbildgröße"
+
+#, fuzzy
+#~ msgid "Thumbnail width"
+#~ msgstr "Miniaturbildgröße"
+
+#, fuzzy
+#~ msgid "Thumbnail height"
+#~ msgstr "Miniaturbildgröße"
+
+#, fuzzy
+#~ msgid "Thumbnail container width"
+#~ msgstr "Miniaturbildgröße"
+
+#, fuzzy
+#~ msgid "Thumbnail active opacity"
+#~ msgstr "Miniaturbildgröße"
+
+#, fuzzy
+#~ msgid "Thumbnail inactive opacity"
+#~ msgstr "Miniaturbildgröße"
+
+#, fuzzy
+#~ msgid "The opacity of inactive thumbnails (0-100)."
+#~ msgstr "Beliebte Posts mit Miniaturgrafiken"
+
+#, fuzzy
+#~ msgid "Image preload"
+#~ msgstr "Grafiklink"
+
+#, fuzzy
+#~ msgid "YourLogo"
+#~ msgstr "Logo"
+
+#, fuzzy
+#~ msgid "Add new slide"
+#~ msgstr "Slide hinzufügen"
+
+#, fuzzy
+#~ msgid "Save changes"
+#~ msgstr "Änderungen speichern"
+
+#, fuzzy
+#~ msgid "Your changes has been saved!"
+#~ msgstr "Ihre Nachricht wurde versendet."
+
+#, fuzzy
+#~ msgid "Choose a skin:"
+#~ msgstr "Bild auswählen"
+
+#, fuzzy
+#~ msgid "Add New"
+#~ msgstr "Neüs Set hinzufügen"
+
+#, fuzzy
+#~ msgid "Actions"
+#~ msgstr "Akkordion"
+
+#, fuzzy
+#~ msgid "Stable"
+#~ msgstr "Styled Tabelle"
+
+#, fuzzy
+#~ msgid "Import Sliders"
+#~ msgstr "Einstellungen importieren"
+
+#, fuzzy
+#~ msgid "Export Sliders"
+#~ msgstr "Slide bearbeiten"
+
+#, fuzzy
+#~ msgid "Role"
+#~ msgstr "Enternen"
+
+#, fuzzy
+#~ msgid "Update"
+#~ msgstr "Set updaten"
+
+#, fuzzy
+#~ msgid "this page"
+#~ msgstr "Sätze pro Seite"
+
+#, fuzzy
+#~ msgid "Rows"
+#~ msgstr "Box Spalten"
+
+#, fuzzy
+#~ msgid "Cols"
+#~ msgstr "Farben"
+
+#, fuzzy
+#~ msgid "Tiles"
+#~ msgstr "Titel"
+
+#, fuzzy
+#~ msgid "Reverse"
+#~ msgstr "Enternen"
+
+#, fuzzy
+#~ msgid "The direction of rotation."
+#~ msgstr "Richtungs Navigation"
+
+#, fuzzy
+#~ msgid "After animation"
+#~ msgstr "Einstellungen Navigation"
+
+#, fuzzy
+#~ msgid "Transition"
+#~ msgstr "Position"
+
+#, fuzzy
+#~ msgid "Choose:"
+#~ msgstr "Bild auswählen"
+
+#, fuzzy
+#~ msgid "or"
+#~ msgstr "Formular"
+
+#, fuzzy
+#~ msgid "All Sliders"
+#~ msgstr "Alle Slides"
+
+#, fuzzy
+#~ msgid "Invalid shortcode"
+#~ msgstr "Shortcode einfügen"
+
+#, fuzzy
+#~ msgid "Slider not found"
+#~ msgstr "Kein Slide gefunden"
+
+#, fuzzy
+#~ msgid "Convert Data"
+#~ msgstr "Kontakte"
+
+#, fuzzy
+#~ msgid "Choose a slider:"
+#~ msgstr "Bild auswählen"
+
+#, fuzzy
+#~ msgid "Add new LayerSlider"
+#~ msgstr "Slide hinzufügen"
+
+#, fuzzy
+#~ msgid "auto"
+#~ msgstr "Button"
+
+#, fuzzy
+#~ msgid "always"
+#~ msgstr "Play"
+
+#~ msgid "<strong>XHTML:</strong> You can use these tags: <code>%s</code>"
+#~ msgstr ""
+#~ "<strong>XHTML:</strong> Du kannst diese Tags benutzen: <code>%s</code>"
+
+#~ msgid "Find here"
+#~ msgstr "Finde hier"
+
+#~ msgid "Quickfinder Image"
+#~ msgstr "Quickfinder Grafik"
+
+#~ msgid "Background Area is Completely Covered"
+#~ msgstr "Cover complete background area (no cloning)"
+
+#~ msgid "Regenerate Thumbnails"
+#~ msgstr "Miniaturbilder neu generieren"
+
+#~ msgid "Regen. Thumbnails"
+#~ msgstr "Miniaturbilder regenerieren"
+
+#~ msgid "Regenerate the thumbnails for this single image"
+#~ msgstr "Miniaturbild für dieses einzelne Bild regenerieren"
+
+#~ msgid "Cheatin&#8217; uh?"
+#~ msgstr "Schummeln&#8217; hm?"
+
+#~ msgid "Unable to find any images. Are you sure <a href='%s'>some exist</a>?"
+#~ msgstr ""
+#~ "Kann keine Bilder finden. Bist du sicher <a href='%s'>welche existieren</"
+#~ "a>?"
+
+#~ msgid ""
+#~ "Please be patient while the thumbnails are regenerated. This can take a "
+#~ "while if your server is slow (inexpensive hosting) or if you have many "
+#~ "images. Do not navigate away from this page until this script is done or "
+#~ "the thumbnails will not be resized. You will be notified via this page "
+#~ "when the regenerating is completed."
+#~ msgstr ""
+#~ "Bitte Geduld während Miniaturbilder generiert werden. Dies kann eine "
+#~ "Weile daürn wenn der Server langsam ist oder es viele Bilder sind. "
+#~ "Navigiere nicht von dieser Seite weg bis das Script fertig ist. "
+#~ "Andernfalls werden die Miniaturbilder nicht generiert. Du wirst auf "
+#~ "dieser Seite informiert, wenn der Prozess abgeschlossen ist."
+
+#~ msgid "To go back to the previous page, <a href=\"%s\">click here</a>."
+#~ msgstr ""
+#~ "Um zur vorherigen Seite zurück zu gehen, <a href=\"%s\">klicke hier</a>."
+
+#~ msgid ""
+#~ "All done! %1$s image(s) were successfully resized in %2$s seconds and "
+#~ "there were %3$s failure(s). To try regenerating the failed images again, "
+#~ "<a href=\"%4$s\">click here</a>. %5$s"
+#~ msgstr ""
+#~ "Alles getan! %1$s Bilder wurden generiert in %2$s Sekunden und es gab %3"
+#~ "$s Fehler. Um die fehlgeschlagenen Bilder neu zu generieren, <a href=\"%4"
+#~ "$s\">klicke hier</a>. %5$s"
+
+#~ msgid ""
+#~ "All done! %1$s image(s) were successfully resized in %2$s seconds and "
+#~ "there were 0 failures. %3$s"
+#~ msgstr ""
+#~ "Alles getan! %1$s Bilder wurden erfolgreich generiert in %2$s Sekunden "
+#~ "und es gab 0 Fehler. %3$s"
+
+#~ msgid "You must enable Javascript in order to proceed!"
+#~ msgstr "Du musst Javascript aktivieren um fortzufahren!"
+
+#~ msgid "Abort Resizing Images"
+#~ msgstr "Generieren abbrechen"
+
+#~ msgid "Debugging Information"
+#~ msgstr "Debug-Informationen"
+
+#~ msgid "Total Images: %s"
+#~ msgstr "Gesamte Bilder: %s"
+
+#~ msgid "Images Resized: %s"
+#~ msgstr "Images Resized: %s"
+
+#~ msgid "Resize Failures: %s"
+#~ msgstr "Generations Fehler: %s"
+
+#~ msgid "Stopping..."
+#~ msgstr "Abbruch..."
+
+#~ msgid ""
+#~ "The resize request was abnormally terminated (ID %s). This is likely due "
+#~ "to the image exceeding available memory or some other type of fatal error."
+#~ msgstr ""
+#~ "Die Generierungs-Anfrage wurde abnormal terminiert (ID %s). Dies kann "
+#~ "passieren, wenn nicht genug Memory zur Verfügung steht oder ein anderer "
+#~ "Fehler auftritt."
+
+#~ msgid ""
+#~ "Use this tool to regenerate thumbnails for all images that you have "
+#~ "uploaded to your blog. This is useful if you've changed any of the "
+#~ "thumbnail dimensions on the <a href='%s'>media settings page</a>. Old "
+#~ "thumbnails will be kept to avoid any broken images due to hard-coded URLs."
+#~ msgstr ""
+#~ "Nutze dieses Tool um die für alle Bilder, die jemals auf den Blog geladen "
+#~ "wurden, Miniaturbilder zu regenerieren. Das ist nützlich wenn du die "
+#~ "Abmessungen der Miniaturbilder in den <a href='%s'>Einstellungen</a> "
+#~ "geändert hast. Alte Miniaturbilder werden behalten um keine toten Links "
+#~ "bei Hartkodierten URLs zu erzeugen."
+
+#~ msgid ""
+#~ "You can regenerate specific images (rather than all images) from the <a "
+#~ "href='%s'>Media</a> page. Hover over an image's row and click the link to "
+#~ "resize just that one image or use the checkboxes and the &quot;Bulk "
+#~ "Actions&quot; dropdown to resize multiple images (WordPress 3.1+ only)."
+#~ msgstr ""
+#~ "Du kannst spezifische Bilder regenerieren, und zwar auf der <a href='%"
+#~ "s'>Medienseite</a>. Hover über ein Bild und klicke den Link um das "
+#~ "einzelne Bild zu regenerieren. Nutze die Massen-Einstellungs-Funktion um "
+#~ "mehrere ausgewählte Bilder zu generieren."
+
+#~ msgid ""
+#~ "Thumbnail regeneration is not reversible, but you can just change your "
+#~ "thumbnail dimensions back to the old values and click the button again if "
+#~ "you don't like the results."
+#~ msgstr ""
+#~ "Miniaturbild-Generation ist nicht rückkehrbar, aber du kannst einfach "
+#~ "deine Miniaturbild-Abmessungen zu den alten Werten zurücksetzen und den "
+#~ "Button wieder klicken, wenn du die Ergebnisse nicht magst."
+
+#~ msgid "To begin, just press the button below."
+#~ msgstr "Um zu beginnen, klicke einfach den unterhalb befindlichen Button."
+
+#~ msgid "Regenerate All Thumbnails"
+#~ msgstr "Miniaturbilder regenerieren"
+
+#~ msgid "Failed resize: %s is an invalid image ID."
+#~ msgstr "Fehler beim generieren von %s - ist eine invalide Bild-ID."
+
+#~ msgid "Your user account doesn't have permission to resize images"
+#~ msgstr "Dein User-Account hat nicht die Erlaubnis Bilder neu zu generieren."
+
+#~ msgid "The originally uploaded image file cannot be found at %s"
+#~ msgstr ""
+#~ "Das originale, hochgeladene Bild kann nicht gefunden werden unter %s"
+
+#~ msgid "Unknown failure reason."
+#~ msgstr "Unbekannte Fehlerqülle"
+
+#~ msgid "&quot;%1$s&quot; (ID %2$s) was successfully resized in %3$s seconds."
+#~ msgstr ""
+#~ "&quot;%1$s&quot; (ID %2$s) wurde erfolgreich generiert in %3$s Sekunden."
+
+#~ msgid ""
+#~ "&quot;%1$s&quot; (ID %2$s) failed to resize. The error message was: %3$s"
+#~ msgstr ""
+#~ "&quot;%1$s&quot; (ID %2$s) Fehler beim generieren. Der Fehler war: %3$s"
+
+#~ msgid ""
+#~ "Select your homepage content using <a href=\"%s\">Home Constructor</a> or "
+#~ "load demo content to see homepage example."
+#~ msgstr ""
+#~ "Wähle deinen Homepage-Inhalt mit dem <a href=\"%s\">Home Constructor</a> "
+#~ "oder lade Demoinhalt um das Homepage-Beispiel zu sehen."

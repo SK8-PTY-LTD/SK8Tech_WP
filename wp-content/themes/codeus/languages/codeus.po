@@ -1,0 +1,3361 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Codex Themes\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-27 15:00+0300\n"
+"PO-Revision-Date: 2014-03-27 15:00+0300\n"
+"Last-Translator: \n"
+"Language-Team: Codex Themes\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n;_ex\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../page_blog_sidebar_left.php:69
+#: ../page_blog.php:60
+#: ../page.php:63
+#: ../page_sidebar.php:70
+#: ../single-codeus_portfolios.php:74
+#: ../page_sidebar_left.php:69
+msgid "Pages:"
+msgstr ""
+
+#: ../search.php:17
+msgid "Nothing Found"
+msgstr ""
+
+#: ../search.php:50
+msgid "Sorry, but nothing matched your search terms. Please try again with different keywords."
+msgstr ""
+
+#: ../comments.php:8
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: ../comments.php:22
+msgid "COMMENTS"
+msgstr ""
+
+#: ../comments.php:22
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: ../comments.php:44
+msgid "Comments are closed."
+msgstr ""
+
+#: ../comments.php:60
+msgid "Name"
+msgstr ""
+
+#: ../comments.php:60
+#: ../comments.php:61
+msgid " <b>(required)</b>"
+msgstr ""
+
+#: ../comments.php:61
+msgid "Mail"
+msgstr ""
+
+#: ../comments.php:62
+msgid "Website"
+msgstr ""
+
+#: ../comments.php:67
+#: ../comments.php:72
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: ../comments.php:68
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>."
+msgstr ""
+
+#: ../comments.php:68
+msgid "Log out &raquo;"
+msgstr ""
+
+#: ../comments.php:69
+msgid "Send"
+msgstr ""
+
+#: ../comments.php:70
+msgid "Leave a reply"
+msgstr ""
+
+#: ../comments.php:71
+#, php-format
+msgid "Comment to %s"
+msgstr ""
+
+#: ../home.php:74
+msgid "Codeus Multi-Purpose Theme"
+msgstr ""
+
+#: ../home.php:77
+#, php-format
+msgid "Log in to <a href=\"%s\">wordpress</a> admin and set up your starting page using <a href=\"%s\">Home Constructor</a>."
+msgstr ""
+
+#: ../home.php:79
+msgid "Please refer to Codeus documentation <b>(Getting Started &mdash; Setting Up Homepage)</b> in order to learn how to use Home Constructor."
+msgstr ""
+
+#: ../home.php:81
+msgid "Additionally you can use demo content included in Codeus to quickly setup a demo of your starting page."
+msgstr ""
+
+#: ../header.php:57
+msgid "Menu"
+msgstr ""
+
+#: ../functions.php:15
+msgid "Primary Menu"
+msgstr ""
+
+#: ../functions.php:16
+msgid "Footer Menu"
+msgstr ""
+
+#: ../functions.php:137
+msgid "Page Sidebar"
+msgstr ""
+
+#: ../functions.php:139
+#: ../functions.php:148
+msgid "Appears on posts and pages except the optional Front Page template, which has its own widgets"
+msgstr ""
+
+#: ../functions.php:146
+msgid "Blog Post Sidebar"
+msgstr ""
+
+#: ../functions.php:161
+msgid "Theme options"
+msgstr ""
+
+#: ../functions.php:185
+msgid "Get all from font."
+msgstr ""
+
+#: ../functions.php:187
+msgid "et colors, backgrounds and fonts options to default?"
+msgstr ""
+
+#: ../functions.php:188
+msgid "Update backup data?"
+msgstr ""
+
+#: ../functions.php:189
+msgid "Restore settings from backup data?"
+msgstr ""
+
+#: ../functions.php:190
+msgid "Import settings?"
+msgstr ""
+
+#: ../functions.php:209
+#: ../functions.php:282
+msgid "Save Changes"
+msgstr ""
+
+#: ../functions.php:219
+msgid "Backup"
+msgstr ""
+
+#: ../functions.php:249
+msgid "Backup and Restore Theme Settings"
+msgstr ""
+
+#: ../functions.php:252
+msgid "If you would like to experiment with the settings of your theme and don't want to loose your previous settings, use the \"Backup Settings\"-button to backup your current theme options. You can restore these options later using the button \"Restore Settings\"."
+msgstr ""
+
+#: ../functions.php:254
+#: ../functions.php:256
+msgid "Last backup"
+msgstr ""
+
+#: ../functions.php:256
+msgid "No backups yet"
+msgstr ""
+
+#: ../functions.php:259
+msgid "Backup Settings"
+msgstr ""
+
+#: ../functions.php:260
+msgid "Restore Settings"
+msgstr ""
+
+#: ../functions.php:264
+msgid "In order to apply the settings of another Codeus theme used in a different install just copy and paste the settings in the text box and click on \"Import Settings\"."
+msgstr ""
+
+#: ../functions.php:270
+msgid "Import Settings"
+msgstr ""
+
+#: ../functions.php:282
+msgid "Reset Style Settings"
+msgstr ""
+
+#: ../functions.php:375
+msgid "Fonts Manager"
+msgstr ""
+
+#: ../functions.php:392
+msgid "Font Manager"
+msgstr ""
+
+#: ../functions.php:396
+#: ../functions.php:425
+msgid "Remove"
+msgstr ""
+
+#: ../functions.php:398
+#: ../functions.php:427
+msgid "Font name"
+msgstr ""
+
+#: ../functions.php:402
+#: ../functions.php:431
+msgid "Font file EOT url"
+msgstr ""
+
+#: ../functions.php:406
+#: ../functions.php:435
+msgid "Font file SVG url"
+msgstr ""
+
+#: ../functions.php:410
+#: ../functions.php:439
+msgid "ID inside SVG"
+msgstr ""
+
+#: ../functions.php:414
+#: ../functions.php:443
+msgid "Font file TTF url"
+msgstr ""
+
+#: ../functions.php:418
+#: ../functions.php:447
+msgid "Font file WOFF url"
+msgstr ""
+
+#: ../functions.php:453
+msgid "+ Add new"
+msgstr ""
+
+#: ../functions.php:454
+msgid "Save"
+msgstr ""
+
+#: ../functions.php:508
+msgid "Page Slideshow"
+msgstr ""
+
+#: ../functions.php:509
+msgid "Page Quickfinder"
+msgstr ""
+
+#: ../functions.php:510
+msgid "Page Portfolio"
+msgstr ""
+
+#: ../functions.php:511
+msgid "Page Gallery"
+msgstr ""
+
+#: ../functions.php:512
+#: ../functions.php:518
+msgid "Page Title"
+msgstr ""
+
+#: ../functions.php:513
+#: ../functions.php:519
+msgid "Lazy Loading Options"
+msgstr ""
+
+#: ../functions.php:514
+msgid "Slideshow"
+msgstr ""
+
+#: ../functions.php:515
+msgid "Quickfinder"
+msgstr ""
+
+#: ../functions.php:516
+msgid "Additional Portfolio Sets"
+msgstr ""
+
+#: ../functions.php:517
+msgid "Gallery"
+msgstr ""
+
+#: ../functions.php:537
+msgid "Slideshow Type"
+msgstr ""
+
+#: ../functions.php:539
+msgid "NivoSlider"
+msgstr ""
+
+#: ../functions.php:540
+msgid "LayerSlider"
+msgstr ""
+
+#: ../functions.php:544
+#: ../functions.php:558
+msgid "Select Slideshow"
+msgstr ""
+
+#: ../functions.php:546
+#: ../functions.php:560
+#: ../functions.php:591
+#: ../functions.php:624
+#: ../functions.php:671
+msgid "None"
+msgstr ""
+
+#: ../functions.php:547
+msgid "All Slides"
+msgstr ""
+
+#: ../functions.php:553
+#: ../functions.php:566
+msgid "No slideshows found."
+msgstr ""
+
+#: ../functions.php:591
+msgid "Quickfinder bar above"
+msgstr ""
+
+#: ../functions.php:591
+#: ../functions.php:624
+msgid "Inside content"
+msgstr ""
+
+#: ../functions.php:591
+msgid "Quickfinder bar below"
+msgstr ""
+
+#: ../functions.php:595
+msgid "Quickfinder position"
+msgstr ""
+
+#: ../functions.php:604
+msgid "Select Quickfinder"
+msgstr ""
+
+#: ../functions.php:624
+msgid "Slider-bar above"
+msgstr ""
+
+#: ../functions.php:624
+msgid "Slider-bar below"
+msgstr ""
+
+#: ../functions.php:626
+msgid "Small Thumbs (222 x 177)"
+msgstr ""
+
+#: ../functions.php:626
+msgid "Medium Thumbs (302 x 207)"
+msgstr ""
+
+#: ../functions.php:626
+msgid "Big Thumbs (464 x 306)"
+msgstr ""
+
+#: ../functions.php:626
+msgid "One column list"
+msgstr ""
+
+#: ../functions.php:633
+msgid "Portfolio position"
+msgstr ""
+
+#: ../functions.php:639
+msgid "Thumbnail size"
+msgstr ""
+
+#: ../functions.php:645
+msgid "Items per page"
+msgstr ""
+
+#: ../functions.php:647
+msgid "Title"
+msgstr ""
+
+#: ../functions.php:652
+msgid "Select Portfolios"
+msgstr ""
+
+#: ../functions.php:653
+msgid "Select all"
+msgstr ""
+
+#: ../functions.php:658
+msgid "Activate Filter"
+msgstr ""
+
+#: ../functions.php:671
+msgid "Gallery above"
+msgstr ""
+
+#: ../functions.php:671
+msgid "Gallery below"
+msgstr ""
+
+#: ../functions.php:673
+msgid "For Full-Width Pages"
+msgstr ""
+
+#: ../functions.php:673
+msgid "For Sidebar Pages"
+msgstr ""
+
+#: ../functions.php:673
+msgid "Small Thumbs"
+msgstr ""
+
+#: ../functions.php:673
+msgid "Medium Thumbs"
+msgstr ""
+
+#: ../functions.php:676
+msgid "without border"
+msgstr ""
+
+#: ../functions.php:677
+msgid "1px no margin"
+msgstr ""
+
+#: ../functions.php:678
+msgid "dark gray"
+msgstr ""
+
+#: ../functions.php:679
+msgid "light gray"
+msgstr ""
+
+#: ../functions.php:680
+msgid "shadow"
+msgstr ""
+
+#: ../functions.php:681
+msgid "shadowed border"
+msgstr ""
+
+#: ../functions.php:682
+msgid "1px with margin"
+msgstr ""
+
+#: ../functions.php:688
+msgid "Gallery position"
+msgstr ""
+
+#: ../functions.php:694
+msgid "Gallery type"
+msgstr ""
+
+#: ../functions.php:703
+msgid "Select Gallery"
+msgstr ""
+
+#: ../functions.php:710
+msgid "Select Style"
+msgstr ""
+
+#: ../functions.php:729
+msgid "Background Image"
+msgstr ""
+
+#: ../functions.php:736
+msgid "Background Color"
+msgstr ""
+
+#: ../functions.php:738
+msgid "Main Text Color"
+msgstr ""
+
+#: ../functions.php:740
+msgid "Excerpt Color"
+msgstr ""
+
+#: ../functions.php:765
+msgid "Lazy loading enabled"
+msgstr ""
+
+#: ../functions.php:1050
+msgid "Prev"
+msgstr ""
+
+#: ../functions.php:1060
+msgid "Next"
+msgstr ""
+
+#: ../single.php:57
+msgid "<span class=\"sep\">|</span>"
+msgstr ""
+
+#: ../single.php:66
+msgid "Previous post"
+msgstr ""
+
+#: ../single.php:67
+msgid "Next post"
+msgstr ""
+
+#: ../single.php:75
+msgid "Related Posts"
+msgstr ""
+
+#: ../footer.php:14
+msgid "Follow Us"
+msgstr ""
+
+#: ../footer.php:31
+msgid "Contact Us"
+msgstr ""
+
+#: ../options.php:6
+msgid "General"
+msgstr ""
+
+#: ../options.php:9
+msgid "Theme Color Skin"
+msgstr ""
+
+#: ../options.php:12
+msgid "Page Color Style"
+msgstr ""
+
+#: ../options.php:15
+msgid "Light"
+msgstr ""
+
+#: ../options.php:16
+msgid "Dark"
+msgstr ""
+
+#: ../options.php:19
+msgid "Select theme color style"
+msgstr ""
+
+#: ../options.php:24
+msgid "Theme Layout"
+msgstr ""
+
+#: ../options.php:27
+msgid "Page Layout Style"
+msgstr ""
+
+#: ../options.php:30
+msgid "Fullwidth Layout"
+msgstr ""
+
+#: ../options.php:31
+msgid "Boxed Layout"
+msgstr ""
+
+#: ../options.php:34
+msgid "Select theme layout style"
+msgstr ""
+
+#: ../options.php:39
+msgid "Identity"
+msgstr ""
+
+#: ../options.php:42
+msgid "Logo"
+msgstr ""
+
+#: ../options.php:45
+#: ../options.php:51
+msgid "Upload or select image file for your logo"
+msgstr ""
+
+#: ../options.php:48
+msgid "Small Logo"
+msgstr ""
+
+#: ../options.php:54
+msgid "Logo Position"
+msgstr ""
+
+#: ../options.php:57
+msgid "Left"
+msgstr ""
+
+#: ../options.php:58
+msgid "Right"
+msgstr ""
+
+#: ../options.php:61
+msgid "Select position of your logo in website header"
+msgstr ""
+
+#: ../options.php:64
+msgid "Favicon"
+msgstr ""
+
+#: ../options.php:66
+msgid "Upload or select file for your favicon"
+msgstr ""
+
+#: ../options.php:71
+msgid "Advanced"
+msgstr ""
+
+#: ../options.php:74
+msgid "Custom CSS"
+msgstr ""
+
+#: ../options.php:76
+msgid "Type your custom css here, which you would like to add to theme's css (or overwrite it)"
+msgstr ""
+
+#: ../options.php:79
+msgid "Google Analytics Code"
+msgstr ""
+
+#: ../options.php:81
+msgid "Paste your tracking code here (Google Analytics or others)"
+msgstr ""
+
+#: ../options.php:89
+msgid "Fonts"
+msgstr ""
+
+#: ../options.php:92
+msgid "Google Fonts"
+msgstr ""
+
+#: ../options.php:95
+msgid "Google Fonts File"
+msgstr ""
+
+#: ../options.php:97
+msgid "Upload or select you own google fonts file if you would like to use a different version than the theme's default"
+msgstr ""
+
+#: ../options.php:102
+msgid "Main Menu Font"
+msgstr ""
+
+#: ../options.php:105
+#: ../options.php:142
+#: ../options.php:179
+#: ../options.php:216
+#: ../options.php:253
+#: ../options.php:290
+#: ../options.php:327
+#: ../options.php:364
+#: ../options.php:401
+#: ../options.php:438
+#: ../options.php:475
+#: ../options.php:512
+#: ../options.php:549
+#: ../options.php:586
+#: ../options.php:623
+#: ../options.php:660
+#: ../options.php:697
+#: ../options.php:734
+#: ../options.php:771
+msgid "Font Family"
+msgstr ""
+
+#: ../options.php:107
+#: ../options.php:144
+#: ../options.php:181
+#: ../options.php:218
+#: ../options.php:255
+#: ../options.php:292
+#: ../options.php:329
+#: ../options.php:366
+#: ../options.php:403
+#: ../options.php:440
+#: ../options.php:477
+#: ../options.php:514
+#: ../options.php:551
+#: ../options.php:588
+#: ../options.php:625
+#: ../options.php:662
+#: ../options.php:699
+#: ../options.php:736
+#: ../options.php:773
+msgid "Select font family you would like to use. On the top of the fonts list you'll find web safe fonts"
+msgstr ""
+
+#: ../options.php:110
+#: ../options.php:147
+#: ../options.php:184
+#: ../options.php:221
+#: ../options.php:258
+#: ../options.php:295
+#: ../options.php:332
+#: ../options.php:369
+#: ../options.php:406
+#: ../options.php:443
+#: ../options.php:480
+#: ../options.php:517
+#: ../options.php:554
+#: ../options.php:591
+#: ../options.php:628
+#: ../options.php:665
+#: ../options.php:702
+#: ../options.php:739
+#: ../options.php:776
+msgid "Font Style"
+msgstr ""
+
+#: ../options.php:112
+#: ../options.php:149
+#: ../options.php:186
+#: ../options.php:223
+#: ../options.php:260
+#: ../options.php:297
+#: ../options.php:334
+#: ../options.php:371
+#: ../options.php:408
+#: ../options.php:445
+#: ../options.php:482
+#: ../options.php:519
+#: ../options.php:556
+#: ../options.php:593
+#: ../options.php:630
+#: ../options.php:667
+#: ../options.php:704
+#: ../options.php:741
+#: ../options.php:778
+msgid "Select font style for your font"
+msgstr ""
+
+#: ../options.php:115
+#: ../options.php:152
+#: ../options.php:189
+#: ../options.php:226
+#: ../options.php:263
+#: ../options.php:300
+#: ../options.php:337
+#: ../options.php:374
+#: ../options.php:411
+#: ../options.php:448
+#: ../options.php:485
+#: ../options.php:522
+#: ../options.php:559
+#: ../options.php:596
+#: ../options.php:633
+#: ../options.php:670
+#: ../options.php:707
+#: ../options.php:744
+#: ../options.php:781
+msgid "Font Sets"
+msgstr ""
+
+#: ../options.php:117
+#: ../options.php:154
+#: ../options.php:191
+#: ../options.php:228
+#: ../options.php:265
+#: ../options.php:302
+#: ../options.php:339
+#: ../options.php:376
+#: ../options.php:413
+#: ../options.php:450
+#: ../options.php:487
+#: ../options.php:524
+#: ../options.php:561
+#: ../options.php:598
+#: ../options.php:635
+#: ../options.php:672
+#: ../options.php:709
+#: ../options.php:746
+#: ../options.php:783
+msgid "Type in or load additional font sets which you would like to use with your chosen google font (latin-ext is loaded by default)"
+msgstr ""
+
+#: ../options.php:121
+#: ../options.php:158
+#: ../options.php:195
+#: ../options.php:232
+#: ../options.php:269
+#: ../options.php:306
+#: ../options.php:343
+#: ../options.php:380
+#: ../options.php:417
+#: ../options.php:454
+#: ../options.php:491
+#: ../options.php:528
+#: ../options.php:565
+#: ../options.php:602
+#: ../options.php:639
+#: ../options.php:676
+#: ../options.php:713
+#: ../options.php:750
+#: ../options.php:787
+msgid "Font Size"
+msgstr ""
+
+#: ../options.php:122
+#: ../options.php:159
+#: ../options.php:196
+#: ../options.php:233
+#: ../options.php:270
+#: ../options.php:307
+#: ../options.php:344
+#: ../options.php:381
+#: ../options.php:418
+#: ../options.php:455
+#: ../options.php:492
+#: ../options.php:529
+#: ../options.php:566
+#: ../options.php:603
+#: ../options.php:640
+#: ../options.php:677
+#: ../options.php:714
+#: ../options.php:751
+#: ../options.php:788
+msgid "Select the font size"
+msgstr ""
+
+#: ../options.php:129
+#: ../options.php:166
+#: ../options.php:203
+#: ../options.php:240
+#: ../options.php:277
+#: ../options.php:314
+#: ../options.php:351
+#: ../options.php:388
+#: ../options.php:425
+#: ../options.php:462
+#: ../options.php:499
+#: ../options.php:536
+#: ../options.php:573
+#: ../options.php:610
+#: ../options.php:647
+#: ../options.php:684
+#: ../options.php:721
+#: ../options.php:758
+#: ../options.php:795
+msgid "Line Height"
+msgstr ""
+
+#: ../options.php:130
+#: ../options.php:167
+#: ../options.php:204
+#: ../options.php:241
+#: ../options.php:278
+#: ../options.php:315
+#: ../options.php:352
+#: ../options.php:389
+#: ../options.php:426
+#: ../options.php:463
+#: ../options.php:500
+#: ../options.php:537
+#: ../options.php:574
+#: ../options.php:611
+#: ../options.php:648
+#: ../options.php:685
+#: ../options.php:722
+#: ../options.php:759
+#: ../options.php:796
+msgid "Select the line height"
+msgstr ""
+
+#: ../options.php:139
+msgid "Submenu Font"
+msgstr ""
+
+#: ../options.php:176
+msgid "H1 Font"
+msgstr ""
+
+#: ../options.php:213
+msgid "H2 Font"
+msgstr ""
+
+#: ../options.php:250
+msgid "H3 Font"
+msgstr ""
+
+#: ../options.php:287
+msgid "H4 Font"
+msgstr ""
+
+#: ../options.php:324
+msgid "H5 Font"
+msgstr ""
+
+#: ../options.php:361
+msgid "H6 Font"
+msgstr ""
+
+#: ../options.php:398
+msgid "Body Font"
+msgstr ""
+
+#: ../options.php:435
+msgid "Widget Tile Font"
+msgstr ""
+
+#: ../options.php:472
+msgid "Button Font"
+msgstr ""
+
+#: ../options.php:509
+msgid "Slideshow Title Font"
+msgstr ""
+
+#: ../options.php:546
+msgid "Slideshow Description Font"
+msgstr ""
+
+#: ../options.php:583
+msgid "Portfolio Title Font"
+msgstr ""
+
+#: ../options.php:620
+msgid "Portfolio Description Font"
+msgstr ""
+
+#: ../options.php:657
+msgid "Quickfinder Title Font"
+msgstr ""
+
+#: ../options.php:694
+msgid "Quickfinder Description Font"
+msgstr ""
+
+#: ../options.php:731
+msgid "Gallery Title Font"
+msgstr ""
+
+#: ../options.php:768
+msgid "Gallery Description Font"
+msgstr ""
+
+#: ../options.php:808
+msgid "Colors"
+msgstr ""
+
+#: ../options.php:811
+msgid "Background Colors"
+msgstr ""
+
+#: ../options.php:814
+msgid "Background Color For Boxed Layout"
+msgstr ""
+
+#: ../options.php:816
+msgid "Select website's backround color in boxed layout"
+msgstr ""
+
+#: ../options.php:819
+msgid "Basic background color for website"
+msgstr ""
+
+#: ../options.php:821
+msgid "Basic background color is the continuous background color underlaying the whole webpage. By default it is visible for example in slideshow area, quickfinder area, portfolio-slider"
+msgstr ""
+
+#: ../options.php:824
+msgid "Top Background Color"
+msgstr ""
+
+#: ../options.php:826
+msgid "Select color for website's top background"
+msgstr ""
+
+#: ../options.php:829
+msgid "Main Content Background Color"
+msgstr ""
+
+#: ../options.php:831
+msgid "Select color for website's main content background"
+msgstr ""
+
+#: ../options.php:834
+msgid "Contact Background Color"
+msgstr ""
+
+#: ../options.php:836
+msgid "Select color contact us & follow us bar at website's bottom"
+msgstr ""
+
+#: ../options.php:839
+msgid "Footer Background Color"
+msgstr ""
+
+#: ../options.php:841
+msgid "Select color footer bar at website's bottom"
+msgstr ""
+
+#: ../options.php:844
+msgid "Styled Element Default Background Color"
+msgstr ""
+
+#: ../options.php:846
+msgid "Default background color which is used in following elements: text boxes, alert boxes, tables, news, tabs, galleries, rounded backgrounds in testimonials, recent posts, author block"
+msgstr ""
+
+#: ../options.php:849
+msgid "Divider Default Color"
+msgstr ""
+
+#: ../options.php:851
+msgid "Default color for dividers used in theme: content dividers, widget dividers, blog & news posts dividers etc."
+msgstr ""
+
+#: ../options.php:854
+msgid "Image Box Border Color"
+msgstr ""
+
+#: ../options.php:856
+msgid "Choose border color for displaying images in styled image"
+msgstr ""
+
+#: ../options.php:861
+msgid "Menu Colors"
+msgstr ""
+
+#: ../options.php:864
+msgid "Main Menu Text Color"
+msgstr ""
+
+#: ../options.php:868
+msgid "Main Menu Hover Text Color"
+msgstr ""
+
+#: ../options.php:872
+msgid "Main Menu Active Text Color"
+msgstr ""
+
+#: ../options.php:876
+msgid "Main Menu Active Background Color"
+msgstr ""
+
+#: ../options.php:880
+msgid "Submenu Text Color"
+msgstr ""
+
+#: ../options.php:884
+msgid "Submenu Hover Text Color"
+msgstr ""
+
+#: ../options.php:892
+msgid "Submenu Hover Background Color"
+msgstr ""
+
+#: ../options.php:898
+msgid "Text Colors"
+msgstr ""
+
+#: ../options.php:901
+msgid "Body Color"
+msgstr ""
+
+#: ../options.php:905
+msgid "H1 Color"
+msgstr ""
+
+#: ../options.php:909
+msgid "H2 Color"
+msgstr ""
+
+#: ../options.php:913
+msgid "H3 Color"
+msgstr ""
+
+#: ../options.php:917
+msgid "H4 Color"
+msgstr ""
+
+#: ../options.php:921
+msgid "H5 Color"
+msgstr ""
+
+#: ../options.php:925
+msgid "H6 Color"
+msgstr ""
+
+#: ../options.php:929
+msgid "Link Color"
+msgstr ""
+
+#: ../options.php:933
+msgid "Hover Link Color"
+msgstr ""
+
+#: ../options.php:937
+msgid "Active Link Color"
+msgstr ""
+
+#: ../options.php:941
+msgid "Footer Text Color"
+msgstr ""
+
+#: ../options.php:945
+msgid "Copyright Text Color"
+msgstr ""
+
+#: ../options.php:949
+msgid "Copyright Link Color"
+msgstr ""
+
+#: ../options.php:953
+msgid "Portfolio & Clients Slider Bar Title"
+msgstr ""
+
+#: ../options.php:957
+msgid "Contact Bar Title"
+msgstr ""
+
+#: ../options.php:961
+msgid "Contact Bar Text Color"
+msgstr ""
+
+#: ../options.php:967
+msgid "Button Colors"
+msgstr ""
+
+#: ../options.php:970
+msgid "Basic Text Color"
+msgstr ""
+
+#: ../options.php:974
+msgid "Hover Text Color"
+msgstr ""
+
+#: ../options.php:978
+msgid "Active Text Color"
+msgstr ""
+
+#: ../options.php:982
+msgid "Basic Background Color"
+msgstr ""
+
+#: ../options.php:986
+msgid "Hover Background Color"
+msgstr ""
+
+#: ../options.php:990
+msgid "Active Background Color"
+msgstr ""
+
+#: ../options.php:996
+msgid "Widgets Colors"
+msgstr ""
+
+#: ../options.php:999
+msgid "Widget Background Color"
+msgstr ""
+
+#: ../options.php:1001
+msgid "Choose background color for following widgets - SUBMENU, TEAM, CATEGORIES, CUSTOM MENU, RECENT POSTS, POPULAR POSTS, FLICKR"
+msgstr ""
+
+#: ../options.php:1004
+msgid "Widget Title Background Color"
+msgstr ""
+
+#: ../options.php:1006
+msgid "Choose title bar background color for following widgets - SUBMENU, TEAM, CATEGORIES, CUSTOM MENU, RECENT POSTS, POPULAR POSTS, FLICKR"
+msgstr ""
+
+#: ../options.php:1009
+msgid "Widget Title Color"
+msgstr ""
+
+#: ../options.php:1011
+msgid "Choose color of widget titles"
+msgstr ""
+
+#: ../options.php:1014
+msgid "Widget Link Color"
+msgstr ""
+
+#: ../options.php:1016
+msgid "Choose color of links in widgets"
+msgstr ""
+
+#: ../options.php:1019
+msgid "Widget Hover Link Color"
+msgstr ""
+
+#: ../options.php:1023
+msgid "Widget Active Link Color"
+msgstr ""
+
+#: ../options.php:1027
+msgid "Widgets Custom Field Text Color"
+msgstr ""
+
+#: ../options.php:1029
+msgid "Select body text color for PROJECT INFO / CUSTOM FIELDS widget"
+msgstr ""
+
+#: ../options.php:1034
+msgid "Portfolio Colors"
+msgstr ""
+
+#: ../options.php:1037
+#: ../options.php:1285
+msgid "Portfolio Slider Bar Background"
+msgstr ""
+
+#: ../options.php:1039
+msgid "Choose background color for portfolio sliders"
+msgstr ""
+
+#: ../options.php:1042
+msgid "Portfolio Slider Title Background"
+msgstr ""
+
+#: ../options.php:1044
+msgid "Select title & description background color for portfolio sliders"
+msgstr ""
+
+#: ../options.php:1047
+msgid "Portfolio Slider Title Text"
+msgstr ""
+
+#: ../options.php:1049
+msgid "Choose portfolio item's title color for portfolio slider"
+msgstr ""
+
+#: ../options.php:1052
+msgid "Portfolio Slider Description Text"
+msgstr ""
+
+#: ../options.php:1054
+msgid "Select portfolio item's description color for portfolio slider"
+msgstr ""
+
+#: ../options.php:1057
+msgid "Portfolio Slider Arrow Border"
+msgstr ""
+
+#: ../options.php:1059
+msgid "Choose border color for slider's arrow"
+msgstr ""
+
+#: ../options.php:1062
+msgid "Portfolio Slider Arrow"
+msgstr ""
+
+#: ../options.php:1064
+msgid "Select color of slider's arrow"
+msgstr ""
+
+#: ../options.php:1067
+msgid "Portfolio Overview Title Background"
+msgstr ""
+
+#: ../options.php:1069
+msgid "Choose title & description background color for grid-style portfolio overviews"
+msgstr ""
+
+#: ../options.php:1072
+msgid "Portfolio Overview Title Text"
+msgstr ""
+
+#: ../options.php:1074
+msgid "Select portfolio item's title color for grid-style portfolio overviews"
+msgstr ""
+
+#: ../options.php:1077
+msgid "Portfolio Overview Description Text"
+msgstr ""
+
+#: ../options.php:1079
+msgid "Choose portfolio item's description color for grid-style portfolio overviews"
+msgstr ""
+
+#: ../options.php:1082
+msgid "Sharing Button Background"
+msgstr ""
+
+#: ../options.php:1084
+msgid "Choose background color for sharing button in portfolio overviews"
+msgstr ""
+
+#: ../options.php:1087
+msgid "Portfolio Date Color"
+msgstr ""
+
+#: ../options.php:1089
+msgid "Font color for showing the date in portfolio overviews"
+msgstr ""
+
+#: ../options.php:1094
+msgid "Gallery And Image Box Colors"
+msgstr ""
+
+#: ../options.php:1097
+msgid "Gallery Caption Background"
+msgstr ""
+
+#: ../options.php:1099
+msgid "Select background color for image description in gallery"
+msgstr ""
+
+#: ../options.php:1102
+msgid "Gallery Title Text"
+msgstr ""
+
+#: ../options.php:1104
+msgid "Choose title color for image description in gallery"
+msgstr ""
+
+#: ../options.php:1107
+msgid "Gallery Description Text"
+msgstr ""
+
+#: ../options.php:1109
+msgid "Select text color for image description in gallery"
+msgstr ""
+
+#: ../options.php:1114
+msgid "Quickfinder Colors"
+msgstr ""
+
+#: ../options.php:1117
+#: ../options.php:1290
+msgid "Quickfinder Bar Background"
+msgstr ""
+
+#: ../options.php:1119
+msgid "Select background color for the bar/panel with quickfinders"
+msgstr ""
+
+#: ../options.php:1122
+msgid "Quickfinder Bar Title Text"
+msgstr ""
+
+#: ../options.php:1124
+msgid "Choose title color for the bar/panel with quickfinders"
+msgstr ""
+
+#: ../options.php:1127
+msgid "Quickfinder Bar Description Text"
+msgstr ""
+
+#: ../options.php:1129
+msgid "Select text color for the bar/panel with quickfinders"
+msgstr ""
+
+#: ../options.php:1132
+msgid "Quickfinder Title Text"
+msgstr ""
+
+#: ../options.php:1136
+msgid "Quickfinder Description Text"
+msgstr ""
+
+#: ../options.php:1142
+msgid "Bullets, Icons, Dropcaps & Pager"
+msgstr ""
+
+#: ../options.php:1145
+msgid "Bullets Symbol"
+msgstr ""
+
+#: ../options.php:1147
+msgid "Select font color for bullets. The same color will be used as icon font color in \"active\" state"
+msgstr ""
+
+#: ../options.php:1150
+msgid "Dropcaps Default Border"
+msgstr ""
+
+#: ../options.php:1152
+msgid "Select default backround color for dropcaps. The same border color will be used as border color for accordion's icons"
+msgstr ""
+
+#: ../options.php:1155
+msgid "Dropcaps Default Background"
+msgstr ""
+
+#: ../options.php:1157
+msgid "Select backround color for dropcaps. The same color will be used as backround color for accordion's icons "
+msgstr ""
+
+#: ../options.php:1160
+msgid "Dropcaps Default Fontcolor"
+msgstr ""
+
+#: ../options.php:1162
+msgid "Select fontcolor for dropcaps"
+msgstr ""
+
+#: ../options.php:1165
+msgid "Icons Background"
+msgstr ""
+
+#: ../options.php:1167
+msgid "Select icon backround color for \"normal\" state"
+msgstr ""
+
+#: ../options.php:1170
+msgid "Icons Symbol"
+msgstr ""
+
+#: ../options.php:1172
+msgid "Select icon font color for \"normal\" state"
+msgstr ""
+
+#: ../options.php:1175
+msgid "Icons Border"
+msgstr ""
+
+#: ../options.php:1177
+#: ../options.php:1182
+msgid "???"
+msgstr ""
+
+#: ../options.php:1180
+msgid "Pager Element Border"
+msgstr ""
+
+#: ../options.php:1185
+msgid "Pager Element Text"
+msgstr ""
+
+#: ../options.php:1187
+msgid "Select font color for pages in pager"
+msgstr ""
+
+#: ../options.php:1190
+msgid "Active and Hover Pager Element Text"
+msgstr ""
+
+#: ../options.php:1192
+msgid "Select font color for active page in pager"
+msgstr ""
+
+#: ../options.php:1195
+msgid "Icon Border For Slideshows & Hovers"
+msgstr ""
+
+#: ../options.php:1197
+msgid "Select icon border color for arrows in slideshow & hovers on portfolio items/gallery"
+msgstr ""
+
+#: ../options.php:1200
+msgid "Icon Font Color For Slideshows & Hovers"
+msgstr ""
+
+#: ../options.php:1202
+msgid "Select icon font color for arrows in slideshow & hovers on portfolio items/gallery"
+msgstr ""
+
+#: ../options.php:1207
+msgid "Form"
+msgstr ""
+
+#: ../options.php:1210
+msgid "Form Elements Background"
+msgstr ""
+
+#: ../options.php:1214
+msgid "Form Elements Text"
+msgstr ""
+
+#: ../options.php:1223
+msgid "Backgrounds"
+msgstr ""
+
+#: ../options.php:1226
+msgid "Background Images"
+msgstr ""
+
+#: ../options.php:1229
+msgid "Background for Boxed Layout"
+msgstr ""
+
+#: ../options.php:1231
+msgid "Select or upload image file for website's backround in boxed layout"
+msgstr ""
+
+#: ../options.php:1234
+msgid "Background Patterns for Boxed Layout"
+msgstr ""
+
+#: ../options.php:1248
+msgid "Cover complete background area (no cloning)"
+msgstr ""
+
+#: ../options.php:1252
+msgid "If checked, this option will use your chosen background image to cover the whole background area.  Otherwise your background image will be use in original sized and then cloned to cover the background area"
+msgstr ""
+
+#: ../options.php:1255
+msgid "Basic background for website"
+msgstr ""
+
+#: ../options.php:1257
+msgid "Basic background is the continuous background underlaying the whole webpage. By default it is visible for example in slideshow area, quickfinder area, portfolio-slider"
+msgstr ""
+
+#: ../options.php:1260
+msgid "Header's Texture Pattern"
+msgstr ""
+
+#: ../options.php:1262
+msgid "Select or upload texture pattern to use in website header. Please use PNGs with transparency"
+msgstr ""
+
+#: ../options.php:1265
+msgid "Top Background"
+msgstr ""
+
+#: ../options.php:1267
+msgid "Select or upload image file for website's top background"
+msgstr ""
+
+#: ../options.php:1270
+msgid "Main Content Background"
+msgstr ""
+
+#: ../options.php:1272
+msgid "Select or upload image file for website's main content background"
+msgstr ""
+
+#: ../options.php:1275
+msgid "Contact Background"
+msgstr ""
+
+#: ../options.php:1277
+msgid "Select or upload image file for contact us & follow us bar at website's bottom"
+msgstr ""
+
+#: ../options.php:1280
+msgid "Footer Background"
+msgstr ""
+
+#: ../options.php:1282
+msgid "Select or upload image file for footer bar at website's bottom"
+msgstr ""
+
+#: ../options.php:1287
+msgid "Select or upload image to customize background in portfolio sliders"
+msgstr ""
+
+#: ../options.php:1292
+msgid "Select or upload image to customize background in quickfinder area"
+msgstr ""
+
+#: ../options.php:1300
+#: ../options.php:1303
+msgid "Home Constructor"
+msgstr ""
+
+#: ../options.php:1306
+msgid "Activate Home Constructor"
+msgstr ""
+
+#: ../options.php:1322
+msgid "Portfolio"
+msgstr ""
+
+#: ../options.php:1323
+#: ../plugins/clients.php:8
+msgid "Clients"
+msgstr ""
+
+#: ../options.php:1324
+msgid "Pages"
+msgstr ""
+
+#: ../options.php:1325
+#: ../plugins/news.php:7
+#: ../plugins/news.php:8
+#: ../plugins/news.php:51
+msgid "News"
+msgstr ""
+
+#: ../options.php:1327
+msgid "Drag-n-drop panels here to setup required order"
+msgstr ""
+
+#: ../options.php:1335
+#: ../options.php:1338
+msgid "NivoSlider Options"
+msgstr ""
+
+#: ../options.php:1341
+msgid "Effect"
+msgstr ""
+
+#: ../options.php:1364
+msgid "Slices"
+msgstr ""
+
+#: ../options.php:1371
+msgid "Box Cols"
+msgstr ""
+
+#: ../options.php:1378
+msgid "Box Rows"
+msgstr ""
+
+#: ../options.php:1385
+msgid "Animation Speed ( x 100 milliseconds )"
+msgstr ""
+
+#: ../options.php:1392
+msgid "Pause Time ( x 1000 milliseconds )"
+msgstr ""
+
+#: ../options.php:1399
+msgid "Direction Navigation"
+msgstr ""
+
+#: ../options.php:1405
+msgid "Control Navigation"
+msgstr ""
+
+#: ../options.php:1416
+msgid "Blog & News"
+msgstr ""
+
+#: ../options.php:1419
+msgid "Blog & News Options"
+msgstr ""
+
+#: ../options.php:1422
+msgid "Show author"
+msgstr ""
+
+#: ../options.php:1428
+msgid "Post per page"
+msgstr ""
+
+#: ../options.php:1435
+msgid "Excerpt lenght"
+msgstr ""
+
+#: ../options.php:1447
+msgid "Footer"
+msgstr ""
+
+#: ../options.php:1450
+msgid "Footer Options"
+msgstr ""
+
+#: ../options.php:1453
+msgid "Activate footer"
+msgstr ""
+
+#: ../options.php:1459
+msgid "Footer HTML"
+msgstr ""
+
+#: ../options.php:1468
+msgid "Contacts & Socials"
+msgstr ""
+
+#: ../options.php:1471
+msgid "Follow Us / Contact Us Bar"
+msgstr ""
+
+#: ../options.php:1474
+msgid "Activate Follow Us / Contact Us"
+msgstr ""
+
+#: ../options.php:1482
+msgid "Contacts"
+msgstr ""
+
+#: ../options.php:1485
+msgid "Contact Us Title"
+msgstr ""
+
+#: ../options.php:1487
+msgid "Enter your custom title for Contact Us box at the website's bottom. \"Contact Us\" will be used if empty"
+msgstr ""
+
+#: ../options.php:1490
+msgid "Contacts Us HTML"
+msgstr ""
+
+#: ../options.php:1492
+msgid "Define your contact data to be shown in contact box. You can use a simple text as well as HTML and shortcodes"
+msgstr ""
+
+#: ../options.php:1495
+msgid "Admin E-mail"
+msgstr ""
+
+#: ../options.php:1497
+msgid "Define email address of website admin. All feedbacks from contact form will be forwarded on this email address"
+msgstr ""
+
+#: ../options.php:1500
+msgid "Display map on contact page"
+msgstr ""
+
+#: ../options.php:1506
+msgid "Map height (px)"
+msgstr ""
+
+#: ../options.php:1510
+msgid "Map latitude"
+msgstr ""
+
+#: ../options.php:1512
+#: ../options.php:1517
+#, php-format
+msgid "<a href=\"%s\">Find here</a>"
+msgstr ""
+
+#: ../options.php:1515
+msgid "Map longitude"
+msgstr ""
+
+#: ../options.php:1520
+msgid "Map zoom"
+msgstr ""
+
+#: ../options.php:1529
+msgid "Socials"
+msgstr ""
+
+#: ../options.php:1532
+msgid "Follow Us Title"
+msgstr ""
+
+#: ../options.php:1534
+msgid "Enter your custom title for Follow Us box at the website's bottom. \"Follow Us\" will be used if empty"
+msgstr ""
+
+#: ../options.php:1537
+msgid "Follow Us Text"
+msgstr ""
+
+#: ../options.php:1539
+msgid "Define your content to be shown in Follow Us box. You can use a simple text as well as HTML and shortcodes"
+msgstr ""
+
+#: ../options.php:1542
+msgid "Activate Twitter Icon"
+msgstr ""
+
+#: ../options.php:1548
+msgid "Activate Facebook Icon"
+msgstr ""
+
+#: ../options.php:1554
+msgid "Activate LinkedIn Icon"
+msgstr ""
+
+#: ../options.php:1560
+msgid "Activate Google Plus Icon"
+msgstr ""
+
+#: ../options.php:1566
+msgid "Activate StumbleUpon Icon"
+msgstr ""
+
+#: ../options.php:1571
+msgid "Activate RSS Icon"
+msgstr ""
+
+#: ../options.php:1577
+msgid "Twitter Profile Link"
+msgstr ""
+
+#: ../options.php:1580
+msgid "Enter URL to your twitter profile"
+msgstr ""
+
+#: ../options.php:1583
+msgid "Facebook Profile Link"
+msgstr ""
+
+#: ../options.php:1586
+msgid "Enter URL to your facebook profile"
+msgstr ""
+
+#: ../options.php:1589
+msgid "LinkedIn Profile Link"
+msgstr ""
+
+#: ../options.php:1592
+msgid "Enter URL to your linkedin profile"
+msgstr ""
+
+#: ../options.php:1595
+msgid "Google Plus Profile Link"
+msgstr ""
+
+#: ../options.php:1598
+msgid "Enter URL to your google+ profile"
+msgstr ""
+
+#: ../options.php:1601
+msgid "StumbleUpon Profile Link"
+msgstr ""
+
+#: ../options.php:1604
+msgid "Enter URL to your stumbleupon profile"
+msgstr ""
+
+#: ../options.php:1607
+msgid "RSS Link"
+msgstr ""
+
+#: ../options.php:1612
+msgid "Display Links For Sharing Posts On Social Networks"
+msgstr ""
+
+#: ../options.php:1811
+msgid "Move content block down to activate it on your Home"
+msgstr ""
+
+#: ../options.php:1812
+msgid "Selectable Content Blocks"
+msgstr ""
+
+#: ../options.php:1822
+msgid "Drag & drop blocks to define sort order. Open blocks to choose content."
+msgstr ""
+
+#: ../options.php:1823
+msgid "Active Home Content"
+msgstr ""
+
+#: ../options.php:1852
+msgid "Select Page"
+msgstr ""
+
+#: ../options.php:1863
+msgid "Select Slideshow Type"
+msgstr ""
+
+#: ../options.php:1879
+#: ../options.php:1888
+#: ../options.php:1900
+#: ../options.php:1912
+#: ../options.php:1924
+msgid "Select"
+msgstr ""
+
+#: ../options.php:1897
+msgid "Select Portfolio"
+msgstr ""
+
+#: ../options.php:1909
+msgid "Select Clients Sets"
+msgstr ""
+
+#: ../options.php:1937
+msgid "News Count"
+msgstr ""
+
+#: ../options.php:1942
+msgid "All News Link"
+msgstr ""
+
+#: ../options.php:1943
+msgid "News Layout"
+msgstr ""
+
+#: ../options.php:1956
+msgid "Sidebar Header"
+msgstr ""
+
+#: ../options.php:1960
+msgid "Sidebar Content"
+msgstr ""
+
+#: ../404.php:16
+msgid "Page not found."
+msgstr ""
+
+#: ../404.php:18
+msgid "Sorry, but the page you requested could not be found."
+msgstr ""
+
+#: ../page_contact.php:17
+msgid "Form  has required fields"
+msgstr ""
+
+#: ../page_contact.php:25
+msgid "From"
+msgstr ""
+
+#: ../page_contact.php:26
+msgid "Contact form message"
+msgstr ""
+
+#: ../page_contact.php:28
+#: ../page_contact.php:29
+msgid "Email"
+msgstr ""
+
+#: ../page_contact.php:30
+msgid "Message"
+msgstr ""
+
+#: ../page_contact.php:32
+msgid "Sending failed."
+msgstr ""
+
+#: ../page_contact.php:63
+msgid "Your message has been sent."
+msgstr ""
+
+#: ../page_contact.php:65
+msgid "ERROR"
+msgstr ""
+
+#: ../page_contact.php:70
+#: ../page_contact.php:74
+msgid "(required)"
+msgstr ""
+
+#: ../page_contact.php:83
+msgid "Clear form"
+msgstr ""
+
+#: ../plugins/blog.php:74
+#: ../plugins/blog.php:93
+#, php-format
+msgid "View all posts in %s"
+msgstr ""
+
+#: ../plugins/blog.php:102
+#, php-format
+msgid "<b>%d</b> comments"
+msgstr ""
+
+#: ../plugins/blog.php:104
+#: ../plugins/shortcodes.php:468
+msgid "Read more"
+msgstr ""
+
+#: ../plugins/blog.php:146
+#, php-format
+msgid "<span class=\"author\">%s</span>"
+msgstr ""
+
+#: ../plugins/blog.php:149
+#, php-format
+msgid "<span class=\"date\">%1$s %2$s</span>"
+msgstr ""
+
+#: ../plugins/blog.php:149
+msgid "Edit"
+msgstr ""
+
+#: ../plugins/blog.php:155
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../plugins/diagram.php:48
+#: ../plugins/diagram.php:69
+#: ../plugins/testimonials.php:166
+msgid "Title:"
+msgstr ""
+
+#: ../plugins/diagram.php:50
+msgid "Amount (in percents):"
+msgstr ""
+
+#: ../plugins/diagram.php:52
+msgid "Color:"
+msgstr ""
+
+#: ../plugins/diagram.php:72
+msgid "Summary:"
+msgstr ""
+
+#: ../plugins/diagram.php:75
+msgid "Type:"
+msgstr ""
+
+#: ../plugins/diagram.php:77
+msgid "Circle"
+msgstr ""
+
+#: ../plugins/diagram.php:78
+msgid "Lines"
+msgstr ""
+
+#: ../plugins/diagram.php:80
+msgid "Skills"
+msgstr ""
+
+#: ../plugins/content_block.php:59
+msgid "No Page"
+msgstr ""
+
+#: ../plugins/gallery.php:7
+msgid "Galleries"
+msgstr ""
+
+#: ../plugins/gallery.php:9
+#: ../plugins/gallery.php:10
+msgid "Add New Gallery"
+msgstr ""
+
+#: ../plugins/gallery.php:11
+#: ../plugins/gallery.php:62
+msgid "Edit Gallery"
+msgstr ""
+
+#: ../plugins/gallery.php:12
+msgid "New Gallery"
+msgstr ""
+
+#: ../plugins/gallery.php:13
+msgid "View Gallery"
+msgstr ""
+
+#: ../plugins/gallery.php:14
+msgid "Search Gallery"
+msgstr ""
+
+#: ../plugins/gallery.php:15
+msgid "No Gallery found"
+msgstr ""
+
+#: ../plugins/gallery.php:16
+msgid "No Gallery found in Trash"
+msgstr ""
+
+#: ../plugins/gallery.php:38
+#, php-format
+msgid "Gallery Manager (ID = %s)"
+msgstr ""
+
+#: ../plugins/gallery.php:64
+msgid "Upload"
+msgstr ""
+
+#: ../plugins/gallery.php:96
+msgid "Enter the title of you gallery, click on Publish and start uploading your images"
+msgstr ""
+
+#: ../plugins/clients.php:7
+#: ../plugins/clients.php:9
+msgid "Client"
+msgstr ""
+
+#: ../plugins/clients.php:10
+#: ../plugins/clients.php:11
+msgid "Add New Client"
+msgstr ""
+
+#: ../plugins/clients.php:12
+msgid "Edit Client"
+msgstr ""
+
+#: ../plugins/clients.php:13
+msgid "New Client"
+msgstr ""
+
+#: ../plugins/clients.php:14
+msgid "View Client"
+msgstr ""
+
+#: ../plugins/clients.php:15
+msgid "Search Clients"
+msgstr ""
+
+#: ../plugins/clients.php:16
+msgid "No Clients found"
+msgstr ""
+
+#: ../plugins/clients.php:17
+msgid "No Clients found in Trash"
+msgstr ""
+
+#: ../plugins/clients.php:36
+#: ../plugins/testimonials.php:36
+msgid "Sets"
+msgstr ""
+
+#: ../plugins/clients.php:37
+#: ../plugins/testimonials.php:37
+msgid "Set"
+msgstr ""
+
+#: ../plugins/clients.php:38
+#: ../plugins/testimonials.php:38
+msgid "Search Sets"
+msgstr ""
+
+#: ../plugins/clients.php:39
+#: ../plugins/testimonials.php:39
+msgid "All Sets"
+msgstr ""
+
+#: ../plugins/clients.php:40
+#: ../plugins/testimonials.php:40
+msgid "Parent Set"
+msgstr ""
+
+#: ../plugins/clients.php:41
+#: ../plugins/testimonials.php:41
+msgid "Parent Set:"
+msgstr ""
+
+#: ../plugins/clients.php:42
+#: ../plugins/testimonials.php:42
+msgid "Edit Set"
+msgstr ""
+
+#: ../plugins/clients.php:43
+#: ../plugins/testimonials.php:43
+msgid "Update Set"
+msgstr ""
+
+#: ../plugins/clients.php:44
+#: ../plugins/testimonials.php:44
+msgid "Add New Set"
+msgstr ""
+
+#: ../plugins/clients.php:45
+#: ../plugins/testimonials.php:45
+msgid "New Set Name"
+msgstr ""
+
+#: ../plugins/clients.php:65
+msgid "Client Image"
+msgstr ""
+
+#: ../plugins/clients.php:71
+msgid "Client Settings"
+msgstr ""
+
+#: ../plugins/clients.php:81
+msgid "Client description"
+msgstr ""
+
+#: ../plugins/clients.php:82
+msgid "Client link"
+msgstr ""
+
+#: ../plugins/clients.php:121
+msgid "Our Clients"
+msgstr ""
+
+#: ../plugins/clients.php:183
+msgid "Show All"
+msgstr ""
+
+#: ../plugins/clients.php:250
+#: ../plugins/clients.php:261
+msgid "Icon"
+msgstr ""
+
+#: ../plugins/clients.php:252
+#: ../plugins/clients.php:264
+msgid "Enter icon code"
+msgstr ""
+
+#: ../plugins/clients.php:252
+#: ../plugins/clients.php:264
+msgid "Icons info"
+msgstr ""
+
+#: ../plugins/clients.php:252
+#: ../plugins/clients.php:264
+msgid "Show Icon Codes"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:155
+msgid "Install Required Plugins"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:156
+msgid "Install Plugins"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:157
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:158
+msgid "Something went wrong."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:169
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:170
+msgid "Return to the dashboard"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:171
+#: ../plugins/class-tgm-plugin-activation.php:1840
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:172
+#: ../plugins/class-tgm-plugin-activation.php:1538
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:173
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:174
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1085
+msgid "External Link"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1090
+msgid "Private Repository"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1093
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1097
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1100
+msgid "Required"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1100
+msgid "Recommended"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1103
+msgid "Not Installed"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1105
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1275
+#, php-format
+msgid "No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1291
+msgid "Plugin"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1292
+msgid "Source"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1293
+msgid "Type"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1294
+msgid "Status"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1312
+msgid "Install"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1313
+msgid "Activate"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1823
+msgid "Install package not available."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1824
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1825
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1826
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1827
+msgid "Plugin install failed."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1828
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1839
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1949
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1950
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1950
+#: ../plugins/class-tgm-plugin-activation.php:1959
+msgid "Show Details"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1950
+#: ../plugins/class-tgm-plugin-activation.php:1959
+msgid "Hide Details"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1951
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1952
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1956
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1957
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1958
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1959
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1960
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:1961
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../plugins/class-tgm-plugin-activation.php:2052
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: ../plugins/shortcodes.php:410
+msgid "More"
+msgstr ""
+
+#: ../plugins/testimonials.php:7
+msgid "Testimonials"
+msgstr ""
+
+#: ../plugins/testimonials.php:8
+msgid "Testimonial"
+msgstr ""
+
+#: ../plugins/testimonials.php:9
+#: ../plugins/testimonials.php:10
+msgid "Add New Testimonial"
+msgstr ""
+
+#: ../plugins/testimonials.php:11
+msgid "Edit Testimonial"
+msgstr ""
+
+#: ../plugins/testimonials.php:12
+msgid "New Testimonial"
+msgstr ""
+
+#: ../plugins/testimonials.php:13
+msgid "View Testimonial"
+msgstr ""
+
+#: ../plugins/testimonials.php:14
+msgid "Search Testimonials"
+msgstr ""
+
+#: ../plugins/testimonials.php:15
+msgid "No Testimonial found"
+msgstr ""
+
+#: ../plugins/testimonials.php:16
+msgid "No Testimonial found in Trash"
+msgstr ""
+
+#: ../plugins/testimonials.php:64
+msgid "Testimonial Settings"
+msgstr ""
+
+#: ../plugins/testimonials.php:78
+msgid "Position"
+msgstr ""
+
+#: ../plugins/testimonials.php:79
+msgid "Company"
+msgstr ""
+
+#: ../plugins/testimonials.php:80
+msgid "Tel."
+msgstr ""
+
+#: ../plugins/testimonials.php:81
+msgid "Link to Company"
+msgstr ""
+
+#: ../plugins/testimonials.php:170
+msgid "Sets:"
+msgstr ""
+
+#: ../plugins/news.php:9
+#: ../plugins/news.php:10
+msgid "Add New News"
+msgstr ""
+
+#: ../plugins/news.php:11
+msgid "Edit News"
+msgstr ""
+
+#: ../plugins/news.php:12
+msgid "New News"
+msgstr ""
+
+#: ../plugins/news.php:13
+msgid "View News"
+msgstr ""
+
+#: ../plugins/news.php:14
+msgid "Search News"
+msgstr ""
+
+#: ../plugins/news.php:15
+#: ../plugins/news.php:54
+#: ../plugins/news.php:105
+msgid "No News found"
+msgstr ""
+
+#: ../plugins/news.php:16
+msgid "No News found in Trash"
+msgstr ""
+
+#: ../plugins/news.php:75
+msgid "Read all news"
+msgstr ""
+
+#: ../plugins/quickfinder.php:7
+msgid "Quickfinders"
+msgstr ""
+
+#: ../plugins/quickfinder.php:9
+#: ../plugins/quickfinder.php:10
+msgid "Add New Quickfinder"
+msgstr ""
+
+#: ../plugins/quickfinder.php:11
+msgid "Edit Quickfinder"
+msgstr ""
+
+#: ../plugins/quickfinder.php:12
+msgid "New Quickfinder"
+msgstr ""
+
+#: ../plugins/quickfinder.php:13
+msgid "View Quickfinder"
+msgstr ""
+
+#: ../plugins/quickfinder.php:14
+msgid "Search Quickfinders"
+msgstr ""
+
+#: ../plugins/quickfinder.php:15
+msgid "No Quickfinder found"
+msgstr ""
+
+#: ../plugins/quickfinder.php:16
+msgid "No Quickfinder found in Trash"
+msgstr ""
+
+#: ../plugins/quickfinder.php:62
+msgid "Quickfinder Settings"
+msgstr ""
+
+#: ../plugins/quickfinder.php:75
+msgid "Quickfinder item description"
+msgstr ""
+
+#: ../plugins/quickfinder.php:76
+msgid "Quickfinder item link"
+msgstr ""
+
+#: ../plugins/quickfinder.php:77
+msgid "Quickfinder item background color"
+msgstr ""
+
+#: ../plugins/quickfinder.php:78
+msgid "Quickfinder item icon color"
+msgstr ""
+
+#: ../plugins/quickfinder.php:79
+msgid "Quickfinder item icon"
+msgstr ""
+
+#: ../plugins/team.php:7
+#: ../plugins/team.php:8
+#: ../plugins/shortcode_generator.php:458
+msgid "Team"
+msgstr ""
+
+#: ../plugins/team.php:9
+#: ../plugins/team.php:10
+msgid "Add New Person"
+msgstr ""
+
+#: ../plugins/team.php:11
+msgid "Edit Person"
+msgstr ""
+
+#: ../plugins/team.php:12
+msgid "New Person"
+msgstr ""
+
+#: ../plugins/team.php:13
+msgid "View Person"
+msgstr ""
+
+#: ../plugins/team.php:14
+msgid "Search Persons"
+msgstr ""
+
+#: ../plugins/team.php:15
+msgid "No Person found"
+msgstr ""
+
+#: ../plugins/team.php:16
+msgid "No Person found in Trash"
+msgstr ""
+
+#: ../plugins/team.php:64
+msgid "Team Settings"
+msgstr ""
+
+#: ../plugins/team.php:82
+#: ../plugins/widgets.php:75
+msgid "Link"
+msgstr ""
+
+#: ../plugins/team.php:83
+msgid "Hide Email"
+msgstr ""
+
+#: ../plugins/widgets.php:20
+msgid "Display Picture"
+msgstr ""
+
+#: ../plugins/widgets.php:21
+msgid "Picturebox"
+msgstr ""
+
+#: ../plugins/widgets.php:72
+msgid "Image link"
+msgstr ""
+
+#: ../plugins/widgets.php:74
+msgid "Description"
+msgstr ""
+
+#: ../plugins/widgets.php:84
+msgid "The popular posts with thumbnails"
+msgstr ""
+
+#: ../plugins/widgets.php:85
+#: ../plugins/widgets.php:100
+msgid "Popular Posts"
+msgstr ""
+
+#: ../plugins/widgets.php:127
+#: ../plugins/widgets.php:179
+msgid "Items (default 3)"
+msgstr ""
+
+#: ../plugins/widgets.php:136
+msgid "The recent posts with thumbnails"
+msgstr ""
+
+#: ../plugins/widgets.php:137
+#: ../plugins/widgets.php:152
+msgid "Recent Posts"
+msgstr ""
+
+#: ../plugins/widgets.php:244
+msgid "Display your recent Flickr photos"
+msgstr ""
+
+#: ../plugins/widgets.php:245
+msgid "Flickr"
+msgstr ""
+
+#: ../plugins/widgets.php:263
+msgid "Photostream"
+msgstr ""
+
+#: ../plugins/widgets.php:305
+#, php-format
+msgid "Flickr ID <a href=\"%s\">Find your Flickr ID here</a>"
+msgstr ""
+
+#: ../plugins/widgets.php:309
+msgid "Items (default 9)"
+msgstr ""
+
+#: ../plugins/widgets.php:332
+msgid "No \"type\" parameter has been setup. Check your settings, or provide the parameter as an argument."
+msgstr ""
+
+#: ../plugins/widgets.php:398
+msgid "Submenu."
+msgstr ""
+
+#: ../plugins/widgets.php:399
+msgid "Submenu"
+msgstr ""
+
+#: ../plugins/widgets.php:429
+#, php-format
+msgid "No menus have been created yet. <a href=\"%s\">Create some</a>."
+msgstr ""
+
+#: ../plugins/widgets.php:434
+msgid "Select Menu"
+msgstr ""
+
+#: ../plugins/widgets.php:666
+#, php-format
+msgid "<a href=\"%s\">Find or Create your Twitter App</a>"
+msgstr ""
+
+#: ../plugins/widgets.php:709
+msgid "Facebook page like box"
+msgstr ""
+
+#: ../plugins/widgets.php:710
+msgid "Facebook Page"
+msgstr ""
+
+#: ../plugins/widgets.php:724
+msgid "Find us on Facebook"
+msgstr ""
+
+#: ../plugins/widgets.php:749
+msgid "Facebook Page URL"
+msgstr ""
+
+#: ../plugins/portfolio.php:7
+msgid "Portfolio items"
+msgstr ""
+
+#: ../plugins/portfolio.php:8
+msgid "Portfolios"
+msgstr ""
+
+#: ../plugins/portfolio.php:9
+msgid "Portfolio item"
+msgstr ""
+
+#: ../plugins/portfolio.php:10
+msgid "Items"
+msgstr ""
+
+#: ../plugins/portfolio.php:11
+#: ../plugins/portfolio.php:12
+msgid "Add New Item"
+msgstr ""
+
+#: ../plugins/portfolio.php:13
+msgid "Edit Item"
+msgstr ""
+
+#: ../plugins/portfolio.php:14
+msgid "New Item"
+msgstr ""
+
+#: ../plugins/portfolio.php:15
+msgid "View Item"
+msgstr ""
+
+#: ../plugins/portfolio.php:16
+msgid "Search Items"
+msgstr ""
+
+#: ../plugins/portfolio.php:17
+msgid "No Items found"
+msgstr ""
+
+#: ../plugins/portfolio.php:18
+msgid "No Items found in Trash"
+msgstr ""
+
+#: ../plugins/portfolio.php:64
+msgid "General Settings"
+msgstr ""
+
+#: ../plugins/portfolio.php:73
+msgid "Portfolio Page"
+msgstr ""
+
+#: ../plugins/portfolio.php:73
+msgid "Internal Link"
+msgstr ""
+
+#: ../plugins/portfolio.php:73
+msgid "Full-Size Image"
+msgstr ""
+
+#: ../plugins/portfolio.php:73
+msgid "YouTube Video"
+msgstr ""
+
+#: ../plugins/portfolio.php:73
+#: ../plugins/shortcode_generator.php:541
+msgid "Vimeo Video"
+msgstr ""
+
+#: ../plugins/portfolio.php:73
+msgid "Self-Hosted Video"
+msgstr ""
+
+#: ../plugins/portfolio.php:76
+msgid "Alternative title (for portfolio overviews)"
+msgstr ""
+
+#: ../plugins/portfolio.php:77
+msgid "Type of portfolio item"
+msgstr ""
+
+#: ../plugins/portfolio.php:83
+msgid "Link to another page or video ID (for YouTube or Vimeo)"
+msgstr ""
+
+#: ../plugins/portfolio.php:176
+#: ../plugins/portfolio.php:306
+msgid "Share"
+msgstr ""
+
+#: ../plugins/portfolio.php:381
+#: ../plugins/portfolio.php:382
+msgid "Project Info / Contact Info / Custom Iconed Fields"
+msgstr ""
+
+#: ../plugins/portfolio.php:391
+msgid "Project Preview"
+msgstr ""
+
+#: ../plugins/portfolio.php:441
+msgid "Value"
+msgstr ""
+
+#: ../plugins/portfolio.php:448
+msgid "Button URL"
+msgstr ""
+
+#: ../plugins/portfolio.php:449
+msgid "Button Text"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:36
+msgid "Accordion"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:43
+msgid "No"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:44
+msgid "Yes"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:48
+msgid "Alert Box"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:61
+#: ../plugins/shortcode_generator.php:237
+#: ../plugins/shortcode_generator.php:263
+msgid "Icon Border Color"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:62
+#: ../plugins/shortcode_generator.php:238
+#: ../plugins/shortcode_generator.php:264
+msgid "Icon Background Color"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:63
+#: ../plugins/shortcode_generator.php:239
+#: ../plugins/shortcode_generator.php:265
+msgid "Icon Font Color"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:68
+msgid "Button"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:76
+msgid "Value for title attribute"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:77
+msgid "Value for target attribute"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:89
+msgid "Choose a set by entering clients set slug"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:92
+msgid "Clients Set Slug"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:93
+msgid "Filter disabled"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:98
+msgid "Divider"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:113
+msgid "Dropcap"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:122
+#: ../plugins/shortcode_generator.php:441
+msgid "Border Color"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:124
+msgid "Font Color"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:128
+msgid "Four Columns"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:154
+#: ../plugins/shortcode_generator.php:377
+msgid "Below"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:157
+msgid "Gallery Post ID"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:159
+#: ../plugins/shortcode_generator.php:366
+msgid "Page Text Alignment"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:162
+msgid "Enter the gallery ID"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:163
+msgid "Choose the gallery type"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:176
+msgid "Diagram"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:193
+msgid "Google Maps"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:204
+msgid "Map width in pixels"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:205
+msgid "Map height in pixels"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:206
+#, php-format
+msgid "Map latitude <a href=\"%s\">Find here</a>"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:207
+#, php-format
+msgid "Map longitude <a href=\"%s\">Find here</a>"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:208
+msgid "Enter zoom number (1-16)"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:212
+#: ../plugins/shortcode_generator.php:339
+#: ../plugins/shortcode_generator.php:526
+#: ../plugins/shortcode_generator.php:556
+msgid "Middle"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:243
+msgid "Icon With Text"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:253
+#: ../plugins/shortcode_generator.php:492
+msgid "Default ( h5 )"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:287
+msgid "Choose a set by entering portfolio set slug"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:290
+msgid "Portfolio Set Slug"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:309
+msgid "Choose a set by entering quickfinder set slug"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:312
+msgid "Quickfinder Set Slug"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:317
+msgid "Quoted Text"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:323
+msgid "Self-hosted Video"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:333
+#: ../plugins/shortcode_generator.php:520
+#: ../plugins/shortcode_generator.php:550
+msgid "Video width in pixels"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:334
+#: ../plugins/shortcode_generator.php:521
+#: ../plugins/shortcode_generator.php:551
+msgid "Video height in pixels"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:335
+msgid "Video URL in mp4 or flv format"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:354
+msgid "Styled Image"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:365
+msgid "Show lightbox with full-size image"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:367
+msgid "Choose Image"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:370
+msgid "Image width in pixels"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:371
+msgid "Image height in pixels"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:372
+msgid "Enter image URL"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:373
+msgid "Enter image Alt-text"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:392
+msgid "Styled List"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:399
+msgid "circle"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:400
+msgid "check"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:401
+msgid "arrow"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:402
+msgid "minus"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:404
+msgid "Element 1"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:404
+msgid "Element 2"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:404
+msgid "Element 3"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:407
+msgid "Styled Table"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:412
+msgid "Title 1"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:412
+msgid "Title 2"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:412
+msgid "Title 3"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:414
+msgid "Content 1 1"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:414
+msgid "Content 1 2"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:414
+msgid "Content 1 3"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:415
+msgid "Content 2 1"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:415
+msgid "Content 2 2"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:415
+msgid "Content 2 3"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:416
+msgid "Content 3 1"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:416
+msgid "Content 3 2"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:416
+msgid "Content 3 3"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:420
+msgid "Styled Textbox"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:430
+#: ../plugins/shortcode_generator.php:431
+#: ../plugins/shortcode_generator.php:432
+#: ../plugins/shortcode_generator.php:433
+#: ../plugins/shortcode_generator.php:434
+msgid "Choose or enter color code, ex. #ffffff"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:437
+msgid "Title Background Color"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:438
+msgid "Title Text Color"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:439
+msgid "Content Background Color"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:440
+msgid "Content Text Color"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:444
+msgid "Enter content (can be normal text, HTML code or shortcode)"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:447
+msgid "Tabs"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:452
+msgid "Content 1"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:453
+msgid "Content 2"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:454
+msgid "Content 3"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:466
+msgid "Team's Set"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:470
+msgid "Enter slug of team's set"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:471
+msgid "Enter title of team's block"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:475
+msgid "Three Columns"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:482
+msgid "Title With Icon"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:500
+msgid "Active"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:504
+msgid "Two Columns"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:511
+msgid "Youtube Video"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:522
+msgid "Youtube video ID something like Js9Z8UQAA4E"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:552
+msgid "Vimeo video ID something like 9380243"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:639
+msgid "Choose the shortcode from the list below and fill in the corresponding attributes &amp; values. After that click on \"Insert Shortcode\" and the generated shortcode will be automatically inserted in your content. Visit our demo website to see all shortcodes in action."
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:642
+msgid "(no short code selected)"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:687
+msgid "Your Content"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:811
+msgid "Insert Shortcode"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:815
+msgid "Shortcode"
+msgstr ""
+
+#: ../plugins/plugins.php:86
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../plugins/plugins.php:99
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: ../plugins/black-studio-tinymce-widget/black-studio-tinymce-widget.php:21
+msgid "Arbitrary text or HTML with visual editor"
+msgstr ""
+
+#: ../plugins/black-studio-tinymce-widget/black-studio-tinymce-widget.php:23
+msgid "Rich Text Editor / WYSIWYG"
+msgstr ""
+
+#: ../plugins/black-studio-tinymce-widget/black-studio-tinymce-widget.php:85
+msgid "HTML"
+msgstr ""
+
+#: ../plugins/black-studio-tinymce-widget/black-studio-tinymce-widget.php:86
+msgid "Visual"
+msgstr ""
+
+#: ../plugins/wp-page-widget/wp-page-widgets.php:114
+msgid "Select an Image"
+msgstr ""
+
+#: ../plugins/wp-page-widget/wp-page-widgets.php:115
+msgid "Insert Into Widget"
+msgstr ""
+
+#: ../plugins/wp-page-widget/wp-page-widgets.php:256
+#: ../plugins/wp-page-widget/wp-page-widgets.php:315
+#: ../plugins/wp-page-widget/wp-page-widgets.php:443
+#: ../plugins/wp-page-widget/wp-page-widgets.php:498
+#: ../plugins/wp-page-widget/wp-page-widgets.php:576
+#: ../plugins/wp-page-widget/wp-page-widgets.php:633
+#: ../plugins/wp-page-widget/wp-page-widgets.php:712
+#: ../plugins/wp-page-widget/wp-page-widgets.php:770
+msgid "Inactive Widgets"
+msgstr ""
+
+#: ../plugins/wp-page-widget/wp-page-widgets.php:300
+#: ../plugins/wp-page-widget/wp-page-widgets.php:483
+#: ../plugins/wp-page-widget/wp-page-widgets.php:618
+#: ../plugins/wp-page-widget/wp-page-widgets.php:755
+msgid "Available Widgets"
+msgstr ""
+
+#: ../plugins/wp-page-widget/wp-page-widgets.php:300
+#: ../plugins/wp-page-widget/wp-page-widgets.php:483
+#: ../plugins/wp-page-widget/wp-page-widgets.php:618
+#: ../plugins/wp-page-widget/wp-page-widgets.php:755
+msgid "Deactivate"
+msgstr ""
+
+#: ../plugins/wp-page-widget/wp-page-widgets.php:303
+#: ../plugins/wp-page-widget/wp-page-widgets.php:486
+#: ../plugins/wp-page-widget/wp-page-widgets.php:621
+#: ../plugins/wp-page-widget/wp-page-widgets.php:758
+msgid "Drag widgets from here to a sidebar on the right to activate them. Drag widgets back here to deactivate them and delete their settings."
+msgstr ""
+
+#: ../plugins/wp-page-widget/wp-page-widgets.php:330
+#: ../plugins/wp-page-widget/wp-page-widgets.php:512
+#: ../plugins/wp-page-widget/wp-page-widgets.php:647
+#: ../plugins/wp-page-widget/wp-page-widgets.php:784
+msgid "Drag widgets here to remove them from the sidebar but keep their settings."
+msgstr ""
+
+#: ../plugins/wp-page-widget/wp-page-widgets.php:1010
+msgid "An error has occured. Please reload the page and try again."
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:7
+#: ../plugins/slideshow/slideshow.php:8
+msgid "Slide"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:10
+#: ../plugins/slideshow/slideshow.php:11
+msgid "Add New Slide"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:12
+msgid "Edit Slide"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:13
+msgid "New Slide"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:14
+msgid "View Slide"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:15
+msgid "Search Slides"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:16
+msgid "No Slide found"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:17
+msgid "No Slide found in Trash"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:38
+msgid "Search Slideshows"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:39
+msgid "All Slideshows"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:40
+msgid "Parent Slideshow"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:41
+msgid "Parent Slideshow:"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:42
+msgid "Edit Slideshow"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:43
+msgid "Update Slideshow"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:44
+msgid "Add New Slideshow"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:45
+msgid "New Slideshow Name"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:63
+msgid "Slide Settings"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:74
+msgid "Slide link"
+msgstr ""
+
+#: ../plugins/slideshow/slideshow.php:75
+msgid "Slide text position"
+msgstr ""
+
+#: ../plugins/video/video.php:34
+#, php-format
+msgid "Plugin \"JW Player for Flash & HTML5 Video\" is not active. Use this <a href=\"%s\">link</a> to activate it."
+msgstr ""
+
+#: ../plugins/video/video.php:36
+#, php-format
+msgid "Plugin \"JW Player for Flash & HTML5 Video\" is not installed. Use this <a href=\"%s\">link</a> to install and activate it."
+msgstr ""
+

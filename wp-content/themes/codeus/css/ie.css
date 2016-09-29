@@ -1,0 +1,13 @@
+/*img {
+	max-width: none;
+}*/
+/*.wrap-box .wrap-box-element {
+	max-width: none;
+}*/
+html * .ls-container *,
+html * .lazy-loading * {
+	filter: none !important;
+}
+.quickfinder ul li .image.thumb .overlay {
+	display: none;
+}

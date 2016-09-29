@@ -1,0 +1,10 @@
+.pricing-table {
+	width: 100%;
+	display: table;
+	table-layout:fixed;
+}
+
+.pricing-table .pricing-column {
+	display: table-cell;
+	
+}
