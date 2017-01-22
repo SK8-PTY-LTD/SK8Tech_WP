@@ -3,7 +3,7 @@ Contributors: ShareThis
 Tags: analytics, dashboard, google, google analytics, google analytics plugin, javascript, marketing, pageviews, statistics, stats, tracking, visits, web stats, widget, analytics dashboard, google analytics dashboard, google analytics widget, google analytics dashboard
 Requires at least: 3.8
 Tested up to: 4.7
-Stable tag: 2.0.4
+Stable tag: 2.0.5
 
 Use Google Analytics on your Wordpress site without touching any code, and view visitor reports right in your Wordpress admin dashboard!
 
@@ -46,6 +46,10 @@ By downloading and installing this plugin you are agreeing to the <a href="http:
 5. View different time ranges and key metrics in the Wordpress Google Analytics widget
 
 == Changelog ==
+
+= 2.0.5 =
+* Better compatability with the Google API quotas
+* Undefined variable fix, thanks to @charlesstpierre
 
 = 2.0.4 =
 * Replaced Bootstrap, should fix most of the issues with Google Sign in

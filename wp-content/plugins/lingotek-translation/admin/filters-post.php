@@ -10,6 +10,7 @@
 class Lingotek_Filters_Post extends PLL_Admin_Filters_Post {
 	public $lgtm; // Lingotek model
 	public $pllm;
+	public $lingotek_prefs;
 
 	/*
 	 * Constructor
@@ -21,6 +22,7 @@ class Lingotek_Filters_Post extends PLL_Admin_Filters_Post {
 
 		$this->lgtm = &$GLOBALS['wp_lingotek']->model;
 		$this->pllm = &$GLOBALS['polylang']->model;
+		$this->lingotek_prefs = Lingotek_Model::get_prefs();
 
 		// automatic upload
 		add_action('post_updated', array(&$this, 'post_updated'), 10, 3);
@@ -226,15 +228,29 @@ class Lingotek_Filters_Post extends PLL_Admin_Filters_Post {
 	 */
 	public function delete_post($post_id) {
 		static $avoid_recursion = array();
+		$group = $this->lgtm->get_group('post', $post_id);
 
 		if (!wp_is_post_revision($post_id) && !in_array($post_id, $avoid_recursion)) {
 			// sync delete is not needed when emptying the bin as trash is synced
-			if (empty($_REQUEST['delete_all'])) {
+			if (empty($_REQUEST['delete_all']) && isset($this->lingotek_prefs['delete_linked_content']['enabled'])) {
 				$tr_ids = $this->get_translations_to_sync($post_id);
 				$avoid_recursion = array_merge($avoid_recursion, array_values($tr_ids));
 				foreach ($tr_ids as $tr_id) {
 					wp_delete_post($tr_id, true); // forces deletion for the translations which are not already in the list
 				}
+			}
+			if ($group !== 0 && $group->source == $post_id) {
+				$group->disassociate();
+			}
+			else if ($group->source !== null) {
+				$post_lang = pll_get_post_language($post_id, 'locale');
+				if ($this->lingotek_prefs['delete_document_from_tms']) {
+					unset($group->desc_array['lingotek']['translations'][$post_lang]);
+				}
+				else {
+					$group->desc_array['lingotek']['translations'][$post_lang] = 'ready';
+				}
+				$group->save();
 			}
 			$this->lgtm->delete_post($post_id);
 		}
@@ -260,8 +276,13 @@ class Lingotek_Filters_Post extends PLL_Admin_Filters_Post {
 	 * @param int $post_id
 	 */
 	public function trash_post($post_id) {
-		foreach ($this->get_translations_to_sync($post_id) as $tr_id)
-			wp_trash_post($tr_id);
+		if (isset($this->lingotek_prefs['delete_linked_content']['enabled'])) {
+			foreach ($this->get_translations_to_sync($post_id) as $tr_id)
+				wp_trash_post($tr_id);
+		}
+		else {
+			wp_trash_post($post_id);
+		}
 	}
 
 	/*

@@ -1,10 +1,10 @@
-=== User Activity Log ===
+﻿=== User Activity Log ===
 Contributors: solwininfotech
 Donate link: https://www.solwininfotech.com/product/wordpress-plugins/user-activity-log-pro/
 Tags: admin user log, user log, user, log, user activity, activity log, log user, record user activity, log user action, user action log, wordpress admin security, wordpress security, security, user tracking, user activity monitor, watch user, track user, track user activity, track activity.
 Requires at least: 4.0
-Tested up to: 4.6.1
-Stable tag: 1.2.6
+Tested up to: 4.7
+Stable tag: 1.2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -117,7 +117,14 @@ Monitor and track all backend activities those are done by your freelancers, web
 3. User Activities - Email Notification Settings
 4. User Activities - Email Settings
 
+
 == Changelog ==
+
+= 1.2.7 =
+Release date: January 4th, 2017
+
+* Bug Fix - Customize notification email not working
+
 = 1.2.6 =
 Release date: October 11th, 2016
 

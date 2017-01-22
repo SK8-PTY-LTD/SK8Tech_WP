@@ -207,8 +207,15 @@ class Ga_Lib_Api_Client {
 	private function ga_api_data( $query_params ) {
 		$request  = Ga_Lib_Api_Request::get_instance();
 		$request  = $this->sign( $request );
-		$response = $request->make_request( self::GA_DATA_ENDPOINT, wp_json_encode( $query_params ), true );
-
+		$current_user = wp_get_current_user();
+		$quota_user_string = '';
+		if ( !empty( $current_user ) ){
+			$blogname = get_option( 'blogname' );
+			$quota_user = md5( $blogname . $current_user->user_login );
+			$quota_user_string = '?quotaUser=' . $quota_user;
+		}
+		$response = $request->make_request( self::GA_DATA_ENDPOINT.$quota_user_string, wp_json_encode( $query_params ), true );
+		
 		return new Ga_Lib_Api_Response( $response );
 	}
 

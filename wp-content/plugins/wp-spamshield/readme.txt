@@ -227,6 +227,34 @@ If you have any further questions, please submit them on the main [WP-SpamShield
 
 == Changelog ==
 
+= 1.9.9.8.5 =
+*released 01/19/17*
+
+* Fixed a bug causing PHP Notices/Warnings.
+* Made various code enhancements and improvements.
+* Maintenance: Updated the spam filters.
+
+= 1.9.9.8.4 =
+*released 01/18/17*
+
+* Fixed a bug in the web host detection function. The error was caused by new functionality imported from our RS System Diagnostic plugin in version 1.9.9.8.2 and has now been fixed.
+
+= 1.9.9.8.3 =
+*released 01/18/17*
+
+* Fixed a fatal error introduced in version 1.9.9.8.2 that affected Wordfence users.
+
+= 1.9.9.8.2 =
+*released 01/18/17*
+
+* Added robust detection for over 90 web hosting services to further improve compatibility with various server setups and edge cases. We developed this functionality for our RS System Diagnostic plugin and imported it to WP-SpamShield.
+* Added robust detection for web proxy/WAF/CDN services such as Cloudflare, Incapsula, and Sucuri CloudProxy. We developed this functionality for our RS System Diagnostic plugin and imported it to WP-SpamShield.
+* Improved support for Varnish and other server-side caching systems.
+* Added functionality to enforce existing [plugin Minimum Requirement #3](https://www.redsandmarketing.com/plugins/wp-spamshield/?wpss=requirements#wpss_requirements), "Your server must be configured to allow the use of an .htaccess file." Accordingly, if a standalone Nginx server is detected, the plugin will deactivate. Standalone Nginx servers have never been supported by the plugin, and this has always been explained in the plugin Minimum Requirements, but unfortunately despite existing warnings in the admin, not everyone pays attention, and this became necessary.
+* Made various code enhancements and improvements.
+* Improved some filters in the anti-spam algorithm.
+* Maintenance: Updated existing spam filters.
+
 = 1.9.9.8.1 =
 *released 12/23/16*
 
@@ -840,9 +868,10 @@ If you have any further questions, please submit them on the main [WP-SpamShield
 For a complete list of changes to the plugin, view the [Changelog](https://www.redsandmarketing.com/plugins/wp-spamshield/changelog/).
 
 == Upgrade Notice ==
-= 1.9.9.8.1 =
+= 1.9.9.8.5 =
 
-* Updated the spam filters. Please see Changelog for details.
+* Fixed a bug causing PHP Notices/Warnings, made various code enhancements and improvements, and updated the spam filters. Please see Changelog for details.
+
 
 == Other Notes ==
 

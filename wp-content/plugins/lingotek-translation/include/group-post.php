@@ -163,6 +163,7 @@ class Lingotek_Group_Post extends Lingotek_Group {
 		$custom_fields_from_wpml = self::get_custom_fields_from_wpml();
 		$custom_fields_from_postmeta = self::get_custom_fields_from_wp_postmeta($post_ID);
 		$custom_fields_from_lingotek = get_option('lingotek_custom_fields', array());
+		$default_custom_fields = get_option('lingotek_default_custom_fields') ? get_option('lingotek_default_custom_fields') : 'ignore';
 		$custom_fields = array();
 		$items = array();
 
@@ -181,7 +182,7 @@ class Lingotek_Group_Post extends Lingotek_Group {
     		}
     		// no lingotek setting, no wpml setting, so save default setting of ignore
     		else {
-					$custom_fields[$cf['meta_key']] = 'ignore';
+					$custom_fields[$cf['meta_key']] = $default_custom_fields;
     		}
 			}
   		// lingotek already has this field setting saved

@@ -153,6 +153,9 @@ class Lingotek_Model {
 			'delete_document_from_tms' => array(
 				'delete' => 1,
 			),
+			'delete_linked_content' => array(
+				'enabled' => 1,
+			),
 		);
 		$prefs = array_merge($default, get_option('lingotek_prefs', $default)); // ensure defaults are set for missing keys
 		return $prefs;
@@ -504,6 +507,7 @@ class Lingotek_Model {
 	public function delete_post($object_id) {
 		if ($document = $this->get_group('post', $object_id)) {
 			$client = new Lingotek_API();
+			$lingotek_prefs = Lingotek_Model::get_prefs();
 
 			if ($document->source == $object_id) {
 				$client->delete_document($document->document_id, $object_id);
@@ -511,7 +515,9 @@ class Lingotek_Model {
 			else {
 				PLL()->model->post->delete_translation($object_id);
 				$lang = PLL()->model->post->get_language($object_id);
-				$client->delete_translation($document->document_id, $lang->lingotek_locale, $object_id);
+				if ($lingotek_prefs['delete_document_from_tms']) {
+					$client->delete_translation($document->document_id, $lang->lingotek_locale, $object_id);
+				}
 			}
 		}
 	}

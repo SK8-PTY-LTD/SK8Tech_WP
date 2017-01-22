@@ -446,12 +446,12 @@ class Lingotek_API extends Lingotek_HTTP {
 	}
 
 	public function get_communities() {
-		$response = $this->get(add_query_arg(array('limit' => 100), $this->api_url . '/community'));
+		$response = $this->get(add_query_arg(array('limit' => 1000), $this->api_url . '/community'));
 		return !is_wp_error($response) && 200 == wp_remote_retrieve_response_code($response) ? json_decode(wp_remote_retrieve_body($response)) : false;
 	}
 
 	public function get_projects($community_id) {
-		$response = $this->get(add_query_arg(array('community_id' => $community_id, 'limit' => 100), $this->api_url . '/project'));
+		$response = $this->get(add_query_arg(array('community_id' => $community_id, 'limit' => 1000), $this->api_url . '/project'));
 		if (wp_remote_retrieve_response_code($response) == 204) {
 			return array();// there are currently no projects
 		}
@@ -459,17 +459,17 @@ class Lingotek_API extends Lingotek_HTTP {
 	}
 
 	public function get_vaults($community_id) {
-		$response = $this->get(add_query_arg(array('community_id' => $community_id, 'limit' => 100), $this->api_url . '/vault'));
+		$response = $this->get(add_query_arg(array('community_id' => $community_id, 'limit' => 1000), $this->api_url . '/vault'));
 		return !is_wp_error($response) && 200 == wp_remote_retrieve_response_code($response) ? json_decode(wp_remote_retrieve_body($response)) : false;
 	}
 
 	public function get_workflows($community_id) {
-		$response = $this->get(add_query_arg(array('community_id' => $community_id, 'limit' => 100), $this->api_url . '/workflow'));
+		$response = $this->get(add_query_arg(array('community_id' => $community_id, 'limit' => 1000), $this->api_url . '/workflow'));
 		return !is_wp_error($response) && 200 == wp_remote_retrieve_response_code($response) ? json_decode(wp_remote_retrieve_body($response)) : false;
 	}
 
 	public function get_filters() {
-		$response = $this->get(add_query_arg(array('limit' => 100), $this->api_url . '/filter'));
+		$response = $this->get(add_query_arg(array('limit' => 1000), $this->api_url . '/filter'));
 		return !is_wp_error($response) && 200 == wp_remote_retrieve_response_code($response) ? json_decode(wp_remote_retrieve_body($response)) : false;
 	}
 

@@ -69,6 +69,17 @@ form.sol-form {
 .sol-email-table td input[type="email"] {
     width: 40%;
 }
+
+.wrap .ualParentTabs h2.nav-tab-wrapper {
+    border-bottom: none;
+}
+
+.ualTabContentWrap .wrap {
+    margin-top: 0;
+}
+
+/*
+
 .tab_parent li:nth-child(2),
 .tab_parent li:last-child {
     margin-left: -3px;
@@ -120,6 +131,9 @@ form.sol-form {
 .tab_parent a:hover {
     color: #484848;
 }
+*/
+
+
 .sol-dropdown {
     margin-bottom: 15px;
 }
@@ -377,7 +391,7 @@ td.column-description {
     margin-right: 5px;
 }
 
-.admin_page_email_settings_menu .ui-button {
+#ualEmailSettings .ui-button {
     border: 1px solid #b6b6b6;
     float: left;
     margin-left: 0;
@@ -397,7 +411,7 @@ td.column-description {
     vertical-align: middle;
     padding: 0;
 }
-.admin_page_email_settings_menu .ui-button span {
+#ualEmailSettings .ui-button span {
     height: 30px;
     line-height: 30px;
     min-width: 31px;
@@ -407,41 +421,70 @@ td.column-description {
     font-weight: bold;
     border-right: 0 none;
 }
-.admin_page_email_settings_menu .ui-corner-left.active:focus,
-.admin_page_email_settings_menu .ui-corner-left.active:active,
-.admin_page_email_settings_menu .ui-corner-left.active:hover {
+#ualEmailSettings .ui-corner-left.active:focus,
+#ualEmailSettings .ui-corner-left.active:active,
+#ualEmailSettings .ui-corner-left.active:hover {
     border-color: #71963a !important;
 }
-.admin_page_email_settings_menu .ui-corner-right.active:focus,
-.admin_page_email_settings_menu .ui-corner-right.active:active,
-.admin_page_email_settings_menu .ui-corner-right.active:hover {
+#ualEmailSettings .ui-corner-right.active:focus,
+#ualEmailSettings .ui-corner-right.active:active,
+#ualEmailSettings .ui-corner-right.active:hover {
     border-color: #d04f38 !important;
 }
-.admin_page_email_settings_menu .ui-corner-left:focus,
-.admin_page_email_settings_menu .ui-corner-left:active,
-.admin_page_email_settings_menu .ui-corner-left:hover,
-.admin_page_email_settings_menu .ui-corner-right:focus,
-.admin_page_email_settings_menu .ui-corner-right:active,
-.admin_page_email_settings_menu .ui-corner-right:hover {
+#ualEmailSettings .ui-corner-left:focus,
+#ualEmailSettings .ui-corner-left:active,
+#ualEmailSettings .ui-corner-left:hover,
+#ualEmailSettings .ui-corner-right:focus,
+#ualEmailSettings .ui-corner-right:active,
+#ualEmailSettings .ui-corner-right:hover {
     border-color: #b6b6b6 !important;
 }
-.admin_page_email_settings_menu .ui-corner-left {
-    border-radius: 3px 0 0 3px;
+#ualEmailSettings .ui-corner-left {
+    border-radius: 3px 0 0 3px !important;
+    height: auto;
 }
-.admin_page_email_settings_menu .ui-corner-right {
-    border-radius: 0 3px 3px 0;
+#ualEmailSettings .ui-corner-right {
+    border-radius: 0 3px 3px 0 !important;
+    height: auto;
 }
-.admin_page_email_settings_menu .ui-corner-left.active {
+#ualEmailSettings .ui-corner-left.active {
     background: #a3c76e none repeat scroll 0 0;
     border-color: #71963a;
     color: #ffffff;
     border-right: 0;
 }
-.admin_page_email_settings_menu .ui-corner-right.active {
+#ualEmailSettings .ui-corner-right.active {
     background: #de806f none repeat scroll 0 0;
     border-color: #d04f38;
     color: #ffffff;
     border-left:0;
+}
+.ualParentTabs a.nav-tab-active,
+.ualParentTabs a.nav-tab-active:focus,
+.ualParentTabs a.nav-tab-active:focus:active,
+.ualParentTabs a.nav-tab-active:hover {
+    background: #ffffff;
+    border-bottom: none;
+    outline: none;
+}
+.ualParentTabs a.nav-tab-active {
+    border-bottom: medium none;
+    position: relative;
+    z-index: 99 !important;
+}
+
+.ualpContentDiv form.sol-form {
+    top: -1px;
+    position: relative;
+}
+
+.ualParentTabs a.nav-tab,
+.ualParentTabs a.nav-tab:focus,
+.ualParentTabs a.nav-tab:active,
+.ualParentTabs a.nav-tab:focus:active,
+.ualParentTabs a.nav-tab:hover {
+    border-bottom: none;
+    outline: none;
 }
 
 @media screen and (max-width : 782px){
@@ -462,4 +505,41 @@ td.column-description {
     .frm-user-activity .tablenav .tablenav-pages {
         margin-bottom: 10px;
     }
+}
+@media screen and (max-width : 1000px){
+    .user-activity-ad-block {
+        margin-top: 30px;
+        width: 100%;
+    }
+    form.sol-form {
+        width: 100%;
+    }
+    .sol-box-border {
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow: hidden;
+        padding: 0 15px;
+        width: 100%;
+    }
+}
+@media screen and (max-width : 480px){
+    .ualParentTabs a.nav-tab {
+        width: 100%;
+        margin-bottom: 0;
+        box-sizing: border-box;
+        margin-top: 0;
+    }
+    .ualpContentDiv form.sol-form {
+        top:auto;
+        margin-top: 20px;
+    }
+    a.nav-tab.ualEmailSettings.nav-tab-active,
+    a.nav-tab.ualEmailSettings.nav-tab-active:hover,
+    a.nav-tab.ualEmailSettings,
+    a.nav-tab.ualEmailSettings:hover {
+        border-bottom: 1px solid #cccccc;
+    }
+    
+    
+    
 }

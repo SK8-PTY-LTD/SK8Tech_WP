@@ -33,6 +33,13 @@ $setting_details = array(
       'delete' => __('Delete documents from Lingotek TMS when disassociating.', 'lingotek-translation'),
     )
   ),
+  'delete_linked_content' => array(
+    'type' => 'checkboxes',
+    'label' => __('Deleting Content', 'wp-lingotek'),
+    'description' => __('When enabled, deleting source or target content will also delete all linked content.', 'wp-lingotek'),
+    'values' => array(
+      'enabled' => __('Delete linked content', 'wp-lingotek')
+    )),
   'import_enabled' => array(
     'type' => 'checkboxes',
     'label' => __('Import', 'wp-lingotek'),

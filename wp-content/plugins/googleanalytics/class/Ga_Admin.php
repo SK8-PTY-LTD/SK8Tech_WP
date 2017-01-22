@@ -144,6 +144,7 @@ class Ga_Admin {
 	 * @return mixed
 	 */
 	public static function preupdate_selected_account( $new_value, $old_value ) {
+		$data = null;		
 		if ( ! empty( $new_value ) ) {
 			$data = explode( "_", $new_value );
 
@@ -626,8 +627,13 @@ class Ga_Admin {
 		$errors = self::api_client()->get_errors();
 		if ( ! empty( $errors ) ) {
 			foreach ( $errors as $error ) {
-				echo Ga_Helper::ga_wp_notice( _( '[' . $error['class'] . ']' ) . ' ' . $error['message'],
-					self::NOTICE_ERROR );
+				if ( $error['class'] == 'Ga_Lib_Api_Request_Exception' ){
+					echo Ga_Helper::ga_wp_notice( _( 'There are temporary connection issues, please try again later or go to Google Analytics website to see the dashboards' ),	self::NOTICE_ERROR );
+				}
+				else{
+					echo Ga_Helper::ga_wp_notice( _( '[' . $error['class'] . ']' ) . ' ' . $error['message'],
+						self::NOTICE_ERROR );
+				}
 			}
 		}
 	}

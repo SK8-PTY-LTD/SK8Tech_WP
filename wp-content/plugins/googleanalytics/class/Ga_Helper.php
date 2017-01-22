@@ -146,7 +146,6 @@ class Ga_Helper {
 	public static function add_ga_dashboard_widget() {
 		echo self::get_ga_dashboard_widget();
 
-		Ga_Admin::display_api_errors();
 	}
 
 	/**

@@ -1,26 +1,26 @@
 <?php
 /*
-  Plugin Name: User Activity Log
-  Plugin URI: https://wordpress.org/plugins/user-activity-log/
-  Description: Log the activity of users and roles to monitor your site with actions
-  Author: Solwin Infotech
-  Author URI: https://www.solwininfotech.com/
-  Version: 1.2.6
-  Requires at least: 4.0
-  Tested up to: 4.6.1
-  Copyright: Solwin Infotech
-  License: GPLv2 or later
+ * Plugin Name: User Activity Log
+ * Plugin URI: https://wordpress.org/plugins/user-activity-log/
+ * Description: Log the activity of users and roles to monitor your site with actions
+ * Author: Solwin Infotech
+ * Author URI: https://www.solwininfotech.com/
+ * Version: 1.2.7
+ * Requires at least: 4.0
+ * Tested up to: 4.7
+ * Copyright: Solwin Infotech
+ * License: GPLv2 or later
  */
 
 /*
-  Exit if accessed directly
+ * Exit if accessed directly
  */
 if (!defined('ABSPATH')) {
     exit;
 }
 
 /*
-  Define variables
+ * Define variables
  */
 define('UAL_PLUGIN_DIR', plugin_dir_path(__FILE__));
 include(UAL_PLUGIN_DIR . 'user_functions.php');
@@ -29,16 +29,17 @@ add_action('init', 'ual_filter_data');
 add_action('plugins_loaded', 'latest_news_solwin_feed');
 add_action('current_screen', 'ual_footer');
 add_filter('set-screen-option', 'ual_set_screen_option', 10, 3);
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'user_activity_log_plugin_links');
 
 /**
- * Load plugin text domain (wp_user_log)
+ * Load plugin text domain (user_activity_log)
  */
 add_action('plugins_loaded', 'load_text_domain_user_activity_log');
 
 if (!function_exists('load_text_domain_user_activity_log')) {
 
     function load_text_domain_user_activity_log() {
-        load_plugin_textdomain('wp_user_log', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+        load_plugin_textdomain('user_activity_log', false, dirname(plugin_basename(__FILE__)) . '/languages/');
     }
 
 }
@@ -55,7 +56,7 @@ if (!function_exists('latest_news_solwin_feed')) {
 
             function solwin_latest_news_with_product_details() {
                 add_screen_option('layout_columns', array('max' => 3, 'default' => 2));
-                add_meta_box('wp_user_log_dashboard_widget', __('News From Solwin Infotech', 'wp_user_log'), 'solwin_dashboard_widget_news', 'dashboard', 'normal', 'high');
+                add_meta_box('wp_user_log_dashboard_widget', __('News From Solwin Infotech', 'user_activity_log'), 'solwin_dashboard_widget_news', 'dashboard', 'normal', 'high');
             }
 
         }
@@ -63,10 +64,10 @@ if (!function_exists('latest_news_solwin_feed')) {
 
             function solwin_dashboard_widget_news() {
                 echo '<div class="rss-widget">'
-                . '<div class="solwin-news"><p><strong>Solwin Infotech News</strong></p>';
+                . '<div class="solwin-news"><p><strong>' . __('Solwin Infotech News', 'user_activity_log') . '</strong></p>';
                 wp_widget_rss_output(array(
                     'url' => 'https://www.solwininfotech.com/feed/',
-                    'title' => __('News From Solwin Infotech', 'wp_user_log'),
+                    'title' => __('News From Solwin Infotech', 'user_activity_log'),
                     'items' => 5,
                     'show_summary' => 0,
                     'show_author' => 0,
@@ -78,11 +79,11 @@ if (!function_exists('latest_news_solwin_feed')) {
 
                 $file = 'https://www.solwininfotech.com/documents/assets/latest_product.xml';
                 echo '<div class="display-product">'
-                . '<div class="product-detail"><p><strong>' . __('Latest Product', 'wp_user_log') . '</strong></p>';
+                . '<div class="product-detail"><p><strong>' . __('Latest Product', 'user_activity_log') . '</strong></p>';
                 $response = wp_remote_post($file);
                 if (is_wp_error($response)) {
                     $error_message = $response->get_error_message();
-                    echo "<p>" . __('Something went wrong', 'wp_user_log') . " : $error_message" . "</p>";
+                    echo "<p>" . __('Something went wrong', 'user_activity_log') . " : $error_message" . "</p>";
                 } else {
                     $body = wp_remote_retrieve_body($response);
                     $xml = simplexml_load_string($body);
@@ -146,11 +147,11 @@ if (!function_exists('ual_remove_footer_admin')) {
         ob_start();
         ?>
         <p id="footer-left" class="alignleft">
-            <?php _e('If you like ', 'wp_user_log'); ?>
-            <a href="https://www.solwininfotech.com/product/wordpress-plugins/user-activity-log/" target="_blank"><strong><?php _e('User Activity Log Plugin', 'wp_user_log'); ?></strong></a>
-            <?php _e('please leave us a', 'wp_user_log'); ?>
+            <?php _e('If you like ', 'user_activity_log'); ?>
+            <a href="https://www.solwininfotech.com/product/wordpress-plugins/user-activity-log/" target="_blank"><strong><?php _e('User Activity Log Plugin', 'user_activity_log'); ?></strong></a>
+            <?php _e('please leave us a', 'user_activity_log'); ?>
             <a class="bdp-rating-link" data-rated="Thanks :)" target="_blank" href="https://wordpress.org/support/plugin/user-activity-log/reviews/?filter=5#new-post">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</a>
-            <?php _e('rating. A heartly thank you from Solwin Infotech in advance!', 'wp_user_log'); ?>
+            <?php _e('rating. A heartly thank you from Solwin Infotech in advance!', 'user_activity_log'); ?>
         </p>
         <?php
         return ob_get_clean();
@@ -205,11 +206,9 @@ if (!function_exists('ual_user_activity')):
 
     function ual_user_activity() {
         global $screen_option_page;
-        $screen_option_page = add_menu_page(__('User Action Log', 'wp_user_log'), __('User Action Log', 'wp_user_log'), 'manage_options', 'user_action_log', 'ual_user_activity_function', 'dashicons-admin-users');
+        $screen_option_page = add_menu_page(__('User Activity Log', 'user_activity_log'), __('User Activity Log', 'user_activity_log'), 'manage_options', 'user_action_log', 'ual_user_activity_function', 'dashicons-admin-users');
         add_action("load-$screen_option_page", 'ual_screen_options');
-        add_submenu_page('user_action_log', __('General Settings', 'wp_user_log'), __('Settings', 'wp_user_log'), 'manage_options', 'general_settings_menu', 'ual_general_settings', 'dashicons-admin-users');
-        $generalpage = add_submenu_page(__('Notification Settings', 'wp_user_log'), __('User Action Log', 'wp_user_log'), __('General', 'wp_user_log'), 'manage_options', 'user_settings_menu', 'ual_user_activity_setting_function', 'dashicons-admin-users');
-        $emailpage = add_submenu_page(__('Email Settings', 'wp_user_log'), __('Email Settings', 'wp_user_log'), __('Email', 'wp_user_log'), 'manage_options', 'email_settings_menu', 'ual_email_settings', 'dashicons-admin-users');
+        add_submenu_page('user_action_log', __('Settings | User Activity Log', 'user_activity_log'), __('Settings', 'user_activity_log'), 'manage_options', 'general_settings_menu', 'ualSettingsPanel');        
     }
 
 endif;
@@ -230,7 +229,7 @@ if (!function_exists('ual_screen_options')) {
             return;
 
         $args = array(
-            'label' => __('Number of items per page:', 'wp_user_log'),
+            'label' => __('Number of items per page:', 'user_activity_log'),
             'default' => 10,
             'option' => 'ual_per_page'
         );
@@ -332,7 +331,7 @@ if (!function_exists('ual_user_activity_function')):
             $prev_page = 1;
         ?>
         <div class="wrap">
-            <h2><?php _e('User Activity Log', 'wp_user_log'); ?></h2>
+            <h2><?php _e('User Activity Log', 'user_activity_log'); ?></h2>
             <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . "?" . $_SERVER['QUERY_STRING']); ?>" class="frm-user-activity">
                 <div class="tablenav top">
                     <div class="wp-filter">
@@ -340,7 +339,7 @@ if (!function_exists('ual_user_activity_function')):
                         <!-- Drop down menu for Role Start -->
                         <div class="alignleft actions">
                             <select name="role">
-                                <option selected value="0"><?php _e('All Role', 'wp_user_log'); ?></option>
+                                <option selected value="0"><?php _e('All Role', 'user_activity_log'); ?></option>
                                 <?php
                                 $role_query = "SELECT distinct user_role from $table_name";
                                 $get_roles = $wpdb->get_results($role_query);
@@ -348,7 +347,7 @@ if (!function_exists('ual_user_activity_function')):
                                     $user_role = $role->user_role;
                                     if ($user_role != "") {
                                         ?>
-                                        <option value="<?php echo $user_role; ?>" <?php echo selected($us_role, $user_role); ?>><?php printf(__('%s', 'wp_user_log'), ucfirst($user_role)); ?></option>
+                                        <option value="<?php echo $user_role; ?>" <?php echo selected($us_role, $user_role); ?>><?php printf(__('%s', 'user_activity_log'), ucfirst($user_role)); ?></option>
                                         <?php
                                     }
                                 }
@@ -359,7 +358,7 @@ if (!function_exists('ual_user_activity_function')):
                         <!-- Drop down menu for User Start -->
                         <div class="alignleft actions">
                             <select name="user" class="sol-dropdown">
-                                <option selected value="0"><?php _e('All User', 'wp_user_log'); ?></option>
+                                <option selected value="0"><?php _e('All User', 'user_activity_log'); ?></option>
                                 <?php
                                 $username_query = "SELECT distinct user_name from $table_name";
                                 $get_username = $wpdb->get_results($username_query);
@@ -367,7 +366,7 @@ if (!function_exists('ual_user_activity_function')):
                                     $user_name = $username->user_name;
                                     if ($user_name != "") {
                                         ?>
-                                        <option value="<?php echo $user_name; ?>" <?php echo selected($us_name, $user_name); ?>><?php printf(__('%s', 'wp_user_log'), ucfirst($user_name)); ?></option>
+                                        <option value="<?php echo $user_name; ?>" <?php echo selected($us_name, $user_name); ?>><?php printf(__('%s', 'user_activity_log'), ucfirst($user_name)); ?></option>
                                         <?php
                                     }
                                 }
@@ -378,7 +377,7 @@ if (!function_exists('ual_user_activity_function')):
                         <!-- Drop down menu for Post type Start -->
                         <div class="alignleft actions">
                             <select name="post_type">
-                                <option selected value="0"><?php _e('All Type', 'wp_user_log'); ?></option>
+                                <option selected value="0"><?php _e('All Type', 'user_activity_log'); ?></option>
                                 <?php
                                 $object_type_query = "SELECT distinct object_type from $table_name";
                                 $get_type = $wpdb->get_results($object_type_query);
@@ -386,7 +385,7 @@ if (!function_exists('ual_user_activity_function')):
                                     $object_type = $type->object_type;
                                     if ($object_type != "") {
                                         ?>
-                                        <option value="<?php echo $object_type; ?>" <?php echo selected($ob_type, $object_type); ?>><?php printf(__('%s', 'wp_user_log'), ucfirst($object_type)); ?></option>
+                                        <option value="<?php echo $object_type; ?>" <?php echo selected($ob_type, $object_type); ?>><?php printf(__('%s', 'user_activity_log'), ucfirst($object_type)); ?></option>
                                         <?php
                                     }
                                 }
@@ -399,9 +398,9 @@ if (!function_exists('ual_user_activity_function')):
                         <!-- Search Box start -->
                         <div class="sol-search-div">
                             <p class="search-box">
-                                <label class="screen-reader-text" for="search-input"><?php _e('Search', 'wp_user_log'); ?> :</label>
-                                <input id="user-search-input" type="search" placeholder="User, Role, Action" value="<?php printf(__('%s', 'wp_user_log'), $searchtxt); ?>" name="txtSearchinput">
-                                <input id="search-submit" class="button" type="submit" value="<?php esc_attr_e('Search', 'wp_user_log'); ?>" name="btnSearch">
+                                <label class="screen-reader-text" for="search-input"><?php _e('Search', 'user_activity_log'); ?> :</label>
+                                <input id="user-search-input" type="search" placeholder="User, Role, Action" value="<?php printf(__('%s', 'user_activity_log'), $searchtxt); ?>" name="txtSearchinput">
+                                <input id="search-submit" class="button" type="submit" value="<?php esc_attr_e('Search', 'user_activity_log'); ?>" name="btnSearch">
                             </p>
                         </div>
                         <!-- Search Box end -->
@@ -409,7 +408,7 @@ if (!function_exists('ual_user_activity_function')):
                     </div>
                     <!-- Top pagination start -->
                     <div class="tablenav-pages">
-                        <?php $items = sprintf(_n('%s item', '%s items', $total_items, 'wp_user_log'), $total_items); ?>
+                        <?php $items = sprintf(_n('%s item', '%s items', $total_items, 'user_activity_log'), $total_items); ?>
                         <span class="displaying-num"><?php echo $items; ?></span>
                         <div class="tablenav-pages" <?php
                         if ((int) $total_pages <= 1) {
@@ -440,24 +439,24 @@ if (!function_exists('ual_user_activity_function')):
                 <table class="widefat post fixed striped" cellspacing="0">
                     <thead>
                         <tr>
-                            <th style="width: 25px" scope="col" class="manage-column column-check"><?php _e('No.', 'wp_user_log'); ?></th>
-                            <th scope="col"><?php _e('Date', 'wp_user_log'); ?></th>
-                            <th scope="col"><?php _e('Author', 'wp_user_log'); ?></th>
-                            <th scope="col"><?php _e('IP Address', 'wp_user_log'); ?></th>
-                            <th scope="col"><?php _e('Type', 'wp_user_log'); ?></th>
-                            <th scope="col"><?php _e('Action', 'wp_user_log'); ?></th>
-                            <th scope="col" colspan="2"><?php _e('Description', 'wp_user_log'); ?></th>
+                            <th style="width: 25px" scope="col" class="manage-column column-check"><?php _e('No.', 'user_activity_log'); ?></th>
+                            <th scope="col"><?php _e('Date', 'user_activity_log'); ?></th>
+                            <th scope="col"><?php _e('Author', 'user_activity_log'); ?></th>
+                            <th scope="col"><?php _e('IP Address', 'user_activity_log'); ?></th>
+                            <th scope="col"><?php _e('Type', 'user_activity_log'); ?></th>
+                            <th scope="col"><?php _e('Action', 'user_activity_log'); ?></th>
+                            <th scope="col" colspan="2"><?php _e('Description', 'user_activity_log'); ?></th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            <th style="width: 25px" scope="col" class="manage-column column-check"><?php _e('No.', 'wp_user_log'); ?></th>
-                            <th scope="col"><?php _e('Date', 'wp_user_log'); ?></th>
-                            <th scope="col"><?php _e('Author', 'wp_user_log'); ?></th>
-                            <th scope="col"><?php _e('IP Address', 'wp_user_log'); ?></th>
-                            <th scope="col"><?php _e('Type', 'wp_user_log'); ?></th>
-                            <th scope="col"><?php _e('Action', 'wp_user_log'); ?></th>
-                            <th scope="col" colspan="2"><?php _e('Description', 'wp_user_log'); ?></th>
+                            <th style="width: 25px" scope="col" class="manage-column column-check"><?php _e('No.', 'user_activity_log'); ?></th>
+                            <th scope="col"><?php _e('Date', 'user_activity_log'); ?></th>
+                            <th scope="col"><?php _e('Author', 'user_activity_log'); ?></th>
+                            <th scope="col"><?php _e('IP Address', 'user_activity_log'); ?></th>
+                            <th scope="col"><?php _e('Type', 'user_activity_log'); ?></th>
+                            <th scope="col"><?php _e('Action', 'user_activity_log'); ?></th>
+                            <th scope="col" colspan="2"><?php _e('Description', 'user_activity_log'); ?></th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -471,7 +470,14 @@ if (!function_exists('ual_user_activity_function')):
                                         echo $srno;
                                         $srno++;
                                         ?></td>
-                                    <td><?php echo $data->modified_date; ?></td>
+                                    <td><?php
+                                        $modified_date = strtotime($data->modified_date);
+                                        $date_format = get_option('date_format');
+                                        $time_format = get_option('time_format');
+                                        echo $date = date($date_format, $modified_date);
+                                        echo " ";
+                                        echo $time = date($time_format, $modified_date);
+                                    ?></td>
                                     <td class="user_id column-user_id" data-colname="Author">
                                         <a href="<?php echo get_edit_user_link($data->user_id); ?>">
                                             <?php echo get_avatar($data->user_id, 40); ?>
@@ -498,7 +504,7 @@ if (!function_exists('ual_user_activity_function')):
                             }
                         } else {
                             echo '<tr class="no-items">';
-                            echo '<td class="colspanchange" colspan="8">' . __('No record found.', 'wp_user_log') . '</td>';
+                            echo '<td class="colspanchange" colspan="8">' . __('No record found.', 'user_activity_log') . '</td>';
                             echo '</tr>';
                         }
                         ?>
@@ -524,7 +530,7 @@ if (!function_exists('ual_user_activity_function')):
                                     <a class="prev-page <?php if ($paged == '1') echo 'disabled'; ?>" href="<?php echo '?page=user_action_log&paged=' . $prev_page . '&userrole=' . $us_role . '&username=' . $us_name . '&type=' . $ob_type . '&txtsearch=' . $searchtxt; ?>" title="Go to the previous page">&lsaquo;</a>
                                 <?php } ?>
                                 <span class="paging-input">
-                                    <span class="current-page" title="Current page"><?php echo $paged; ?></span> <?php _e('of', 'wp_user_log'); ?>
+                                    <span class="current-page" title="Current page"><?php echo $paged; ?></span> <?php _e('of', 'user_activity_log'); ?>
                                     <!--<input class="current-page" type="text" size="1" value="<?php // echo $paged;                      ?>" name="paged" title="Current page"> of-->
                                     <span class="total-pages"><?php echo $total_pages; ?></span>
                                 </span>
@@ -549,16 +555,16 @@ if (!function_exists('ual_advertisment_sidebar')) {
         ?>
         <div class="user-activity-ad-block">
             <div class="ual-help">
-                <h2><?php _e('Help to improve this plugin!', 'wp_user_log'); ?></h2>
+                <h2><?php _e('Help to improve this plugin!', 'user_activity_log'); ?></h2>
                 <div class="help-wrapper">
-                    <span><?php _e('Enjoyed this plugin?', 'wp_user_log'); ?></span>
-                    <span><?php _e('You can help by', 'wp_user_log'); ?>
+                    <span><?php _e('Enjoyed this plugin?', 'user_activity_log'); ?></span>
+                    <span><?php _e('You can help by', 'user_activity_log'); ?>
                         <a href="https://wordpress.org/support/plugin/user-activity-log/reviews/?filter=5#new-post" target="_blank">
-                            <?php _e(' rating this plugin on wordpress.org', 'wp_user_log'); ?>
+                            <?php _e(' rating this plugin on wordpress.org', 'user_activity_log'); ?>
                         </a>
                     </span>
                     <div class="ual-total-download">
-                        <?php _e('Downloads:', 'wp_user_log'); ?><?php get_total_downloads_user_activity_log_plugin(); ?>
+                        <?php _e('Downloads:', 'user_activity_log'); ?><?php get_total_downloads_user_activity_log_plugin(); ?>
                         <?php
                         $wp_version = get_bloginfo('version');
                         if ($wp_version > 3.8) {
@@ -569,41 +575,41 @@ if (!function_exists('ual_advertisment_sidebar')) {
                 </div>
             </div>
             <div class="useful_plugins">
-                <h2><?php _e('User Activity Log Pro', 'wp_user_log'); ?></h2>
+                <h2><?php _e('User Activity Log Pro', 'user_activity_log'); ?></h2>
                 <div class="help-wrapper">
                     <div class="pro-content">
                         <ul class="advertisementContent">
-                            <li><?php _e("Export logs in CSV Format", 'wp_user_log') ?></li>
-                            <li><?php _e("View Detail logs(Old/New comparison)", 'wp_user_log') ?></li>
-                            <li><?php _e("Delete Logs", 'wp_user_log') ?></li>
-                            <li><?php _e("Favorite/Unfavorite Logs", 'wp_user_log') ?></li>
-                            <li><?php _e("Password Security", 'wp_user_log') ?></li>
-                            <li><?php _e("Role selection option for display logs", 'wp_user_log') ?></li>
-                            <li><?php _e("Hook Selection option to monitor activity", 'wp_user_log') ?></li>
-                            <li><?php _e("Add Custom event to track the logs", 'wp_user_log') ?></li>
-                            <li><?php _e("Sort and Filter logs", 'wp_user_log') ?></li>
+                            <li><?php _e("Export logs in CSV Format", 'user_activity_log') ?></li>
+                            <li><?php _e("View Detail logs(Old/New comparison)", 'user_activity_log') ?></li>
+                            <li><?php _e("Delete Logs", 'user_activity_log') ?></li>
+                            <li><?php _e("Favorite/Unfavorite Logs", 'user_activity_log') ?></li>
+                            <li><?php _e("Password Security", 'user_activity_log') ?></li>
+                            <li><?php _e("Role selection option for display logs", 'user_activity_log') ?></li>
+                            <li><?php _e("Hook Selection option to monitor activity", 'user_activity_log') ?></li>
+                            <li><?php _e("Add Custom event to track the logs", 'user_activity_log') ?></li>
+                            <li><?php _e("Sort and Filter logs", 'user_activity_log') ?></li>
                         </ul>
-                        <p class="pricing_change"><?php _e("Buy Now only at ", 'wp_user_log') ?><ins><?php _e("$24", 'wp_user_log') ?></ins></p>
+                        <p class="pricing_change"><?php _e("Buy Now only at ", 'user_activity_log') ?><ins><?php _e("$24", 'user_activity_log') ?></ins></p>
                     </div>
                     <div class="pre-book-pro">
                         <a href="https://codecanyon.net/item/user-activity-log-pro-for-wordpress/18201203?ref=solwin" target="_blank">
-                            <?php _e('Buy Now', 'wp_user_log'); ?>
+                            <?php _e('Buy Now', 'user_activity_log'); ?>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="ual-support">
-                <h3><?php _e('Need Support?', 'wp_user_log'); ?></h3>
+                <h3><?php _e('Need Support?', 'user_activity_log'); ?></h3>
                 <div class="help-wrapper">
-                    <span><?php _e('Check out the', 'wp_user_log') ?>
-                        <a href="https://wordpress.org/plugins/user-activity-log/faq/" target="_blank"><?php _e('FAQs', 'wp_user_log'); ?></a>
-                        <?php _e('and', 'wp_user_log') ?>
-                        <a href="https://wordpress.org/support/plugin/user-activity-log" target="_blank"><?php _e('Support Forums', 'wp_user_log') ?></a>
+                    <span><?php _e('Check out the', 'user_activity_log') ?>
+                        <a href="https://wordpress.org/plugins/user-activity-log/faq/" target="_blank"><?php _e('FAQs', 'user_activity_log'); ?></a>
+                        <?php _e('and', 'user_activity_log') ?>
+                        <a href="https://wordpress.org/support/plugin/user-activity-log" target="_blank"><?php _e('Support Forums', 'user_activity_log') ?></a>
                     </span>
                 </div>
             </div>
             <div class="ual-support">
-                <h3><?php _e('Share & Follow Us', 'wp_user_log'); ?></h3>
+                <h3><?php _e('Share & Follow Us', 'user_activity_log'); ?></h3>
                 <div class="help-wrapper">
                     <!-- Twitter -->
                     <div style='display:block;margin-bottom:8px;'>
@@ -669,3 +675,29 @@ if (!function_exists('ualDeactivateUalp')) {
     }
 
 }
+
+
+if(!function_exists('user_activity_log_plugin_links')) {
+    
+    function user_activity_log_plugin_links($links){
+        $links[] = '<a target="_blank" href="'. esc_url( 'https://www.solwininfotech.com/documents/wordpress/user-activity-log-lite/' ) .'">'.__('Documentation', 'user_activity_log').'</a>';
+        return $links;
+    }
+    
+}
+
+/*
+ * Delete activity log as per selected days
+ */
+if(!function_exists('user_activity_log_delete_log')){
+    function user_activity_log_delete_log(){
+        global $wpdb;
+        $getLogSpan = "";
+        $getLogSpan = get_option('ualpKeepLogsDay');
+        $table_name = $wpdb->prefix . "ualp_user_activity";
+        if (!empty($getLogSpan)) {
+            $wpdb->query("DELETE FROM $table_name WHERE modified_date < NOW() - INTERVAL $getLogSpan DAY");
+        }
+    }
+}
+add_action('init', 'user_activity_log_delete_log');

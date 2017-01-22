@@ -71,12 +71,12 @@ if (!function_exists('ual_database_upgrade')) {
             <div class="updated">
                 <p>
                     <strong>
-                        <?php _e('User Activity Log Data Update', 'wp_user_log'); ?>
-                    </strong> &#8211; <?php _e('We need to update your database to the latest version.', 'wp_user_log'); ?>
+                        <?php _e('User Activity Log Data Update', 'user_activity_log'); ?>
+                    </strong> &#8211; <?php _e('We need to update your database to the latest version.', 'user_activity_log'); ?>
                 </p>
                 <p class="submit">
                     <a href="<?php echo esc_url(add_query_arg('do_update_ual', 'do', admin_url('admin.php?page=general_settings_menu'))); ?>" class="ual-update-now button-primary">
-                        <?php _e('Run the updater', 'wp_user_log'); ?>
+                        <?php _e('Run the updater', 'user_activity_log'); ?>
                     </a>
                 </p>
             </div>
@@ -88,7 +88,7 @@ if (!function_exists('ual_database_upgrade')) {
             ?>
             <script type="text/javascript">
                 jQuery('.ual-update-now').click('click', function () {
-                    return window.confirm('<?php echo esc_js(__('It is strongly recommended that you backup your database before proceeding. Are you sure you wish to run the updater now?', 'wp_user_log')); ?>');
+                    return window.confirm('<?php echo esc_js(__('It is strongly recommended that you backup your database before proceeding. Are you sure you wish to run the updater now?', 'user_activity_log')); ?>');
                 });
             </script>
             <?php
@@ -876,8 +876,8 @@ if (!function_exists('admin_notice_message')) {
      */
     function admin_notice_message($class, $message) {
         ?>
-        <div class="<?php _e($class, 'wp_user_log'); ?> is-dismissible notice settings-error">
-            <p><?php _e($message, 'wp_user_log'); ?></p>
+        <div class="<?php _e($class, 'user_activity_log'); ?> is-dismissible notice settings-error">
+            <p><?php _e($message, 'user_activity_log'); ?></p>
         </div>
         <?php
     }
@@ -897,7 +897,7 @@ if (!function_exists('ual_settings_link')) {
         if (empty($plugin))
             $plugin = dirname(plugin_basename(__FILE__)) . '/user_activity_log.php';
         if ($plugin_file == $plugin) {
-            $settings_link = '<a href="' . admin_url('admin.php?page=general_settings_menu') . '">' . __('Settings', 'wp_user_log') . '</a>';
+            $settings_link = '<a href="' . admin_url('admin.php?page=general_settings_menu') . '">' . __('Settings', 'user_activity_log') . '</a>';
             array_unshift($actions, $settings_link);
         }
         return $actions;
@@ -905,6 +905,16 @@ if (!function_exists('ual_settings_link')) {
 
 }
 add_filter('plugin_action_links', 'ual_settings_link', 10, 2);
+
+if(!function_exists('ual_plugin_upgrade_notice_screen')){
+    function ual_plugin_upgrade_notice_screen(){
+        $screen = get_current_screen();
+        if ($screen->id == "toplevel_page_user_action_log" || $screen->id == "user-action-log_page_general_settings_menu" || $screen->id == "admin_page_email_settings_menu" || $screen->id == "admin_page_user_settings_menu") {
+            add_action('admin_notices', 'ual_plugin_upgrade_notice');
+        }
+    }
+}
+add_action('current_screen', 'ual_plugin_upgrade_notice_screen');
 
 /*
  * add notice at admin side
@@ -921,16 +931,20 @@ if (!function_exists('ual_plugin_upgrade_notice')) {
             <div class="updated notice is-dismissible"><?php
                 $genre_url = add_query_arg('ual_plugin_upgrade_notice', 0, get_permalink());
                 ?>
-                <p><?php _e('User Activity Log Plugin : ', 'wp_user_log'); ?>
-                    <a href="http://solwininfotech.com/documents/wordpress/user-activity-log-pro/" target="_blank" style="text-decoration: underline">
-                        <strong><?php _e('Live Documentation', 'wp_user_log'); ?></strong>
+                <p><?php _e('User Activity Log Plugin : ', 'user_activity_log'); ?>
+                    <a href="http://solwininfotech.com/documents/wordpress/user-activity-log-lite/" target="_blank" style="text-decoration: underline">
+                        <strong><?php _e('Live Documentation', 'user_activity_log'); ?></strong>
                     </a>
                 </p>
                 <p>
-                    <?php _e('Want more user activity log features?', 'wp_user_log'); ?>
+                    <?php _e('Want more user activity log features?', 'user_activity_log'); ?>
                     <a href="https://codecanyon.net/item/user-activity-log-pro-for-wordpress/18201203?ref=solwin" target="_blank" style="text-decoration: underline">
-                        <strong><?php _e('Upgrade to PRO', 'wp_user_log'); ?></strong>
+                        <strong><?php _e('Upgrade to PRO', 'user_activity_log'); ?></strong>
                     </a>
+                </p>
+                <p>
+                    <a href="http://useractivitylog.solwininfotech.com/" target="_blank"><strong><?php _e('Live Preview', 'user_activity_log'); ?></strong></a> |
+                    <a href="<?php echo $genre_url; ?>"><strong><?php _e('Dismiss This Notice', 'user_activity_log'); ?></strong></a>
                 </p>
             </div>
             <?php
@@ -938,7 +952,6 @@ if (!function_exists('ual_plugin_upgrade_notice')) {
     }
 
 }
-add_action('admin_notices', 'ual_plugin_upgrade_notice');
 
 /**
  * add user meta for ignore notice
@@ -957,3 +970,360 @@ if (!function_exists('ual_ignore_upgrade_notice')) {
 
 }
 add_action('admin_init', 'ual_ignore_upgrade_notice');
+
+add_action('init', 'ual_filter_user_role');
+/**
+ * Filter user Roles
+ *
+ */
+if (!function_exists('ual_filter_user_role')):
+
+    function ual_filter_user_role() {
+        $paged = 1;
+        $admin_url = get_admin_url();
+        $display = '';
+        if (isset($_POST['user_role'])) {
+            $display = $_POST['user_role'];
+        }
+        if (isset($_POST['btn_filter_user_role'])) {
+            $display = $_POST['user_role'];
+            $header_uri = $admin_url . "admin.php?page=general_settings_menu&paged=$paged&display=$display&txtsearch=$search";
+            header("Location: " . $header_uri, true);
+            exit();
+        }
+        if (isset($_POST['btnSearch_user_role'])) {
+            $search = ual_test_input($_POST['txtSearchinput']);
+            $header_uri = $admin_url . "admin.php?page=general_settings_menu&paged=$paged&display=$display&txtsearch=$search";
+            header("Location: " . $header_uri, true);
+            exit();
+        }
+    }
+
+endif;
+
+/**
+ * user cancel subscribe
+ */
+if (!function_exists('wp_ajax_close_tab')) {
+
+    function wp_ajax_close_tab() {
+        update_option('is_user_subscribed_cancled', 'yes');
+        exit();
+    }
+
+}
+add_action('wp_ajax_close_tab', 'wp_ajax_close_tab');
+
+/**
+ * admin scripts
+ */
+if (!function_exists('ual_admin_scripts')) {
+
+    function ual_admin_scripts() {
+        $screen = get_current_screen();
+        $plugin_data = get_plugin_data(WP_PLUGIN_DIR . '/user-activity-log/user_activity_log.php', $markup = true, $translate = true);
+        $current_version = $plugin_data['Version'];
+        $old_version = get_option('ual_version');
+        if ($old_version != $current_version) {
+            update_option('is_user_subscribed_cancled', '');
+            update_option('ual_version', $current_version);
+        }
+
+        if (get_option('is_user_subscribed') != 'yes' && get_option('is_user_subscribed_cancled') != 'yes') {
+            wp_enqueue_script('thickbox');
+            wp_enqueue_style('thickbox');
+        }
+        wp_register_script('custom_wp_admin_js1', plugins_url('js/admin_script.js', __FILE__));
+        wp_enqueue_script('custom_wp_admin_js1');
+    }
+
+}
+add_action('admin_enqueue_scripts', 'ual_admin_scripts');
+
+/**
+ * start session if not
+ */
+if (!function_exists('ual_session_start')) {
+
+    function ual_session_start() {
+        if (session_id() == '') {
+            session_start();
+        }
+    }
+
+}
+add_action('init', 'ual_session_start');
+
+/**
+ * subscribe email form
+ */
+if (!function_exists('ual_subscribe_mail')) {
+
+    function ual_subscribe_mail() {
+        $customer_email = get_option('admin_email');
+        $current_user = wp_get_current_user();
+        $f_name = $current_user->user_firstname;
+        $l_name = $current_user->user_lastname;
+        if (isset($_POST['sbtEmail'])) {
+            $_SESSION['success_msg'] = 'Thank you for your subscription.';
+            //Email To Admin
+            update_option('is_user_subscribed', 'yes');
+            $customer_email = trim($_POST['txtEmail']);
+            $customer_name = trim($_POST['txtName']);
+            $to = 'plugins@solwininfotech.com';
+            $from = get_option('admin_email');
+            $headers = "MIME-Version: 1.0;\r\n";
+            $headers .= "From: " . strip_tags($from) . "\r\n";
+            $headers .= "Content-Type: text/html; charset: utf-8;\r\n";
+            $headers .= "X-Priority: 3\r\n";
+            $headers .= "X-Mailer: PHP" . phpversion() . "\r\n";
+            $subject = __('New user subscribed from Plugin - User Activity Log', 'user_activity_log');
+
+            $body = '';
+
+            ob_start();
+            ?>
+            <div style="background: #F5F5F5; border-width: 1px; border-style: solid; padding-bottom: 20px; margin: 0px auto; width: 750px; height: auto; border-radius: 3px 3px 3px 3px; border-color: #5C5C5C;">
+                <div style="border: #FFF 1px solid; background-color: #ffffff !important; margin: 20px 20px 0;
+                     height: auto; -moz-border-radius: 3px; padding-top: 15px;">
+                    <div style="padding: 20px 20px 20px 20px; font-family: Arial, Helvetica, sans-serif;
+                         height: auto; color: #333333; font-size: 13px;">
+                        <div style="width: 100%;">
+                            <strong>Dear Admin (User Activity Log plugin developer)</strong>,
+                            <br />
+                            <br />
+                            Thank you for developing useful plugin.
+                            <br />
+                            <br />
+                            I <?php echo $customer_name; ?> want to notify you that I have installed plugin on my <a href="<?php echo home_url(); ?>">website</a>. Also I want to subscribe to your newsletter, and I do allow you to enroll me to your free newsletter subscription to get update with new products, news, offers and updates.
+                            <br />
+                            <br />
+                            I hope this will motivate you to develop more good plugins and expecting good support form your side.
+                            <br />
+                            <br />
+                            Following is details for newsletter subscription.
+                            <br />
+                            <br />
+                            <div>
+                                <table border='0' cellpadding='5' cellspacing='0' style="font-family: Arial, Helvetica, sans-serif; font-size: 13px;color: #333333;width: 100%;">
+                                    <?php if ($customer_name != '') {
+                                        ?>
+                                        <tr style="border-bottom: 1px solid #eee;">
+                                            <th style="padding: 8px 5px; text-align: left;width: 120px;">
+                                                Name<span style="float:right">:</span>
+                                            </th>
+                                            <td style="padding: 8px 5px;">
+                                                <?php echo $customer_name; ?>
+                                            </td>
+                                        </tr>
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <tr style="border-bottom: 1px solid #eee;">
+                                            <th style="padding: 8px 5px; text-align: left;width: 120px;">
+                                                Name<span style="float:right">:</span>
+                                            </th>
+                                            <td style="padding: 8px 5px;">
+                                                <?php echo home_url(); ?>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
+                                    <tr style="border-bottom: 1px solid #eee;">
+                                        <th style="padding: 8px 5px; text-align: left;width: 120px;">
+                                            Email<span style="float:right">:</span>
+                                        </th>
+                                        <td style="padding: 8px 5px;">
+                                            <?php echo $customer_email; ?>
+                                        </td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #eee;">
+                                        <th style="padding: 8px 5px; text-align: left;width: 120px;">
+                                            Website<span style="float:right">:</span>
+                                        </th>
+                                        <td style="padding: 8px 5px;">
+                                            <?php echo home_url(); ?>
+                                        </td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #eee;">
+                                        <th style="padding: 8px 5px; text-align: left; width: 120px;">
+                                            Date<span style="float:right">:</span>
+                                        </th>
+                                        <td style="padding: 8px 5px;">
+                                            <?php echo date('d-M-Y  h:i  A'); ?>
+                                        </td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #eee;">
+                                        <th style="padding: 8px 5px; text-align: left; width: 120px;">
+                                            Plugin<span style="float:right">:</span>
+                                        </th>
+                                        <td style="padding: 8px 5px;">
+                                            <?php echo 'User Activity Log'; ?>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br /><br />
+                                Again Thanks you
+                                <br />
+                                <br />
+                                Regards
+                                <br />
+                                <?php echo $customer_name; ?>
+                                <br />
+                                <?php echo home_url(); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php
+            $body = ob_get_clean();
+            wp_mail($to, $subject, $body, $headers);
+        }
+        if (get_option('is_user_subscribed') != 'yes' && get_option('is_user_subscribed_cancled') != 'yes') {
+            ?>
+            <div id="subscribe_widget_ual" style="display:none;">
+                <div class="subscribe_widget">
+                    <h3>Notify to plugin developer and subscribe.</h3>
+                    <form class='sub_form' name="frmSubscribe" method="post" action="<?php echo admin_url() . 'admin.php?page=general_settings_menu'; ?>">
+                        <div class="sub_row"><label>Your Name: </label><input placeholder="Your Name" name="txtName" type="text" value="<?php echo $f_name . ' ' . $l_name; ?>" /></div>
+                        <div class="sub_row"><label>Email Address: </label><input placeholder="Email Address" required name="txtEmail" type="email" value="<?php echo $customer_email; ?>" /></div>
+                        <input class="button button-primary" type="submit" name="sbtEmail" value="Notify & Subscribe" />
+                    </form>
+                </div>
+            </div>
+            <?php
+        }
+        if (isset($_GET['page'])) {
+            if (get_option('is_user_subscribed') != 'yes' && get_option('is_user_subscribed_cancled') != 'yes' && ($_GET['page'] == 'general_settings_menu' || $_GET['page'] == 'user_action_log' || $_GET['page'] == 'user_settings_menu' || $_GET['page'] == 'email_settings_menu')) {
+                ?>
+                <a style="display:none" href="#TB_inline?width=400&height=210&inlineId=subscribe_widget_ual" class="thickbox" id="subscribe_thickbox"></a>
+                <?php
+            }
+        }
+    }
+
+}
+add_action('admin_head', 'ual_subscribe_mail', 11);
+
+
+/**
+ * Get rating star and total downloads of current plugin
+ */
+$wp_version = get_bloginfo('version');
+if ($wp_version > 3.8) {
+    if (!function_exists('wp_custom_star_rating_user_activity_log')) {
+
+        function wp_custom_star_rating_user_activity_log($args = array()) {
+            $plugins = $response = "";
+            $args = array(
+                'author' => 'solwininfotech',
+                'fields' => array(
+                    'downloaded' => true,
+                    'downloadlink' => true
+                )
+            );
+            // Make request and extract plug-in object. Action is query_plugins
+            $response = wp_remote_post(
+                    'http://api.wordpress.org/plugins/info/1.0/', array(
+                'body' => array(
+                    'action' => 'query_plugins',
+                    'request' => serialize((object) $args)
+                )
+                    )
+            );
+            if (!is_wp_error($response)) {
+                $returned_object = unserialize(wp_remote_retrieve_body($response));
+                $plugins = $returned_object->plugins;
+            }
+            $current_slug = 'user-activity-log';
+            if ($plugins) {
+                foreach ($plugins as $plugin) {
+                    if ($current_slug == $plugin->slug) {
+                        $rating = $plugin->rating * 5 / 100;
+                        if ($rating > 0) {
+                            $args = array(
+                                'rating' => $rating,
+                                'type' => 'rating',
+                                'number' => $plugin->num_ratings,
+                            );
+                            wp_star_rating($args);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+/**
+ * Get total downloads of current plugin
+ */
+if (!function_exists('get_total_downloads_user_activity_log_plugin')) {
+
+    function get_total_downloads_user_activity_log_plugin() {
+        // Set the arguments. For brevity of code, I will set only a few fields.
+        $plugins = $response = "";
+        $args = array(
+            'author' => 'solwininfotech',
+            'fields' => array(
+                'downloaded' => true,
+                'downloadlink' => true
+            )
+        );
+        // Make request and extract plug-in object. Action is query_plugins
+        $response = wp_remote_post(
+                'http://api.wordpress.org/plugins/info/1.0/', array(
+            'body' => array(
+                'action' => 'query_plugins',
+                'request' => serialize((object) $args)
+            )
+                )
+        );
+        if (!is_wp_error($response)) {
+            $returned_object = unserialize(wp_remote_retrieve_body($response));
+            $plugins = $returned_object->plugins;
+        } else {
+
+        }
+        $current_slug = 'user-activity-log';
+        if ($plugins) {
+            foreach ($plugins as $plugin) {
+                if ($current_slug == $plugin->slug) {
+                    if ($plugin->downloaded) {
+                        ?>
+                        <span class="total-downloads">
+                            <span class="download-number"><?php echo $plugin->downloaded; ?></span>
+                        </span>
+                        <?php
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+add_action('user_register', 'ual_enable_user_notification_at_login');
+/**
+ * Enable user notification of email at login
+ *
+ * @param int $user_id user ID
+ */
+if (!function_exists('ual_enable_user_notification_at_login')) {
+
+    function ual_enable_user_notification_at_login($user_id) {
+        $user_info = get_userdata($user_id);
+        $user_role = $user_info->roles[0];
+        $user_role_enable = get_option('enable_role_list');
+        $user_enabled = get_option('enable_user_list');
+        for ($i = 0; $i < count($user_role_enable); $i++) {
+            if ($user_role_enable[$i] == $user_role) {
+                array_push($user_enabled, $user_info->user_login);
+                update_option('enable_user_list', $user_enabled);
+            }
+        }
+    }
+
+}

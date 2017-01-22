@@ -53,8 +53,12 @@ else {
 			foreach ($data[$key]['fields']['label'] as $key1 => $arr) {
 				if (is_array($arr)) {
 					foreach (array_keys($arr) as $key2) {
-						 if(empty($_POST[$key]['fields'][$key1][$key2]))
-							$content_types[$key]['fields'][$key1][$key2] = 1;
+						 if(!isset($_POST[$key]['fields'][$key1][$key2])) {
+							 $content_types[$key]['fields'][$key1][$key2] = 1;
+						 }
+						 else {
+							 $content_types[$key]['fields'][$key1][$key2] = 0;
+						 }
 					}
 				}
 				elseif (isset($_POST[$key]) && empty($_POST[$key]['fields'][$key1])) {

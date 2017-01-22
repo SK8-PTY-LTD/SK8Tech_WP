@@ -1,13 +1,15 @@
 <?php
 /**
  *  WP-SpamShield Admin Settings Page
- *  File Version 1.9.9.8.1
+ *  File Version 1.9.9.8.5
  */
 
 if( !defined( 'ABSPATH' ) || !defined( 'WPSS_VERSION' ) ) {
 	if( !headers_sent() ) { @header($_SERVER['SERVER_PROTOCOL'].' 403 Forbidden',TRUE,403); @header('X-Robots-Tag: noindex',TRUE); }
 	die( 'ERROR: Direct access to this file is not allowed.' );
 }
+
+if( TRUE !== WPSS_DEBUG && TRUE !== WP_DEBUG ) { @ini_set( 'display_errors', 0 ); @error_reporting( 0 ); } /* Prevents error display, but will display errors if WP_DEBUG turned on. */
 
 /** BEGIN **/
 
@@ -17,7 +19,7 @@ if( !defined( 'ABSPATH' ) || !defined( 'WPSS_VERSION' ) ) {
 
 			echo WPSS_EOL."\t\t\t".'<div class="wrap">'.WPSS_EOL."\t\t\t".'<h2>WP-SpamShield ' . __( 'Settings' ) . '</h2>'.WPSS_EOL;
 
-			$ip = rs_wpss_get_ip_addr();
+			$ip = WPSS_Utils::get_ip_addr();
 			$spam_count_raw = rs_wpss_count();
 			global $spamshield_options; if( empty( $spamshield_options ) ) { $spamshield_options = get_option('spamshield_options'); }
 			$admin_email	= get_option('admin_email');
@@ -32,7 +34,7 @@ if( !defined( 'ABSPATH' ) || !defined( 'WPSS_VERSION' ) ) {
 			}
 			rs_wpss_update_session_data($spamshield_options);
 			$spamshield_options_prev = $spamshield_options; /* Previous options set - plugin will use them to compare when validating */
-			$current_date	= date('Y-m-d');
+			$current_date	= date( WPSS_DATE_BASIC );
 			$timenow		= time();
 			$install_date	= empty( $spamshield_options['install_date'] ) ? $current_date : $spamshield_options['install_date'];
 			$num_days_inst	= rs_wpss_date_diff($install_date, $current_date); if( $num_days_inst < 1 ) { $num_days_inst = 1; }
@@ -49,13 +51,13 @@ if( !defined( 'ABSPATH' ) || !defined( 'WPSS_VERSION' ) ) {
 				$wpss_inst_status_color		= '#77A51F'; /* '#D6EF7A', 'green' */
 				$wpss_inst_status_bg_color	= '#EBF7D5'; /* '#77A51F', '#CCFFCC' */
 				$wpss_inst_status_msg_main	= __( 'Installed Correctly', 'wp-spamshield' );
-				$wpss_inst_status_msg_text	= rs_wpss_casetrans('lower',$wpss_inst_status_msg_main);
+				$wpss_inst_status_msg_text	= WPSS_Func::lower( $wpss_inst_status_msg_main );
 			} else {
 				$wpss_inst_status_image		= 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABHElEQVR4AWMYVGCZIUszELfTyvBMIP4PxSXUNpwdiH8gWfAXiHmoacFMuOEIvIRahivDDcXE2tSw4DgeCy5QargvkmEPgXgVFD9AEg+nxIJXSAbVIolXIIl/INfwUrTgmIgk14Mm10Cq4bygpIhmyEIk+dlY4kOYFAuWYzFgLQH5jcQarocjxexCUrMZhxpzYiy4hEPzUSQ1+3GouUXI8Eg8af4ckrpjeNQl47PgLR6N95HU3cCj7hMQM2EzvAmkgAC+DcQ3iVDXi264GCFN0NybBMQJQHyPCPWyyBZsIUKDF5J6dyLU74MptgULEMZJSBbEEKnHDaT4LpGKPwNxPhDnAvFHIvU8YgAxaIlBFrhCa6x51MRQMz0ZaA0AjjUGdu65IP4AAAAASUVORK5CYII=';
 				$wpss_inst_status_color		= '#A63104'; /* '#FC956D', 'red' */
 				$wpss_inst_status_bg_color	= '#FEDBCD'; /* '#A63104', '#FFCCCC' */
 				$wpss_inst_status_msg_main	= __( 'Not Installed Correctly', 'wp-spamshield' );
-				$wpss_inst_status_msg_text	= rs_wpss_casetrans('lower',$wpss_inst_status_msg_main);
+				$wpss_inst_status_msg_text	= WPSS_Func::lower( $wpss_inst_status_msg_main );
 				/* Add specifics - Standalone Nginx */
 				if( !empty( $is_nginx ) && empty( $is_apache ) ) {
 					$wpss_inst_status_msg_main	.= ' ' . sprintf( __( 'Your server is running <a href=%1$s>standalone Nginx</a>.', 'wp-spamshield' ), '"'. rs_wpss_append_url( 'https://www.redsandmarketing.com/plugins/wp-spamshield/?wpss=requirements#wpss_requirements' ) .'" target="_blank" rel="external" ' ); /* TO DO: TRANSLATE - Added 1.9.9.8.1 */
@@ -75,7 +77,7 @@ if( !defined( 'ABSPATH' ) || !defined( 'WPSS_VERSION' ) ) {
 			$_GET_RAW = $_GET;
 			$_GET_FIL = array();
 			if( !empty( $_GET ) && is_array( $_GET ) ) {
-				foreach( $_GET as $k => $v ) { $_GET_FIL[$k] = sanitize_text_field(stripslashes($_GET[$k])); }
+				foreach( $_GET as $k => $v ) { $_GET_FIL[$k] = sanitize_text_field( stripslashes( $_GET[$k] ) ); }
 			}
 
 			/* Add IP to Blacklist */
@@ -185,7 +187,7 @@ if( !defined( 'ABSPATH' ) || !defined( 'WPSS_VERSION' ) ) {
 				$spamshield_options['comment_logging_start_date']	= $comment_logging_start_date;
 				$spamshield_options['comment_logging_end_date']		= $comment_logging_end_date;
 				$spamshield_options['install_date']					= $install_date;
-				self::update_wpss_option( $spamshield_options );
+				self::update_option( $spamshield_options );
 				if( !empty( $ip ) ) { update_option( 'spamshield_last_admin', $ip ); }
 				$blacklist_keys_update = rs_wpss_sanitize_string( $_POST['wordpress_comment_blacklist'] );
 				rs_wpss_update_bw_list_keys( 'black', $blacklist_keys_update );
@@ -250,7 +252,7 @@ if( !defined( 'ABSPATH' ) || !defined( 'WPSS_VERSION' ) ) {
 				$spamshield_options['install_date'] = $install_date;
 				if( !empty( $spamshield_options['comment_logging_all'] ) ) { $spamshield_options['comment_logging'] = 1; }
 				if( empty( $spamshield_options['comment_logging'] ) ) { $spamshield_options['comment_logging_all'] = 0; }
-				self::update_wpss_option( $spamshield_options ); rs_wpss_update_session_data($spamshield_options);
+				self::update_option( $spamshield_options ); rs_wpss_update_session_data($spamshield_options);
 				if( !empty( $ip ) ) { update_option( 'spamshield_last_admin', $ip ); }
 			}
 			$wpss_info_box_height = rs_wpss_is_lang_en_us() ? '315' : '335';
