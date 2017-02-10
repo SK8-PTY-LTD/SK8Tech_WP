@@ -1,7 +1,7 @@
 <?php
 /**
  *  WP-SpamShield Admin Settings Page
- *  File Version 1.9.9.8.5
+ *  File Version 1.9.9.8.8
  */
 
 if( !defined( 'ABSPATH' ) || !defined( 'WPSS_VERSION' ) ) {
@@ -19,10 +19,10 @@ if( TRUE !== WPSS_DEBUG && TRUE !== WP_DEBUG ) { @ini_set( 'display_errors', 0 )
 
 			echo WPSS_EOL."\t\t\t".'<div class="wrap">'.WPSS_EOL."\t\t\t".'<h2>WP-SpamShield ' . __( 'Settings' ) . '</h2>'.WPSS_EOL;
 
-			$ip = WPSS_Utils::get_ip_addr();
-			$spam_count_raw = rs_wpss_count();
-			global $spamshield_options; if( empty( $spamshield_options ) ) { $spamshield_options = get_option('spamshield_options'); }
-			$admin_email	= get_option('admin_email');
+			$ip = @WP_SpamShield::get_ip_addr();
+			$spam_count_raw		= rs_wpss_count();
+			$spamshield_options	= WP_SpamShield::get_option();
+			$admin_email		= get_option('admin_email');
 			if( empty( $spamshield_options['form_message_recipient'] ) || !is_email( $spamshield_options['form_message_recipient'] ) ) {
 				$spamshield_options['form_message_recipient'] = $admin_email;
 			}
@@ -95,7 +95,7 @@ if( TRUE !== WPSS_DEBUG && TRUE !== WP_DEBUG ) { @ini_set( 'display_errors', 0 )
 			$wpss_action = !empty( $_GET_FIL['wpss_action'] ) ? $_GET_FIL['wpss_action'] : '';
 			if( $wpss_action === 'blacklist_ip' && !empty( $_GET_FIL['bl_ip'] ) && !empty( $_GET_FIL[$ip_blacklist_nonce_name] ) && rs_wpss_is_user_admin() && empty( $_POST['submit_wpss_general_options'] ) && empty( $_POST['submit_wpss_contact_options'] ) ) {
 				if( rs_wpss_verify_nonce( $ip_blacklist_nonce_value, $ip_blacklist_nonce_action, $ip_blacklist_nonce_name ) ) {
-					if( rs_wpss_is_valid_ip( $ip_to_blacklist ) ) {
+					if( WP_SpamShield::is_valid_ip( $ip_to_blacklist ) ) {
 						if( $ip_to_blacklist === $ip ) {
 							echo '<div class="error notice is-dismissible"><p><strong>' . __( 'Are you sure you want to blacklist yourself? IP Address not added to Comment Blacklist.', 'wp-spamshield' ) . '</strong></p></div>'; /* NEEDS TRANSLATION */
 						} elseif( rs_wpss_is_admin_ip( $ip_to_blacklist ) ) {
@@ -166,7 +166,7 @@ if( TRUE !== WPSS_DEBUG && TRUE !== WP_DEBUG ) { @ini_set( 'display_errors', 0 )
 				/* Validate POST Values */
 				$valid_post_spamshield_options = !empty( $_POST ) ? $_POST : array();
 				$wpss_options_default = unserialize( WPSS_OPTIONS_DEFAULT );
-				$wpss_options_general_boolean = array( 'block_all_trackbacks', 'block_all_pingbacks', 'comment_logging', 'comment_logging_all', 'enhanced_comment_blacklist', 'enable_whitelist', 'allow_proxy_users', 'hide_extra_data', 'registration_shield_disable', 'registration_shield_level_1', 'disable_cf7_shield', 'disable_gf_shield', 'disable_misc_form_shield', 'disable_email_encode', 'allow_comment_author_keywords', 'promote_plugin_link' );
+				$wpss_options_general_boolean = array( 'block_all_trackbacks', 'block_all_pingbacks', 'comment_logging', 'comment_logging_all', 'enhanced_comment_blacklist', 'enable_whitelist', 'allow_proxy_users', 'hide_extra_data', 'registration_shield_disable', 'registration_shield_level_1', 'disable_cf7_shield', 'disable_gf_shield', 'disable_misc_form_shield', 'disable_email_encode', 'allow_comment_author_keywords', 'auto_update_plugin', 'promote_plugin_link' );
 				foreach( $wpss_options_general_boolean as $i => $v ) {
 					$valid_post_spamshield_options[$v] = ( !empty( $_POST[$v] ) && $_POST[$v] !== 'off' ) ? 1 : 0;
 				}
@@ -176,14 +176,17 @@ if( TRUE !== WPSS_DEBUG && TRUE !== WP_DEBUG ) { @ini_set( 'display_errors', 0 )
 				if( !empty( $spamshield_options['comment_logging'] ) && $valid_post_spamshield_options['comment_logging'] == 0 ) { /* If Blocked Comment Logging Mode is turned off then deselects "Log All Comments" */
 					$valid_post_spamshield_options['comment_logging_all'] = 0;
 				}
-				if( !empty( $_POST['comment_min_length'] ) && preg_match( "~^\d+$~", $_POST['comment_min_length'] ) ) {
+				if( !empty( $_POST['comment_min_length'] ) && self::preg_match( "~^\d+$~", $_POST['comment_min_length'] ) ) {
 					$comment_min_length_temp = (int) rs_wpss_sanitize_string( $_POST['comment_min_length'] );
 					$valid_post_spamshield_options['comment_min_length'] = ( !empty( $comment_min_length_temp ) && $comment_min_length_temp <= 30 ) ? $comment_min_length_temp : $wpss_options_default['comment_min_length'];
 				} else { $valid_post_spamshield_options['comment_min_length'] = $wpss_options_default['comment_min_length']; }
 
 				/* Update Values */
-				$option_list_go = array( 'block_all_trackbacks', 'block_all_pingbacks', 'comment_logging', 'comment_logging_all', 'enhanced_comment_blacklist', 'enable_whitelist', 'comment_min_length', 'allow_proxy_users', 'hide_extra_data', 'registration_shield_disable', 'registration_shield_level_1', 'disable_cf7_shield', 'disable_gf_shield', 'disable_misc_form_shield', 'disable_email_encode', 'allow_comment_author_keywords', 'promote_plugin_link' );
-				foreach( $option_list_go as $i => $v ) { $spamshield_options[$v] = isset( $valid_post_spamshield_options[$v] ) ? $valid_post_spamshield_options[$v] : $spamshield_options[$v]; }
+				$option_list_go = array( 'block_all_trackbacks', 'block_all_pingbacks', 'comment_logging', 'comment_logging_all', 'enhanced_comment_blacklist', 'enable_whitelist', 'comment_min_length', 'allow_proxy_users', 'hide_extra_data', 'registration_shield_disable', 'registration_shield_level_1', 'disable_cf7_shield', 'disable_gf_shield', 'disable_misc_form_shield', 'disable_email_encode', 'allow_comment_author_keywords', 'auto_update_plugin', 'promote_plugin_link' );
+				foreach( $option_list_go as $i => $v ) {
+					if( 'auto_update_plugin' === $v && defined( 'WPSS_AUTOUP_DISABLE' ) && TRUE === WPSS_AUTOUP_DISABLE ) { $spamshield_options[$v] = 0; continue; }
+					$spamshield_options[$v] = isset( $valid_post_spamshield_options[$v] ) ? $valid_post_spamshield_options[$v] : $spamshield_options[$v];
+				}
 				$spamshield_options['comment_logging_start_date']	= $comment_logging_start_date;
 				$spamshield_options['comment_logging_end_date']		= $comment_logging_end_date;
 				$spamshield_options['install_date']					= $install_date;
@@ -214,15 +217,15 @@ if( TRUE !== WPSS_DEBUG && TRUE !== WP_DEBUG ) { @ini_set( 'display_errors', 0 )
 				foreach( $wpss_options_contact_text as $i => $v ) {
 					$valid_post_spamshield_options[$v] = !empty( $_POST[$v] ) ? rs_wpss_sanitize_opt_string( $_POST[$v] ) : $wpss_options_default[$v];
 				}
-				if( !empty( $_POST['form_message_width'] ) && preg_match( "~^\d+$~", $_POST['form_message_width'] ) ) {
+				if( !empty( $_POST['form_message_width'] ) && self::preg_match( "~^\d+$~", $_POST['form_message_width'] ) ) {
 					$form_message_width_temp = (int) rs_wpss_sanitize_string( $_POST['form_message_width'] );
 					$valid_post_spamshield_options['form_message_width'] = $form_message_width_temp >= $wpss_options_default['form_message_width'] ? $form_message_width_temp : $wpss_options_default['form_message_width'];
 				} else { $valid_post_spamshield_options['form_message_width'] = $wpss_options_default['form_message_width']; }
-				if( !empty( $_POST['form_message_height'] ) && preg_match( "~^\d+$~", $_POST['form_message_height'] ) ) {
+				if( !empty( $_POST['form_message_height'] ) && self::preg_match( "~^\d+$~", $_POST['form_message_height'] ) ) {
 					$form_message_height_temp = (int) rs_wpss_sanitize_string( $_POST['form_message_height'] );
 					$valid_post_spamshield_options['form_message_height'] = $form_message_height_temp >= 5 ? $form_message_height_temp : $wpss_options_default['form_message_height'];
 				} else { $valid_post_spamshield_options['form_message_height'] = $wpss_options_default['form_message_height']; }
-				if( !empty( $_POST['form_message_min_length'] ) && preg_match( "~^\d+$~", $_POST['form_message_min_length'] ) ) {
+				if( !empty( $_POST['form_message_min_length'] ) && self::preg_match( "~^\d+$~", $_POST['form_message_min_length'] ) ) {
 					$form_message_min_length_temp = (int) rs_wpss_sanitize_string( $_POST['form_message_min_length'] );
 					$valid_post_spamshield_options['form_message_min_length'] = ( $form_message_min_length_temp >= 15 && $form_message_min_length_temp <= 150 ) ? $form_message_min_length_temp : $wpss_options_default['form_message_min_length'];
 				} else { $valid_post_spamshield_options['form_message_min_length'] = $wpss_options_default['form_message_min_length']; }
@@ -319,7 +322,7 @@ if( TRUE !== WPSS_DEBUG && TRUE !== WP_DEBUG ) { @ini_set( 'display_errors', 0 )
 						/* If comment logging is on, check file permissions and attempt to fix. Reset .htaccess file for data dir, to allow IP of current admin to view log file. Let user know if not set correctly. */
 						$wpss_hta_reset = rs_wpss_log_reset( NULL, TRUE, TRUE );
 						if( empty( $wpss_hta_reset ) ) {
-							echo '<br />'.WPSS_EOL.'<span style="color:red;"><strong>' . sprintf( __( 'The log file may not be writeable. You may need to manually correct the file permissions.<br />Set the permission for the "%1$s" directory to "%2$s" and all files within it to "%3$s".</strong><br />If that doesn\'t work, then please read the <a href="%4$s" %5$s>FAQ</a> for this topic.', 'wp-spamshield' ), WPSS_PLUGIN_DATA_PATH, '0755', '0644', rs_wpss_append_url( WPSS_HOME_URL.'faqs/?faqs=5#faqs_5' ), 'target="_blank"' ) . '</span><br />'.WPSS_EOL;
+							echo '<br />'.WPSS_EOL.'<span style="color:red;"><strong>' . sprintf( __( 'The log file may not be writeable. You may need to manually correct the file permissions.<br />Set the permission for the "%1$s" directory to "%2$s" and all files within it to "%3$s".</strong><br />If that doesn\'t work, then please read the <a href="%4$s" %5$s>FAQ</a> for this topic.', 'wp-spamshield' ), WPSS_PLUGIN_DATA_PATH, '755', '644', rs_wpss_append_url( WPSS_HOME_URL.'faqs/?faqs=5#faqs_5' ), 'target="_blank"' ) . '</span><br />'.WPSS_EOL;
 						}
 					} else { rs_wpss_log_reset( NULL, FALSE, FALSE, TRUE ); /* Create log file if it doesn't exist */ }
 					$wpss_log_key = rs_wpss_get_log_key();
@@ -365,20 +368,23 @@ if( TRUE !== WPSS_DEBUG && TRUE !== WP_DEBUG ) { @ini_set( 'display_errors', 0 )
 					</label>
 					</li>
 			<?php
-			$boolean_options_go = array(
-				array( 'block_all_trackbacks', __( 'Disable trackbacks.', 'wp-spamshield' ), __( 'Use if trackback spam is excessive. (Not recommended)', 'wp-spamshield' ) ),
-				array( 'block_all_pingbacks', __( 'Disable pingbacks.', 'wp-spamshield' ), __( 'Use if pingback spam is excessive. Disadvantage is reduction of communication between blogs. (Not recommended)', 'wp-spamshield' ) ),
-				array( 'allow_proxy_users', __( 'Allow users behind proxy servers to comment?', 'wp-spamshield' ), __( 'Many human spammers hide behind proxies, so you can uncheck this option for extra protection. (For highest user compatibility, leave it checked.)', 'wp-spamshield' ) ),
-				array( 'hide_extra_data', __( 'Hide extra technical data in comment notifications.', 'wp-spamshield' ), __( 'This data is helpful if you need to submit a spam sample. If you dislike seeing the extra info, you can use this option.', 'wp-spamshield' ) ),
-				array( 'registration_shield_disable', __( 'Disable Registration Spam Shield.', 'wp-spamshield' ), __( 'This option will disable the anti-spam shield for the WordPress registration form only. While not recommended, this option is available if you need it. Anti-spam will still remain active for comments, pingbacks, trackbacks, and contact forms.', 'wp-spamshield' ) ),
-				array( 'disable_cf7_shield', __( 'Disable anti-spam for Contact Form 7.', 'wp-spamshield' ), __( 'This option will disable anti-spam protection for Contact Form 7 forms.', 'wp-spamshield' ) ),
-				array( 'disable_gf_shield', __( 'Disable anti-spam for Gravity Forms.', 'wp-spamshield' ), __( 'This option will disable anti-spam protection for Gravity Forms.', 'wp-spamshield' ) ),
-				array( 'disable_misc_form_shield', __( 'Disable anti-spam for miscellaneous forms.', 'wp-spamshield' ), __( 'This option will disable anti-spam protection for custom and miscellaneous forms on your site. (All forms that are not from WP-SpamShield, Contact Form 7, or Gravity Forms.)', 'wp-spamshield' ) . ' ' . __( 'NOTE: The anti-spam for miscellaneous forms feature also protects your site from many XML-RPC based attacks, such as brute force amplification attacks, so we recommend that you do not disable it.', 'wp-spamshield' ) ),
-				array( 'disable_email_encode', __( 'Disable email harvester protection.', 'wp-spamshield' ), __( 'This option will disable the automatic encoding of email addresses and mailto links in your website content.', 'wp-spamshield' ) ),
-				array( 'allow_comment_author_keywords', __( 'Allow Keywords in Comment Author Names.', 'wp-spamshield' ), sprintf( __( 'This will allow some keywords to be used in comment author names. By default, WP-SpamShield blocks many common spam keywords from being used in the comment "%1$s" field. This option is useful for sites with users that use pseudonyms, or for sites that simply want to allow business names and keywords to be used in the comment "%2$s" field. This option is not recommended, as it can potentially allow more human spam, but it is available if you choose. Your site will still be protected against all automated comment spam.', 'wp-spamshield' ), __( 'Name' ), __( 'Name' ) ) ),
-				array( 'promote_plugin_link', __( 'Help promote WP-SpamShield?', 'wp-spamshield' ), __( 'This places a small link under the comments and contact form, letting others know what\'s blocking spam on your blog.', 'wp-spamshield' ) ),
+			$boolean_options_go =
+				array(
+					array( 'block_all_trackbacks',			__( 'Disable trackbacks.', 'wp-spamshield' ),									__( 'Use if trackback spam is excessive. (Not recommended)', 'wp-spamshield' ) ),
+					array( 'block_all_pingbacks',			__( 'Disable pingbacks.', 'wp-spamshield' ),									__( 'Use if pingback spam is excessive. Disadvantage is reduction of communication between blogs. (Not recommended)', 'wp-spamshield' ) ),
+					array( 'allow_proxy_users',				__( 'Allow users behind proxy servers to comment?', 'wp-spamshield' ),			__( 'Many human spammers hide behind proxies, so you can uncheck this option for extra protection. (For highest user compatibility, leave it checked.)', 'wp-spamshield' ) ),
+					array( 'hide_extra_data',				__( 'Hide extra technical data in comment notifications.', 'wp-spamshield' ),	__( 'This data is helpful if you need to submit a spam sample. If you dislike seeing the extra info, you can use this option.', 'wp-spamshield' ) ),
+					array( 'registration_shield_disable',	__( 'Disable Registration Spam Shield.', 'wp-spamshield' ),						__( 'This option will disable the anti-spam shield for the WordPress registration form only. While not recommended, this option is available if you need it. Anti-spam will still remain active for comments, pingbacks, trackbacks, and contact forms.', 'wp-spamshield' ) ),
+					array( 'disable_cf7_shield',			__( 'Disable anti-spam for Contact Form 7.', 'wp-spamshield' ),					__( 'This option will disable anti-spam protection for Contact Form 7 forms.', 'wp-spamshield' ) ),
+					array( 'disable_gf_shield',				__( 'Disable anti-spam for Gravity Forms.', 'wp-spamshield' ),					__( 'This option will disable anti-spam protection for Gravity Forms.', 'wp-spamshield' ) ),
+					array( 'disable_misc_form_shield',		__( 'Disable anti-spam for miscellaneous forms.', 'wp-spamshield' ),			__( 'This option will disable anti-spam protection for custom and miscellaneous forms on your site. (All forms that are not from WP-SpamShield, Contact Form 7, or Gravity Forms.)', 'wp-spamshield' ) . ' ' . __( 'NOTE: The anti-spam for miscellaneous forms feature also protects your site from many XML-RPC based attacks, such as brute force amplification attacks, so we recommend that you do not disable it.', 'wp-spamshield' ) ),
+					array( 'disable_email_encode',			__( 'Disable email harvester protection.', 'wp-spamshield' ),					__( 'This option will disable the automatic encoding of email addresses and mailto links in your website content.', 'wp-spamshield' ) ),
+					array( 'allow_comment_author_keywords',	__( 'Allow Keywords in Comment Author Names.', 'wp-spamshield' ),				sprintf( __( 'This will allow some keywords to be used in comment author names. By default, WP-SpamShield blocks many common spam keywords from being used in the comment "%1$s" field. This option is useful for sites with users that use pseudonyms, or for sites that simply want to allow business names and keywords to be used in the comment "%2$s" field. This option is not recommended, as it can potentially allow more human spam, but it is available if you choose. Your site will still be protected against all automated comment spam.', 'wp-spamshield' ), __( 'Name' ), __( 'Name' ) ) ),
+					array( 'auto_update_plugin',			__( 'Enable Automatic Updates.', 'wp-spamshield' ),								__( 'WP-SpamShield can perform automatic updates using the WordPress plugin update API. Being that WP-SpamShield is an anti-spam and security plugin, just like an anti-virus, anti-malware or other security program on your computer, automatic updates are extremely important. (We recommend you keep this enabled.)', 'wp-spamshield' ) ),
+					array( 'promote_plugin_link',			__( 'Help promote WP-SpamShield?', 'wp-spamshield' ),							__( 'This places a small link under the comments and contact form, letting others know what\'s blocking spam on your blog.', 'wp-spamshield' ) ),
 				);
 			foreach( $boolean_options_go as $i => $v ) {
+				if( 'auto_update_plugin' === $v[0] && defined( 'WPSS_AUTOUP_DISABLE' ) && TRUE === WPSS_AUTOUP_DISABLE ) { continue; }
 				$checked = (TRUE==(int)(bool)$spamshield_options[$v[0]])?'checked="checked" ':'';
 				echo "\t\t\t\t\t".'<li>'.WPSS_EOL."\t\t\t\t\t".'<label for="'.$v[0].'">'.WPSS_EOL."\t\t\t\t\t\t".'<input type="checkbox" id="'.$v[0].'" name="'.$v[0].'" '.$checked.'value="1" />'.WPSS_EOL."\t\t\t\t\t\t".'<strong>'.$v[1].'</strong><br />'.$v[2].'<br />&nbsp;'.WPSS_EOL."\t\t\t\t\t".'</label>'.WPSS_EOL."\t\t\t\t\t".'</li>'.WPSS_EOL;
 			}

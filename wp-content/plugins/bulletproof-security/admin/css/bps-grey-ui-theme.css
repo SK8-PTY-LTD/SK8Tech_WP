@@ -133,9 +133,10 @@ SecurityLogTable {position:relative;top:0px;left:0px;margin:15px 0px 15px -3px;}
 #bps-edittabs ul li a {}
 #bps_file_editor {width:690px;}
 .bps_file_editor_update {background-color:#dfecf2;border:1px solid #999;padding:5px;-moz-border-radius-topleft:3px;-webkit-border-top-left-radius:3px;-khtml-border-top-left-radius:3px;border-top-left-radius:3px;-moz-border-radius-topright:3px;-webkit-border-top-right-radius:3px;-khtml-border-top-right-radius:3px;border-top-right-radius:3px;-webkit-box-shadow: 3px 3px 5px -1px rgba(153,153,153,0.7);-moz-box-shadow: 3px 3px 5px -1px rgba(153,153,153,0.7);box-shadow: 3px 3px 5px -1px rgba(153,153,153,0.7);}
-#autolock_status {position:relative;top:-27px;left:140px;margin:0px 0px -27px 0px;width:25px;font-weight:bold;color:#2ea2cc;border:1px solid #999;padding:3px;background-color:#222;text-align:center;}
+.autolock_status {padding:4px 4px 5px 4px;line-height:28px;white-space:nowrap;margin:0px 0px 0px 5px;width:25px;color:#2ea2cc;border:1px solid #999;background-color:#222;text-align:center;}
 /** Custom Code **/
-#ResetDismissNotices {position:relative;top:-39px;left:200px;margin-bottom:-39px;margin-right:200px;}
+#ResetDismissNotices {}
+#CC-Help-Links {}
 pre {position:relative;z-index:50;background:#fff url(../images/pre_bg.png) top left repeat;border:1px solid #999;color:#000;display:block;font-family:"Courier New", Courier, monospace;font-size:11px;line-height:14px;width:700px;margin:0px 0px 0px 0px;overflow:auto;max-height:200px;overflow-x:scroll;overflow-y:scroll;padding:5px;}
 label[for=bps-CCode] {font-size:10px;}
 .cc-read-me-text {color:#000;}
@@ -326,7 +327,6 @@ label[for=mmode], label[for=mmode-email] {font-size:1em;}
 h2.bps-tab-title {margin-left:0px;}
 #bps-edittabs {width:100%;}
 #bps_file_editor {width:100%;}
-#autolock_status {position:relative;top:-31px;left:155px;margin:0px 0px -27px 0px;width:25px;font-weight:bold;color:#2ea2cc;border:1px solid #999;padding:3px;background-color:#222;text-align:center;}
 #message.updated {margin-left:0px;}
 #message.updated.fade {margin-left:0px;}
 div#messageinner.updatedinner {width:100%}
@@ -348,8 +348,6 @@ td.bps-table_cell_help_custom_code pre {width:95%;}
 #CC-Import {position:relative;left:-10px;top:0px;max-width:250px;}
 #CC-Export {position:relative;top:0px;left:0px;margin:10px 0px 0px 0px;}
 #CC-Delete {position:relative;top:-32px;left:80px;margin-right:80px;}
-#CC-Help-Links {display:none}
-#ResetDismissNotices {position:relative;top:0;left:0px;margin-bottom:20px}
 /* still needs some work - maybe do something like add all columns and set them to 1% */
 .LSM-DBRadio-Form {max-width:250px}
 #LoginSecurityCheckall {max-height:600px;width:100%;overflow:auto;margin:0px 0px 20px 0px;}
@@ -417,7 +415,6 @@ div#milestone {height:40px;}
 #bps-edittabs {width:100%;}
 #bps_file_editor {width:100%;}
 #bpsProLogo img {width:90%;margin-bottom:15px;}
-#autolock_status {position:relative;top:-31px;left:155px;margin:0px 0px -27px 0px;width:25px;font-weight:bold;color:#2ea2cc;border:1px solid #999;padding:3px;background-color:#222;text-align:center;}
 #bps-container .bps-text-area-600x700 {height:300px;width:100%;overflow:auto;}
 .PFW-Allow-From-Text-Area {width:100%;height:100px;}
 #bps-container .bps-text-area-custom-code {height:220px;width:100%;overflow:auto;}

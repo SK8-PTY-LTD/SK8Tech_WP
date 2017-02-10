@@ -638,6 +638,15 @@ if ( isset( $_POST['bpsResetDismissSubmit'] ) && current_user_can('manage_option
 		echo $text;
 	}
 
+	if ( ! delete_user_meta($user_id, 'bps_ignore_woocommerce_lsm_jtc_notice') ) {
+		$text = __('The BPS WooCommerce Options Notice: Enable Login Security for WooCommerce is NOT set. Nothing to reset.', 'bulletproof-security').'<br>';
+		echo $text;
+	} else {
+		$text = '<span style="color:#008000;">'.__('Success! The BPS WooCommerce Options Notice: Enable Login Security for WooCommerce is reset.', 'bulletproof-security').'</span><br>';
+		echo $text;
+		delete_option('bulletproof_security_options_setup_wizard_woo'); 
+	}
+
 	if ( ! delete_user_meta($user_id, 'bpsPro_ignore_speed_boost_notice') ) {
 		$text = __('The New Improved BPS Speed Boost Cache Code Notice is NOT set. Nothing to reset.', 'bulletproof-security').'<br>';
 		echo $text;

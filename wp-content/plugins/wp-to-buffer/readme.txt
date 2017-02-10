@@ -1,9 +1,9 @@
 === WordPress to Buffer ===
-Contributors: n7studios,wpcube
-Donate link: https://www.wpcube.co.uk/plugins/wordpress-to-buffer-pro
+Contributors: n7studios,wpzinc
+Donate link: https://www.wpzinc.com/plugins/wordpress-to-buffer-pro
 Tags: buffer, bufferapp, buffer app, buffer my post, buffer old post, buffer post, post to buffer, promote old posts, promote posts, promote custom posts, promote selected posts, share posts, bulk share posts, share old posts, social, media, sharing, social media, social sharing, schedule, auto post, auto publish, facebook, facebook post, facebook selected posts, facebook plugin, auto facebook post, post facebook, post to facebook, twitter, twitter post, tweet post twitter selected posts, tweet selected posts twitter plugin, auto twitter post, auto tweet post post twitter, post to twitter, linkedin, linkedin post, linkedin selected posts, linkedin plugin, auto linkedin post, post linkedin, post to linkedin, google, google post, google selected posts, google plugin, auto google post, post google, post to google, pinterest, pinterest post, pinterest selected posts, pinterest plugin, auto pinterest post, post pinterest, post to pinterest, best wordpress social plugin, best wordpress social sharing plugin, best social plugin, best social sharing plugin, best facebook social plugin, best twitter social plugin, best linkedin social plugin, best pinterest social plugin, best google+ social plugin
 Requires at least: 3.6
-Tested up to: 4.7
+Tested up to: 4.7.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -15,7 +15,7 @@ Send WordPress Pages, Posts or Custom Post Types to your Buffer (bufferapp.com) 
 WordPress to Buffer is a plugin for WordPress that sends updates to your Buffer (bufferapp.com) account for scheduled publishing to social networks, such as Facebook, Twitter, LinkedIn and Google+, when you publish and/or update WordPress Pages, Posts and/or Custom Post Types.
 
 > #### WordPress to Buffer Pro
-> <a href="https://www.wpcube.co.uk/plugins/wordpress-to-buffer-pro/" rel="friend" title="WordPress to Buffer Pro - Publish to Facebook, Twitter, LinkedIn, Google+ and Pinterest">WordPress to Buffer Pro</a> provides additional functionality:<br />
+> <a href="https://www.wpzinc.com/plugins/wordpress-to-buffer-pro/" rel="friend" title="WordPress to Buffer Pro - Publish to Facebook, Twitter, LinkedIn, Google+ and Pinterest">WordPress to Buffer Pro</a> provides additional functionality:<br />
 >
 > - Pinterest: Post to your Pinterest boards<br />
 > - Separate Options per Social Network: Define different statuses for each Post Type and Social Network<br />
@@ -33,20 +33,20 @@ WordPress to Buffer is a plugin for WordPress that sends updates to your Buffer 
 > - Updates: Receive one click update notifications, right within your WordPress Adminstration panel<br />
 > - Seamless Upgrade: Retain all current settings when upgrading to Pro<br />
 >
-> [Upgrade to WordPress to Buffer Pro](https://www.wpcube.co.uk/plugins/wordpress-to-buffer-pro/)
+> [Upgrade to WordPress to Buffer Pro](https://www.wpzinc.com/plugins/wordpress-to-buffer-pro/)
 
 = Support =
 
 We will do our best to provide support through the WordPress forums. However, please understand that this is a free plugin, 
 so support will be limited. Please read this article on <a href="http://www.wpbeginner.com/beginners-guide/how-to-properly-ask-for-wordpress-support-and-get-it/">how to properly ask for WordPress support and get it</a>.
 
-If you require one to one email support, please consider <a href="http://www.wpcube.co.uk/plugins/wordpress-to-buffer-pro" rel="friend">upgrading to the Pro version</a>.
+If you require one to one email support, please consider <a href="http://www.wpzinc.com/plugins/wordpress-to-buffer-pro" rel="friend">upgrading to the Pro version</a>.
 
-= WP Cube =
+= WP Zinc =
 We produce free and premium WordPress Plugins that supercharge your site, by increasing user engagement, boost site visitor numbers
 and keep your WordPress web sites secure.
 
-Find out more about us at <a href="https://www.wpcube.co.uk" rel="friend" title="Premium WordPress Plugins">wpcube.co.uk</a>
+Find out more about us at <a href="https://www.wpzinc.com" rel="friend" title="Premium WordPress Plugins">wpzinc.com</a>
 
 == Installation ==
 
@@ -66,6 +66,9 @@ Find out more about us at <a href="https://www.wpcube.co.uk" rel="friend" title=
 4. Post level settings meta box.
 
 == Changelog ==
+
+= 3.0.5 =
+* Fix: Changed branding from WP Cube to WP Zinc
 
 = 3.0.4 =
 * Fix: Removed var_dump()

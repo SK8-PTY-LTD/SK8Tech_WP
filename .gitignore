@@ -12,6 +12,9 @@ wp-content/uploads/
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
 
+#backupwordpress
+wp-content/backupwordpress-c7de7e460e-backups/
+
 .htaccess
 /license.txt
 /readme.html

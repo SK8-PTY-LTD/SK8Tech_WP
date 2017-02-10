@@ -227,6 +227,41 @@ If you have any further questions, please submit them on the main [WP-SpamShield
 
 == Changelog ==
 
+= 1.9.9.9 =
+*released 02/09/17*
+
+* Made some improvements to the whitelisting functionality.
+* Made some improvements to the widgets, and made some tweaks to make them fully compatible with the customizer. It was necessary to remove the custom color option and color picker on the "WP-SpamShield Counter - Custom" widget to make this possible. We may look into re-adding these in the future.
+* Made various code enhancements and improvements.
+* Improved some filters in the anti-spam algorithm.
+
+= 1.9.9.8.9 =
+*released 01/31/17*
+
+* Made various code enhancements and improvements.
+* Maintenance: Updated the spam filters.
+
+= 1.9.9.8.8 =
+*released 01/28/17*
+
+* Made various code enhancements and improvements.
+* Added new spam filters to the algorithm.
+* Improved some filters in the anti-spam algorithm.
+* Maintenance: Updated the spam filters.
+
+= 1.9.9.8.7 =
+*released 01/22/17*
+
+* Fixed a bug affecting certain server configurations.
+* Made various code enhancements and improvements.
+
+= 1.9.9.8.6 =
+*released 01/21/17*
+
+* Made various code enhancements and improvements.
+* Added an option to disable automatic plugin updates.
+* Maintenance: Updated the spam filters.
+
 = 1.9.9.8.5 =
 *released 01/19/17*
 
@@ -868,21 +903,7 @@ If you have any further questions, please submit them on the main [WP-SpamShield
 For a complete list of changes to the plugin, view the [Changelog](https://www.redsandmarketing.com/plugins/wp-spamshield/changelog/).
 
 == Upgrade Notice ==
-= 1.9.9.8.5 =
+= 1.9.9.9 =
 
-* Fixed a bug causing PHP Notices/Warnings, made various code enhancements and improvements, and updated the spam filters. Please see Changelog for details.
+* Made various code enhancements/improvements, and improved some filters in the anti-spam algorithm. Please see Changelog for details.
 
-
-== Other Notes ==
-
-[Troubleshooting Guide](https://www.redsandmarketing.com/plugins/wp-spamshield/troubleshooting-guide/) | [Frequently Asked Questions (FAQs)](https://www.redsandmarketing.com/plugins/wp-spamshield/faqs/) | [WP-SpamShield Support Page](https://www.redsandmarketing.com/plugins/wp-spamshield/support/)
-
-= Troubleshooting Guide / Support =
-
-If you're experiencing any issues, please take a few moments to work through the [FAQs](https://www.redsandmarketing.com/plugins/wp-spamshield/faqs/) and [troubleshooting guide](https://www.redsandmarketing.com/plugins/wp-spamshield/troubleshooting-guide/) as these solve over 90% of the issues that users bring to us.
-
-= Updates / Documentation =
-For updates and documentation, visit the [WP-SpamShield homepage](https://www.redsandmarketing.com/plugins/wp-spamshield/).
-
-= WordPress Security Note =
-As with any WordPress plugin, for security reasons, you should only download plugins from the author's site and from official WordPress repositories. When other sites host a plugin that is developed by someone else, they may be distributing a rogue version with malicious code that could compromise the security of your site and/or server. We cannot endorse a version of this that you may have downloaded from another site. If you have downloaded the "WP-SpamShield" plugin from another site, please download the current release from the from the [official WP-SpamShield page on WordPress.org](https://wordpress.org/plugins/wp-spamshield/).

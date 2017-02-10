@@ -632,6 +632,28 @@ $HFiles_options = get_option('bulletproof_security_options_htaccess_files');
 	
 	$successMessage8 = __(' DB Option created or updated Successfully!', 'bulletproof-security');
 
+	$woo_plugin_var = 'woocommerce/woocommerce.php';
+	$woo_return_var = in_array( $woo_plugin_var, apply_filters('active_plugins', get_option('active_plugins')));
+	
+	if ( $woo_return_var == 1 ) {
+		// .54.36: New installations of BPS should not display the WooCommerce Enable LSM option Dismiss Notice if WooCommerce is already installed.
+		$bps_woo_lsm_jtc_options = array( 'bps_wizard_woo' => '1' );
+
+		if ( ! $BPS_LSM_Options['bps_enable_lsm_woocommerce'] ) {
+			$bps_enable_lsm_woocommerce = '1';
+		} else {
+			$bps_enable_lsm_woocommerce = $BPS_LSM_Options['bps_enable_lsm_woocommerce'];
+		}
+
+	} else {
+		$bps_enable_lsm_woocommerce = $BPS_LSM_Options['bps_enable_lsm_woocommerce'];
+		$bps_woo_lsm_jtc_options = array( 'bps_wizard_woo' => '' );
+	}
+
+		foreach( $bps_woo_lsm_jtc_options as $key => $value ) {
+			update_option('bulletproof_security_options_setup_wizard_woo', $bps_woo_lsm_jtc_options);
+		}
+
 	$$bps_login_security = get_option('bulletproof_security_options_login_security');
 	
 	$bps_login_security1 = ! $bps_login_security['bps_max_logins'] ? '3' : $bps_login_security['bps_max_logins'];
@@ -655,7 +677,8 @@ $HFiles_options = get_option('bulletproof_security_options_htaccess_files');
 	'bps_login_security_errors' 	=> $bps_login_security7, 
 	'bps_login_security_remaining' 	=> $bps_login_security8, 
 	'bps_login_security_pw_reset' 	=> $bps_login_security9,  
-	'bps_login_security_sort' 		=> $bps_login_security10 
+	'bps_login_security_sort' 		=> $bps_login_security10, 
+	'bps_enable_lsm_woocommerce' 	=> $bps_enable_lsm_woocommerce
 	);
 
 	foreach( $BPS_Options_LSM as $key => $value ) {
@@ -1012,7 +1035,8 @@ if ( isset( $_POST['Submit-Net-LSM'] ) && current_user_can('manage_options') ) {
 			'bps_login_security_errors' 	=> 'wpErrors', 
 			'bps_login_security_remaining' 	=> 'On', 
 			'bps_login_security_pw_reset' 	=> 'enable',  
-			'bps_login_security_sort' 		=> 'ascending' 
+			'bps_login_security_sort' 		=> 'ascending', 
+			'bps_enable_lsm_woocommerce' 	=> '' 
 			);
 
 			if ( ! get_blog_option( $net_id, $bps_Net_lsm ) ) {	
@@ -1037,7 +1061,8 @@ if ( isset( $_POST['Submit-Net-LSM'] ) && current_user_can('manage_options') ) {
 				'bps_login_security_errors' 	=> $BPS_LSM_Options_Net['bps_login_security_errors'], 
 				'bps_login_security_remaining' 	=> $BPS_LSM_Options_Net['bps_login_security_remaining'], 
 				'bps_login_security_pw_reset' 	=> $BPS_LSM_Options_Net['bps_login_security_pw_reset'],  
-				'bps_login_security_sort' 		=> $BPS_LSM_Options_Net['bps_login_security_sort'] 
+				'bps_login_security_sort' 		=> $BPS_LSM_Options_Net['bps_login_security_sort'], 
+				'bps_enable_lsm_woocommerce' 	=> $BPS_LSM_Options_Net['bps_enable_lsm_woocommerce'] 
 				);
 
 				foreach( $BPS_Net_Options_lsm as $key => $value ) {

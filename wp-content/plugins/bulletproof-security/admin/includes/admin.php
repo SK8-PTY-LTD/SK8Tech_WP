@@ -102,7 +102,7 @@ global $wpdb, $wp_version, $blog_id;
 	}
 	}
 	
-// Whitelist BPS DB options: Total: 30
+// Whitelist BPS DB options: Total: 31
 register_setting('bulletproof_security_options', 'bulletproof_security_options', 'bulletproof_security_options_validate');
 register_setting('bulletproof_security_options_SLF', 'bulletproof_security_options_SLF', 'bulletproof_security_options_validate_SLF');
 register_setting('bulletproof_security_options_debug', 'bulletproof_security_options_debug', 'bulletproof_security_options_validate_debug');
@@ -117,6 +117,7 @@ register_setting('bulletproof_security_options_pop_uninstall', 'bulletproof_secu
 register_setting('bulletproof_security_options_customcode_WPA', 'bulletproof_security_options_customcode_WPA', 'bulletproof_security_options_validate_customcode_WPA');
 register_setting('bulletproof_security_options_apache_modules', 'bulletproof_security_options_apache_modules', 'bulletproof_security_options_validate_apache_modules');
 register_setting('bulletproof_security_options_hidden_plugins', 'bulletproof_security_options_hidden_plugins', 'bulletproof_security_options_validate_hidden_plugins');
+register_setting('bulletproof_security_options_setup_wizard_woo', 'bulletproof_security_options_setup_wizard_woo', 'bulletproof_security_options_validate_setup_wizard_woo');
 register_setting('bulletproof_security_options_sec_log_post_limit', 'bulletproof_security_options_sec_log_post_limit', 'bulletproof_security_options_validate_sec_log_post_limit');
 register_setting('bulletproof_security_options_status_display', 'bulletproof_security_options_status_display', 'bulletproof_security_options_validate_status_display');
 register_setting('bulletproof_security_options_login_security', 'bulletproof_security_options_login_security', 'bulletproof_security_options_validate_login_security');
@@ -691,6 +692,7 @@ require_once( ABSPATH . 'wp-admin/includes/plugin.php');
 	delete_option('bulletproof_security_options_hpf_cron');
 	delete_option('bulletproof_security_options_zip_fix');
 	delete_option('bulletproof_security_options_autoupdate');
+	delete_option('bulletproof_security_options_setup_wizard_woo');
 	// will be adding this new upgrade notice option later
 	// delete_option('bulletproof_security_options_upgrade_notice');	
 	
@@ -844,6 +846,7 @@ function bulletproof_security_options_validate_login_security($input) {
 	$BPSoptions['bps_login_security_remaining'] = wp_filter_nohtml_kses($input['bps_login_security_remaining']);
 	$BPSoptions['bps_login_security_pw_reset'] = wp_filter_nohtml_kses($input['bps_login_security_pw_reset']);
 	$BPSoptions['bps_login_security_sort'] = wp_filter_nohtml_kses($input['bps_login_security_sort']);
+	$BPSoptions['bps_enable_lsm_woocommerce'] = wp_filter_nohtml_kses($input['bps_enable_lsm_woocommerce']);
 
 	return $BPSoptions;  
 }
@@ -1005,6 +1008,15 @@ function bulletproof_security_options_validate_pop_uninstall($input) {
 function bulletproof_security_options_validate_wizard_free($input) {  
 	$options = get_option('bulletproof_security_options_wizard_free');  
 	$options['bps_wizard_free'] = wp_filter_nohtml_kses($input['bps_wizard_free']);
+	
+	return $options;  
+}
+
+// Setup Wizard New BPS Installations: Used in WooCommerce Dismiss Notice.
+// New installations of BPS should not display the WooCommerce Enable LSM option Dismiss Notice.
+function bulletproof_security_options_validate_setup_wizard_woo($input) {  
+	$options = get_option('bulletproof_security_options_setup_wizard_woo');  
+	$options['bps_wizard_woo'] = wp_filter_nohtml_kses($input['bps_wizard_woo']);
 	
 	return $options;  
 }

@@ -343,7 +343,7 @@ msgid "WP to Buffer"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "http://www.wpcube.co.uk/plugins/wp-to-buffer-pro"
+msgid "https://www.wpzinc.com/plugins/wp-to-buffer-pro"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -357,5 +357,5 @@ msgid "WP Cube"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://www.wpcube.co.uk"
+msgid "https://www.wpzinc.com"
 msgstr ""

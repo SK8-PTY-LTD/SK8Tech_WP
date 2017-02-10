@@ -142,17 +142,14 @@ function bpsResetTimeout() {
 			
 			foreach ( $BPS_ISL_options as $key => $value ) {
 		
-				if ( $key == 'bps_isl_custom_roles' && ! is_array($value) ) {
-					return;
-				}
-				
 				if ( $key == 'bps_isl_custom_roles' && is_array($value) ) {
 					
 					foreach ( $value as $ckey => $cvalue ) {
 						
 						if ( $user_role == $ckey && $cvalue == '1' ) {
-							
 							$timeout = $BPS_ISL_options['bps_isl_timeout'] * 60000;
+						} else {
+							return;
 						}
 					}
 				}

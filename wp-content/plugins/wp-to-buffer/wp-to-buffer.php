@@ -1,16 +1,16 @@
 <?php
 /**
 * Plugin Name: WP to Buffer
-* Plugin URI: http://www.wpcube.co.uk/plugins/wp-to-buffer-pro
-* Version: 3.0.4
-* Author: WP Cube
-* Author URI: http://www.wpcube.co.uk
+* Plugin URI: https://www.wpzinc.com/plugins/wordpress-to-buffer-pro
+* Version: 3.0.5
+* Author: WP Zinc
+* Author URI: https://www.wpzinc.com
 * Description: Send WordPress Pages, Posts or Custom Post Types to your Buffer (bufferapp.com) account for scheduled publishing to social networks.
 * Text Domain: wp-to-buffer
 * License: GPL2
 */
 
-/*  Copyright 2015 WP Cube (email : support@wpcube.co.uk)
+/*  Copyright 2016 WP Zinc (email : support@wpzinc.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -27,27 +27,27 @@
 */
 
 /**
-* WP to Buffer Class
-* 
-* @package WP Cube
-* @subpackage WP to Buffer
-* @author Tim Carr
-* @version 3.0.3
-* @copyright WP Cube
-*/
+ * WP to Buffer Class
+ * 
+ * @package     WP Zinc
+ * @subpackage  WP to Buffer
+ * @author      Tim Carr
+ * @version     3.0.5
+ * @copyright   WP Zinc
+ */
 class WPToBuffer {
 
     /**
-    * Constructor.
-    */
-    function __construct() {
+     * Constructor.
+     */
+    public function __construct() {
 
         // Plugin Details
         $this->plugin               = new stdClass;
         $this->plugin->name         = 'wp-to-buffer'; // Plugin Folder
         $this->plugin->settingsName = 'wp-to-buffer';
         $this->plugin->displayName  = 'WP to Buffer'; // Plugin Name
-        $this->plugin->version      = '3.0.4';
+        $this->plugin->version      = '3.0.5';
         $this->plugin->folder       = plugin_dir_path( __FILE__ );
         $this->plugin->url          = plugin_dir_url( __FILE__ );
 
@@ -101,7 +101,7 @@ class WPToBuffer {
             __( 'WP-Cron', $this->plugin->name ), 
             __( 'Optionally enable WP-Cron to send status updates via Cron, speeding up UI performance', $this->plugin->name ),
         );
-        $this->plugin->upgradeURL = 'http://www.wpcube.co.uk/plugins/wp-to-buffer-pro';
+        $this->plugin->upgradeURL = 'https://www.wpzinc.com/plugins/wordpress-to-buffer-pro';
         
         // Settings
 		$this->plugin->ignorePostTypes = array( 'attachment', 'revision', 'nav_menu_item') ;      
@@ -109,33 +109,33 @@ class WPToBuffer {
 		$this->plugin->updateDefaultString = 'Updated Post: {title} {url}';
 		
         // Dashboard Submodule
-        if ( ! class_exists( 'WPCubeDashboardWidget' ) ) {
+        if ( ! class_exists( 'WPZincDashboardWidget' ) ) {
 			require_once( $this->plugin->folder . '/_modules/dashboard/dashboard.php' );
 		}
-		$dashboard = new WPCubeDashboardWidget( $this->plugin ); 
+		$dashboard = new WPZincDashboardWidget( $this->plugin ); 
 		
 		// Hooks
-        add_action( 'admin_enqueue_scripts', array( &$this, 'admin_scripts_css' ) );
-        add_action( 'admin_menu', array( &$this, 'admin_menu' ) );
-        add_action( 'admin_notices', array( &$this, 'admin_notices' ) ); 
-        add_action( 'wp_loaded', array( &$this, 'register_publish_hooks' ) );
-        add_action( 'plugins_loaded', array( &$this, 'load_language_files' ) );
+        add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts_css' ) );
+        add_action( 'admin_menu', array( $this, 'admin_menu' ) );
+        add_action( 'admin_notices', array( $this, 'admin_notices' ) ); 
+        add_action( 'wp_loaded', array( $this, 'register_publish_hooks' ) );
+        add_action( 'plugins_loaded', array( $this, 'load_language_files' ) );
 
     }
     
     /**
-    * Registers publish hooks against all public Post Types
-    */
-    function register_publish_hooks() {   
+     * Registers publish hooks against all public Post Types
+     */
+    public function register_publish_hooks() {   
 
     	add_action( 'transition_post_status', array( $this, 'transition_post_status' ), 10, 3 );
 
     }
     
     /**
-    * Register and enqueue any JS and CSS for the WordPress Administration
-    */
-    function admin_scripts_css() {
+     * Register and enqueue any JS and CSS for the WordPress Administration
+     */
+    public function admin_scripts_css() {
 
     	// JS
     	wp_enqueue_script( $this->plugin->name . '-admin', $this->plugin->url . 'js/admin.js', array( 'jquery' ), $this->plugin->version, true );
@@ -146,20 +146,20 @@ class WPToBuffer {
     }
     
     /**
-    * Register the plugin settings panel
-    */
-    function admin_menu() {
+     * Register the plugin settings panel
+     */
+    public function admin_menu() {
 
         add_menu_page( $this->plugin->displayName, $this->plugin->displayName, 'manage_options', $this->plugin->name, array(&$this, 'admin_screen'), $this->plugin->url . 'images/icons/small.png' );
     
     }
     
     /**
-    * Outputs a notice if:
-    * - Buffer hasn't authenticated i.e. we do not have an access token
-    * - A Post has been sent to Buffer and we have a valid message response
-    */
-    function admin_notices() {
+     * Outputs a notice if:
+     * - Buffer hasn't authenticated i.e. we do not have an access token
+     * - A Post has been sent to Buffer and we have a valid message response
+     */
+    public function admin_notices() {
 
         // Don't check on plugin main page
         if ( isset( $_GET['page'] ) && $_GET['page'] == $this->plugin->name ) {
@@ -233,11 +233,11 @@ class WPToBuffer {
     }
     
     /**
-    * Called when any Page, Post or Custom Post Type is published or updated, live or for a scheduled post
-    *
-    * @param int $postID Post ID
-    */
-    function publish( $postID, $updateType ) {
+     * Called when any Page, Post or Custom Post Type is published or updated, live or for a scheduled post
+     *
+     * @param int $postID Post ID
+     */
+    public function publish( $postID, $updateType ) {
     	$defaults = get_option($this->plugin->settingsName); // Get settings
         if (!isset($defaults['accessToken']) OR empty($defaults['accessToken'])) return false; // No access token so cannot publish to Buffer
         
@@ -332,10 +332,10 @@ class WPToBuffer {
     }
     
 	/**
-    * Output the Administration Panel
-    * Save POSTed data from the Administration Panel into a WordPress option
-    */
-    function admin_screen() {
+     * Output the Administration Panel
+     * Save POSTed data from the Administration Panel into a WordPress option
+     */
+    public function admin_screen() {
 
     	// Save Settings
         if (isset($_POST['submit'])) {
@@ -406,24 +406,24 @@ class WPToBuffer {
     }
     
     /**
-    * Loads plugin textdomain
-    */
-    function load_language_files() {
+     * Loads plugin textdomain
+     */
+    public function load_language_files() {
 
     	load_plugin_textdomain( $this->plugin->name, false, $this->plugin->name . '/languages/' );
 
     }
     
     /**
-    * Sends a GET request to the Buffer API
-    *
-    * @param string $accessToken Access Token
-    * @param string $cmd Command
-    * @param string $method Method (get|post)
-    * @param array $params Parameters (optional)
-    * @return mixed JSON decoded object or error string
-    */
-    function request($accessToken, $cmd, $method = 'get', $params = array()) {
+     * Sends a GET request to the Buffer API
+     *
+     * @param string $accessToken Access Token
+     * @param string $cmd Command
+     * @param string $method Method (get|post)
+     * @param array $params Parameters (optional)
+     * @return mixed JSON decoded object or error string
+     */
+    public function request($accessToken, $cmd, $method = 'get', $params = array()) {
     	// Check for access token
     	if ($accessToken == '') return __('Invalid access token', $this->plugin->name);
 		

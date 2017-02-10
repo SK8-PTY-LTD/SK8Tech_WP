@@ -224,7 +224,10 @@ if ( ! current_user_can('manage_options') ) {
     <td><label for="LSLog" style="margin:0px 0px 0px 5px;"><strong><?php _e('Blank = Show All Rows', 'bulletproof-security'); ?></strong></label></td>
   </tr>
 </table>
-<br />
+
+	<div id="LSM-woocommerce" style="margin:10px 0px 10px 0px">
+	<input type="checkbox" name="bulletproof_security_options_login_security[bps_enable_lsm_woocommerce]" value="1" <?php checked( $BPSoptions['bps_enable_lsm_woocommerce'], 1 ); ?> /><label><?php _e(' Enable Login Security for WooCommerce', 'bulletproof-security'); ?></label>
+	</div>
 
 <table border="0">
   <tr>
@@ -929,7 +932,7 @@ if ( isset( $_POST['Submit-ISL-Options'] ) && current_user_can('manage_options')
 		
 		} else {
 			
-			$Custom_Roles_array = '';
+			$Custom_Roles_array = array( 'bps', '' );
 		}
 	}
 

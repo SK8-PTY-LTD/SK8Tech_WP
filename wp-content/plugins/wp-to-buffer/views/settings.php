@@ -1,6 +1,6 @@
 <div class="wrap">
     <div id="<?php echo $this->plugin->name; ?>-title" class="icon32"></div> 
-    <h2 class="wpcube"><?php echo $this->plugin->displayName; ?> &raquo; <?php _e('Settings'); ?></h2>
+    <h2 class="wpzinc"><?php echo $this->plugin->displayName; ?> &raquo; <?php _e('Settings'); ?></h2>
            
     <?php    
     if (isset($this->message)) {

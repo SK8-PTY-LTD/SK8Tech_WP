@@ -655,70 +655,148 @@ function bpsPro_new_version_db_options_files_autoupdate() {
 	if ( current_user_can('manage_options') ) {
 		global $bps_version, $bps_last_version, $wp_version, $wpdb, $aitpro_bullet, $pagenow;
 	
-		// .53.9: Custom default.htacces File
-		// If a /bps-backup/master-backups/default.htaccess exists then copy it to /htaccess/default.htaccess
-		$custom_default_htaccess = WP_CONTENT_DIR . '/bps-backup/master-backups/default.htaccess';
-		$DefaultHtaccess = WP_PLUGIN_DIR . '/bulletproof-security/admin/htaccess/default.htaccess';
-		if ( file_exists($custom_default_htaccess) ) {
-			copy($custom_default_htaccess, $DefaultHtaccess);
-		}
-
-		// .53.8: Add/Update new ISL DB options. conditional on whether someone is using ISL or not.
+		// .54.3: BugFix: pre-save bps_isl_custom_roles as an array
 		// .54.2: Added Custom User Roles. bps_isl_uri_exclusions was not added/updated in previous BPS version.
+		// .53.8: Add/Update new ISL DB options. conditional on whether someone is using ISL or not.
 		$isl_options = get_option('bulletproof_security_options_idle_session');
 		
 		if ( $isl_options['bps_isl'] == 'On' || $isl_options['bps_isl'] == 'Off' ) {
 
-		$isl_logout_url = plugins_url('/bulletproof-security/isl-logout.php');
-		$isl_login_url = site_url('/wp-login.php');
-		$isl_css1 = 'background-color:#fff;line-height:normal;';
-		$isl_css2 = 'position:fixed;top:20%;left:0%;text-align:center;height:100%;width:100%;';		
-		$isl_css3 = 'border:5px solid gray;background-color:#BCE2F1;';
-		$isl_css4 = 'font-family:Verdana, Arial, Helvetica, sans-serif;font-size:18px;font-weight:bold;';
+		if ( ! $isl_options['bps_isl_custom_roles'] ) {
+			$isl_options18 = array( 'bps', '' );
+		
+		} else {
 
-		$isl_options1 = ! $isl_options['bps_isl'] ? 'On' : $isl_options['bps_isl'];
-		$isl_options2 = ! $isl_options['bps_isl_timeout'] ? '60' : $isl_options['bps_isl_timeout'];
-		$isl_options3 = ! $isl_options['bps_isl_logout_url'] ? $isl_logout_url : $isl_options['bps_isl_logout_url'];		
-		$isl_options4 = ! $isl_options['bps_isl_login_url'] ? $isl_login_url : $isl_options['bps_isl_login_url'];		
-		$isl_options5 = ! $isl_options['bps_isl_custom_message'] ? '' : $isl_options['bps_isl_custom_message'];		
-		$isl_options6 = ! $isl_options['bps_isl_custom_css_1'] ? $isl_css1 : $isl_options['bps_isl_custom_css_1'];
-		$isl_options7 = ! $isl_options['bps_isl_custom_css_2'] ? $isl_css2 : $isl_options['bps_isl_custom_css_2'];
-		$isl_options8 = ! $isl_options['bps_isl_custom_css_3'] ? $isl_css3 : $isl_options['bps_isl_custom_css_3'];		
-		$isl_options9 = ! $isl_options['bps_isl_custom_css_4'] ? $isl_css4 : $isl_options['bps_isl_custom_css_4'];		
-		$isl_options10 = ! $isl_options['bps_isl_user_account_exceptions'] ? '' : $isl_options['bps_isl_user_account_exceptions'];		
-		$isl_options11 = ! $isl_options['bps_isl_administrator'] ? '' : $isl_options['bps_isl_administrator'];
-		$isl_options12 = ! $isl_options['bps_isl_editor'] ? '' : $isl_options['bps_isl_editor'];
-		$isl_options13 = ! $isl_options['bps_isl_author'] ? '' : $isl_options['bps_isl_author'];		
-		$isl_options14 = ! $isl_options['bps_isl_contributor'] ? '' : $isl_options['bps_isl_contributor'];		
-		$isl_options15 = ! $isl_options['bps_isl_subscriber'] ? '' : $isl_options['bps_isl_subscriber'];
-		$isl_options16 = ! $isl_options['bps_isl_tinymce'] ? '' : $isl_options['bps_isl_tinymce'];
-		$isl_options17 = ! $isl_options['bps_isl_uri_exclusions'] ? '' : $isl_options['bps_isl_uri_exclusions'];		
-		$isl_options18 = ! $isl_options['bps_isl_custom_roles'] ? '' : $isl_options['bps_isl_custom_roles'];
+			foreach ( $isl_options as $key => $value ) {
+		
+				if ( $key == 'bps_isl_custom_roles' ) {
+					
+					if ( ! is_array($value) ) {
+						$isl_options18 = array( 'bps', '' );
+					} else { 
+						$isl_options18 = $isl_options['bps_isl_custom_roles'];
+					}
+				}
+			}	
+		}
 
 		$isl_db_options = array(
-		'bps_isl' 							=> $isl_options1, 
-		'bps_isl_timeout' 					=> $isl_options2, 
-		'bps_isl_logout_url' 				=> $isl_options3, 
-		'bps_isl_login_url' 				=> $isl_options4, 
-		'bps_isl_custom_message' 			=> $isl_options5, 
-		'bps_isl_custom_css_1' 				=> $isl_options6, 
-		'bps_isl_custom_css_2' 				=> $isl_options7, 
-		'bps_isl_custom_css_3' 				=> $isl_options8, 
-		'bps_isl_custom_css_4' 				=> $isl_options9, 
-		'bps_isl_user_account_exceptions'	=> $isl_options10,  
-		'bps_isl_administrator' 			=> $isl_options11, 
-		'bps_isl_editor' 					=> $isl_options12, 
-		'bps_isl_author' 					=> $isl_options13, 
-		'bps_isl_contributor' 				=> $isl_options14, 
-		'bps_isl_subscriber' 				=> $isl_options15, 
-		'bps_isl_tinymce' 					=> $isl_options16, 
-		'bps_isl_uri_exclusions' 			=> $isl_options17, 
+		'bps_isl' 							=> $isl_options['bps_isl'], 
+		'bps_isl_timeout' 					=> $isl_options['bps_isl_timeout'], 
+		'bps_isl_logout_url' 				=> $isl_options['bps_isl_logout_url'], 
+		'bps_isl_login_url' 				=> $isl_options['bps_isl_login_url'], 
+		'bps_isl_custom_message' 			=> $isl_options['bps_isl_custom_message'], 
+		'bps_isl_custom_css_1' 				=> $isl_options['bps_isl_custom_css_1'], 
+		'bps_isl_custom_css_2' 				=> $isl_options['bps_isl_custom_css_2'], 
+		'bps_isl_custom_css_3' 				=> $isl_options['bps_isl_custom_css_3'], 
+		'bps_isl_custom_css_4' 				=> $isl_options['bps_isl_custom_css_4'], 
+		'bps_isl_user_account_exceptions'	=> $isl_options['bps_isl_user_account_exceptions'],  
+		'bps_isl_administrator' 			=> $isl_options['bps_isl_administrator'], 
+		'bps_isl_editor' 					=> $isl_options['bps_isl_editor'], 
+		'bps_isl_author' 					=> $isl_options['bps_isl_author'], 
+		'bps_isl_contributor' 				=> $isl_options['bps_isl_contributor'], 
+		'bps_isl_subscriber' 				=> $isl_options['bps_isl_subscriber'], 
+		'bps_isl_tinymce' 					=> $isl_options['bps_isl_tinymce'], 
+		'bps_isl_uri_exclusions' 			=> $isl_options['bps_isl_uri_exclusions'], 
 		'bps_isl_custom_roles' 				=> $isl_options18 
 		);
 
 		foreach( $isl_db_options as $key => $value ) {
 			update_option('bulletproof_security_options_idle_session', $isl_db_options);
 		}
+		}
+
+		// .54.3: BugFix: pre-save ACE db options.
+		$ace_options = get_option('bulletproof_security_options_auth_cookie');  
+	
+		if ( $ace_options['bps_ace'] == 'On' || $ace_options['bps_ace'] == 'Off' ) {
+			
+		if ( ! $ace_options['bps_ace_custom_roles'] ) {
+			$ace_options11 = array( 'bps', '' );
+		
+		} else {
+			
+			foreach ( $ace_options as $key => $value ) {
+		
+				if ( $key == 'bps_ace_custom_roles' ) {
+					
+					if ( ! is_array($value) ) {
+						$ace_options11 = array( 'bps', '' );
+					} else { 
+						$ace_options11 = $ace_options['bps_ace_custom_roles'];
+					}
+				}
+			}	
+		}
+		
+		$ace_db_options = array(
+		'bps_ace' 							=> $ace_options['bps_ace'], 
+		'bps_ace_expiration' 				=> $ace_options['bps_ace_expiration'], 
+		'bps_ace_rememberme_expiration' 	=> $ace_options['bps_ace_rememberme_expiration'], 
+		'bps_ace_user_account_exceptions' 	=> $ace_options['bps_ace_user_account_exceptions'], 
+		'bps_ace_administrator' 			=> $ace_options['bps_ace_administrator'], 
+		'bps_ace_editor' 					=> $ace_options['bps_ace_editor'], 
+		'bps_ace_author' 					=> $ace_options['bps_ace_author'], 
+		'bps_ace_contributor' 				=> $ace_options['bps_ace_contributor'], 
+		'bps_ace_subscriber' 				=> $ace_options['bps_ace_subscriber'], 
+		'bps_ace_rememberme_disable'		=> $ace_options['bps_ace_rememberme_disable'],  
+		'bps_ace_custom_roles' 				=> $ace_options11 
+		);
+
+		foreach( $ace_db_options as $key => $value ) {
+			update_option('bulletproof_security_options_auth_cookie', $ace_db_options);
+		}
+		}
+
+		// .54.3: New Enable LSM for WooCommerce option added
+		// .51.8: New Login Security Attempts Remaining option added
+		$lsm = get_option('bulletproof_security_options_login_security');	
+	
+		if ( $woo_return_var == 1 ) {
+			if ( ! $lsm['bps_enable_lsm_woocommerce'] ) {
+				$bps_enable_lsm_woocommerce = '1';
+			} else {
+				$bps_enable_lsm_woocommerce = $lsm['bps_enable_lsm_woocommerce'];
+			}
+		} else {
+			$bps_enable_lsm_woocommerce = $lsm['bps_enable_lsm_woocommerce'];
+		}
+
+		$lsm1 = ! $lsm['bps_max_logins'] ? '3' : $lsm['bps_max_logins'];
+		$lsm2 = ! $lsm['bps_lockout_duration'] ? '60' : $lsm['bps_lockout_duration'];
+		$lsm3 = ! $lsm['bps_manual_lockout_duration'] ? '60' : $lsm['bps_manual_lockout_duration'];
+		$lsm4 = ! $lsm['bps_max_db_rows_display'] ? '' : $lsm['bps_max_db_rows_display'];
+		$lsm5 = ! $lsm['bps_login_security_OnOff'] ? 'On' : $lsm['bps_login_security_OnOff'];
+		$lsm6 = ! $lsm['bps_login_security_logging'] ? 'logLockouts' : $lsm['bps_login_security_logging'];
+		$lsm7 = ! $lsm['bps_login_security_errors'] ? 'wpErrors' : $lsm['bps_login_security_errors'];
+		$lsm8 = ! $lsm['bps_login_security_remaining'] ? 'On' : $lsm['bps_login_security_remaining'];
+		$lsm9 = ! $lsm['bps_login_security_pw_reset'] ? 'enable' : $lsm['bps_login_security_pw_reset'];
+		$lsm10 = ! $lsm['bps_login_security_sort'] ? 'ascending' : $lsm['bps_login_security_sort'];
+
+		$lsm_options = array(
+		'bps_max_logins' 				=> $lsm1, 
+		'bps_lockout_duration' 			=> $lsm2, 
+		'bps_manual_lockout_duration' 	=> $lsm3, 
+		'bps_max_db_rows_display' 		=> $lsm4, 
+		'bps_login_security_OnOff' 		=> $lsm5, 
+		'bps_login_security_logging' 	=> $lsm6, 
+		'bps_login_security_errors' 	=> $lsm7, 
+		'bps_login_security_remaining' 	=> $lsm8, 
+		'bps_login_security_pw_reset' 	=> $lsm9, 
+		'bps_login_security_sort' 		=> $lsm10, 
+		'bps_enable_lsm_woocommerce' 	=> $bps_enable_lsm_woocommerce 
+		);
+
+		foreach( $lsm_options as $key => $value ) {
+			update_option('bulletproof_security_options_login_security', $lsm_options);
+		}
+
+		// .53.9: Custom default.htacces File
+		// If a /bps-backup/master-backups/default.htaccess exists then copy it to /htaccess/default.htaccess
+		$custom_default_htaccess = WP_CONTENT_DIR . '/bps-backup/master-backups/default.htaccess';
+		$DefaultHtaccess = WP_PLUGIN_DIR . '/bulletproof-security/admin/htaccess/default.htaccess';
+		if ( file_exists($custom_default_htaccess) ) {
+			copy($custom_default_htaccess, $DefaultHtaccess);
 		}
 
 		// .53.8: Add/Update new Hidden|Empty Plugin Folders|Files Cron DB options.
@@ -753,198 +831,166 @@ function bpsPro_new_version_db_options_files_autoupdate() {
 		// .53.6: Wordfence WAF mess - Reset php handler dismiss notice.
 		bpsPro_php_handler_dismiss_notice_reset();
 
-	// .53.5: Old obsolete function deleted and code moved here.
-	// Email Alerting & Log file zip, email and deleting DB options.
-	$email_log = get_option('bulletproof_security_options_email');
-	$admin_email = get_option('admin_email');
+		// .53.5: Old obsolete function deleted and code moved here.
+		// Email Alerting & Log file zip, email and deleting DB options.
+		$email_log = get_option('bulletproof_security_options_email');
+		$admin_email = get_option('admin_email');
 
-	$email_log1 = ! $email_log['bps_send_email_to'] ? $admin_email : $email_log['bps_send_email_to'];
-	$email_log2 = ! $email_log['bps_send_email_from'] ? $admin_email : $email_log['bps_send_email_from'];
-	$email_log3 = ! $email_log['bps_send_email_cc'] ? '' : $email_log['bps_send_email_cc'];
-	$email_log4 = ! $email_log['bps_send_email_bcc'] ? '' : $email_log['bps_send_email_bcc'];
-	$email_log5 = ! $email_log['bps_login_security_email'] ? 'lockoutOnly' : $email_log['bps_login_security_email'];
-	$email_log6 = ! $email_log['bps_security_log_size'] ? '500KB' : $email_log['bps_security_log_size'];
-	$email_log7 = ! $email_log['bps_security_log_emailL'] ? 'email' : $email_log['bps_security_log_emailL'];
-	$email_log8 = ! $email_log['bps_dbb_log_email'] ? 'email' : $email_log['bps_dbb_log_email'];
-	$email_log9 = ! $email_log['bps_dbb_log_size'] ? '500KB' : $email_log['bps_dbb_log_size'];
+		$email_log1 = ! $email_log['bps_send_email_to'] ? $admin_email : $email_log['bps_send_email_to'];
+		$email_log2 = ! $email_log['bps_send_email_from'] ? $admin_email : $email_log['bps_send_email_from'];
+		$email_log3 = ! $email_log['bps_send_email_cc'] ? '' : $email_log['bps_send_email_cc'];
+		$email_log4 = ! $email_log['bps_send_email_bcc'] ? '' : $email_log['bps_send_email_bcc'];
+		$email_log5 = ! $email_log['bps_login_security_email'] ? 'lockoutOnly' : $email_log['bps_login_security_email'];
+		$email_log6 = ! $email_log['bps_security_log_size'] ? '500KB' : $email_log['bps_security_log_size'];
+		$email_log7 = ! $email_log['bps_security_log_emailL'] ? 'email' : $email_log['bps_security_log_emailL'];
+		$email_log8 = ! $email_log['bps_dbb_log_email'] ? 'email' : $email_log['bps_dbb_log_email'];
+		$email_log9 = ! $email_log['bps_dbb_log_size'] ? '500KB' : $email_log['bps_dbb_log_size'];
 
-	$email_log_options = array(
-	'bps_send_email_to' 			=> $email_log1, 
-	'bps_send_email_from' 			=> $email_log2, 
-	'bps_send_email_cc' 			=> $email_log3, 
-	'bps_send_email_bcc' 			=> $email_log4, 
-	'bps_login_security_email' 		=> $email_log5, 
-	'bps_security_log_size' 		=> $email_log6, 
-	'bps_security_log_emailL' 		=> $email_log7, 
-	'bps_dbb_log_email' 			=> $email_log8, 
-	'bps_dbb_log_size' 				=> $email_log9 
-	);
-
-	foreach( $email_log_options as $key => $value ) {
-		update_option('bulletproof_security_options_email', $email_log_options);
-	}
-
-	// .52.9: POST Request Attack Protection code correction|addition
-	// .53: Condition added to allow commenting out wp-admin URI whitelist rule
-	bpsPro_post_request_protection_check();
-
-	// .52.7: Set Security Log Limit POST Request Body Data option to checked/limited by default
-	$bps_seclog_post_limit_Options = 'bulletproof_security_options_sec_log_post_limit';			
-
-	$seclog_post_limit_Options = array( 'bps_security_log_post_limit' => '1' );
-			
-	if ( ! get_option( $bps_seclog_post_limit_Options ) ) {			
-		
-		foreach( $seclog_post_limit_Options as $key => $value ) {
-			update_option('bulletproof_security_options_sec_log_post_limit', $seclog_post_limit_Options);
-		}
-	}
-
-	// BPS .52.6: Pre-save UI Theme Skin with Blue Theme if DB option does not exist
-	bpsPro_presave_ui_theme_skin_options();
-
-	// .52.3: If Custom Code db options do not exist yet, create blank values
-	$ccr = get_option('bulletproof_security_options_customcode');
-	
-	$ccr1 = ! $ccr['bps_customcode_one'] ? '' : $ccr['bps_customcode_one'];
-	$ccr2 = ! $ccr['bps_customcode_server_signature'] ? '' : $ccr['bps_customcode_server_signature'];
-	$ccr3 = ! $ccr['bps_customcode_directory_index'] ? '' : $ccr['bps_customcode_directory_index'];
-	$ccr4 = ! $ccr['bps_customcode_server_protocol'] ? '' : $ccr['bps_customcode_server_protocol'];
-	$ccr5 = ! $ccr['bps_customcode_error_logging'] ? '' : $ccr['bps_customcode_error_logging'];
-	$ccr6 = ! $ccr['bps_customcode_deny_dot_folders'] ? '' : $ccr['bps_customcode_deny_dot_folders'];
-	$ccr7 = ! $ccr['bps_customcode_admin_includes'] ? '' : $ccr['bps_customcode_admin_includes'];
-	$ccr8 = ! $ccr['bps_customcode_wp_rewrite_start'] ? '' : $ccr['bps_customcode_wp_rewrite_start'];
-	$ccr9 = ! $ccr['bps_customcode_request_methods'] ? '' : $ccr['bps_customcode_request_methods'];
-	$ccr10 = ! $ccr['bps_customcode_two'] ? '' : $ccr['bps_customcode_two'];
-	$ccr11 = ! $ccr['bps_customcode_timthumb_misc'] ? '' : $ccr['bps_customcode_timthumb_misc'];
-	$ccr12 = ! $ccr['bps_customcode_bpsqse'] ? '' : $ccr['bps_customcode_bpsqse'];
-	$ccr12m = @! $ccr['bps_customcode_wp_rewrite_end'] ? '' : $ccr['bps_customcode_wp_rewrite_end'];
-	$ccr13 = ! $ccr['bps_customcode_deny_files'] ? '' : $ccr['bps_customcode_deny_files'];
-	$ccr14 = ! $ccr['bps_customcode_three'] ? '' : $ccr['bps_customcode_three'];
-
-	if ( ! is_multisite() ) {
-
-		$ccr_options = array(
-		'bps_customcode_one' 				=> $ccr1, 
-		'bps_customcode_server_signature' 	=> $ccr2, 
-		'bps_customcode_directory_index' 	=> $ccr3, 
-		'bps_customcode_server_protocol' 	=> $ccr4, 
-		'bps_customcode_error_logging' 		=> $ccr5, 
-		'bps_customcode_deny_dot_folders' 	=> $ccr6, 
-		'bps_customcode_admin_includes' 	=> $ccr7, 
-		'bps_customcode_wp_rewrite_start' 	=> $ccr8, 
-		'bps_customcode_request_methods' 	=> $ccr9, 
-		'bps_customcode_two' 				=> $ccr10, 
-		'bps_customcode_timthumb_misc' 		=> $ccr11, 
-		'bps_customcode_bpsqse' 			=> $ccr12, 
-		'bps_customcode_deny_files' 		=> $ccr13, 
-		'bps_customcode_three' 				=> $ccr14
+		$email_log_options = array(
+		'bps_send_email_to' 			=> $email_log1, 
+		'bps_send_email_from' 			=> $email_log2, 
+		'bps_send_email_cc' 			=> $email_log3, 
+		'bps_send_email_bcc' 			=> $email_log4, 
+		'bps_login_security_email' 		=> $email_log5, 
+		'bps_security_log_size' 		=> $email_log6, 
+		'bps_security_log_emailL' 		=> $email_log7, 
+		'bps_dbb_log_email' 			=> $email_log8, 
+		'bps_dbb_log_size' 				=> $email_log9 
 		);
-				
-	} else {
-					
-		$ccr_options = array(
-		'bps_customcode_one' 				=> $ccr1, 
-		'bps_customcode_server_signature' 	=> $ccr2, 
-		'bps_customcode_directory_index' 	=> $ccr3, 
-		'bps_customcode_server_protocol' 	=> $ccr4, 
-		'bps_customcode_error_logging' 		=> $ccr5, 
-		'bps_customcode_deny_dot_folders' 	=> $ccr6, 
-		'bps_customcode_admin_includes' 	=> $ccr7, 
-		'bps_customcode_wp_rewrite_start' 	=> $ccr8, 
-		'bps_customcode_request_methods' 	=> $ccr9, 
-		'bps_customcode_two' 				=> $ccr10, 
-		'bps_customcode_timthumb_misc' 		=> $ccr11, 
-		'bps_customcode_bpsqse' 			=> $ccr12, 
-		'bps_customcode_wp_rewrite_end' 	=> $ccr12m, 
-		'bps_customcode_deny_files' 		=> $ccr13, 
-		'bps_customcode_three' 				=> $ccr14
-		);					
-	}
 
-	foreach( $ccr_options as $key => $value ) {
-		update_option('bulletproof_security_options_customcode', $ccr_options);
-	}
+		foreach( $email_log_options as $key => $value ) {
+			update_option('bulletproof_security_options_email', $email_log_options);
+		}
 
-	$ccw = get_option('bulletproof_security_options_customcode_WPA');
-	
-	$ccw1 = ! $ccw['bps_customcode_deny_files_wpa'] ? '' : $ccw['bps_customcode_deny_files_wpa'];
-	$ccw2 = ! $ccw['bps_customcode_one_wpa'] ? '' : $ccw['bps_customcode_one_wpa'];
-	$ccw3 = ! $ccw['bps_customcode_two_wpa'] ? '' : $ccw['bps_customcode_two_wpa'];
-	$ccw4 = ! $ccw['bps_customcode_bpsqse_wpa'] ? '' : $ccw['bps_customcode_bpsqse_wpa'];
-	
-	$ccw_options = array(
-	'bps_customcode_deny_files_wpa' => $ccw1, 
-	'bps_customcode_one_wpa' 		=> $ccw2, 
-	'bps_customcode_two_wpa' 		=> $ccw3, 
-	'bps_customcode_bpsqse_wpa' 	=> $ccw4
-	);
+		// .53: Condition added to allow commenting out wp-admin URI whitelist rule
+		// .52.9: POST Request Attack Protection code correction|addition
+		bpsPro_post_request_protection_check();
+
+		// .52.7: Set Security Log Limit POST Request Body Data option to checked/limited by default
+		$bps_seclog_post_limit_Options = 'bulletproof_security_options_sec_log_post_limit';			
+
+		$seclog_post_limit_Options = array( 'bps_security_log_post_limit' => '1' );
 			
-	foreach( $ccw_options as $key => $value ) {
-		update_option('bulletproof_security_options_customcode_WPA', $ccw_options);
-	}
-
-	// .51.8: New Login Security Attempts Remaining option added
-	$lsm = get_option('bulletproof_security_options_login_security');	
-
-	$lsm1 = ! $lsm['bps_max_logins'] ? '3' : $lsm['bps_max_logins'];
-	$lsm2 = ! $lsm['bps_lockout_duration'] ? '60' : $lsm['bps_lockout_duration'];
-	$lsm3 = ! $lsm['bps_manual_lockout_duration'] ? '60' : $lsm['bps_manual_lockout_duration'];
-	$lsm4 = ! $lsm['bps_max_db_rows_display'] ? '' : $lsm['bps_max_db_rows_display'];
-	$lsm5 = ! $lsm['bps_login_security_OnOff'] ? 'On' : $lsm['bps_login_security_OnOff'];
-	$lsm6 = ! $lsm['bps_login_security_logging'] ? 'logLockouts' : $lsm['bps_login_security_logging'];
-	$lsm7 = ! $lsm['bps_login_security_errors'] ? 'wpErrors' : $lsm['bps_login_security_errors'];
-	$lsm8 = ! $lsm['bps_login_security_remaining'] ? 'On' : $lsm['bps_login_security_remaining'];
-	$lsm9 = ! $lsm['bps_login_security_pw_reset'] ? 'enable' : $lsm['bps_login_security_pw_reset'];
-	$lsm10 = ! $lsm['bps_login_security_sort'] ? 'ascending' : $lsm['bps_login_security_sort'];
-
-	$lsm_options = array(
-	'bps_max_logins' 				=> $lsm1, 
-	'bps_lockout_duration' 			=> $lsm2, 
-	'bps_manual_lockout_duration' 	=> $lsm3, 
-	'bps_max_db_rows_display' 		=> $lsm4, 
-	'bps_login_security_OnOff' 		=> $lsm5, 
-	'bps_login_security_logging' 	=> $lsm6, 
-	'bps_login_security_errors' 	=> $lsm7, 
-	'bps_login_security_remaining' 	=> $lsm8, 
-	'bps_login_security_pw_reset' 	=> $lsm9,  
-	'bps_login_security_sort' 		=> $lsm10 
-	);
-
-	foreach( $lsm_options as $key => $value ) {
-		update_option('bulletproof_security_options_login_security', $lsm_options);
-	}
-
-	$bps_option_name_dbb = 'bulletproof_security_options_DBB_log';
-	$bps_new_value_dbb = bpsPro_DBB_LogLastMod_wp_secs();
-	$BPS_Options_dbb = array( 'bps_dbb_log_date_mod' => $bps_new_value_dbb );
-
-	if ( ! get_option( $bps_option_name_dbb ) ) {	
+		if ( ! get_option( $bps_seclog_post_limit_Options ) ) {			
 		
-		foreach( $BPS_Options_dbb as $key => $value ) {
-			update_option('bulletproof_security_options_DBB_log', $BPS_Options_dbb);
+			foreach( $seclog_post_limit_Options as $key => $value ) {
+				update_option('bulletproof_security_options_sec_log_post_limit', $seclog_post_limit_Options);
+			}
 		}
-	}
 
-	// Save the Setup Wizard DB option only if it does not already exist
-	$bps_setup_wizard = 'bulletproof_security_options_wizard_free';
-	$BPS_Wizard = array( 'bps_wizard_free' => 'upgrade' );	
+		// BPS .52.6: Pre-save UI Theme Skin with Blue Theme if DB option does not exist
+		bpsPro_presave_ui_theme_skin_options();
+
+		// .52.3: If Custom Code db options do not exist yet, create blank values
+		$ccr = get_option('bulletproof_security_options_customcode');
 	
-	if ( ! get_option( $bps_setup_wizard ) ) {	
-		
-		foreach( $BPS_Wizard as $key => $value ) {
-			update_option('bulletproof_security_options_wizard_free', $BPS_Wizard);
-		}
-	}
+		$ccr1 = ! $ccr['bps_customcode_one'] ? '' : $ccr['bps_customcode_one'];
+		$ccr2 = ! $ccr['bps_customcode_server_signature'] ? '' : $ccr['bps_customcode_server_signature'];
+		$ccr3 = ! $ccr['bps_customcode_directory_index'] ? '' : $ccr['bps_customcode_directory_index'];
+		$ccr4 = ! $ccr['bps_customcode_server_protocol'] ? '' : $ccr['bps_customcode_server_protocol'];
+		$ccr5 = ! $ccr['bps_customcode_error_logging'] ? '' : $ccr['bps_customcode_error_logging'];
+		$ccr6 = ! $ccr['bps_customcode_deny_dot_folders'] ? '' : $ccr['bps_customcode_deny_dot_folders'];
+		$ccr7 = ! $ccr['bps_customcode_admin_includes'] ? '' : $ccr['bps_customcode_admin_includes'];
+		$ccr8 = ! $ccr['bps_customcode_wp_rewrite_start'] ? '' : $ccr['bps_customcode_wp_rewrite_start'];
+		$ccr9 = ! $ccr['bps_customcode_request_methods'] ? '' : $ccr['bps_customcode_request_methods'];
+		$ccr10 = ! $ccr['bps_customcode_two'] ? '' : $ccr['bps_customcode_two'];
+		$ccr11 = ! $ccr['bps_customcode_timthumb_misc'] ? '' : $ccr['bps_customcode_timthumb_misc'];
+		$ccr12 = ! $ccr['bps_customcode_bpsqse'] ? '' : $ccr['bps_customcode_bpsqse'];
+		$ccr12m = @! $ccr['bps_customcode_wp_rewrite_end'] ? '' : $ccr['bps_customcode_wp_rewrite_end'];
+		$ccr13 = ! $ccr['bps_customcode_deny_files'] ? '' : $ccr['bps_customcode_deny_files'];
+		$ccr14 = ! $ccr['bps_customcode_three'] ? '' : $ccr['bps_customcode_three'];
 
-	// Misc cleanup, etc.
-	// delete the old Maintenance Mode DB option - added in BPS .49.9
-	if ( get_option('bulletproof_security_options_maint') ) {	
-		delete_option('bulletproof_security_options_maint');
-	}
-	// Delete all the old plugin api junk content in this transient
-	delete_transient( 'bulletproof-security_info' );
+		if ( ! is_multisite() ) {
+
+			$ccr_options = array(
+			'bps_customcode_one' 				=> $ccr1, 
+			'bps_customcode_server_signature' 	=> $ccr2, 
+			'bps_customcode_directory_index' 	=> $ccr3, 
+			'bps_customcode_server_protocol' 	=> $ccr4, 
+			'bps_customcode_error_logging' 		=> $ccr5, 
+			'bps_customcode_deny_dot_folders' 	=> $ccr6, 
+			'bps_customcode_admin_includes' 	=> $ccr7, 
+			'bps_customcode_wp_rewrite_start' 	=> $ccr8, 
+			'bps_customcode_request_methods' 	=> $ccr9, 
+			'bps_customcode_two' 				=> $ccr10, 
+			'bps_customcode_timthumb_misc' 		=> $ccr11, 
+			'bps_customcode_bpsqse' 			=> $ccr12, 
+			'bps_customcode_deny_files' 		=> $ccr13, 
+			'bps_customcode_three' 				=> $ccr14
+			);
+				
+		} else {
+					
+			$ccr_options = array(
+			'bps_customcode_one' 				=> $ccr1, 
+			'bps_customcode_server_signature' 	=> $ccr2, 
+			'bps_customcode_directory_index' 	=> $ccr3, 
+			'bps_customcode_server_protocol' 	=> $ccr4, 
+			'bps_customcode_error_logging' 		=> $ccr5, 
+			'bps_customcode_deny_dot_folders' 	=> $ccr6, 
+			'bps_customcode_admin_includes' 	=> $ccr7, 
+			'bps_customcode_wp_rewrite_start' 	=> $ccr8, 
+			'bps_customcode_request_methods' 	=> $ccr9, 
+			'bps_customcode_two' 				=> $ccr10, 
+			'bps_customcode_timthumb_misc' 		=> $ccr11, 
+			'bps_customcode_bpsqse' 			=> $ccr12, 
+			'bps_customcode_wp_rewrite_end' 	=> $ccr12m, 
+			'bps_customcode_deny_files' 		=> $ccr13, 
+			'bps_customcode_three' 				=> $ccr14
+			);					
+		}
+
+		foreach( $ccr_options as $key => $value ) {
+			update_option('bulletproof_security_options_customcode', $ccr_options);
+		}
+
+		$ccw = get_option('bulletproof_security_options_customcode_WPA');
+	
+		$ccw1 = ! $ccw['bps_customcode_deny_files_wpa'] ? '' : $ccw['bps_customcode_deny_files_wpa'];
+		$ccw2 = ! $ccw['bps_customcode_one_wpa'] ? '' : $ccw['bps_customcode_one_wpa'];
+		$ccw3 = ! $ccw['bps_customcode_two_wpa'] ? '' : $ccw['bps_customcode_two_wpa'];
+		$ccw4 = ! $ccw['bps_customcode_bpsqse_wpa'] ? '' : $ccw['bps_customcode_bpsqse_wpa'];
+	
+		$ccw_options = array(
+		'bps_customcode_deny_files_wpa' => $ccw1, 
+		'bps_customcode_one_wpa' 		=> $ccw2, 
+		'bps_customcode_two_wpa' 		=> $ccw3, 
+		'bps_customcode_bpsqse_wpa' 	=> $ccw4
+		);
+			
+		foreach( $ccw_options as $key => $value ) {
+			update_option('bulletproof_security_options_customcode_WPA', $ccw_options);
+		}
+
+		$bps_option_name_dbb = 'bulletproof_security_options_DBB_log';
+		$bps_new_value_dbb = bpsPro_DBB_LogLastMod_wp_secs();
+		$BPS_Options_dbb = array( 'bps_dbb_log_date_mod' => $bps_new_value_dbb );
+
+		if ( ! get_option( $bps_option_name_dbb ) ) {	
 		
+			foreach( $BPS_Options_dbb as $key => $value ) {
+				update_option('bulletproof_security_options_DBB_log', $BPS_Options_dbb);
+			}
+		}
+
+		// Save the Setup Wizard DB option only if it does not already exist
+		$bps_setup_wizard = 'bulletproof_security_options_wizard_free';
+		$BPS_Wizard = array( 'bps_wizard_free' => 'upgrade' );	
+	
+		if ( ! get_option( $bps_setup_wizard ) ) {	
+		
+			foreach( $BPS_Wizard as $key => $value ) {
+				update_option('bulletproof_security_options_wizard_free', $BPS_Wizard);
+			}
+		}
+
+		// Misc cleanup, etc.
+		// delete the old Maintenance Mode DB option - added in BPS .49.9
+		if ( get_option('bulletproof_security_options_maint') ) {	
+			delete_option('bulletproof_security_options_maint');
+		}
+		// Delete all the old plugin api junk content in this transient
+		delete_transient( 'bulletproof-security_info' );
 	}
 }
 

@@ -67,9 +67,9 @@ $gmt_offset = get_option( 'gmt_offset' ) * 3600;
 	$post_limit = get_option('bulletproof_security_options_sec_log_post_limit'); 
 
 	if ( $post_limit['bps_security_log_post_limit'] == '1' ) {
-		$request_body = file_get_contents( 'php://input', NULL, NULL, -1, 500 );
+		$request_body = file_get_contents( 'php://input', NULL, NULL, 0, 500 );
 	} else {
-		$request_body = file_get_contents( 'php://input', NULL, NULL, -1, 250000 ); // roughly 250KB Max Limit
+		$request_body = file_get_contents( 'php://input', NULL, NULL, 0, 250000 ); // roughly 250KB Max Limit
 	}
 
 	if ( ! get_option( 'gmt_offset' ) ) {

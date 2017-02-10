@@ -4,7 +4,7 @@ Donate link: https://wordpress.org/support/view/plugin-reviews/bulletproof-secur
 Tags: 400, 401, 403, 404, 405, 410, 503, apache, antivirus, attack, auth cookie, authenticate, authentication, authentication cookie, author, author id, auto-logout, automatic, backdoor, backup, ban, base64, block, blocked, Bot, brute force, bruteforce, bulletproof, chmod, code, coming soon, cookie, cookie expiration, crack, cracking, crlf, csrf, database backup, database table prefix, db backup, db table backup, db table prefix, developer, development, directory traversal, dos, ddos, dump, empty plugin, encode, enumeration, error log, event listener, expire, exploit, exploitation, file inclusion, firewall, hack, hackers, hidden file, hidden plugin, htaccess, http log, idle, idle logout, idle time, idle user, idle session, inactive logout, inactive time, inactive user, inactive session, infect, infected, infection, injection, lfi, linux, litespeed, lock, log, log off, logging, login alerts, login security, login, maintenance mode, maintenance, malicious, malware, multisite, mysql, mysql backup, network, offline, optimize, optimization, path traversal, performance, permissions, pingback, prevent, prevention, privacy, private, protection, remember me, rfi, safe, safety, schedule backup, script, secure, security log, security, session, signout, spam, spammers, speed increase, speed boost, sql injection, system information, system info, timeout, trackback, unavailable, under construction, user id, user account, user role, username, users, virus, viruses, vulnerable, vulnerability, website backup, wordpress backup, website security, windows, wordpress security, xmlrpc, xml-rpc, xss
 Requires at least: 3.7 
 Tested up to: 4.7
-Stable tag: .54.2
+Stable tag: .54.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -407,7 +407,7 @@ Extensive Help Info can be found on the <a href="https://forum.ait-pro.com/forum
 * Log All User Account Logins or Log Only User Account Lockouts
 * Logged DB Fields: User ID|Username|Display Name|Email|Role|Login Time|Lockout Expires|IP Address|Hostname|Request URI
 * Email Alerting Options: User Account is locked out|An Administrator Logs in|An Administrator Logs in and when a User Account is locked out|Any User logs in and when a User Account is locked out|Do Not Send Email Alerts
-* Login Security Additional Options: Max Login Attempts|Automatic Lockout Time|Manual Lockout Time|Max DB Rows To Show|Turn On|Turn Off
+* Login Security Additional Options: Max Login Attempts|Automatic Lockout Time|Manual Lockout Time|Max DB Rows To Show|Enable Login Security for WooCommerce|Turn On|Turn Off
 * Login Security Stealth Mode: Standard WP Error Messages or Generic Error Messages. 
 * Login Security Attempts Remaining: Display a "Login Attempts Remaining X" message when an incorrect password is entered. 
 * Login Security Stealth Mode: Enable or Disable Login Password Reset capability and links.

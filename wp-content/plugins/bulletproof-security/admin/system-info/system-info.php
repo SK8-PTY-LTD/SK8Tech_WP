@@ -650,6 +650,48 @@ echo '<strong><span class="sysinfo-label-text">'.__('ionCube Loader', 'bulletpro
 	}
 	}
 	
+ 	/*
+	* WP get_temp_dir() preference is to return the value of sys_get_temp_dir(),
+ 	* followed by your PHP temporary upload directory, followed by WP_CONTENT_DIR,
+ 	* before finally defaulting to /tmp/
+	* In the event that this function does not find a writable location,
+ 	* It may be overridden by the WP_TEMP_DIR constant in your wp-config.php file.
+	* WP will use sys_get_temp_dir() for the temporary uploads folder.
+ 	*/
+
+	echo '<strong><span class="sysinfo-label-text">'.__('WP Temp Dir: ', 'bulletproof-security').'</span></strong> ' . get_temp_dir() . '<br>';
+
+	if ( defined('WP_TEMP_DIR') ) {
+		echo '<strong><span class="sysinfo-label-text">'.__('The WP_TEMP_DIR constant is being used in wp-config.php file', 'bulletproof-security').'</span></strong><br>';
+	}
+
+	if ( function_exists('sys_get_temp_dir') ) {
+		$sys_get_temp_dir = sys_get_temp_dir();
+		if ( @is_dir( $sys_get_temp_dir ) && wp_is_writable( $sys_get_temp_dir ) ) {
+			echo '<strong><span class="sysinfo-label-text">'.__('PHP Temp Dir: ', 'bulletproof-security').'</span></strong> ' . $sys_get_temp_dir . '<br>';			
+		} else {
+			echo '<strong><span class="sysinfo-label-text">'.__('PHP Temp Dir: ', 'bulletproof-security').'</span></strong> ' .__('Not set/defined or directory is not writable', 'bulletproof-security'). '<br>';	
+		}
+	}
+
+	// The temporary directory used for storing files when doing file upload. 
+	// Must be writable by whatever user PHP is running as. If not specified PHP will use the system's default.
+	// WP will use sys_get_temp_dir() for the temporary uploads folder.
+	$upload_tmp_dir = ini_get('upload_tmp_dir');
+	if ( @is_dir( $upload_tmp_dir ) && wp_is_writable( $upload_tmp_dir ) ) {
+		echo '<strong><span class="sysinfo-label-text">'.__('PHP Upload Temp Dir: ', 'bulletproof-security').'</span></strong> ' . $upload_tmp_dir . '<br>';
+	} else {
+		echo '<strong><span class="sysinfo-label-text">'.__('PHP Upload Temp Dir: ', 'bulletproof-security').'</span></strong> ' .__('Not set/defined or directory is not writable', 'bulletproof-security'). '<br>';
+	}
+	
+	// Current directory used to save session data.
+	$session_save_path = ini_get('session.save_path');
+	if ( @is_dir( $session_save_path ) && wp_is_writable( $session_save_path ) ) {
+		echo '<strong><span class="sysinfo-label-text">'.__('Session Save Path: ', 'bulletproof-security').'</span></strong> ' . $session_save_path . '<br>';
+	} else {
+		echo '<strong><span class="sysinfo-label-text">'.__('Session Save Path: ', 'bulletproof-security').'</span></strong> ' .__('Not set/defined or directory is not writable', 'bulletproof-security'). '<br>';
+	}
+
 	if ( function_exists('gc_enabled') && function_exists('gc_collect_cycles') ) {
 	if ( gc_enabled() ) {
 		$garbage = '<strong><span class="sysinfo-label-text">'.__('On | Cycles: ', 'bulletproof-security') . '</span></strong>' . gc_collect_cycles();

@@ -1,7 +1,7 @@
 <?php
 /**
  *  WP-SpamShield Compatibility
- *  File Version 1.9.9.8.5
+ *  File Version 1.9.9.8.8
  */
 
 if( !defined( 'ABSPATH' ) || !defined( 'WPSS_VERSION' ) ) {
@@ -10,6 +10,8 @@ if( !defined( 'ABSPATH' ) || !defined( 'WPSS_VERSION' ) ) {
 }
 
 if( TRUE !== WPSS_DEBUG && TRUE !== WP_DEBUG ) { @ini_set( 'display_errors', 0 ); @error_reporting( 0 ); } /* Prevents error display, but will display errors if WP_DEBUG turned on. */
+
+
 
 class WPSS_Compatibility {
 
@@ -105,7 +107,9 @@ class WPSS_Compatibility {
 	static public function conflict_check() {
 		/**
 		 *  Check if plugins with known issues are active, then deconflict using workarounds
-		 *  hook@ 'plugins_loaded':100
+		 *  @hook			'plugins_loaded':100
+		 *  @dependencies	...
+		 *  @since			...
 		 */
 
 		/* New User Approve Plugin ( https://wordpress.org/plugins/new-user-approve/ ) */
@@ -124,12 +128,14 @@ class WPSS_Compatibility {
 			}
 		}
 
+		/*Add more... */
+
 	}
 
 	static public function deconflict_nua_01() {
 		if( class_exists( 'pw_new_user_approve' ) && method_exists( 'pw_new_user_approve', 'create_new_user' ) && has_filter( 'register_post', array( pw_new_user_approve::instance(), 'create_new_user' ) ) ) {
 			remove_action( 'register_post', array( pw_new_user_approve::instance(), 'create_new_user' ), 10 );
-			add_action( 'registration_errors', array('WPSS_Compatibility','deconflict_nua_01_01'), 9998, 3 );
+			add_action( 'registration_errors', array( 'WPSS_Compatibility', 'deconflict_nua_01_01' ), 9998, 3 );
 		}
 	}
 
@@ -234,13 +240,12 @@ class WPSS_Compatibility {
 		$req_uri	= $_SERVER['REQUEST_URI'];
 		$req_uri_lc	= WPSS_Func::lower( $req_uri );
 		$post_count = count( $_POST );
-		$ip			= WPSS_Utils::get_ip_addr();
+		$ip			= WP_SpamShield::get_ip_addr();
 		$user_agent = rs_wpss_get_user_agent();
 		$referer	= rs_wpss_get_referrer();
 
 		/* IP / PROXY INFO - BEGIN */
-		global $wpss_ip_proxy_info;
-		if( empty( $wpss_ip_proxy_info ) ) { $wpss_ip_proxy_info = rs_wpss_ip_proxy_info(); }
+		global $wpss_ip_proxy_info; if( empty( $wpss_ip_proxy_info ) ) { $wpss_ip_proxy_info = rs_wpss_ip_proxy_info(); }
 		extract( $wpss_ip_proxy_info );
 		/* IP / PROXY INFO - END */
 
@@ -248,31 +253,31 @@ class WPSS_Compatibility {
 		if( $post_count == 6 && isset( $_POST['updatemylocation'], $_POST['log'], $_POST['lat'], $_POST['country'], $_POST['zip'], $_POST['myaddress'] ) ) { return TRUE; }
 
 		/* WP Remote */
-		if( defined( 'WPRP_PLUGIN_SLUG' ) && !empty( $_POST['wpr_verify_key'] ) && preg_match( "~\ WP\-Remote$~", $user_agent ) && preg_match( "~\.amazonaws\.com$~", $reverse_dns ) ) { return TRUE; }
+		if( defined( 'WPRP_PLUGIN_SLUG' ) && !empty( $_POST['wpr_verify_key'] ) && WP_SpamShield::preg_match( "~\ WP\-Remote$~", $user_agent ) && WP_SpamShield::preg_match( "~\.amazonaws\.com$~", $rev_dns ) ) { return TRUE; }
 
 		/* Ecommerce Plugins */
-		if( ( rs_wpss_is_ssl() || !empty( $_POST['add-to-cart'] ) || !empty( $_POST['add_to_cart'] ) || !empty( $_POST['addtocart'] ) || !empty( $_POST['product-id'] ) || !empty( $_POST['product_id'] ) || !empty( $_POST['productid'] ) || ( $user_agent === 'PayPal IPN ( https://www.paypal.com/ipn )' && preg_match( "~(^|\.)paypal\.com$~", $reverse_dns ) && $fcrdns === '[Verified]' ) ) && self::is_ecom_enabled() ) { return TRUE; }
-		if( ( rs_wpss_is_ssl() || self::is_ecom_enabled() ) && $fcrdns === '[Verified]' ) {
+		if( ( rs_wpss_is_https() || !empty( $_POST['add-to-cart'] ) || !empty( $_POST['add_to_cart'] ) || !empty( $_POST['addtocart'] ) || !empty( $_POST['product-id'] ) || !empty( $_POST['product_id'] ) || !empty( $_POST['productid'] ) || ( $user_agent === 'PayPal IPN ( https://www.paypal.com/ipn )' && WP_SpamShield::preg_match( "~(^|\.)paypal\.com$~", $rev_dns ) && $fcrdns === '[Verified]' ) ) && self::is_ecom_enabled() ) { return TRUE; }
+		if( ( rs_wpss_is_https() || self::is_ecom_enabled() ) && $fcrdns === '[Verified]' ) {
 			/* PayPal, Stripe, Authorize.net, Worldpay, etc */
 			if(
-				( $user_agent === 'PayPal IPN ( https://www.paypal.com/ipn )' && preg_match( "~(^|\.)paypal\.com$~", $reverse_dns ) ) ||
-				$reverse_dns === 'api.stripe.com' ||
-				preg_match( "~(^|\.)(authorize\.net|worldpay\.com|payfast\.co\.za|api\.mollie\.nl|api\.simplifycommerce\.com|wepayapi\.com|2checkout\.com|paylane\.com)$~", $reverse_dns )
+				( $user_agent === 'PayPal IPN ( https://www.paypal.com/ipn )' && WP_SpamShield::preg_match( "~(^|\.)paypal\.com$~", $rev_dns ) ) ||
+				$rev_dns === 'api.stripe.com' ||
+				WP_SpamShield::preg_match( "~(^|\.)(authorize\.net|worldpay\.com|payfast\.co\.za|api\.mollie\.nl|api\.simplifycommerce\.com|wepayapi\.com|2checkout\.com|paylane\.com)$~", $rev_dns )
 			) { return TRUE; }
 		}
 
 		/* WooCommerce Payment Gateways */
 		if( self::is_woocom_enabled() ) {
-			if( ( $user_agent === 'PayPal IPN ( https://www.paypal.com/ipn )' && preg_match( "~^(ipn|ipnpb|notify|reports)(\.sandbox)?\.paypal\.com$~", $reverse_dns ) ) || strpos( $req_uri, 'WC_Gateway_Paypal' ) !== FALSE ) { return TRUE; }
-			if( preg_match( "~(^|\.)payfast\.co\.za$~", $reverse_dns ) || ( strpos( $req_uri, 'wc-api' ) !== FALSE && strpos( $req_uri, 'WC_Gateway_PayFast' ) !== FALSE ) ) { return TRUE; }
+			if( ( $user_agent === 'PayPal IPN ( https://www.paypal.com/ipn )' && WP_SpamShield::preg_match( "~^(ipn|ipnpb|notify|reports)(\.sandbox)?\.paypal\.com$~", $rev_dns ) ) || strpos( $req_uri, 'WC_Gateway_Paypal' ) !== FALSE ) { return TRUE; }
+			if( WP_SpamShield::preg_match( "~(^|\.)payfast\.co\.za$~", $rev_dns ) || ( strpos( $req_uri, 'wc-api' ) !== FALSE && strpos( $req_uri, 'WC_Gateway_PayFast' ) !== FALSE ) ) { return TRUE; }
 			/* Plugin: 'woocommerce-gateway-payfast/gateway-payfast.php' */
-			if( preg_match( "~((\?|\&)wc\-api\=WC_(Addons_)?Gateway_|/wc\-api/.*WC_(Addons_)?Gateway_)~", $req_uri ) ) { return TRUE; }
+			if( WP_SpamShield::preg_match( "~((\?|\&)wc\-api\=WC_(Addons_)?Gateway_|/wc\-api/.*WC_(Addons_)?Gateway_)~", $req_uri ) ) { return TRUE; }
 			/* $wc_gateways = array( 'WC_Gateway_BACS', 'WC_Gateway_Cheque', 'WC_Gateway_COD', 'WC_Gateway_Paypal', 'WC_Addons_Gateway_Simplify_Commerce', 'WC_Gateway_Simplify_Commerce' ); */
 		}
 
 		/* Easy Digital Downloads Payment Gateways */
 		if( defined( 'EDD_VERSION' ) ) {
-			if( ( $user_agent === 'PayPal IPN ( https://www.paypal.com/ipn )' && preg_match( "~^(ipn|ipnpb|notify|reports)(\.sandbox)?\.paypal\.com$~", $reverse_dns ) ) || ( !empty( $_GET['edd-listener'] ) && $_GET['edd-listener'] === 'IPN' )  || ( strpos( $req_uri, 'edd-listener' ) !== FALSE && strpos( $req_uri, 'IPN' ) !== FALSE ) ) { return TRUE; }
+			if( ( $user_agent === 'PayPal IPN ( https://www.paypal.com/ipn )' && WP_SpamShield::preg_match( "~^(ipn|ipnpb|notify|reports)(\.sandbox)?\.paypal\.com$~", $rev_dns ) ) || ( !empty( $_GET['edd-listener'] ) && $_GET['edd-listener'] === 'IPN' )  || ( strpos( $req_uri, 'edd-listener' ) !== FALSE && strpos( $req_uri, 'IPN' ) !== FALSE ) ) { return TRUE; }
 			if( ( !empty( $_GET['edd-listener'] ) && $_GET['edd-listener'] === 'amazon' ) || ( strpos( $req_uri, 'edd-listener' ) !== FALSE && strpos( $req_uri, 'amazon' ) !== FALSE ) ) { return TRUE; }
 			if( !empty( $_GET['edd-listener'] ) || strpos( $req_uri, 'edd-listener' ) !== FALSE ) { return TRUE; }
 		}
@@ -287,13 +292,13 @@ class WPSS_Compatibility {
 			isset( $_POST['ipn_track_id'], $_POST['payer_id'], $_POST['payment_type'], $_POST['payment_status'], $_POST['receiver_id'], $_POST['txn_id'], $_POST['txn_type'], $_POST['verify_sign'] )
 			&& FALSE !== strpos( $req_uri_lc, 'paypal' )
 			&& $user_agent === 'PayPal IPN ( https://www.paypal.com/ipn )'
-			&& preg_match( "~^(ipn|ipnpb|notify|reports)(\.sandbox)?\.paypal\.com$~", $reverse_dns )
+			&& WP_SpamShield::preg_match( "~^(ipn|ipnpb|notify|reports)(\.sandbox)?\.paypal\.com$~", $rev_dns )
 			&& $fcrdns === '[Verified]'
 		) { return TRUE; }
 
 		/* Clef */
 		if( defined( 'CLEF_VERSION' ) ) {
-			if( preg_match( "~^Clef/[0-9](\.[0-9]+)+\ \(https\://getclef\.com\)$~", $user_agent ) && preg_match( "~((^|\.)clef\.io|\.amazonaws\.com)$~", $reverse_dns ) ) { return TRUE; }
+			if( WP_SpamShield::preg_match( "~^Clef/[0-9](\.[0-9]+)+\ \(https\://getclef\.com\)$~", $user_agent ) && WP_SpamShield::preg_match( "~((^|\.)clef\.io|\.amazonaws\.com)$~", $rev_dns ) ) { return TRUE; }
 		}
 
 		/* OA Social Login */
@@ -303,20 +308,20 @@ class WPSS_Compatibility {
 		}
 
 		/* IFTTT */
-		if( rs_wpss_is_xmlrpc() && $user_agent === 'IFTTT production' && preg_match( "~\.amazonaws\.com$~", $reverse_dns ) && $fcrdns === '[Verified]' ) { return TRUE; }
+		if( rs_wpss_is_xmlrpc() && $user_agent === 'IFTTT production' && WP_SpamShield::preg_match( "~\.amazonaws\.com$~", $rev_dns ) && $fcrdns === '[Verified]' ) { return TRUE; }
 
 		/* Amazon SNS - http://docs.aws.amazon.com/sns/latest/dg/json-formats.html */
 		if( $user_agent === 'Amazon Simple Notification Service Agent' && isset( $_SERVER['HTTP_X_AMZ_SNS_MESSAGE_TYPE'], $_SERVER['HTTP_X_AMZ_SNS_MESSAGE_ID'], $_SERVER['HTTP_X_AMZ_SNS_TOPIC_ARN'], $_SERVER['CONTENT_TYPE'], $_POST['HTTP_RAW_POST_DATA'] ) ) {
 			$_POST['HTTP_RAWDS_POST_DATA'] = trim(stripslashes($_POST['HTTP_RAW_POST_DATA']));
 			if(
-				preg_match( "~text/plain~i", $_SERVER['CONTENT_TYPE'] )
-				&& preg_match( "~^(SubscriptionConfirmation|Notification|UnsubscribeConfirmation)$~", $_SERVER['HTTP_X_AMZ_SNS_MESSAGE_TYPE'] )
-				&& preg_match( "~\"Type\"\ \:\ \"(SubscriptionConfirmation|Notification|UnsubscribeConfirmation)\",~", $_POST['HTTP_RAWDS_POST_DATA'] )
-				&& preg_match( "~^[a-z0-9\-]+$~", $_SERVER['HTTP_X_AMZ_SNS_MESSAGE_ID'] )
-				&& preg_match( "~\"MessageId\"\ \:\ \"".preg_quote($_SERVER['HTTP_X_AMZ_SNS_MESSAGE_ID'])."\",~", $_POST['HTTP_RAWDS_POST_DATA'] )
-				&& preg_match( "~^arn\:aws\:sns\:([a-z0-9\-]+)\:[a-z0-9]+\:.+$~", $_SERVER['HTTP_X_AMZ_SNS_TOPIC_ARN'], $amz_sns_topic_arn_matches )
-				&& preg_match( "~\"TopicArn\"\ \:\ \"".preg_quote($_SERVER['HTTP_X_AMZ_SNS_TOPIC_ARN'])."\",~", $_POST['HTTP_RAWDS_POST_DATA'] )
-				&& preg_match( "~\"SigningCertURL\"\ \:\ \"https\://sns\.".preg_quote($amz_sns_topic_arn_matches[1])."\.amazonaws\.com/SimpleNotificationService\-[a-z0-9]+\.pem\"~", $_POST['HTTP_RAWDS_POST_DATA'] )
+				WP_SpamShield::preg_match( "~text/plain~i", $_SERVER['CONTENT_TYPE'] )
+				&& WP_SpamShield::preg_match( "~^(SubscriptionConfirmation|Notification|UnsubscribeConfirmation)$~", $_SERVER['HTTP_X_AMZ_SNS_MESSAGE_TYPE'] )
+				&& WP_SpamShield::preg_match( "~\"Type\"\ \:\ \"(SubscriptionConfirmation|Notification|UnsubscribeConfirmation)\",~", $_POST['HTTP_RAWDS_POST_DATA'] )
+				&& WP_SpamShield::preg_match( "~^[a-z0-9\-]+$~", $_SERVER['HTTP_X_AMZ_SNS_MESSAGE_ID'] )
+				&& WP_SpamShield::preg_match( "~\"MessageId\"\ \:\ \"".preg_quote($_SERVER['HTTP_X_AMZ_SNS_MESSAGE_ID'])."\",~", $_POST['HTTP_RAWDS_POST_DATA'] )
+				&& WP_SpamShield::preg_match( "~^arn\:aws\:sns\:([a-z0-9\-]+)\:[a-z0-9]+\:.+$~", $_SERVER['HTTP_X_AMZ_SNS_TOPIC_ARN'], $amz_sns_topic_arn_matches )
+				&& WP_SpamShield::preg_match( "~\"TopicArn\"\ \:\ \"".preg_quote($_SERVER['HTTP_X_AMZ_SNS_TOPIC_ARN'])."\",~", $_POST['HTTP_RAWDS_POST_DATA'] )
+				&& WP_SpamShield::preg_match( "~\"SigningCertURL\"\ \:\ \"https\://sns\." . preg_quote( $amz_sns_topic_arn_matches[1] ) . "\.amazonaws\.com/SimpleNotificationService\-[a-z0-9]+\.pem\"~", $_POST['HTTP_RAWDS_POST_DATA'] )
 				&& $fcrdns === '[Verified]'
 			) { unset($_POST['HTTP_RAWDS_POST_DATA']); return TRUE; }
 			unset($_POST['HTTP_RAWDS_POST_DATA']);

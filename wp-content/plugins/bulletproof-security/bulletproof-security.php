@@ -5,7 +5,7 @@ Plugin URI: https://forum.ait-pro.com/read-me-first/
 Text Domain: bulletproof-security
 Domain Path: /languages/
 Description: <strong>Feature Highlights:</strong> Setup Wizard &bull; .htaccess Website Security Protection (Firewalls) &bull; Security Logging|HTTP Error Logging &bull; DB Backup &bull; DB Table Prefix Changer &bull; Login Security & Monitoring &bull; Idle Session Logout (ISL) &bull; Auth Cookie Expiration (ACE) &bull; UI Theme Skin Changer &bull; System Info: Extensive System, Server and Security Status Information &bull; FrontEnd|BackEnd Maintenance Mode
-Version: .54.2
+Version: .54.4
 Author: AITpro | Edward Alexander
 Author URI: https://forum.ait-pro.com/read-me-first/
 */
@@ -28,9 +28,9 @@ Author URI: https://forum.ait-pro.com/read-me-first/
 */
 
 // BPS variables
-define( 'BULLETPROOF_VERSION', '.54.2' );
-$bps_last_version = '.54.1';
-$bps_version = '.54.2';
+define( 'BULLETPROOF_VERSION', '.54.4' );
+$bps_last_version = '.54.3';
+$bps_version = '.54.4';
 $aitpro_bullet = '<img src="'.plugins_url('/bulletproof-security/admin/images/aitpro-bullet.png').'" style="padding:0px 3px 0px 3px;" />';
 // Top div & bottom div
 $bps_topDiv = '<div id="message" class="updated" style="background-color:#dfecf2;border:1px solid #999;-moz-border-radius-topleft:3px;-webkit-border-top-left-radius:3px;-khtml-border-top-left-radius:3px;border-top-left-radius:3px;-moz-border-radius-topright:3px;-webkit-border-top-right-radius:3px;-khtml-border-top-right-radius:3px;border-top-right-radius:3px;-webkit-box-shadow: 3px 3px 5px -1px rgba(153,153,153,0.7);-moz-box-shadow: 3px 3px 5px -1px rgba(153,153,153,0.7);box-shadow: 3px 3px 5px -1px rgba(153,153,153,0.7);"><p>';

@@ -122,13 +122,14 @@ SecurityLogTable {position:relative;top:0px;left:0px;margin:15px 0px 15px -3px;}
 #bps-edittabs {width:700px;position:relative;left:0px;top:0px;}
 #bps_file_editor {width:690px;}
 .bps_file_editor_update {background-color:#dfecf2;border:1px solid #999;padding:5px;-moz-border-radius-topleft:3px;-webkit-border-top-left-radius:3px;-khtml-border-top-left-radius:3px;border-top-left-radius:3px;-moz-border-radius-topright:3px;-webkit-border-top-right-radius:3px;-khtml-border-top-right-radius:3px;border-top-right-radius:3px;-webkit-box-shadow: 3px 3px 5px -1px rgba(153,153,153,0.7);-moz-box-shadow: 3px 3px 5px -1px rgba(153,153,153,0.7);box-shadow: 3px 3px 5px -1px rgba(153,153,153,0.7);}
-#autolock_status {position:relative;top:-27px;left:140px;margin:0px 0px -27px 0px;width:25px;font-weight:bold;color:#2ea2cc;border:1px solid #999;padding:3px;background-color:#222;text-align:center;}
+.autolock_status {padding:4px 4px 5px 4px;line-height:28px;white-space:nowrap;margin:0px 0px 0px 5px;width:25px;color:#2ea2cc;border:1px solid #999;background-color:#222;text-align:center;}
 #bpsLockHtaccess {margin:5px;}
 #bpsUnLockHtaccess {margin:5px;}
 #bpsAutoLockOn {margin:5px;}
 #bpsAutoLockOff {margin:5px;}
 /** Custom Code **/
-#ResetDismissNotices {position:relative;top:-39px;left:200px;margin-bottom:-39px;margin-right:200px;}
+#ResetDismissNotices {}
+#CC-Help-Links {}
 pre {position:relative;z-index:50;background:#fff url(../images/pre_bg.png) top left repeat;border:1px solid #999;color:#000;display:block;font-family:"Courier New", Courier, monospace;font-size:11px;line-height:14px;width:700px;margin:0px 0px 0px 0px;overflow:auto;max-height:200px;overflow-x:scroll;overflow-y:scroll;padding:5px;}
 .cc-read-me-text {color:#2ea2cc;}
 #CC-Import {max-width:324px;border:1px solid black;padding:5px;}
@@ -215,8 +216,9 @@ against Roque plugin and theme scripts loading in BPS plugn pages and breaking t
 .ui-state-default.bps-menu a, .ui-state-default.bps-menu a:link, .ui-state-default.bps-menu a:visited {color:#fff;background-image:url(../images/menu-btn.png);background-repeat:none;}
 .ui-state-hover.bps-menu, .ui-widget-content.bps-menu .ui-state-hover, .ui-widget-header.bps-menu .ui-state-hover, .ui-state-focus.bps-menu, .ui-widget-content.bps-menu .ui-state-focus, .ui-widget-header.bps-menu .ui-state-focus {font-size:14px;border-left:1px solid #999999;border-right:1px solid #999999;border-bottom:1px solid #999999;padding:0px 10px 5px 10px;}
 .ui-state-hover.bps-menu a, .ui-state-hover a:hover {font-size:14px;color:#000;background-image:url(../images/menu-btn-hover.png);background-repeat:none;}
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {color:#000;background-image:url(../images/menu-btn-hover.png);background-repeat:none;}
 .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {color:#000;background-image:url(../images/menu-btn-hover.png);background-repeat:none;}
+/* BPS jQuery UI Accordion button background image hover and active states */
+.ui-state-active, .ui-state-hover, .ui-widget-content .ui-state-active, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-active, .ui-widget-header .ui-state-hover  {color:#000;background-image:url(../images/accordion-btn-over.png);background-repeat:none;}
 /** jQuery UI Core defaults **/
 .ui-helper-hidden{display:none;}
 .ui-helper-hidden-accessible{position:absolute;left:-99999999px;}
@@ -250,9 +252,9 @@ against Roque plugin and theme scripts loading in BPS plugn pages and breaking t
 .ui-accordion.bps-accordion .ui-accordion-content {padding:1em 2.2em;border-top:0;overflow:auto;}
 /** BPS jQuery UI Accordion **/
 .bps-accordion-main {border:1px solid #999;background-color:#fff;}
-.bps-accordion-main h3 {color:#fff;width:183px;border:1px solid #999;background-image:url(../images/menu-btn.png);background-repeat:none;}
-.bps-accordion-main-2 h3 {color:#fff;width:280px;border:1px solid #999;background-image:url(../images/menu-btn.png);background-repeat:none;}
-.bps-accordion-main-3 h3 {color:#fff;width:300px;border:1px solid #999;background-image:url(../images/menu-btn.png);background-repeat:none;}
+.bps-accordion-main h3 {color:#fff;width:183px;border:1px solid #999;background-image:url(../images/accordion-btn.png);background-repeat:none;}
+.bps-accordion-main-2 h3 {color:#fff;width:280px;border:1px solid #999;background-image:url(../images/accordion-btn.png);background-repeat:none;}
+.bps-accordion-main-3 h3 {color:#fff;width:300px;border:1px solid #999;background-image:url(../images/accordion-btn.png);background-repeat:none;}
 .bps-accordion-main-inner {border:1px solid #999;}
 #cc-accordion-inner {margin:0px -25px 0px -25px;}
 #mmode-accordion-inner {margin:0px -15px 0px -15px;}
@@ -316,7 +318,6 @@ h2.bps-tab-title {margin-left:0px;}
 div#messageinner.updatedinner {width:100%}
 #bps-edittabs {width:100%;}
 #bps_file_editor {width:100%;}
-#autolock_status {position:relative;top:-31px;left:155px;margin:0px 0px -27px 0px;width:25px;font-weight:bold;color:#2ea2cc;border:1px solid #999;padding:3px;background-color:#222;text-align:center;}
 #bps-container .bps-text-area-600x700 {height:300px;width:100%;overflow:auto;}
 .PFW-Allow-From-Text-Area {width:95%;height:100px;}
 #HPF2 select.form-340 {width:100%;}
@@ -328,8 +329,6 @@ td.bps-table_cell_help_custom_code pre {width:95%;}
 #CC-Import {position:relative;left:-10px;top:0px;max-width:250px;}
 #CC-Export {position:relative;top:0px;left:0px;margin:10px 0px 0px 0px;}
 #CC-Delete {position:relative;top:-32px;left:80px;margin-right:80px;}
-#CC-Help-Links {display:none}
-#ResetDismissNotices {position:relative;top:0;left:0px;margin-bottom:20px}
 /* still needs some work - maybe do something like add all columns and set them to 1% */
 .LSM-DBRadio-Form {max-width:250px}
 #LoginSecurityCheckall {max-height:600px;width:100%;overflow:auto;margin:0px 0px 20px 0px;}
@@ -400,7 +399,6 @@ table.bps-help_faq_table {width:100%;}
 #bps-edittabs {width:100%;}
 #bps_file_editor {width:100%;}
 div#messageinner.updatedinner {width:100%}
-#autolock_status {position:relative;top:-31px;left:155px;margin:0px 0px -27px 0px;width:25px;font-weight:bold;color:#2ea2cc;border:1px solid #999;padding:3px;background-color:#222;text-align:center;}
 #bps-container .bps-text-area-600x700 {height:300px;width:100%;overflow:auto;}
 #bps-container .bps-text-area-custom-code {height:220px;width:100%;overflow:auto;}
 .PFW-Allow-From-Text-Area {width:100%;height:100px;}

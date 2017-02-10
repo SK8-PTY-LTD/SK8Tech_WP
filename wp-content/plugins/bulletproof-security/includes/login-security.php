@@ -1,10 +1,47 @@
 <?php
-$BPSoptions = get_option('bulletproof_security_options_login_security');
-	if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && isset( $_POST['wp-submit'] ) ) {
-		add_filter('authenticate', 'bpspro_wp_authenticate_username_password', 20, 3);
+
+	// .54.3: WooCommerce custom login page|form.
+	// WooCommerce is Activated check:
+	// If not activated then use the standard WP Login processing if enable checkboxes are checked, otherwise someone will not be able to login.
+	// This also continues to protect the Standard WP Login page no matter what option settings are chosen.
+	// This also prevents someone who does not have WooCommerce installed from not being able to login if they check the Enable WooCommerce options.
+	// This also allows someone with WooCommerce installed just to turn LSM on or off without messing with the Enable WooCommerce options.
+	// Note: There is no need for an LSM Off condition like BPS Pro has because JTC is not involved in the equation - If LSM is Off then the filter is not processed.
+	$BPSoptions = get_option('bulletproof_security_options_login_security');
+	$plugin_var = 'woocommerce/woocommerce.php';
+	$return_var = in_array( $plugin_var, apply_filters('active_plugins', get_option('active_plugins')));
+
+	if ( $return_var == 1 ) {
+		
+		if ( $BPSoptions['bps_enable_lsm_woocommerce'] == 1 ) {
+		
+			if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && isset( $_POST['login'] ) || $BPSoptions['bps_login_security_OnOff'] == 'On' && isset( $_POST['wp-submit'] ) ) {
+				add_filter( 'authenticate', 'bpsPro_wp_authenticate_username_password', 20, 3 );
+			}		
+		
+		} elseif ( $BPSoptions['bps_enable_lsm_woocommerce'] != 1 ) {
+
+			if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && isset( $_POST['wp-submit'] ) ) {
+				add_filter( 'authenticate', 'bpsPro_wp_authenticate_username_password', 20, 3 );
+			}	
+		
+		} else {
+			
+			// Standard WP Login: LSM Processing
+			if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && isset( $_POST['wp-submit'] ) ) {
+				add_filter( 'authenticate', 'bpsPro_wp_authenticate_username_password', 20, 3 );
+			}		
+		}
+
+	} else {
+		
+		// Standard WP Login: LSM Processing
+		if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && isset( $_POST['wp-submit'] ) ) {
+			add_filter( 'authenticate', 'bpsPro_wp_authenticate_username_password', 20, 3 );
+		}		
 	}
 
-function bpspro_wp_authenticate_username_password( $user, $username, $password ) {
+function bpsPro_wp_authenticate_username_password( $user, $username, $password ) {
 global $wpdb, $blog_id;
 $BPSoptions = get_option('bulletproof_security_options_login_security');
 $options = get_option('bulletproof_security_options_email');
@@ -45,13 +82,13 @@ if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && $BPSoptions['bps_login_s
 	
 			if ( $row->status == 'Locked' && $timeNow < $row->lockout_time && $row->failed_logins >= $BPSoptions['bps_max_logins'] && $BPSoptions['bps_login_security_errors'] != 'genericAll') { 
 				$error = new WP_Error();
-				$error->add('locked_account', __('<strong>ERROR</strong>: This user account has been locked until <strong>'.date_i18n(get_option('date_format').' '.get_option('time_format'), $row->lockout_time + $gmt_offset).'</strong> due to too many failed login attempts. You can login again after the Lockout Time above has expired.'));
+				$error->add('locked_account', '<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' This user account has been locked until ', 'bulletproof-security').'<strong>'.date_i18n(get_option('date_format').' '.get_option('time_format'), $row->lockout_time + $gmt_offset).'</strong>'.__(' due to too many failed login attempts. You can login again after the Lockout Time above has expired.', 'bulletproof-security') );
 		
 				return $error;
 			}
 			
 			if ( $row->status == 'Locked' && $timeNow < $row->lockout_time && $row->failed_logins >= $BPSoptions['bps_max_logins'] && $BPSoptions['bps_login_security_errors'] == 'genericAll') { 
-				return new WP_Error('incorrect_password', sprintf(__('<strong>ERROR</strong>: Invalid Entry. <a href="%s">Lost your password?</a>'), wp_lostpassword_url()));
+				return new WP_Error('incorrect_password', sprintf('<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' Invalid Entry.', 'bulletproof-security').' <a href="%s">'.__('Lost your password?', 'bulletproof-security').'</a>', wp_lostpassword_url()));
 			}
 		}
 
@@ -69,32 +106,32 @@ if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && $BPSoptions['bps_login_s
 			} else {			
 			
 			if ( $options['bps_login_security_email'] == 'anyUserLoginLock') {
-				$message = '<p><font color="blue"><strong>A User Has Logged in</strong></font></p>';
-				$message .=  '<p>To take further action go to the Login Security page. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.</p>';
-				$message .= '<p><strong>Username:</strong> '.$user->user_login.'</p>'; 
-				$message .= '<p><strong>Status:</strong> '.$status.'</p>'; 
-				$message .= '<p><strong>Role:</strong> '.$user->roles[0].'</p>'; 
-				$message .= '<p><strong>Email:</strong> '.$user->user_email.'</p>'; 
-				$message .= '<p><strong>User IP Address:</strong> '.$ip_address.'</p>'; 
-				$message .= '<p><strong>User Hostname:</strong> '.$hostname.'</p>'; 
-				$message .= '<p><strong>Request URI:</strong> '.$request_uri.'</p>'; 
-				$message .= '<p><strong>Site:</strong> '.$justUrl.'</p>';
+				$message = '<p><font color="blue"><strong>'.__('A User has logged in on website: ', 'bulletproof-security').$justUrl.'</strong></font></p>';
+				$message .= '<p>'.__('To take further action go to the Login Security page. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.', 'bulletproof-security').'</p>';
+				$message .= '<p><strong>'.__('Username:', 'bulletproof-security').'</strong> '.$user->user_login.'</p>'; 
+				$message .= '<p><strong>'.__('Status:', 'bulletproof-security').'</strong> '.$status.'</p>'; 
+				$message .= '<p><strong>'.__('User Role:', 'bulletproof-security').'</strong> '.$user->roles[0].'</p>'; 
+				$message .= '<p><strong>'.__('Email:', 'bulletproof-security').'</strong> '.$user->user_email.'</p>'; 
+				$message .= '<p><strong>'.__('User IP Address:', 'bulletproof-security').'</strong> '.$ip_address.'</p>'; 
+				$message .= '<p><strong>'.__('User Hostname:', 'bulletproof-security').'</strong> '.$hostname.'</p>'; 
+				$message .= '<p><strong>'.__('Request URI:', 'bulletproof-security').'</strong> '.$request_uri.'</p>'; 
+				$message .= '<p><strong>'.__('Website:', 'bulletproof-security').'</strong> '.$justUrl.'</p>';
 
 				wp_mail($bps_email_to, $subject, $message, $headers);
 			}
 			
 			// Option adminLoginOnly - Send Email Alert if an Administrator Logs in
 			if ( $options['bps_login_security_email'] == 'adminLoginOnly' || $options['bps_login_security_email'] == 'adminLoginLock' && $user->roles[0] == 'administrator') {
-				$message = '<p><font color="blue"><strong>An Administrator Has Logged in</strong></font></p>';
-				$message .=  '<p>To take further action go to the Login Security page. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.</p>';
-				$message .= '<p><strong>Username:</strong> '.$user->user_login.'</p>'; 
-				$message .= '<p><strong>Status:</strong> '.$status.'</p>'; 
-				$message .= '<p><strong>Role:</strong> '.$user->roles[0].'</p>'; 
-				$message .= '<p><strong>Email:</strong> '.$user->user_email.'</p>'; 
-				$message .= '<p><strong>User IP Address:</strong> '.$ip_address.'</p>'; 
-				$message .= '<p><strong>User Hostname:</strong> '.$hostname.'</p>'; 
-				$message .= '<p><strong>Request URI:</strong> '.$request_uri.'</p>'; 
-				$message .= '<p><strong>Site:</strong> '.$justUrl.'</p>';
+				$message = '<p><font color="blue"><strong>'.__('An Administrator has logged in on website: ', 'bulletproof-security').$justUrl.'</strong></font></p>';
+				$message .= '<p>'.__('To take further action go to the Login Security page. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.', 'bulletproof-security').'</p>';
+				$message .= '<p><strong>'.__('Username:', 'bulletproof-security').'</strong> '.$user->user_login.'</p>'; 
+				$message .= '<p><strong>'.__('Status:', 'bulletproof-security').'</strong> '.$status.'</p>'; 
+				$message .= '<p><strong>'.__('User Role:', 'bulletproof-security').'</strong> '.$user->roles[0].'</p>'; 
+				$message .= '<p><strong>'.__('Email:', 'bulletproof-security').'</strong> '.$user->user_email.'</p>'; 
+				$message .= '<p><strong>'.__('User IP Address:', 'bulletproof-security').'</strong> '.$ip_address.'</p>'; 
+				$message .= '<p><strong>'.__('User Hostname:', 'bulletproof-security').'</strong> '.$hostname.'</p>'; 
+				$message .= '<p><strong>'.__('Request URI:', 'bulletproof-security').'</strong> '.$request_uri.'</p>'; 
+				$message .= '<p><strong>'.__('Website:', 'bulletproof-security').'</strong> '.$justUrl.'</p>';
 
 				wp_mail($bps_email_to, $subject, $message, $headers);
 			}
@@ -116,32 +153,32 @@ if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && $BPSoptions['bps_login_s
 			} else {	
 
 			if ( $options['bps_login_security_email'] == 'anyUserLoginLock') {
-				$message = '<p><font color="blue"><strong>A User Has Logged in</strong></font></p>';
-				$message .=  '<p>To take further action go to the Login Security page. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.</p>';
-				$message .= '<p><strong>Username:</strong> '.$user->user_login.'</p>'; 
-				$message .= '<p><strong>Status:</strong> '.$status.'</p>'; 
-				$message .= '<p><strong>Role:</strong> '.$user->roles[0].'</p>'; 
-				$message .= '<p><strong>Email:</strong> '.$user->user_email.'</p>'; 
-				$message .= '<p><strong>User IP Address:</strong> '.$ip_address.'</p>'; 
-				$message .= '<p><strong>User Hostname:</strong> '.$hostname.'</p>'; 
-				$message .= '<p><strong>Request URI:</strong> '.$request_uri.'</p>'; 
-				$message .= '<p><strong>Site:</strong> '.$justUrl.'</p>'; 
+				$message = '<p><font color="blue"><strong>'.__('Test A User has logged in on website: ', 'bulletproof-security').$justUrl.'</strong></font></p>';
+				$message .= '<p>'.__('To take further action go to the Login Security page. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.', 'bulletproof-security').'</p>';
+				$message .= '<p><strong>'.__('Username:', 'bulletproof-security').'</strong> '.$user->user_login.'</p>'; 
+				$message .= '<p><strong>'.__('Status:', 'bulletproof-security').'</strong> '.$status.'</p>'; 
+				$message .= '<p><strong>'.__('User Role:', 'bulletproof-security').'</strong> '.$user->roles[0].'</p>'; 
+				$message .= '<p><strong>'.__('Email:', 'bulletproof-security').'</strong> '.$user->user_email.'</p>'; 
+				$message .= '<p><strong>'.__('User IP Address:', 'bulletproof-security').'</strong> '.$ip_address.'</p>'; 
+				$message .= '<p><strong>'.__('User Hostname:', 'bulletproof-security').'</strong> '.$hostname.'</p>'; 
+				$message .= '<p><strong>'.__('Request URI:', 'bulletproof-security').'</strong> '.$request_uri.'</p>'; 
+				$message .= '<p><strong>'.__('Website:', 'bulletproof-security').'</strong> '.$justUrl.'</p>';
 
 				wp_mail($bps_email_to, $subject, $message, $headers);
 			}
 			
 			// Option adminLoginOnly - Send Email Alert if an Administrator Logs in
 			if ( $options['bps_login_security_email'] == 'adminLoginOnly' || $options['bps_login_security_email'] == 'adminLoginLock' && $user->roles[0] == 'administrator') {
-				$message = '<p><font color="blue"><strong>An Administrator Has Logged in</strong></font></p>';
-				$message .=  '<p>To take further action go to the Login Security page. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.</p>';
-				$message .= '<p><strong>Username:</strong> '.$user->user_login.'</p>'; 
-				$message .= '<p><strong>Status:</strong> '.$status.'</p>'; 
-				$message .= '<p><strong>Role:</strong> '.$user->roles[0].'</p>'; 
-				$message .= '<p><strong>Email:</strong> '.$user->user_email.'</p>'; 
-				$message .= '<p><strong>User IP Address:</strong> '.$ip_address.'</p>'; 
-				$message .= '<p><strong>User Hostname:</strong> '.$hostname.'</p>'; 
-				$message .= '<p><strong>Request URI:</strong> '.$request_uri.'</p>'; 
-				$message .= '<p><strong>Site:</strong> '.$justUrl.'</p>'; 
+				$message = '<p><font color="blue"><strong>'.__('An Administrator has logged in on website: ', 'bulletproof-security').$justUrl.'</strong></font></p>';
+				$message .= '<p>'.__('To take further action go to the Login Security page. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.', 'bulletproof-security').'</p>';				
+				$message .= '<p><strong>'.__('Username:', 'bulletproof-security').'</strong> '.$user->user_login.'</p>'; 
+				$message .= '<p><strong>'.__('Status:', 'bulletproof-security').'</strong> '.$status.'</p>'; 
+				$message .= '<p><strong>'.__('User Role:', 'bulletproof-security').'</strong> '.$user->roles[0].'</p>'; 
+				$message .= '<p><strong>'.__('Email:', 'bulletproof-security').'</strong> '.$user->user_email.'</p>'; 
+				$message .= '<p><strong>'.__('User IP Address:', 'bulletproof-security').'</strong> '.$ip_address.'</p>'; 
+				$message .= '<p><strong>'.__('User Hostname:', 'bulletproof-security').'</strong> '.$hostname.'</p>'; 
+				$message .= '<p><strong>'.__('Request URI:', 'bulletproof-security').'</strong> '.$request_uri.'</p>'; 
+				$message .= '<p><strong>'.__('Website:', 'bulletproof-security').'</strong> '.$justUrl.'</p>'; 
 				
 				wp_mail($bps_email_to, $subject, $message, $headers);
 			}
@@ -163,21 +200,21 @@ if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && $BPSoptions['bps_login_s
 			} else {
 
 			if ( $options['bps_login_security_email'] == 'lockoutOnly' || $options['bps_login_security_email'] == 'anyUserLoginLock' || $options['bps_login_security_email'] == 'adminLoginLock') {
-				$message = '<p><font color="#fb0101"><strong>A User Account Has Been Locked</strong></font></p>';
-				$message .=  '<p>To take further action go to the Login Security page. If no action is taken then the User will be able to try and login again after the Lockout Time has expired. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.</p>';
-				$message .=  '<p><strong>What to do if your User Account is locked and you are unable to login to your website:</strong> Use FTP or your web host control panel file manager and rename the /bulletproof-security plugin folder name to /_bulletproof-security. Log into your website. Rename the /_bulletproof-security plugin folder name back to /bulletproof-security. Go to the BPS Login Security page and unlock your User Account.</p>';
-				$message .=  '<p><strong>What to do if your User Account is being locked repeatedly:</strong> Additional things that you can do to protect publicly displayed usernames, not exposing author names/user account names, etc.: https://forum.ait-pro.com/forums/topic/user-account-locked/#post-12634</p>';
+				$message = '<p><font color="#fb0101"><strong>'.__('A User Account has been locked on website: ', 'bulletproof-security').$justUrl.'</strong></font></p>';
+				$message .= '<p>'.__('To take further action go to the Login Security page. If no action is taken then the User will be able to try and login again after the Lockout Time has expired. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.', 'bulletproof-security').'</p>';
+				$message .= '<p><strong>'.__('What to do if your User Account is locked and you are unable to login to your website:', 'bulletproof-security').'</strong>'.__(' Use FTP or your web host control panel file manager and rename the /bulletproof-security plugin folder name to /_bulletproof-security. Log into your website. Rename the /_bulletproof-security plugin folder name back to /bulletproof-security. Go to the BPS Login Security page and unlock your User Account.', 'bulletproof-security').'</p>';
+				$message .= '<p><strong>'.__('What to do if your User Account is being locked repeatedly:', 'bulletproof-security').'</strong>'.__(' Additional things that you can do to protect publicly displayed usernames, not exposing author names/user account names, etc.', 'bulletproof-security').': https://forum.ait-pro.com/forums/topic/user-account-locked/#post-12634</p>';
 
-				$message .= '<p><strong>Username:</strong> '.$user->user_login.'</p>'; 
-				$message .= '<p><strong>Status:</strong> '.$status.'</p>'; 
-				$message .= '<p><strong>Role:</strong> '.$user->roles[0].'</p>'; 
-				$message .= '<p><strong>Email:</strong> '.$user->user_email.'</p>'; 
-				$message .= '<p><strong>Lockout Time:</strong> '.date_i18n(get_option('date_format').' '.get_option('time_format'), $login_time + $gmt_offset).'</p>'; 
-				$message .= '<p><strong>Lockout Time Expires:</strong> '.date_i18n(get_option('date_format').' '.get_option('time_format'), $lockout_time + $gmt_offset).'</p>'; 
-				$message .= '<p><strong>User IP Address:</strong> '.$ip_address.'</p>'; 
-				$message .= '<p><strong>User Hostname:</strong> '.$hostname.'</p>'; 
-				$message .= '<p><strong>Request URI:</strong> '.$request_uri.'</p>'; 
-				$message .= '<p><strong>Site:</strong> '.$justUrl.'</p>'; 
+				$message .= '<p><strong>'.__('Username:', 'bulletproof-security').'</strong> '.$user->user_login.'</p>'; 
+				$message .= '<p><strong>'.__('Status:', 'bulletproof-security').'</strong> '.$status.'</p>'; 
+				$message .= '<p><strong>'.__('User Role:', 'bulletproof-security').'</strong> '.$user->roles[0].'</p>'; 
+				$message .= '<p><strong>'.__('Email:', 'bulletproof-security').'</strong> '.$user->user_email.'</p>'; 
+				$message .= '<p><strong>'.__('Lockout Time:', 'bulletproof-security').'</strong> '.date_i18n(get_option('date_format').' '.get_option('time_format'), $login_time + $gmt_offset).'</p>'; 
+				$message .= '<p><strong>'.__('Lockout Time Expires:', 'bulletproof-security').'</strong> '.date_i18n(get_option('date_format').' '.get_option('time_format'), $lockout_time + $gmt_offset).'</p>'; 
+				$message .= '<p><strong>'.__('User IP Address:', 'bulletproof-security').'</strong> '.$ip_address.'</p>'; 
+				$message .= '<p><strong>'.__('User Hostname:', 'bulletproof-security').'</strong> '.$hostname.'</p>'; 
+				$message .= '<p><strong>'.__('Request URI:', 'bulletproof-security').'</strong> '.$request_uri.'</p>'; 
+				$message .= '<p><strong>'.__('Website:', 'bulletproof-security').'</strong> '.$justUrl.'</p>';
 
 				wp_mail($bps_email_to, $subject, $message, $headers);
 			}
@@ -208,32 +245,32 @@ if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && $BPSoptions['bps_login_s
 			} else {
 
 			if ( $options['bps_login_security_email'] == 'anyUserLoginLock') {
-				$message = '<p><font color="blue"><strong>A User Has Logged in</strong></font></p>';
-				$message .=  '<p>To take further action go to the Login Security page. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.</p>';
-				$message .= '<p><strong>Username:</strong> '.$user->user_login.'</p>'; 
-				$message .= '<p><strong>Status:</strong> '.$status.'</p>'; 
-				$message .= '<p><strong>Role:</strong> '.$user->roles[0].'</p>'; 
-				$message .= '<p><strong>Email:</strong> '.$user->user_email.'</p>'; 
-				$message .= '<p><strong>User IP Address:</strong> '.$ip_address.'</p>'; 
-				$message .= '<p><strong>User Hostname:</strong> '.$hostname.'</p>'; 
-				$message .= '<p><strong>Request URI:</strong> '.$request_uri.'</p>'; 
-				$message .= '<p><strong>Site:</strong> '.$justUrl.'</p>';
+				$message = '<p><font color="blue"><strong>'.__('A User has logged in on website: ', 'bulletproof-security').$justUrl.'</strong></font></p>';
+				$message .= '<p>'.__('To take further action go to the Login Security page. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.', 'bulletproof-security').'</p>';
+				$message .= '<p><strong>'.__('Username:', 'bulletproof-security').'</strong> '.$user->user_login.'</p>'; 
+				$message .= '<p><strong>'.__('Status:', 'bulletproof-security').'</strong> '.$status.'</p>'; 
+				$message .= '<p><strong>'.__('User Role:', 'bulletproof-security').'</strong> '.$user->roles[0].'</p>'; 
+				$message .= '<p><strong>'.__('Email:', 'bulletproof-security').'</strong> '.$user->user_email.'</p>'; 
+				$message .= '<p><strong>'.__('User IP Address:', 'bulletproof-security').'</strong> '.$ip_address.'</p>'; 
+				$message .= '<p><strong>'.__('User Hostname:', 'bulletproof-security').'</strong> '.$hostname.'</p>'; 
+				$message .= '<p><strong>'.__('Request URI:', 'bulletproof-security').'</strong> '.$request_uri.'</p>'; 
+				$message .= '<p><strong>'.__('Website:', 'bulletproof-security').'</strong> '.$justUrl.'</p>'; 
 
 				wp_mail($bps_email_to, $subject, $message, $headers);
 			}
 				
 			// Option adminLoginOnly - Send Email Alert if an Administrator Logs in
 			if ( $options['bps_login_security_email'] == 'adminLoginOnly' || $options['bps_login_security_email'] == 'adminLoginLock' && $user->roles[0] == 'administrator') {
-				$message = '<p><font color="blue"><strong>An Administrator Has Logged in</strong></font></p>';
-				$message .=  '<p>To take further action go to the Login Security page. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.</p>';
-				$message .= '<p><strong>Username:</strong> '.$user->user_login.'</p>'; 
-				$message .= '<p><strong>Status:</strong> '.$status.'</p>'; 
-				$message .= '<p><strong>Role:</strong> '.$user->roles[0].'</p>'; 
-				$message .= '<p><strong>Email:</strong> '.$user->user_email.'</p>'; 
-				$message .= '<p><strong>User IP Address:</strong> '.$ip_address.'</p>'; 
-				$message .= '<p><strong>User Hostname:</strong> '.$hostname.'</p>'; 
-				$message .= '<p><strong>Request URI:</strong> '.$request_uri.'</p>'; 
-				$message .= '<p><strong>Site:</strong> '.$justUrl.'</p>'; 
+				$message = '<p><font color="blue"><strong>'.__('An Administrator has logged in on website: ', 'bulletproof-security').$justUrl.'</strong></font></p>';
+				$message .= '<p>'.__('To take further action go to the Login Security page. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.', 'bulletproof-security').'</p>';				
+				$message .= '<p><strong>'.__('Username:', 'bulletproof-security').'</strong> '.$user->user_login.'</p>'; 
+				$message .= '<p><strong>'.__('Status:', 'bulletproof-security').'</strong> '.$status.'</p>'; 
+				$message .= '<p><strong>'.__('User Role:', 'bulletproof-security').'</strong> '.$user->roles[0].'</p>'; 
+				$message .= '<p><strong>'.__('Email:', 'bulletproof-security').'</strong> '.$user->user_email.'</p>'; 
+				$message .= '<p><strong>'.__('User IP Address:', 'bulletproof-security').'</strong> '.$ip_address.'</p>'; 
+				$message .= '<p><strong>'.__('User Hostname:', 'bulletproof-security').'</strong> '.$hostname.'</p>'; 
+				$message .= '<p><strong>'.__('Request URI:', 'bulletproof-security').'</strong> '.$request_uri.'</p>'; 
+				$message .= '<p><strong>'.__('Website:', 'bulletproof-security').'</strong> '.$justUrl.'</p>'; 
 
 				wp_mail($bps_email_to, $subject, $message, $headers);
 			}
@@ -248,8 +285,8 @@ if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && $BPSoptions['bps_login_s
 
 				if ( $row->status == 'Locked' && $timeNow < $row->lockout_time && $row->failed_logins >= $BPSoptions['bps_max_logins'] ) { // greater > for testing
 					$error = new WP_Error();
-					$error->add('locked_account', __('<strong>ERROR</strong>: This user account has been locked until <strong>'.date_i18n(get_option('date_format').' '.get_option('time_format'), $row->lockout_time + $gmt_offset).'</strong> due to too many failed login attempts. You can login again after the Lockout Time above has expired.'));
-			
+					$error->add('locked_account', '<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' This user account has been locked until ', 'bulletproof-security').'<strong>'.date_i18n(get_option('date_format').' '.get_option('time_format'), $row->lockout_time + $gmt_offset).'</strong>'.__(' due to too many failed login attempts. You can login again after the Lockout Time above has expired.', 'bulletproof-security') );
+
 					return $error;
 				}
 					$failed_logins = $row->failed_logins;
@@ -317,21 +354,21 @@ if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && $BPSoptions['bps_login_s
 			} else {
 
 			if ( $options['bps_login_security_email'] == 'lockoutOnly' || $options['bps_login_security_email'] == 'anyUserLoginLock' || $options['bps_login_security_email'] == 'adminLoginLock') {
-				$message = '<p><font color="#fb0101"><strong>A User Account Has Been Locked</strong></font></p>';
-				$message .=  '<p>To take further action go to the Login Security page. If no action is taken then the User will be able to try and login again after the Lockout Time has expired. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.</p>';
-				$message .=  '<p><strong>What to do if your User Account is locked and you are unable to login to your website:</strong> Use FTP or your web host control panel file manager and rename the /bulletproof-security plugin folder name to /_bulletproof-security. Log into your website. Rename the /_bulletproof-security plugin folder name back to /bulletproof-security. Go to the BPS Login Security page and unlock your User Account.</p>';
-				$message .=  '<p><strong>What to do if your User Account is being locked repeatedly:</strong> Additional things that you can do to protect publicly displayed usernames, not exposing author names/user account names, etc.: https://forum.ait-pro.com/forums/topic/user-account-locked/#post-12634</p>';
+				$message = '<p><font color="#fb0101"><strong>'.__('A User Account has been locked on website: ', 'bulletproof-security').$justUrl.'</strong></font></p>';
+				$message .= '<p>'.__('To take further action go to the Login Security page. If no action is taken then the User will be able to try and login again after the Lockout Time has expired. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.', 'bulletproof-security').'</p>';
+				$message .= '<p><strong>'.__('What to do if your User Account is locked and you are unable to login to your website:', 'bulletproof-security').'</strong>'.__(' Use FTP or your web host control panel file manager and rename the /bulletproof-security plugin folder name to /_bulletproof-security. Log into your website. Rename the /_bulletproof-security plugin folder name back to /bulletproof-security. Go to the BPS Login Security page and unlock your User Account.', 'bulletproof-security').'</p>';
+				$message .= '<p><strong>'.__('What to do if your User Account is being locked repeatedly:', 'bulletproof-security').'</strong>'.__(' Additional things that you can do to protect publicly displayed usernames, not exposing author names/user account names, etc.', 'bulletproof-security').': https://forum.ait-pro.com/forums/topic/user-account-locked/#post-12634</p>';
 
-				$message .= '<p><strong>Username:</strong> '.$user->user_login.'</p>'; 
-				$message .= '<p><strong>Status:</strong> '.$status.'</p>'; 
-				$message .= '<p><strong>Role:</strong> '.$user->roles[0].'</p>'; 
-				$message .= '<p><strong>Email:</strong> '.$user->user_email.'</p>'; 
-				$message .= '<p><strong>Lockout Time:</strong> '.date_i18n(get_option('date_format').' '.get_option('time_format'), $login_time + $gmt_offset).'</p>'; 
-				$message .= '<p><strong>Lockout Time Expires:</strong> '.date_i18n(get_option('date_format').' '.get_option('time_format'), $lockout_time + $gmt_offset).'</p>'; 
-				$message .= '<p><strong>User IP Address:</strong> '.$ip_address.'</p>'; 
-				$message .= '<p><strong>User Hostname:</strong> '.$hostname.'</p>'; 
-				$message .= '<p><strong>Request URI:</strong> '.$request_uri.'</p>'; 
-				$message .= '<p><strong>Site:</strong> '.$justUrl.'</p>'; 
+				$message .= '<p><strong>'.__('Username:', 'bulletproof-security').'</strong> '.$user->user_login.'</p>'; 
+				$message .= '<p><strong>'.__('Status:', 'bulletproof-security').'</strong> '.$status.'</p>'; 
+				$message .= '<p><strong>'.__('User Role:', 'bulletproof-security').'</strong> '.$user->roles[0].'</p>'; 
+				$message .= '<p><strong>'.__('Email:', 'bulletproof-security').'</strong> '.$user->user_email.'</p>'; 
+				$message .= '<p><strong>'.__('Lockout Time:', 'bulletproof-security').'</strong> '.date_i18n(get_option('date_format').' '.get_option('time_format'), $login_time + $gmt_offset).'</p>'; 
+				$message .= '<p><strong>'.__('Lockout Time Expires:', 'bulletproof-security').'</strong> '.date_i18n(get_option('date_format').' '.get_option('time_format'), $lockout_time + $gmt_offset).'</p>'; 
+				$message .= '<p><strong>'.__('User IP Address:', 'bulletproof-security').'</strong> '.$ip_address.'</p>'; 
+				$message .= '<p><strong>'.__('User Hostname:', 'bulletproof-security').'</strong> '.$hostname.'</p>'; 
+				$message .= '<p><strong>'.__('Request URI:', 'bulletproof-security').'</strong> '.$request_uri.'</p>'; 
+				$message .= '<p><strong>'.__('Website:', 'bulletproof-security').'</strong> '.$justUrl.'</p>';
 
 				wp_mail($bps_email_to, $subject, $message, $headers);
 			}
@@ -378,13 +415,13 @@ if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && $BPSoptions['bps_login_s
 	
 			if ( $row->status == 'Locked' && $timeNow < $row->lockout_time && $row->failed_logins >= $BPSoptions['bps_max_logins'] && $BPSoptions['bps_login_security_errors'] != 'genericAll') { 
 				$error = new WP_Error();
-				$error->add('locked_account', __('<strong>ERROR</strong>: This user account has been locked until <strong>'.date_i18n(get_option('date_format').' '.get_option('time_format'), $row->lockout_time + $gmt_offset).'</strong> due to too many failed login attempts. You can login again after the Lockout Time above has expired.'));
-		
+				$error->add('locked_account', '<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' This user account has been locked until ', 'bulletproof-security').'<strong>'.date_i18n(get_option('date_format').' '.get_option('time_format'), $row->lockout_time + $gmt_offset).'</strong>'.__(' due to too many failed login attempts. You can login again after the Lockout Time above has expired.', 'bulletproof-security') );
+
 				return $error;
 			}
 			
 			if ( $row->status == 'Locked' && $timeNow < $row->lockout_time && $row->failed_logins >= $BPSoptions['bps_max_logins'] && $BPSoptions['bps_login_security_errors'] == 'genericAll') { 
-				return new WP_Error('incorrect_password', sprintf(__('<strong>ERROR</strong>: Invalid Entry. <a href="%s">Lost your password?</a>'), wp_lostpassword_url()));
+				return new WP_Error('incorrect_password', sprintf('<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' Invalid Entry.', 'bulletproof-security').' <a href="%s">'.__('Lost your password?', 'bulletproof-security').'</a>', wp_lostpassword_url()));			
 			}
 		}
 
@@ -402,21 +439,21 @@ if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && $BPSoptions['bps_login_s
 			} else {
 
 			if ( $options['bps_login_security_email'] == 'lockoutOnly' || $options['bps_login_security_email'] == 'anyUserLoginLock' || $options['bps_login_security_email'] == 'adminLoginLock') {
-				$message = '<p><font color="#fb0101"><strong>A User Account Has Been Locked</strong></font></p>';
-				$message .=  '<p>To take further action go to the Login Security page. If no action is taken then the User will be able to try and login again after the Lockout Time has expired. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.</p>';
-				$message .=  '<p><strong>What to do if your User Account is locked and you are unable to login to your website:</strong> Use FTP or your web host control panel file manager and rename the /bulletproof-security plugin folder name to /_bulletproof-security. Log into your website. Rename the /_bulletproof-security plugin folder name back to /bulletproof-security. Go to the BPS Login Security page and unlock your User Account.</p>';
-				$message .=  '<p><strong>What to do if your User Account is being locked repeatedly:</strong> Additional things that you can do to protect publicly displayed usernames, not exposing author names/user account names, etc.: https://forum.ait-pro.com/forums/topic/user-account-locked/#post-12634</p>';
+				$message = '<p><font color="#fb0101"><strong>'.__('A User Account has been locked on website: ', 'bulletproof-security').$justUrl.'</strong></font></p>';
+				$message .= '<p>'.__('To take further action go to the Login Security page. If no action is taken then the User will be able to try and login again after the Lockout Time has expired. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.', 'bulletproof-security').'</p>';
+				$message .= '<p><strong>'.__('What to do if your User Account is locked and you are unable to login to your website:', 'bulletproof-security').'</strong>'.__(' Use FTP or your web host control panel file manager and rename the /bulletproof-security plugin folder name to /_bulletproof-security. Log into your website. Rename the /_bulletproof-security plugin folder name back to /bulletproof-security. Go to the BPS Login Security page and unlock your User Account.', 'bulletproof-security').'</p>';
+				$message .= '<p><strong>'.__('What to do if your User Account is being locked repeatedly:', 'bulletproof-security').'</strong>'.__(' Additional things that you can do to protect publicly displayed usernames, not exposing author names/user account names, etc.', 'bulletproof-security').': https://forum.ait-pro.com/forums/topic/user-account-locked/#post-12634</p>';
 
-				$message .= '<p><strong>Username:</strong> '.$user->user_login.'</p>'; 
-				$message .= '<p><strong>Status:</strong> '.$status.'</p>'; 
-				$message .= '<p><strong>Role:</strong> '.$user->roles[0].'</p>'; 
-				$message .= '<p><strong>Email:</strong> '.$user->user_email.'</p>'; 
-				$message .= '<p><strong>Lockout Time:</strong> '.date_i18n(get_option('date_format').' '.get_option('time_format'), $login_time + $gmt_offset).'</p>'; 
-				$message .= '<p><strong>Lockout Time Expires:</strong> '.date_i18n(get_option('date_format').' '.get_option('time_format'), $lockout_time + $gmt_offset).'</p>'; 
-				$message .= '<p><strong>User IP Address:</strong> '.$ip_address.'</p>'; 
-				$message .= '<p><strong>User Hostname:</strong> '.$hostname.'</p>'; 
-				$message .= '<p><strong>Request URI:</strong> '.$request_uri.'</p>'; 
-				$message .= '<p><strong>Site:</strong> '.$justUrl.'</p>'; 
+				$message .= '<p><strong>'.__('Username:', 'bulletproof-security').'</strong> '.$user->user_login.'</p>'; 
+				$message .= '<p><strong>'.__('Status:', 'bulletproof-security').'</strong> '.$status.'</p>'; 
+				$message .= '<p><strong>'.__('User Role:', 'bulletproof-security').'</strong> '.$user->roles[0].'</p>'; 
+				$message .= '<p><strong>'.__('Email:', 'bulletproof-security').'</strong> '.$user->user_email.'</p>'; 
+				$message .= '<p><strong>'.__('Lockout Time:', 'bulletproof-security').'</strong> '.date_i18n(get_option('date_format').' '.get_option('time_format'), $login_time + $gmt_offset).'</p>'; 
+				$message .= '<p><strong>'.__('Lockout Time Expires:', 'bulletproof-security').'</strong> '.date_i18n(get_option('date_format').' '.get_option('time_format'), $lockout_time + $gmt_offset).'</p>'; 
+				$message .= '<p><strong>'.__('User IP Address:', 'bulletproof-security').'</strong> '.$ip_address.'</p>'; 
+				$message .= '<p><strong>'.__('User Hostname:', 'bulletproof-security').'</strong> '.$hostname.'</p>'; 
+				$message .= '<p><strong>'.__('Request URI:', 'bulletproof-security').'</strong> '.$request_uri.'</p>'; 
+				$message .= '<p><strong>'.__('Website:', 'bulletproof-security').'</strong> '.$justUrl.'</p>';
 
 				wp_mail($bps_email_to, $subject, $message, $headers);
 			}
@@ -452,32 +489,34 @@ if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && $BPSoptions['bps_login_s
 			} else {
 
 			if ( $options['bps_login_security_email'] == 'anyUserLoginLock') {
-				$message = '<p><font color="blue"><strong>A User Has Logged in</strong></font></p>';
-				$message .=  '<p>To take further action go to the Login Security page. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.</p>';
-				$message .= '<p><strong>Username:</strong> '.$user->user_login.'</p>'; 
-				$message .= '<p><strong>Status:</strong> '.$status.'</p>'; 
-				$message .= '<p><strong>Role:</strong> '.$user->roles[0].'</p>'; 
-				$message .= '<p><strong>Email:</strong> '.$user->user_email.'</p>'; 
-				$message .= '<p><strong>User IP Address:</strong> '.$ip_address.'</p>'; 
-				$message .= '<p><strong>User Hostname:</strong> '.$hostname.'</p>'; 
-				$message .= '<p><strong>Request URI:</strong> '.$request_uri.'</p>'; 
-				$message .= '<p><strong>Site:</strong> '.$justUrl.'</p>';
+				$message = '<p><font color="blue"><strong>'.__('A User has logged in on website: ', 'bulletproof-security').$justUrl.'</strong></font></p>';
+				$message .= '<p>'.__('To take further action go to the Login Security page. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.', 'bulletproof-security').'</p>';
+
+				$message .= '<p><strong>'.__('Username:', 'bulletproof-security').'</strong> '.$user->user_login.'</p>'; 
+				$message .= '<p><strong>'.__('Status:', 'bulletproof-security').'</strong> '.$status.'</p>'; 
+				$message .= '<p><strong>'.__('User Role:', 'bulletproof-security').'</strong> '.$user->roles[0].'</p>'; 
+				$message .= '<p><strong>'.__('Email:', 'bulletproof-security').'</strong> '.$user->user_email.'</p>'; 
+				$message .= '<p><strong>'.__('User IP Address:', 'bulletproof-security').'</strong> '.$ip_address.'</p>'; 
+				$message .= '<p><strong>'.__('User Hostname:', 'bulletproof-security').'</strong> '.$hostname.'</p>'; 
+				$message .= '<p><strong>'.__('Request URI:', 'bulletproof-security').'</strong> '.$request_uri.'</p>'; 
+				$message .= '<p><strong>'.__('Website:', 'bulletproof-security').'</strong> '.$justUrl.'</p>';
 
 				wp_mail($bps_email_to, $subject, $message, $headers);
 			}
 
 			// Option adminLoginOnly - Send Email Alert if an Administrator Logs in
 			if ( $options['bps_login_security_email'] == 'adminLoginOnly' || $options['bps_login_security_email'] == 'adminLoginLock' && $user->roles[0] == 'administrator') {
-				$message = '<p><font color="blue"><strong>An Administrator Has Logged in</strong></font></p>';
-				$message .=  '<p>To take further action go to the Login Security page. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.</p>';
-				$message .= '<p><strong>Username:</strong> '.$user->user_login.'</p>'; 
-				$message .= '<p><strong>Status:</strong> '.$status.'</p>'; 
-				$message .= '<p><strong>Role:</strong> '.$user->roles[0].'</p>'; 
-				$message .= '<p><strong>Email:</strong> '.$user->user_email.'</p>'; 
-				$message .= '<p><strong>User IP Address:</strong> '.$ip_address.'</p>'; 
-				$message .= '<p><strong>User Hostname:</strong> '.$hostname.'</p>'; 
-				$message .= '<p><strong>Request URI:</strong> '.$request_uri.'</p>'; 
-				$message .= '<p><strong>Site:</strong> '.$justUrl.'</p>'; 
+				$message = '<p><font color="blue"><strong>'.__('An Administrator has logged in on website: ', 'bulletproof-security').$justUrl.'</strong></font></p>';
+				$message .= '<p>'.__('To take further action go to the Login Security page. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.', 'bulletproof-security').'</p>';
+
+				$message .= '<p><strong>'.__('Username:', 'bulletproof-security').'</strong> '.$user->user_login.'</p>'; 
+				$message .= '<p><strong>'.__('Status:', 'bulletproof-security').'</strong> '.$status.'</p>'; 
+				$message .= '<p><strong>'.__('User Role:', 'bulletproof-security').'</strong> '.$user->roles[0].'</p>'; 
+				$message .= '<p><strong>'.__('Email:', 'bulletproof-security').'</strong> '.$user->user_email.'</p>'; 
+				$message .= '<p><strong>'.__('User IP Address:', 'bulletproof-security').'</strong> '.$ip_address.'</p>'; 
+				$message .= '<p><strong>'.__('User Hostname:', 'bulletproof-security').'</strong> '.$hostname.'</p>'; 
+				$message .= '<p><strong>'.__('Request URI:', 'bulletproof-security').'</strong> '.$request_uri.'</p>'; 
+				$message .= '<p><strong>'.__('Website:', 'bulletproof-security').'</strong> '.$justUrl.'</p>';
 
 				wp_mail($bps_email_to, $subject, $message, $headers);
 			}			
@@ -492,8 +531,8 @@ if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && $BPSoptions['bps_login_s
 
 				if ( $row->status == 'Locked' && $timeNow < $row->lockout_time && $row->failed_logins >= $BPSoptions['bps_max_logins'] ) { // greater > for testing
 					$error = new WP_Error();
-					$error->add('locked_account', __('<strong>ERROR</strong>: This user account has been locked until <strong>'.date_i18n(get_option('date_format').' '.get_option('time_format'), $row->lockout_time + $gmt_offset).'</strong> due to too many failed login attempts. You can login again after the Lockout Time above has expired.'));
-			
+					$error->add('locked_account', '<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' This user account has been locked until ', 'bulletproof-security').'<strong>'.date_i18n(get_option('date_format').' '.get_option('time_format'), $row->lockout_time + $gmt_offset).'</strong>'.__(' due to too many failed login attempts. You can login again after the Lockout Time above has expired.', 'bulletproof-security') );
+
 					return $error;
 				}
 					$failed_logins = $row->failed_logins;
@@ -561,21 +600,21 @@ if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && $BPSoptions['bps_login_s
 			} else {
 
 			if ( $options['bps_login_security_email'] == 'lockoutOnly' || $options['bps_login_security_email'] == 'anyUserLoginLock' || $options['bps_login_security_email'] == 'adminLoginLock') {
-				$message = '<p><font color="#fb0101"><strong>A User Account Has Been Locked</strong></font></p>';
-				$message .=  '<p>To take further action go to the Login Security page. If no action is taken then the User will be able to try and login again after the Lockout Time has expired. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.</p>';
-				$message .=  '<p><strong>What to do if your User Account is locked and you are unable to login to your website:</strong> Use FTP or your web host control panel file manager and rename the /bulletproof-security plugin folder name to /_bulletproof-security. Log into your website. Rename the /_bulletproof-security plugin folder name back to /bulletproof-security. Go to the BPS Login Security page and unlock your User Account.</p>';
-				$message .=  '<p><strong>What to do if your User Account is being locked repeatedly:</strong> Additional things that you can do to protect publicly displayed usernames, not exposing author names/user account names, etc.: https://forum.ait-pro.com/forums/topic/user-account-locked/#post-12634</p>';
+				$message = '<p><font color="#fb0101"><strong>'.__('A User Account has been locked on website: ', 'bulletproof-security').$justUrl.'</strong></font></p>';
+				$message .= '<p>'.__('To take further action go to the Login Security page. If no action is taken then the User will be able to try and login again after the Lockout Time has expired. If you do not want to receive further email alerts change or turn off Login Security Email Alerts.', 'bulletproof-security').'</p>';
+				$message .= '<p><strong>'.__('What to do if your User Account is locked and you are unable to login to your website:', 'bulletproof-security').'</strong>'.__(' Use FTP or your web host control panel file manager and rename the /bulletproof-security plugin folder name to /_bulletproof-security. Log into your website. Rename the /_bulletproof-security plugin folder name back to /bulletproof-security. Go to the BPS Login Security page and unlock your User Account.', 'bulletproof-security').'</p>';
+				$message .= '<p><strong>'.__('What to do if your User Account is being locked repeatedly:', 'bulletproof-security').'</strong>'.__(' Additional things that you can do to protect publicly displayed usernames, not exposing author names/user account names, etc.', 'bulletproof-security').': https://forum.ait-pro.com/forums/topic/user-account-locked/#post-12634</p>';
 
-				$message .= '<p><strong>Username:</strong> '.$user->user_login.'</p>'; 
-				$message .= '<p><strong>Status:</strong> '.$status.'</p>'; 
-				$message .= '<p><strong>Role:</strong> '.$user->roles[0].'</p>'; 
-				$message .= '<p><strong>Email:</strong> '.$user->user_email.'</p>'; 
-				$message .= '<p><strong>Lockout Time:</strong> '.date_i18n(get_option('date_format').' '.get_option('time_format'), $login_time + $gmt_offset).'</p>'; 
-				$message .= '<p><strong>Lockout Time Expires:</strong> '.date_i18n(get_option('date_format').' '.get_option('time_format'), $lockout_time + $gmt_offset).'</p>'; 
-				$message .= '<p><strong>User IP Address:</strong> '.$ip_address.'</p>'; 
-				$message .= '<p><strong>User Hostname:</strong> '.$hostname.'</p>'; 
-				$message .= '<p><strong>Request URI:</strong> '.$request_uri.'</p>'; 
-				$message .= '<p><strong>Site:</strong> '.$justUrl.'</p>'; 
+				$message .= '<p><strong>'.__('Username:', 'bulletproof-security').'</strong> '.$user->user_login.'</p>'; 
+				$message .= '<p><strong>'.__('Status:', 'bulletproof-security').'</strong> '.$status.'</p>'; 
+				$message .= '<p><strong>'.__('User Role:', 'bulletproof-security').'</strong> '.$user->roles[0].'</p>'; 
+				$message .= '<p><strong>'.__('Email:', 'bulletproof-security').'</strong> '.$user->user_email.'</p>'; 
+				$message .= '<p><strong>'.__('Lockout Time:', 'bulletproof-security').'</strong> '.date_i18n(get_option('date_format').' '.get_option('time_format'), $login_time + $gmt_offset).'</p>'; 
+				$message .= '<p><strong>'.__('Lockout Time Expires:', 'bulletproof-security').'</strong> '.date_i18n(get_option('date_format').' '.get_option('time_format'), $lockout_time + $gmt_offset).'</p>'; 
+				$message .= '<p><strong>'.__('User IP Address:', 'bulletproof-security').'</strong> '.$ip_address.'</p>'; 
+				$message .= '<p><strong>'.__('User Hostname:', 'bulletproof-security').'</strong> '.$hostname.'</p>'; 
+				$message .= '<p><strong>'.__('Request URI:', 'bulletproof-security').'</strong> '.$request_uri.'</p>'; 
+				$message .= '<p><strong>'.__('Website:', 'bulletproof-security').'</strong> '.$justUrl.'</p>';
 
 				wp_mail($bps_email_to, $subject, $message, $headers);
 			}
@@ -603,37 +642,40 @@ if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && $BPSoptions['bps_login_s
 
 /*
 ****************************************************
+// Login Security & Monitoring
 // WordPress Standard Authentication Processing Code
 // with Generic Error Message display options
+// .54.3: WooCommerce custom login page/form condition added
 ****************************************************
 */
-if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && isset( $_POST['wp-submit'] ) ) {
+
+if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && isset( $_POST['wp-submit'] ) || $BPSoptions['bps_login_security_OnOff'] == 'On' && $BPSoptions['bps_enable_lsm_woocommerce'] == 1 && isset( $_POST['login'] ) ) {
 
 	// if a user does not set/save this option then default to WP Errors
 	// .53.8: added email address login error checking + messages
 	if ( ! $user && ! $BPSoptions['bps_login_security_errors'] ) {
-		return new WP_Error('invalid_username', sprintf(__('<strong>ERROR</strong>: Invalid username. <a href="%s">Lost your password?</a>'), wp_lostpassword_url()));
+		return new WP_Error('invalid_username', sprintf('<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' Invalid username.', 'bulletproof-security').' <a href="%s">'.__('Lost your password?', 'bulletproof-security').'</a>', wp_lostpassword_url()));	
 	}
 
 	if ( ! $user && $BPSoptions['bps_login_security_errors'] == 'wpErrors' ) {
 		
 		if ( strpos( $username, '@' ) ) {
-		
-			return new WP_Error('invalid_email', sprintf(__('<strong>ERROR</strong>: Invalid email address. <a href="%s">Lost your password?</a>'), wp_lostpassword_url()));
+			return new WP_Error('invalid_email', sprintf('<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' Invalid email address.', 'bulletproof-security').' <a href="%s">'.__('Lost your password?', 'bulletproof-security').'</a>', wp_lostpassword_url()));
 
 		} else {
 		
-			return new WP_Error('invalid_username', sprintf(__('<strong>ERROR</strong>: Invalid username. <a href="%s">Lost your password?</a>'), wp_lostpassword_url()));
-		
+			return new WP_Error('invalid_username', sprintf('<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' Invalid username.', 'bulletproof-security').' <a href="%s">'.__('Lost your password?', 'bulletproof-security').'</a>', wp_lostpassword_url()));		
+
 		}
 	}
 
 	if ( ! $user && $BPSoptions['bps_login_security_errors'] == 'generic') {
-		return new WP_Error('invalid_username', sprintf(__('<strong>ERROR</strong>: Invalid Entry. <a href="%s">Lost your password?</a>'), wp_lostpassword_url()));
+		return new WP_Error('invalid_username', sprintf('<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' Invalid Entry.', 'bulletproof-security').' <a href="%s">'.__('Lost your password?', 'bulletproof-security').'</a>', wp_lostpassword_url()));
 	}
 	
 	if ( ! $user && $BPSoptions['bps_login_security_errors'] == 'genericAll') {
-		return new WP_Error('invalid_username', sprintf(__('<strong>ERROR</strong>: Invalid Entry. <a href="%s">Lost your password?</a>'), wp_lostpassword_url()));
+		return new WP_Error('invalid_username', sprintf('<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' Invalid Entry.', 'bulletproof-security').' <a href="%s">'.__('Lost your password?', 'bulletproof-security').'</a>', wp_lostpassword_url()));
+
 	}
 
 	$user = apply_filters('wp_authenticate_user', $user, $password);
@@ -642,8 +684,7 @@ if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && isset( $_POST['wp-submit
 
 	// if a user does not set/save this option then default to WP Errors
 	if ( ! wp_check_password($password, $user->user_pass, $user->ID) && ! $BPSoptions['bps_login_security_errors'] ) {
-		
-		return new WP_Error( 'incorrect_password', sprintf( __( '<strong>ERROR</strong>: The password you entered for the username <strong>%1$s</strong> is incorrect. <a href="%2$s">Lost your password?</a>' ), $username, wp_lostpassword_url() ) );		
+		return new WP_Error('incorrect_password', sprintf('<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' The password you entered for the username ', 'bulletproof-security').'<strong>%1$s</strong>'.__(' is incorrect. ', 'bulletproof-security').' <a href="%2$s">'.__('Lost your password?', 'bulletproof-security').'</a>', $username, wp_lostpassword_url()));
 	}
 
 	if ( ! wp_check_password($password, $user->user_pass, $user->ID) && $BPSoptions['bps_login_security_errors'] == 'wpErrors' ) {
@@ -651,25 +692,23 @@ if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && isset( $_POST['wp-submit
 		if ( $BPSoptions['bps_login_security_remaining'] == 'On' ) {
 		
 			if ( strpos( $username, '@' ) ) {
-			
-				return new WP_Error( 'incorrect_password', sprintf( __( '<strong>ERROR</strong>: The password you entered for the email address <strong>%1$s</strong> is incorrect. <a href="%2$s">Lost your password?</a> Login Attempts Remaining <strong>%3$d</strong>' ), $username, wp_lostpassword_url(), $remaining ) );
+				return new WP_Error('incorrect_password', sprintf('<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' The password you entered for the email address ', 'bulletproof-security').'<strong>%1$s</strong>'.__(' is incorrect. ', 'bulletproof-security').' <a href="%2$s">'.__('Lost your password?', 'bulletproof-security').'</a>'.__(' Login Attempts Remaining ', 'bulletproof-security').'<strong>%3$d</strong>', $username, wp_lostpassword_url(), $remaining ) );
 
 			} else {
 			
-				return new WP_Error( 'incorrect_password', sprintf( __( '<strong>ERROR</strong>: The password you entered for the username <strong>%1$s</strong> is incorrect. <a href="%2$s">Lost your password?</a> Login Attempts Remaining <strong>%3$d</strong>' ), $username, wp_lostpassword_url(), $remaining ) );
-			
+				return new WP_Error('incorrect_password', sprintf('<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' The password you entered for the username ', 'bulletproof-security').'<strong>%1$s</strong>'.__(' is incorrect. ', 'bulletproof-security').' <a href="%2$s">'.__('Lost your password?', 'bulletproof-security').'</a>'.__(' Login Attempts Remaining ', 'bulletproof-security').'<strong>%3$d</strong>', $username, wp_lostpassword_url(), $remaining ) );
 			}
 		
 		} else {
 
 			if ( strpos( $username, '@' ) ) {
 
-				return new WP_Error( 'incorrect_password', sprintf( __( '<strong>ERROR</strong>: The password you entered for the email address <strong>%1$s</strong> is incorrect. <a href="%2$s">Lost your password?</a>' ), $username, wp_lostpassword_url() ) );				
-			
+				return new WP_Error('incorrect_password', sprintf('<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' The password you entered for the email address ', 'bulletproof-security').'<strong>%1$s</strong>'.__(' is incorrect. ', 'bulletproof-security').' <a href="%2$s">'.__('Lost your password?', 'bulletproof-security').'</a>', $username, wp_lostpassword_url()));
+
 			} else {
 				
-				return new WP_Error( 'incorrect_password', sprintf( __( '<strong>ERROR</strong>: The password you entered for the username <strong>%1$s</strong> is incorrect. <a href="%2$s">Lost your password?</a>' ), $username, wp_lostpassword_url() ) );
-				
+				return new WP_Error('incorrect_password', sprintf('<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' The password you entered for the username ', 'bulletproof-security').'<strong>%1$s</strong>'.__(' is incorrect. ', 'bulletproof-security').' <a href="%2$s">'.__('Lost your password?', 'bulletproof-security').'</a>', $username, wp_lostpassword_url()));
+
 			}
 		}
 	}
@@ -678,12 +717,12 @@ if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && isset( $_POST['wp-submit
 
 		if ( $BPSoptions['bps_login_security_remaining'] == 'On' ) {
 
-			return new WP_Error( 'incorrect_password', sprintf( __( '<strong>ERROR</strong>: Invalid Entry. <a href="%2$s">Lost your password?</a> Login Attempts Remaining <strong>%3$d</strong>' ), $username, wp_lostpassword_url(), $remaining ) );
-		
+			return new WP_Error('incorrect_password', sprintf('<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' Invalid Entry.', 'bulletproof-security').' <a href="%2$s">'.__('Lost your password?', 'bulletproof-security').'</a>'.__(' Login Attempts Remaining ', 'bulletproof-security').'<strong>%3$d</strong>', $username, wp_lostpassword_url(), $remaining ) );
+
 		} else {	
 		
-			return new WP_Error( 'incorrect_password', sprintf( __( '<strong>ERROR</strong>: Invalid Entry. <a href="%2$s">Lost your password?</a>' ), $username, wp_lostpassword_url() ) );	
-		
+			return new WP_Error('incorrect_password', sprintf('<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' Invalid Entry.', 'bulletproof-security').' <a href="%2$s">'.__('Lost your password?', 'bulletproof-security').'</a>', $username, wp_lostpassword_url() ) );
+
 		}
 	}
 	
@@ -691,12 +730,12 @@ if ( $BPSoptions['bps_login_security_OnOff'] == 'On' && isset( $_POST['wp-submit
 
 		if ( $BPSoptions['bps_login_security_remaining'] == 'On' ) {
 
-			return new WP_Error( 'incorrect_password', sprintf( __( '<strong>ERROR</strong>: Invalid Entry. <a href="%2$s">Lost your password?</a> Login Attempts Remaining <strong>%3$d</strong>' ), $username, wp_lostpassword_url(), $remaining ) );
+			return new WP_Error('incorrect_password', sprintf('<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' Invalid Entry.', 'bulletproof-security').' <a href="%2$s">'.__('Lost your password?', 'bulletproof-security').'</a>'.__(' Login Attempts Remaining ', 'bulletproof-security').'<strong>%3$d</strong>', $username, wp_lostpassword_url(), $remaining ) );
 
 		} else {
 
-			return new WP_Error( 'incorrect_password', sprintf( __( '<strong>ERROR</strong>: Invalid Entry. <a href="%2$s">Lost your password?</a>' ), $username, wp_lostpassword_url() ) );		
-		
+			return new WP_Error('incorrect_password', sprintf('<strong>'.__('ERROR:', 'bulletproof-security').'</strong>'.__(' Invalid Entry.', 'bulletproof-security').' <a href="%2$s">'.__('Lost your password?', 'bulletproof-security').'</a>', $username, wp_lostpassword_url() ) );
+
 		}
 	}
 	return $user;
