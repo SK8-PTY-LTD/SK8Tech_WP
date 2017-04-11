@@ -1,5 +1,20 @@
 jQuery( function($) {
 
+	/**
+	 * Pull share counts
+	 *
+	 */
+	$(document).ready( function() {
+
+		if( typeof dpsp_ajax_url != 'undefined' && typeof dpsp_ajax_pull_post_share_counts_data != 'undefined' ) {
+
+			$.post( dpsp_ajax_url, dpsp_ajax_pull_post_share_counts_data, function( response ) { });
+
+		}
+
+	});
+
+	
 	/*
 	 * Position sidebar icons vertically
 	 *

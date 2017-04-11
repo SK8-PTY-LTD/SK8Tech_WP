@@ -16,7 +16,9 @@ jQuery( document ).ready( function( $ ) {
 	if ( $( '.nav-tab-wrapper.needs-js' ).length > 0 ) {
 		// Determine the CSS class that's used to denote panels
 		var nav_tab_wrapper_panel 	= $( '.nav-tab-wrapper.needs-js' ).data( 'panel' ),
-			nav_tab_wrapper 		= $( '.nav-tab-wrapper.needs-js' );
+			nav_tab_wrapper 		= $( '.nav-tab-wrapper.needs-js' ),
+			nav_tab_form			= $( '.nav-tab-wrapper.needs-js' ).data( 'form' ),
+			nav_tab_form_action 	= $( 'form' + nav_tab_form ).attr( 'action' );
 		
 		// Show tabbed bar
 		$( nav_tab_wrapper ).fadeIn( 'fast', function() {
@@ -28,6 +30,7 @@ jQuery( document ).ready( function( $ ) {
 
 		// Get the active tab, so we know which panel to display
 		active_tab = window.location.hash;
+
 		if ( active_tab.length == 0 ) {
 			// Get active tab from the tabbed menu
 			active_tab = $( 'a.nav-tab-active', $( nav_tab_wrapper ) ).attr( 'href' );
@@ -37,10 +40,20 @@ jQuery( document ).ready( function( $ ) {
 			$( 'a[href="' + active_tab + '"]', $( nav_tab_wrapper ) ).addClass( 'nav-tab-active' );
 		}
 
+		// If we don't have an active tab at this point, we don't have any tabs, so bail
+		if ( typeof active_tab == 'undefined' ) {
+			return;
+		}
+
 		// Show the active tab's panel now, both by ID and class
 		$( active_tab + '-panel' ).show(); // ID
 		$( active_tab.replace( '#', '.' ) + '-panel' ).show(); // Class
-		
+
+		// Update the Documentation tab, if it exists
+		if ( typeof $( 'a.nav-tab-active', $( nav_tab_wrapper ) ).data( 'documentation' ) != 'undefined' ) {
+			$( 'a.nav-tab.documentation' ).attr( 'href', $( 'a.nav-tab-active', $( nav_tab_wrapper ) ).data( 'documentation' ) );
+		}
+
 		// Change active panel on tab click
 		$( nav_tab_wrapper ).on( 'click', 'a', function( e ) {
 
@@ -61,6 +74,11 @@ jQuery( document ).ready( function( $ ) {
 			$( this ).addClass( 'nav-tab-active' );
 			active_tab = $( this ).attr( 'href' );
 
+			// Update the Documentation tab, if it exists
+			if ( typeof $( this ).data( 'documentation' ) != 'undefined' ) {
+				$( 'a.nav-tab.documentation' ).attr( 'href', $( this ).data( 'documentation' ) );
+			}
+
 			// Show the active tab's panel now
 			$( active_tab + '-panel' ).each( function() {
 				$( this ).show();
@@ -74,6 +92,11 @@ jQuery( document ).ready( function( $ ) {
     			history.pushState( null, null, $( this ).attr( 'href' ) );
 			} else {
     			location.hash = $( this ).attr( 'href' );
+			}
+
+			// Update the URL hash on the form
+			if ( nav_tab_form_action !== undefined ) {
+				$( nav_tab_form ).attr( 'action', nav_tab_form_action + active_tab );
 			}
 		} );
 	}

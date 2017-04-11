@@ -193,7 +193,7 @@ $sapi_type = php_sapi_name();
 	$memoryLimit = str_replace('M', '', $memoryLimitM);
 
 	if ( $memoryLimit == '' || ! $memoryLimitM ) {
-		echo '<strong><font color="blue">'.__('Unable to get the PHP Configuration Memory Limit value from the Server. It is recommended that your PHP Configuration Memory Limit is set to at least 128M. Contact your Web Host and ask them what your PHP Configuration Memory Limit is for your website.', 'bulletproof-security').'</font></strong><br>';
+		//echo '<strong><font color="blue">'.__('Unable to get the PHP Configuration Memory Limit value from the Server. It is recommended that your PHP Configuration Memory Limit is set to at least 128M. Contact your Web Host and ask them what your PHP Configuration Memory Limit is for your website.', 'bulletproof-security').'</font></strong><br>';
 
 	} else {
 

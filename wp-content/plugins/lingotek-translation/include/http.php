@@ -8,6 +8,7 @@
 class Lingotek_HTTP {
 	protected $headers = array();
 
+	const TIMEOUT = 30;
 	/*
 	 * formats a request as multipart
 	 * greatly inspired from mailgun wordpress plugin
@@ -50,7 +51,7 @@ class Lingotek_HTTP {
     if (!empty($args)) {
       Lingotek::log($args);
     }
-    return wp_remote_post($url, array('headers' => $this->headers, 'body' => $args));
+    return wp_remote_post($url, array('headers' => $this->headers, 'body' => $args, 'timeout' => self::TIMEOUT));
 	}
 
 	/*
@@ -63,7 +64,7 @@ class Lingotek_HTTP {
     if (!empty($args)) {
       Lingotek::log($args);
     }
-    return wp_remote_get($url, array('headers' => $this->headers, 'body' => $args, 'timeout' => 30));
+    return wp_remote_get($url, array('headers' => $this->headers, 'body' => $args, 'timeout' => self::TIMEOUT));
   }
 
   /*
@@ -76,7 +77,7 @@ class Lingotek_HTTP {
     if (!empty($args)) {
       Lingotek::log($args);
     }
-    return wp_remote_request($url, array('method' => 'DELETE', 'headers' => $this->headers, 'body' => $args));
+    return wp_remote_request($url, array('method' => 'DELETE', 'headers' => $this->headers, 'body' => $args, 'timeout' => self::TIMEOUT));
 	}
 
 	/*
@@ -89,6 +90,6 @@ class Lingotek_HTTP {
     if (!empty($args)) {
       Lingotek::log($args);
     }
-    return wp_remote_request($url, array('method' => 'PATCH', 'headers' => $this->headers, 'body' => $args));
+    return wp_remote_request($url, array('method' => 'PATCH', 'headers' => $this->headers, 'body' => $args, 'timeout' => self::TIMEOUT));
 	}
 }

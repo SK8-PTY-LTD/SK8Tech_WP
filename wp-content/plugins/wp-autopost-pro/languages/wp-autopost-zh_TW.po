@@ -192,6 +192,9 @@ msgstr "每篇文章之间的发布时间间隔"
 msgid "Post Scheduled"
 msgstr "定时发布"
 
+msgid "Post Instant"
+msgstr "即时发布"
+
 msgid "Start Time"
 msgstr "起始时间"
 
@@ -1494,8 +1497,8 @@ msgstr "文章分页内容被检测到"
 msgid "[Article Extraction Settings] is automatically set OK"
 msgstr "[文章抓取设置] 自动设置成功"
 
-msgid "Use <strong>Batch generate The URL of Article List</strong>, is best to use manul update"
-msgstr "使用<strong>批量生成文章列表网址</strong>，最好使用手动更新方式"
+msgid "Use <strong>Batch generate The URL of Article List</strong>, will not automatically update, please use manual update (Manually Click the Update Now)"
+msgstr "使用<strong>批量生成文章列表网址</strong>，将不会自动更新，请使用手动更新方式(点击现在更新)"
 
 msgid "Default Featured Image Settings"
 msgstr "默认特色图像设置"
@@ -1511,4 +1514,79 @@ msgstr "还没有图像，请先上传一些图像"
 
 msgid "You can select one or more images as a default featured image, if you selected more then one image will random use one of them"
 msgstr "你可以选择一张或多张图像作为默认的特色图像，如果选择了多个图片，将随机设置其中一张作为特色图片"
+
+msgid "Extraction Settings"
+msgstr "采集设置"
+
+msgid "WordPress Settings"
+msgstr "WordPress相关"
+
+msgid "Filter & Replacement"
+msgstr "过滤及替换"
+
+msgid "Custom Settings"
+msgstr "自定义及模板"
+
+msgid "Rewrite & Translate"
+msgstr "伪原创及翻译"
+
+msgid "General Settings"
+msgstr "常用设置"
+
+msgid "Publish Date Setting"
+msgstr "发布时间设置"
+
+msgid "Tags Setting"
+msgstr "标签设置"
+
+msgid "Constant Tags"
+msgstr "固定标签"
+
+msgid "Limit the number of tags"
+msgstr "标签限制数量"
+
+msgid "0 means no limits"
+msgstr "0表示无限制"
+
+msgid "When article's contents contains the keyword in the below tags list, will add the matched tags"
+msgstr "当文章内容包含下面标签关键词时, 自动添加对应标签"
+
+msgid "Ignore article's contents, will always add the tags in the below list"
+msgstr "忽略文章内容, 总是添加下面列表里的标签"
+
+msgid "Images Settings"
+msgstr "图像设置"
+
+msgid "Also Download Images Form A Tags"
+msgstr "同时下载超链接(A标签)里的图片"
+
+msgid "Group"
+msgstr "分组"
+
+msgid "Add New Group"
+msgstr "新建分组"
+
+msgid "Group Name"
+msgstr "分组名称"
+
+msgid "Not in group"
+msgstr "未分组"
+
+msgid "Save To Group"
+msgstr "保存到分组"
+
+msgid "This Task not in any group, can not save to group"
+msgstr "该任务不在任何分组里, 无法保存到分组"
+
+msgid "Download Option"
+msgstr "下载选项"
+
+msgid "Time difference setting"
+msgstr "时差调整"
+
+msgid "If the two Date-times not equal, adjust the time difference, keep them equal"
+msgstr "如果上面两个时间不相等, 调整下面时差, 使两个时间保持相等"
+
+msgid "If the rules are correct, but can't get the results, please access <a href='http://wp-autopost.org/support/' target='_blank'> Online Support</a> to get help"
+msgstr "如果规则正确，不能得到正确结果，请访问 <a href='http://wp-autopost.org/zh/support/' target='_blank'>在线支持</a> 进行协助处理"
 

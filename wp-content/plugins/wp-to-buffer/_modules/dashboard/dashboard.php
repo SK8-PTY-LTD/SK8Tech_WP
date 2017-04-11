@@ -53,6 +53,10 @@ class WPZincDashboardWidget {
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts_css' ) );
         add_action( str_replace( '-', '_', $this->plugin->name ) . '_admin_menu', array( $this, 'admin_menu' ), 99 );
 
+        // Reviews
+        add_action( 'wp_ajax_' . str_replace( '-', '_', $this->plugin->name ) . '_dismiss_review', array( $this, 'dismiss_review' ) );
+        add_action( 'admin_notices', array( $this, 'display_review_request' ) );
+
         // Export and Support
         add_action( 'plugins_loaded', array( $this, 'export' ) );
         add_action( 'plugins_loaded', array( $this, 'maybe_redirect' ) );
@@ -97,6 +101,109 @@ class WPZincDashboardWidget {
         add_submenu_page( $slug, __( 'Import & Export', $this->plugin->name ), __( 'Import & Export', $this->plugin->name ), 'manage_options', $this->plugin->name . '-import-export', array( $this, 'import_export_screen' ) ); 
         add_submenu_page( $slug, __( 'Support', $this->plugin->name ), __( 'Support', $this->plugin->name ), 'manage_options', $this->plugin->name . '-support', array( $this, 'support_screen' ) );
     
+    }
+
+    /**
+     * Displays a dismissible WordPress Administration notice requesting a review, if the main
+     * plugin's key action has been completed.
+     *
+     * @since   1.0.0
+     */
+    public function display_review_request() {
+
+        // If we're not an Admin user, bail
+        if ( ! function_exists( 'current_user_can' ) ) {
+            return;
+        }
+        if ( ! current_user_can( 'activate_plugins' ) ) {
+            return;
+        }
+
+        // If the review request was dismissed by the user, bail.
+        if ( $this->dismissed_review() ) {
+            return;
+        }
+
+        // If no review request has been set by the plugin, bail.
+        if ( ! $this->requested_review() ) {
+            return;
+        }
+
+        // If here, display the request for a review
+        include_once( $this->dashboard_folder . '/views/review-notice.php' );
+
+    }
+
+    /**
+     * Flag to indicate whether a review has been requested.
+     *
+     * @since   1.0.0
+     *
+     * @return  bool    Review Requested
+     */
+    public function requested_review() {
+
+        $time = get_option( $this->plugin->review_name . '-review-request' );
+        if ( empty( $time ) ) {
+            return false;
+        }
+
+        // Check the current date and time matches or is later than the above value
+        $now = time();
+        if ( $now >= ( $time + ( 3 * DAY_IN_SECONDS ) ) ) {
+            return true;
+        }
+
+        // We're not yet ready to show this review
+        return false;
+
+    }
+
+    /**
+     * Requests a review notification, which is displayed on subsequent page loads.
+     *
+     * @since   1.0.0
+     */
+    public function request_review() {
+
+        // If a review has already been requested, bail
+        $time = get_option( $this->plugin->review_name . '-review-request' );
+        if ( ! empty( $time ) ) {
+            return;
+        }
+
+        // Request a review, setting the value to the date and time now.
+        update_option( $this->plugin->review_name . '-review-request', time() );
+
+    }
+
+    /**
+     * Flag to indicate whether a review request has been dismissed by the user.
+     *
+     * @since   1.0.0
+     *
+     * @return  bool    Review Dismissed
+     */
+    public function dismissed_review() {
+
+        return get_option( $this->plugin->review_name . '-review-dismissed' );
+
+    }
+
+    /**
+     * Dismisses the review notification, so it isn't displayed again.
+     *
+     * @since   1.0.0
+     */
+    public function dismiss_review() {
+
+        update_option( $this->plugin->review_name . '-review-dismissed', 1 );
+
+        // Send success response if called via AJAX
+        if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
+            wp_send_json_success( 1 );
+        }
+
     }
 
     /**
@@ -240,7 +347,7 @@ class WPZincDashboardWidget {
     }
 
     /**
-     * If the Support menu item was clicked, redirect
+     * If the Support or Upgrade menu item was clicked, redirect
      *
      * @since 3.0
      */
@@ -250,13 +357,18 @@ class WPZincDashboardWidget {
         if ( ! isset( $_GET['page'] ) ) {
             return;
         }
-        if ( $_GET['page'] != $this->plugin->name . '-support' ) {
-            return;
+        
+        // Redirect to Support
+        if ( $_GET['page'] == $this->plugin->name . '-support' ) {
+            wp_redirect( $this->plugin->support_url );
+            die();
         }
 
-        // Redirect
-        wp_redirect( $this->plugin->support_url );
-        die();
+        // Redirect to Upgrade
+        if ( $_GET['page'] == $this->plugin->name . '-upgrade' ) {
+            wp_redirect( $this->plugin->upgrade_url );
+            die();
+        }
 
     }
 

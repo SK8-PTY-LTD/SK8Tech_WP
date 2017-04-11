@@ -513,7 +513,7 @@ $search = '';
 </select><br /><br /> -->
 
 <input type="hidden" name="bpsEMA" value="bps-EMA" />
-<input type="submit" name="bpsEmailAlertSubmit" class="button bps-button" style="margin:15px 0px 0px 0px;" value="<?php esc_attr_e('Save Options', 'bulletproof-security') ?>" />
+<input type="submit" name="bpsEmailAlertSubmit" class="button bps-button" style="margin:15px 0px 20px 0px;" value="<?php esc_attr_e('Save Options', 'bulletproof-security') ?>" />
 </form>
 </div>
 

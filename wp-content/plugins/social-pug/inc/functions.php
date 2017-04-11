@@ -1,7 +1,7 @@
 <?php
 
 
-	/*
+	/**
 	 * Returns all the tools available with all their data
 	 *
 	 */
@@ -44,7 +44,7 @@
 	}
 
 
-	/*
+	/**
 	 * Checks to see if the tool settings is active or not
 	 *
 	 */
@@ -70,7 +70,7 @@
 	}
 
 
-	/*
+	/**
 	 * Returns an array with the positions where the social networks
 	 * can be placed
 	 *
@@ -94,7 +94,7 @@
 	}
 
 
-	/*
+	/**
 	 * Returns the name of a location
 	 *
 	 * @param string $location_slug
@@ -114,7 +114,7 @@
 	}
 
 
-	/*
+	/**
 	 * Checks to see if the location is active or not
 	 *
 	 */
@@ -130,7 +130,7 @@
 	}
 
 
-	/*
+	/**
 	 * Determines whether the location should be displayed or not
 	 *
 	 * @param string $location_slug
@@ -156,7 +156,7 @@
 	}
 
 
-	/*
+	/**
 	 * Get settings for a particular location
 	 * This is a developer friendly function
 	 *
@@ -178,7 +178,7 @@
 	}
 
 
-	/*
+	/**
 	 * Function that returns all networks
 	 *
 	 * @return array
@@ -198,7 +198,7 @@
 	}
 
 
-	/*
+	/**
 	 * Not all social networks support social count.
 	 * This function returns an array of network slugs
 	 * for the networks that do support it
@@ -225,7 +225,7 @@
 	}
 
 
-	/*
+	/**
 	 * Function that returns the name of a social network given its slug
 	 *
 	 */
@@ -240,7 +240,7 @@
 	}
 
 
-	/*
+	/**
 	 * Returns all networks that are set in every location panel
 	 *
 	 * @return array;
@@ -271,7 +271,7 @@
 	}
 
 
-	/*
+	/**
 	 * Return an array of registered post types slugs and names
 	 * 
 	 * @return array
@@ -298,7 +298,7 @@
 	}
 
 
-	/*
+	/**
 	 * Returns the post types that are active for all locations
 	 *
 	 */
@@ -323,7 +323,7 @@
 	}
 
 
-	/*
+	/**
 	 * Returns the saved option, but replaces the saved social network
 	 * data with simple data to display in the back-end
 	 *
@@ -368,7 +368,7 @@
 	}
 
 
-	/*
+	/**
 	 * Returns the share link for a social network given the network slug
    	 *
    	 * @param string $network_slug
@@ -414,244 +414,6 @@
 		}
 
 	}
-
-
-	/*
-	 * Returns the share count for a post and a social network from the 
-	 * social network through an API
-	 *
-	 * @param int post_id 			- id of the post
-	 * @param string $network_slug	- slug of the social network
-	 *
-	 * @return mixed 				- bool false if something went wrong, and int if everything went well
-	 *
-	 */
-	function dpsp_get_post_network_share_count( $post_id, $network_slug ) {
-
-		if( !isset( $post_id ) && !isset( $network_slug ) )
-			return false;
-
-
-		// Get page url for the post
-		$page_url = get_permalink( $post_id );
-		$page_url = urlencode( $page_url );
-
-		// Default post arguments
-		$args = array( 'timeout' => 30 );
-
-		// Prepare urls to get remote request
-		switch( $network_slug ) {
-
-			case 'facebook':
-				$url = 'https://graph.facebook.com/?id=' . $page_url;
-				break;
-
-			case 'twitter':
-				$url = 'http://public.newsharecounts.com/count.json?url=' . $page_url ;
-				break;
-
-			case 'google-plus':
-
-				$args = array(
-					'timeout' => 30,
-					'headers' => 'Content-type: application/json\r\n',
-					'body' => json_encode(
-						array(
-							'method' => 'pos.plusones.get', 
-							'id' => 'p', 
-							'params' => array(
-								'nolog' => true,
-								'id' => urldecode( $page_url ),
-								'source' => 'widget',
-								'userId' => '@viewer',
-								'groupId' => '@self'
-							), 
-							'jsonrpc' => '2.0', 
-							'key' => 'p', 
-							'apiVersion' => 'v1'
-						)
-					)
-				);
-
-				$url = 'https://clients6.google.com/rpc/?key=AIzaSyCKSbrvQasunBoV16zDH9R33D88CeLr9gQ';
-				break;
-
-			case 'pinterest':
-				$url = 'http://widgets.pinterest.com/v1/urls/count.json?source=6&url=' . $page_url;
-				break;
-
-		}
-
-		// Get response from the api call
-		if( $network_slug == 'google-plus' )
-			$response = wp_remote_post( $url, $args );
-		else
-			$response = wp_remote_get( $url, $args );
-
-
-		// Continue only if response code is 200
-		if( wp_remote_retrieve_response_code( $response ) == 200 ) {
-
-			$body = json_decode( wp_remote_retrieve_body( $response ), true );
-
-			// Get share value from response body
-			switch( $network_slug ) {
-
-				case 'facebook':
-					$share_count = isset( $body['share']['share_count'] ) ? $body['share']['share_count'] : false;
-					break;
-
-				case 'google-plus':
-					$share_count = isset( $body['result']['metadata']['globalCounts']['count'] ) ? (int)$body['result']['metadata']['globalCounts']['count'] : false;
-					break;
-
-				case 'pinterest':
-					$body 	= wp_remote_retrieve_body( $response );
-					$start  = strpos( $body, '(' );
-					$end    = strpos( $body, ')', $start + 1 );
-					$length = $end - $start;
-					$body 	= json_decode( substr( $body, $start + 1, $length - 1 ), true );
-
-					$share_count = ( isset( $body['count'] ) ? $body['count'] : false );
-
-					break;
-
-				default:
-					$share_count = ( isset( $body['count'] ) ? $body['count'] : false );
-					break;
-
-			}
-
-			return ( $share_count ? (int)$share_count : $share_count );
-
-		} else {
-
-			return false;
-
-		}
-
-		return false;
-
-	}
-
-
-	/*
-	 * Returns the share count saved for a post given the post_id and the
-	 * network we wish to retreive the value for
-	 *
-	 * @param int post_id 			- id of the post
-	 * @param string $network_slug	- slug of the social network
-	 *
-	 * @return mixed 				- bool false if something went wrong, and int if everything went well
-	 *
-	 */
-	function dpsp_get_post_share_count( $post_id, $network_slug ) {
-
-		if( !isset( $post_id ) && !isset( $network_slug ) )
-			return false;
-
-
-		$shares = get_post_meta( $post_id, 'dpsp_networks_shares', true );
-
-		if( isset( $shares[$network_slug] ) && in_array( $network_slug, dpsp_get_networks_with_social_count() ) )
-			return $shares[$network_slug];
-		else
-			return false;
-
-	}
-
-
-	/*
-	 * Returns an array with the saved shares from the database
-	 *
-	 * @param $post_id
-	 *
-	 * @return array
-	 *
-	 */
-	function dpsp_get_post_shares_counts( $post_id ) {
-
-		$network_shares = get_post_meta( $post_id, 'dpsp_networks_shares', true );
-
-		return apply_filters( 'dpsp_get_post_shares_counts', $network_shares, $post_id );
-
-	}
-
-
-	/*
-	 * Return total share count calculated for the social networks passed, if no social network is passed
-	 * the total share value will be calculated for all active networks
-	 *
-	 * @param array $networks 	- the networks for which we want to return the total count
-	 * @param string $location  - the location of the share buttons
-	 *
-	 * @return int
-	 *
-	 */
-	function dpsp_get_post_total_share_count( $post_id = 0, $networks = array(), $location = '' ) {
-
-		$total_shares = 0;
-
-		if( $post_id == 0 ) {
-			global $post;
-			$post_id = $post->ID;
-		}
-
-		if( empty($networks) )
-			$networks = dpsp_get_active_networks();
-
-
-		// Get network shares for this post
-		$networks_shares = get_post_meta( $post_id, 'dpsp_networks_shares', true );
-		$networks_shares = ( !empty( $networks_shares ) ? $networks_shares : array() );
-
-		// Pass through each network and increment the total shares counter
-		foreach( $networks as $network_slug )
-			$total_shares += ( isset($networks_shares[$network_slug]) && in_array( $network_slug, dpsp_get_networks_with_social_count() ) ? $networks_shares[$network_slug] : 0 );
-
-		return apply_filters( 'dpsp_get_post_total_share_count', $total_shares, $location );
-
-	}
-
-
-	/*
-	 * Rounds the share counts
-	 *
-	 */
-	function dpsp_round_share_counts( $share_count, $location = '' ) {
-
-		if( empty( $location ) )
-			return $share_count;
-
-		if( empty( $share_count ) )
-			return $share_count;
-
-
-		$location_settings = get_option( 'dpsp_location_' . $location, array() );
-
-		if( !isset( $location_settings['display']['count_round'] ) )
-			return $share_count;
-
-		if( is_array( $share_count ) ) {
-
-			foreach( $share_count as $key => $count ) {
-				if( $count / 1000 >= 1 )
-					$share_count[$key] = round( $count / 1000, 1 ) . 'k';
-			}
-
-
-		} else {
-
-			if( $share_count / 1000 >= 1 )
-				$share_count = round( $share_count / 1000, 1 ) . 'k';
-
-		}
-
-		return $share_count;
-
-	}
-	add_filter( 'dpsp_get_output_post_shares_counts', 'dpsp_round_share_counts', 10, 2 );
-	add_filter( 'dpsp_get_output_total_share_count', 'dpsp_round_share_counts', 10, 2 );
 
 
 	/*
@@ -782,3 +544,31 @@
 		return apply_filters( 'dpsp_get_post_image_url', $post_thumbnail_data[0], $post->ID );
 
 	}
+
+
+	/**
+     * Removes the script tags from the values of an array recursivelly
+     *
+     * @param array $array
+     *
+     * @return array
+     *
+     */
+    function dpsp_array_strip_script_tags( $array = array() ) {
+
+        if( empty( $array ) || ! is_array( $array ) )
+            return array();
+
+        foreach( $array as $key => $value ) {
+
+            if( is_array( $value ) )
+                $array[$key] = dpsp_array_strip_script_tags( $value );
+
+            else
+                $array[$key] = preg_replace( '@<(script)[^>]*?>.*?</\\1>@si', '', $value );
+
+        }
+
+        return $array;
+
+    }

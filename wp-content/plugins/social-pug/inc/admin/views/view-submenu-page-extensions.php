@@ -4,7 +4,7 @@
 
 	<h1 class="dpsp-page-title"><?php echo __( 'Available Tools', 'social-pug' ); ?></h1>
 
-	<p><?php _e( 'These are various tools available for Social Pug which further enhance the functionality of the plugin.', 'social-pug' ); ?></p>
+	<p><?php _e( 'These are the various tools available for Social Pug which further enhance the functionality of the plugin.', 'social-pug' ); ?></p>
 
 	<p><?php _e( 'To gain immediate access to the tools below, <a href="https://devpups.com/social-pug/pricing/">have a look at our pricing.</a>', 'social-pug' ); ?></p>
 
@@ -65,5 +65,26 @@
 			dpsp_output_tool_box( $tool_slug, $tool );
 	?>
 	</div><!-- End of Share Tools -->
+
+
+	<?php /* 
+	<h1 class="dpsp-page-title" style="margin-top: 25px;"><?php echo __( 'Recommended Plugins', 'social-pug' ); ?></h1>
+
+	<div class="dpsp-row dpsp-m-padding">
+	<?php 
+		$tools = array();
+
+		$tools['premium_networks'] = array(
+			'name' 		 		 => __( 'SkyePress - Auto Post and Schedule to Social Media', 'social-pug' ),
+			'img'		 		 => 'assets/img/skyepress-social-pug-promo.png',
+			'desc'				 => __( 'Auto Post to your Twitter, Facebook and LinkedIn profiles and much more...', 'social-pug' ),
+			'url'				 => admin_url( 'admin.php?page=dpsp-extensions&sub-page=skyepress' )
+		);
+
+		foreach( $tools as $tool_slug => $tool )
+			dpsp_output_tool_box( $tool_slug, $tool );
+	?>
+	</div><!-- End of Our Plugins -->
+	*/ ?>
 
 </div>

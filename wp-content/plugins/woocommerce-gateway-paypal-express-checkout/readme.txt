@@ -1,9 +1,9 @@
 === WooCommerce PayPal Express Checkout Payment Gateway ===
-Contributors: automattic, woothemes, akeda, dwainm, royho, allendav, slash1andy, woosteve, spraveenitpro, mikedmoore, fernashes, shellbeezy, danieldudzic, mikaey
+Contributors: automattic, woothemes, akeda, dwainm, royho, allendav, slash1andy, woosteve, spraveenitpro, mikedmoore, fernashes, shellbeezy, danieldudzic, mikaey, fullysupportedphil, dsmithweb, corsonr, bor0
 Tags: ecommerce, e-commerce, commerce, woothemes, wordpress ecommerce, store, sales, sell, shop, shopping, cart, checkout, configurable, paypal
 Requires at least: 4.4
 Tested up to: 4.4
-Stable tag: 1.1.2
+Stable tag: 1.2.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -84,6 +84,15 @@ https://gist.github.com/mikejolley/ad2ecc286c9ad6cefbb7065ba6dfef48
 3. Checkout with PayPal directly from the Cart.
 
 == Changelog ==
+
+= 1.2.0 =
+* Fix - Prevent conflict with other gateways.
+* Fix - Compatibility with WooCommerce 3.0, including ensuring the customer address is saved correctly.
+
+= 1.1.3 =
+* Fix   - Guest users can checkout without giving shipping information when required.
+* Fix   - Modal popup not working properly. Changed to full page redirect with a hook to add back the modal/popup.
+* Tweak - Guest checkout is on by default. Should be turned off by using this filter: woocommerce_paypal_express_checkout_allow_guests.
 
 = 1.1.2 =
 * Fix - Make sure translations are loaded properly.

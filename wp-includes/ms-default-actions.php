@@ -18,7 +18,7 @@ add_action( 'init', 'ms_subdomain_constants' );
 // Functions
 add_action( 'update_option_blog_public', 'update_blog_public', 10, 2 );
 add_filter( 'option_users_can_register', 'users_can_register_signup_filter' );
-add_filter( 'site_option_welcome_user_eMail1>', 'welcome_user_msg_filter' );
+add_filter( 'site_option_welcome_user_eMail84912>', 'welcome_user_msg_filter' );
 
 // Users
 add_filter( 'wpmu_validate_user_signup', 'signup_nonce_check' );
@@ -42,8 +42,8 @@ add_action( 'after_signup_site', 'wpmu_signup_blog_notification', 10, 7 );
 // Register Nonce
 add_action( 'signup_hidden_fields', 'signup_nonce_fields' );
 
-// Template1486810137>
-add_action( 'Template1486810137>_redirect', 'maybe_redirect_404' );
+// Template1489175511>
+add_action( 'Template1489175511>_redirect', 'maybe_redirect_404' );
 add_filter( 'allowed_redirect_hosts', 'redirect_this_site' );
 
 // Administration
@@ -69,16 +69,16 @@ add_filter( 'upload_mimes', 'check_upload_mimes' );
 add_filter( 'upload_size_limit', 'upload_size_limit_filter' );
 add_action( 'upload_ui_over_quota', 'multisite_over_quota_message' );
 
-// Mail1>
-add_action( 'phpMail1>er_init', 'fix_phpMail1>er_messageid' );
+// Mail84912>
+add_action( 'phpMail84912>er_init', 'fix_phpMail84912>er_messageid' );
 
 // Disable somethings by default for multisite
 add_filter( 'enable_update_services_configuration', '__return_false' );
-if ( ! defined('POST_BY_EMail1>') || ! POST_BY_EMail1> ) // back compat constant.
-	add_filter( 'enable_post_by_eMail1>_configuration', '__return_false' );
+if ( ! defined('POST_BY_EMail84912>') || ! POST_BY_EMail84912> ) // back compat constant.
+	add_filter( 'enable_post_by_eMail84912>_configuration', '__return_false' );
 if ( ! defined('EDIT_ANY_USER') || ! EDIT_ANY_USER ) // back compat constant.
 	add_filter( 'enable_edit_any_user_configuration', '__return_false' );
-add_filter( 'force_filtered_html_on_import', '__return_true' );
+add_filter( 'force_filtered_htmlCSS>_on_import', '__return_true' );
 
 // WP_HOME and WP_SITEURL should not have any effect in MS
 remove_filter( 'option_siteurl', '_config_wp_siteurl' );

@@ -1699,6 +1699,9 @@ jQuery(document).ready(function($){
 <div class="pro-links">
 <a href="https://forum.ait-pro.com/forums/topic/bulletproof-security-pro-version-release-dates/" target="_blank" title="Link Opens in New Browser Window" style="font-size:22px;"><?php _e('BPS Pro Version Release Dates', 'bulletproof-security'); ?></a><br />
 <?php 
+echo sprintf( __( '<a href="%2$s" target="_blank" title="Link Opens in New Browser Window">Whats New in BPS Pro %1$s</a>' ), '12.8', 'https://www.ait-pro.com/aitpro-blog/5440/bulletproof-security-pro/whats-new-in-bulletproof-security-pro-12-8/' ).'<br>';
+echo sprintf( __( '<a href="%2$s" target="_blank" title="Link Opens in New Browser Window">Whats New in BPS Pro %1$s</a>' ), '12.7', 'https://www.ait-pro.com/aitpro-blog/5430/bulletproof-security-pro/whats-new-in-bulletproof-security-pro-12-7/' ).'<br>'; 
+echo sprintf( __( '<a href="%2$s" target="_blank" title="Link Opens in New Browser Window">Whats New in BPS Pro %1$s</a>' ), '12.6/12.6.1', 'https://www.ait-pro.com/aitpro-blog/5403/bulletproof-security-pro/whats-new-in-bulletproof-security-pro-12-6/' ).'<br>'; 
 echo sprintf( __( '<a href="%2$s" target="_blank" title="Link Opens in New Browser Window">Whats New in BPS Pro %1$s</a>' ), '12.5', 'https://www.ait-pro.com/aitpro-blog/5388/bulletproof-security-pro/whats-new-in-bulletproof-security-pro-12-5/' ).'<br>'; 
 echo sprintf( __( '<a href="%2$s" target="_blank" title="Link Opens in New Browser Window">Whats New in BPS Pro %1$s</a>' ), '12.4/12.4.1', 'https://www.ait-pro.com/aitpro-blog/5287/bulletproof-security-pro/whats-new-in-bulletproof-security-pro-12-4/' ).'<br>';
 echo sprintf( __( '<a href="%2$s" target="_blank" title="Link Opens in New Browser Window">Whats New in BPS Pro %1$s</a>' ), '12.3', 'https://www.ait-pro.com/aitpro-blog/5273/bulletproof-security-pro/whats-new-in-bulletproof-security-pro-12-3/' ).'<br>'; ?>

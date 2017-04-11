@@ -159,7 +159,7 @@ global $bps_topDiv, $bps_bottomDiv;
 	$CC_Options_root = get_option('bulletproof_security_options_customcode'); 
 ?>    
 
-    <strong><label for="bps-CCode"><?php _e('CUSTOM CODE TOP PHP/PHP.INI HANDLER/CACHE CODE:<br>Add php/php.ini handler code, cache code and/or <a href="https://forum.ait-pro.com/forums/topic/htaccess-caching-code-speed-boost-cache-code/" title="Link opens in a new Browser window" target="_blank">Speed Boost Cache Code</a>', 'bulletproof-security'); ?> </label></strong><br />
+    <strong><label for="bps-CCode"><?php echo number_format_i18n( 1 ).'. '; _e('CUSTOM CODE TOP PHP/PHP.INI HANDLER/CACHE CODE:<br>Add php/php.ini handler code, cache code and/or <a href="https://forum.ait-pro.com/forums/topic/htaccess-caching-code-speed-boost-cache-code/" title="Link opens in a new Browser window" target="_blank">Speed Boost Cache Code</a>', 'bulletproof-security'); ?> </label></strong><br />
 <strong><?php $text = '<font color="#2ea2cc">'.__('ONLY add valid php/php.ini handler htaccess code and/or cache htaccess code below or text commented out with a pound sign #', 'bulletproof-security').'</font>'; echo $text ; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_one" tabindex="1"><?php echo $CC_Options_root['bps_customcode_one']; ?></textarea>
     </td>
@@ -167,7 +167,7 @@ global $bps_topDiv, $bps_bottomDiv;
   </tr>
   <tr>
     <td class="bps-table_cell_help_custom_code">
-    <strong><label for="bps-CCode"><?php _e('CUSTOM CODE TURN OFF YOUR SERVER SIGNATURE:', 'bulletproof-security'); ?> </label></strong><br />
+    <strong><label for="bps-CCode"><?php echo number_format_i18n( 2 ).'. '; _e('CUSTOM CODE TURN OFF YOUR SERVER SIGNATURE:', 'bulletproof-security'); ?> </label></strong><br />
 <strong><?php $text = '<font color="#2ea2cc">'.__('You MUST copy and paste the entire TURN OFF YOUR SERVER SIGNATURE section of code from your root .htaccess file into this text box first. You can then edit and modify the code in this text window and save your changes.', 'bulletproof-security').'</font>'; echo $text ; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_server_signature" tabindex="2"><?php echo @$CC_Options_root['bps_customcode_server_signature']; ?></textarea>
     </td>
@@ -175,7 +175,7 @@ global $bps_topDiv, $bps_bottomDiv;
   </tr>
   <tr>
     <td class="bps-table_cell_help_custom_code">
-    <strong><label for="bps-CCode"><?php _e('CUSTOM CODE DO NOT SHOW DIRECTORY LISTING/DIRECTORY INDEX:', 'bulletproof-security'); ?> </label></strong><br />
+    <strong><label for="bps-CCode"><?php echo number_format_i18n( 3 ).'. '; _e('CUSTOM CODE DO NOT SHOW DIRECTORY LISTING/DIRECTORY INDEX:', 'bulletproof-security'); ?> </label></strong><br />
 <strong><?php $text = '<font color="#2ea2cc">'.__('You MUST copy and paste the entire DO NOT SHOW DIRECTORY LISTING and DIRECTORY INDEX sections of code from your root .htaccess file into this text box first. You can then edit and modify the code in this text window and save your changes.', 'bulletproof-security').'</font>'; echo $text ; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_directory_index" tabindex="3"><?php echo $CC_Options_root['bps_customcode_directory_index']; ?></textarea>
     </td>
@@ -183,7 +183,7 @@ global $bps_topDiv, $bps_bottomDiv;
   </tr>
   <tr>
     <td class="bps-table_cell_help_custom_code">
-    <strong><label for="bps-CCode"><?php _e('CUSTOM CODE BRUTE FORCE LOGIN PAGE PROTECTION:', 'bulletproof-security'); ?> </label></strong><br />
+    <strong><label for="bps-CCode"><?php echo number_format_i18n( 4 ).'. '; _e('CUSTOM CODE BRUTE FORCE LOGIN PAGE PROTECTION:', 'bulletproof-security'); ?> </label></strong><br />
 <strong><?php $text = '<font color="#2ea2cc">'.__('This Custom Code text box is for optional/Bonus code. To get this code click the link below:', 'bulletproof-security').'<br><a href="https://forum.ait-pro.com/forums/topic/protect-login-page-from-brute-force-login-attacks/" title="Link opens in a new Browser window" target="_blank">Brute Force Login Page Protection Code</a></font>'; echo $text ; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_server_protocol" tabindex="4"><?php echo $CC_Options_root['bps_customcode_server_protocol']; ?></textarea>
     </td>
@@ -191,7 +191,7 @@ global $bps_topDiv, $bps_bottomDiv;
   </tr>
   <tr>
     <td class="bps-table_cell_help_custom_code">
-    <strong><label for="bps-CCode"><?php _e('CUSTOM CODE ERROR LOGGING AND TRACKING:', 'bulletproof-security'); ?> </label></strong><br />
+    <strong><label for="bps-CCode"><?php echo number_format_i18n( 5 ).'. '; _e('CUSTOM CODE ERROR LOGGING AND TRACKING:', 'bulletproof-security'); ?> </label></strong><br />
 <strong><?php $text = '<font color="#2ea2cc">'.__('You MUST copy and paste the entire ERROR LOGGING AND TRACKING section of code from your root .htaccess file into this text box first. You can then edit and modify the code in this text window and save your changes.', 'bulletproof-security').'</font>'; echo $text ; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_error_logging" tabindex="5"><?php echo $CC_Options_root['bps_customcode_error_logging']; ?></textarea>
     </td>
@@ -199,7 +199,7 @@ global $bps_topDiv, $bps_bottomDiv;
   </tr>
   <tr>
     <td class="bps-table_cell_help_custom_code">
-    <strong><label for="bps-CCode"><?php _e('CUSTOM CODE DENY ACCESS TO PROTECTED SERVER FILES AND FOLDERS:', 'bulletproof-security'); ?> </label></strong><br />
+    <strong><label for="bps-CCode"><?php echo number_format_i18n( 6 ).'. '; _e('CUSTOM CODE DENY ACCESS TO PROTECTED SERVER FILES AND FOLDERS:', 'bulletproof-security'); ?> </label></strong><br />
 <strong><?php $text = '<font color="#2ea2cc">'.__('You MUST copy and paste the entire DENY ACCESS TO PROTECTED SERVER FILES AND FOLDERS section of code from your root .htaccess file into this text box first. You can then edit and modify the code in this text window and save your changes.', 'bulletproof-security').'</font>'; echo $text ; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_deny_dot_folders" tabindex="6"><?php echo @$CC_Options_root['bps_customcode_deny_dot_folders']; ?></textarea>
     </td>
@@ -207,7 +207,7 @@ global $bps_topDiv, $bps_bottomDiv;
   </tr>
   <tr>
     <td class="bps-table_cell_help_custom_code">
-    <strong><label for="bps-CCode"><?php _e('CUSTOM CODE WP-ADMIN/INCLUDES: DO NOT add wp-admin .htaccess code here', 'bulletproof-security'); ?> </label></strong><br />
+    <strong><label for="bps-CCode"><?php echo number_format_i18n( 7 ).'. '; _e('CUSTOM CODE WP-ADMIN/INCLUDES: DO NOT add wp-admin .htaccess code here', 'bulletproof-security'); ?> </label></strong><br />
 <strong><?php $text = '<font color="#2ea2cc">'.__('Add one pound sign # below to prevent the WP-ADMIN/INCLUDES section of code from being created in your root .htaccess file', 'bulletproof-security').'</font>'; echo $text ; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_admin_includes" tabindex="7"><?php echo $CC_Options_root['bps_customcode_admin_includes']; ?></textarea>
     </td>
@@ -215,7 +215,7 @@ global $bps_topDiv, $bps_bottomDiv;
   </tr>
   <tr>
     <td class="bps-table_cell_help_custom_code">
-    <strong><label for="bps-CCode"><?php _e('CUSTOM CODE WP REWRITE LOOP START: www/non-www http/https Rewrite code here', 'bulletproof-security'); ?> </label></strong><br />
+    <strong><label for="bps-CCode"><?php echo number_format_i18n( 8 ).'. '; _e('CUSTOM CODE WP REWRITE LOOP START: www/non-www http/https Rewrite code here', 'bulletproof-security'); ?> </label></strong><br />
 <strong><?php $text = '<font color="#2ea2cc">'.__('You MUST copy and paste the entire WP REWRITE LOOP START section of code from your root .htaccess file into this text box first. You can then edit and modify the code in this text window and save your changes.', 'bulletproof-security').'</font>'; echo $text ; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_wp_rewrite_start" tabindex="8"><?php echo $CC_Options_root['bps_customcode_wp_rewrite_start']; ?></textarea>
     </td>
@@ -224,7 +224,7 @@ global $bps_topDiv, $bps_bottomDiv;
   <tr>
     <td class="bps-table_cell_help_custom_code">
      <strong><label for="bps-CCode">
-	<?php _e('CUSTOM CODE REQUEST METHODS FILTERED:', 'bulletproof-security'); ?><br />
+	<?php echo number_format_i18n( 9 ).'. '; _e('CUSTOM CODE REQUEST METHODS FILTERED:', 'bulletproof-security'); ?><br />
 	<?php _e('Whitelist User Agents and allow HEAD Requests', 'bulletproof-security'); ?> </label></strong><br />
 <strong><?php $text = '<font color="#2ea2cc">'.__('You MUST copy and paste the entire REQUEST METHODS FILTERED section of code from your root .htaccess file into this text box first. You can then edit and modify the code in this text window and save your changes. To Allow HEAD Requests, comment out these 2 lines of code with # signs: ', 'bulletproof-security').'#RewriteCond %{REQUEST_METHOD} ^(HEAD) [NC] and #RewriteRule ^(.*)$ - [R=405,L].</font>'; echo $text ; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_request_methods" tabindex="9"><?php echo $CC_Options_root['bps_customcode_request_methods']; ?></textarea>   
@@ -245,7 +245,7 @@ global $bps_topDiv, $bps_bottomDiv;
   </tr>
   <tr>
     <td class="bps-table_cell_help_custom_code">
-    <strong><label for="bps-CCode"><?php _e('CUSTOM CODE PLUGIN/THEME SKIP/BYPASS RULES:<br>Add personal plugin/theme skip/bypass rules here', 'bulletproof-security'); ?> </label></strong><br />
+    <strong><label for="bps-CCode"><?php echo number_format_i18n( 10 ).'. '; _e('CUSTOM CODE PLUGIN/THEME SKIP/BYPASS RULES:<br>Add personal plugin/theme skip/bypass rules here', 'bulletproof-security'); ?> </label></strong><br />
  <strong><?php $text = '<font color="#2ea2cc">'.__('ONLY add valid htaccess code below or text commented out with a pound sign #', 'bulletproof-security').'</font>'; echo $text; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_two" tabindex="10"><?php echo $CC_Options_root['bps_customcode_two']; ?></textarea>
     </td>
@@ -253,7 +253,7 @@ global $bps_topDiv, $bps_bottomDiv;
   </tr>
   <tr>
     <td class="bps-table_cell_help_custom_code">
-    <strong><label for="bps-CCode"><?php _e('CUSTOM CODE TIMTHUMB FORBID RFI and MISC FILE SKIP/BYPASS RULE:', 'bulletproof-security'); ?> </label></strong><br />
+    <strong><label for="bps-CCode"><?php echo number_format_i18n( 11 ).'. '; _e('CUSTOM CODE TIMTHUMB FORBID RFI and MISC FILE SKIP/BYPASS RULE:', 'bulletproof-security'); ?> </label></strong><br />
  <strong><?php $text = '<font color="#2ea2cc">'.__('You MUST copy and paste the entire TIMTHUMB FORBID RFI section of code from your root .htaccess file into this text box first. You can then edit and modify the code in this text window and save your changes.', 'bulletproof-security').'</font>'; echo $text; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_timthumb_misc" tabindex="11"><?php echo $CC_Options_root['bps_customcode_timthumb_misc']; ?></textarea>
     </td>
@@ -261,7 +261,7 @@ global $bps_topDiv, $bps_bottomDiv;
   </tr>
   <tr>
     <td class="bps-table_cell_help_custom_code">
-    <strong><label for="bps-CCode"><?php _e('CUSTOM CODE BPSQSE BPS QUERY STRING EXPLOITS:', 'bulletproof-security'); ?> </label></strong><br />
+    <strong><label for="bps-CCode"><?php echo number_format_i18n( 12 ).'. '; _e('CUSTOM CODE BPSQSE BPS QUERY STRING EXPLOITS:', 'bulletproof-security'); ?> </label></strong><br />
  <strong><?php $text = '<font color="#2ea2cc">'.__('You MUST copy and paste the entire BPSQSE QUERY STRING EXPLOITS section of code from your root .htaccess file from # BEGIN BPSQSE BPS QUERY STRING EXPLOITS to # END BPSQSE BPS QUERY STRING EXPLOITS into this text box first. You can then edit and modify the code in this text window and save your changes.', 'bulletproof-security').'</font>'; echo $text; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_bpsqse" tabindex="12"><?php echo $CC_Options_root['bps_customcode_bpsqse']; ?></textarea>
     </td>
@@ -272,7 +272,7 @@ global $bps_topDiv, $bps_bottomDiv;
 
   <tr>
     <td class="bps-table_cell_help_custom_code">
-    <strong><label for="bps-CCode"><?php _e('CUSTOM CODE WP REWRITE LOOP END: Add WP Rewrite Loop End code here', 'bulletproof-security'); ?> </label></strong><br />
+    <strong><label for="bps-CCode"><?php echo number_format_i18n( 12 ).'. '; _e('CUSTOM CODE WP REWRITE LOOP END: Add WP Rewrite Loop End code here', 'bulletproof-security'); ?> </label></strong><br />
  <strong><?php $text = '<font color="#2ea2cc">'.__('This is a Special Custom Code text box that should only be used if the correct WP REWRITE LOOP END code is not being created in your root .htaccess file. See the Read Me help button for more information.', 'bulletproof-security').'</font>'; echo $text; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_wp_rewrite_end" tabindex="13"><?php echo $CC_Options_root['bps_customcode_wp_rewrite_end']; ?></textarea>
 
@@ -285,7 +285,7 @@ global $bps_topDiv, $bps_bottomDiv;
 
   <tr>
     <td class="bps-table_cell_help_custom_code">
-    <strong><label for="bps-CCode"><?php _e('CUSTOM CODE DENY BROWSER ACCESS TO THESE FILES:', 'bulletproof-security'); ?> </label></strong><br />
+    <strong><label for="bps-CCode"><?php echo number_format_i18n( 13 ).'. '; _e('CUSTOM CODE DENY BROWSER ACCESS TO THESE FILES:', 'bulletproof-security'); ?> </label></strong><br />
  <strong><?php $text = '<font color="#2ea2cc">'.__('You MUST copy and paste the entire DENY BROWSER ACCESS section of code from your root .htaccess file into this text box first. You can then edit and modify the code in this text window and save your changes.', 'bulletproof-security').'</font>'; echo $text; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_deny_files" tabindex="14"><?php echo $CC_Options_root['bps_customcode_deny_files']; ?></textarea>
     </td>
@@ -305,7 +305,7 @@ global $bps_topDiv, $bps_bottomDiv;
   </tr>
   <tr>
     <td class="bps-table_cell_help_custom_code">
-    <strong><label for="bps-CCode"><?php _e('CUSTOM CODE BOTTOM HOTLINKING/FORBID COMMENT SPAMMERS/BLOCK BOTS/BLOCK IP/REDIRECT CODE: Add miscellaneous code here', 'bulletproof-security'); ?> </label></strong><br />
+    <strong><label for="bps-CCode"><?php echo number_format_i18n( 14 ).'. '; _e('CUSTOM CODE BOTTOM HOTLINKING/FORBID COMMENT SPAMMERS/BLOCK BOTS/BLOCK IP/REDIRECT CODE: Add miscellaneous code here', 'bulletproof-security'); ?> </label></strong><br />
  <strong><?php $text = '<font color="#2ea2cc">'.__('ONLY add valid htaccess code below or text commented out with a pound sign #', 'bulletproof-security').'</font>'; echo $text; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_three" tabindex="15"><?php echo $CC_Options_root['bps_customcode_three']; ?></textarea>
     </td>
@@ -365,7 +365,7 @@ jQuery(document).ready(function($){
 	$CC_Options_wpadmin = get_option('bulletproof_security_options_customcode_WPA'); 
 ?>
 
-<strong><label for="bps-CCode"><?php _e('CUSTOM CODE WPADMIN DENY BROWSER ACCESS TO FILES:<br>Add additional wp-admin files that you would like to block here', 'bulletproof-security'); ?> </label></strong><br />
+<strong><label for="bps-CCode"><?php echo number_format_i18n( 1 ).'. '; _e('CUSTOM CODE WPADMIN DENY BROWSER ACCESS TO FILES:<br>Add additional wp-admin files that you would like to block here', 'bulletproof-security'); ?> </label></strong><br />
 <strong><?php $text = '<font color="#2ea2cc">'.__('You MUST copy and paste the entire WPADMIN DENY BROWSER ACCESS TO FILES section of code from your wp-admin .htaccess file into this text box first. You can then edit and modify the code in this text window and save your changes. Add one pound sign # below to prevent the WPADMIN DENY BROWSER ACCESS TO FILES section of code from being created in your wp-admin .htaccess file', 'bulletproof-security').'</font>'; echo $text; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_deny_files_wpa" tabindex="1"><?php echo $CC_Options_wpadmin['bps_customcode_deny_files_wpa']; ?></textarea>    
     </td>
@@ -386,7 +386,7 @@ jQuery(document).ready(function($){
   </tr>
   <tr>
     <td class="bps-table_cell_help_custom_code">
-    <strong><label for="bps-CCode"><?php _e('CUSTOM CODE WPADMIN TOP:<br>wp-admin password protection & miscellaneous custom code here', 'bulletproof-security'); ?> </label></strong><br />
+    <strong><label for="bps-CCode"><?php echo number_format_i18n( 2 ).'. '; _e('CUSTOM CODE WPADMIN TOP:<br>wp-admin password protection & miscellaneous custom code here', 'bulletproof-security'); ?> </label></strong><br />
 <strong><?php $text = '<font color="#2ea2cc">'.__('ONLY add valid htaccess code below or text commented out with a pound sign #', 'bulletproof-security').'</font>'; echo $text; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_one_wpa" tabindex="2"><?php echo $CC_Options_wpadmin['bps_customcode_one_wpa']; ?></textarea>
     </td>
@@ -394,7 +394,7 @@ jQuery(document).ready(function($){
   </tr>
   <tr>
     <td class="bps-table_cell_help_custom_code">
-    <strong><label for="bps-CCode"><?php _e('CUSTOM CODE WPADMIN PLUGIN/FILE SKIP RULES:<br>Add wp-admin plugin/file skip rules code here', 'bulletproof-security'); ?> </label></strong><br />
+    <strong><label for="bps-CCode"><?php echo number_format_i18n( 3 ).'. '; _e('CUSTOM CODE WPADMIN PLUGIN/FILE SKIP RULES:<br>Add wp-admin plugin/file skip rules code here', 'bulletproof-security'); ?> </label></strong><br />
  <strong><?php $text = '<font color="#2ea2cc">'.__('ONLY add valid htaccess code below or text commented out with a pound sign #', 'bulletproof-security').'</font>'; echo $text; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_two_wpa" tabindex="3"><?php echo $CC_Options_wpadmin['bps_customcode_two_wpa']; ?></textarea>
     </td>
@@ -402,7 +402,7 @@ jQuery(document).ready(function($){
   </tr>
   <tr>
     <td class="bps-table_cell_help_custom_code">
-    <strong><label for="bps-CCode"><?php _e('CUSTOM CODE BPSQSE-check BPS QUERY STRING EXPLOITS AND FILTERS:<br>Modify Query String Exploit code here', 'bulletproof-security'); ?> </label></strong><br />
+    <strong><label for="bps-CCode"><?php echo number_format_i18n( 4 ).'. '; _e('CUSTOM CODE BPSQSE-check BPS QUERY STRING EXPLOITS AND FILTERS:<br>Modify Query String Exploit code here', 'bulletproof-security'); ?> </label></strong><br />
 <strong><?php $text = '<font color="#2ea2cc">'.__('You MUST copy and paste the entire BPS QUERY STRING EXPLOITS section of code from your wp-admin .htaccess file from # BEGIN BPSQSE-check BPS QUERY STRING EXPLOITS AND FILTERS to # END BPSQSE-check BPS QUERY STRING EXPLOITS AND FILTERS into this text box first. You can then edit and modify the code in this text window and save your changes.', 'bulletproof-security').'</font>'; echo $text; ?></strong><br />
     <textarea class="bps-text-area-custom-code" name="bps_customcode_bpsqse_wpa" tabindex="4"><?php echo $CC_Options_wpadmin['bps_customcode_bpsqse_wpa']; ?></textarea>
     </td>

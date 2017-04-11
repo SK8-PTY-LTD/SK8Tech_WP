@@ -488,7 +488,7 @@ if ( isset( $_POST['bpsResetDismissSubmit'] ) && current_user_can('manage_option
 
 	$user_id = $current_user->ID;
 
-	echo '<div id="message" class="updated fade" style="color:#000000;font-weight:bold;background-color:#dfecf2;border:1px solid #999;-moz-border-radius-topleft:3px;-webkit-border-top-left-radius:3px;-khtml-border-top-left-radius:3px;border-top-left-radius:3px;-moz-border-radius-topright:3px;-webkit-border-top-right-radius:3px;-khtml-border-top-right-radius:3px;border-top-right-radius:3px;-webkit-box-shadow: 3px 3px 5px -1px rgba(153,153,153,0.7);-moz-box-shadow: 3px 3px 5px -1px rgba(153,153,153,0.7);box-shadow: 3px 3px 5px -1px rgba(153,153,153,0.7);"><p>';
+	echo '<div id="message" class="updated fade" style="color:#000000;font-weight:600;background-color:#dfecf2;border:1px solid #999;-moz-border-radius-topleft:3px;-webkit-border-top-left-radius:3px;-khtml-border-top-left-radius:3px;border-top-left-radius:3px;-moz-border-radius-topright:3px;-webkit-border-top-right-radius:3px;-khtml-border-top-right-radius:3px;border-top-right-radius:3px;-webkit-box-shadow: 3px 3px 5px -1px rgba(153,153,153,0.7);-moz-box-shadow: 3px 3px 5px -1px rgba(153,153,153,0.7);box-shadow: 3px 3px 5px -1px rgba(153,153,153,0.7);"><p>';
 
 
 
@@ -599,10 +599,10 @@ if ( isset( $_POST['bpsResetDismissSubmit'] ) && current_user_can('manage_option
 	}
 
 	if ( ! delete_user_meta($user_id, 'bps_ignore_sucuri_notice') ) {
-		$text = __('The Sucuri 1-click Hardening wp-content .htaccess file Dismiss Notice is NOT set. Nothing to reset.', 'bulletproof-security').'<br>';
+		$text = __('The Sucuri Restrict wp-content access Hardening Option problem Dismiss Notice is NOT set. Nothing to reset.', 'bulletproof-security').'<br>';
 		echo $text;
 	} else {
-		$text = '<span style="color:#008000;">'.__('Success! The Sucuri 1-click Hardening wp-content .htaccess file check is reset.', 'bulletproof-security').'</span><br>';
+		$text = '<span style="color:#008000;">'.__('Success! The Sucuri Restrict wp-content access Hardening Option problem check is reset.', 'bulletproof-security').'</span><br>';
 		echo $text;
 	}
 
@@ -660,6 +660,14 @@ if ( isset( $_POST['bpsResetDismissSubmit'] ) && current_user_can('manage_option
 		echo $text;
 	} else {
 		$text = '<span style="color:#008000;">'.__('Success! The BPS Plugin Automatic Update Notice is reset.', 'bulletproof-security').'</span><br>';
+		echo $text;
+	}
+
+	if ( ! delete_user_meta($user_id, 'bpsPro_ignore_EPC_plugin_notice') ) {
+		$text = __('The Endurance Page Cache (EPC) plugin Notice is NOT set. Nothing to reset.', 'bulletproof-security').'<br>';
+		echo $text;
+	} else {
+		$text = '<span style="color:#008000;">'.__('Success! The Endurance Page Cache (EPC) plugin Notice is reset.', 'bulletproof-security').'</span><br>';
 		echo $text;
 	}
 

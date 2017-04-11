@@ -156,7 +156,7 @@
 
 		global $post;
 
-		$output = '<ul class="dpsp-networks-btns-wrapper ' . ( !empty($location) ? 'dpsp-networks-btns-' . $location : '' ) . '">';
+		$output = '<ul class="dpsp-networks-btns-wrapper ' . ( !empty($location) ? 'dpsp-networks-btns-' . esc_attr( $location ) : '' ) . '">';
 
 		// Set current network and networks count		
 		$current_network = 1;
@@ -164,7 +164,7 @@
 
 		// Get networks share count for this post
 		if( $post )
-			$networks_shares = apply_filters( 'dpsp_get_output_post_shares_counts', dpsp_get_post_shares_counts( $post->ID ), $location );
+			$networks_shares = apply_filters( 'dpsp_get_output_post_shares_counts', dpsp_get_post_share_counts( $post->ID ), $location );
 
 		$networks_shares = ( !empty( $networks_shares ) ? $networks_shares : array() );
 
@@ -302,6 +302,10 @@
 		if( !is_singular() )
 			return;
 
+		// Facebook specific
+		if( ! empty( $settings['facebook_app_id'] ) )
+			echo '<meta property="fb:app_id" 	content ="' . esc_attr( $settings['facebook_app_id'] ) . '" />';
+
 		// Twitter specific
 		echo '<meta name="twitter:card" 		content="summary" />';
 
@@ -318,8 +322,43 @@
 	add_action( 'wp_head', 'dpsp_output_meta_tags' );
 
 
+	/**
+	 * Outputs the script needed to pull the share counts for the current post
+	 *
+	 */
+	function dpsp_output_ajax_pull_post_share_counts() {
 
+		// Output the script only on single posts
+		if( ! is_singular() )
+			return;
 
+		global $post;
+
+		// Filter to disable the output of the ajax pull share counts js data variables
+		if( ! apply_filters( 'dpsp_output_ajax_pull_post_share_counts', true ) )
+			return;
+
+		// Check last updated timestamp and output the script only
+		// if at least 3 hours have passed
+		$shares_last_updated = get_post_meta( $post->ID, 'dpsp_networks_shares_last_updated', true );
+
+		if( $shares_last_updated >= time() - 3 * HOUR_IN_SECONDS )
+			return;
+
+		
+		$contents = "
+			var dpsp_ajax_url = '" . admin_url( 'admin-ajax.php' ) . "';
+
+			var dpsp_ajax_pull_post_share_counts_data = {
+				action  : 'dpsp_ajax_pull_post_share_counts',
+				post_id : '" . $post->ID . "'
+			}
+		";
+		
+		wp_add_inline_script( 'dpsp-frontend-js', $contents, 'before' );
+
+	}
+	add_action( 'wp_enqueue_scripts', 'dpsp_output_ajax_pull_post_share_counts' );
 
 
 

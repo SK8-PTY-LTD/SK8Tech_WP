@@ -33,7 +33,7 @@
 	add_action( 'admin_init', 'dpsp_settings_register_settings' );
 
 
-	/*
+	/**
 	 * Filter and sanitize settings
 	 *
 	 * @param array $new_settings
@@ -41,6 +41,8 @@
 	 */
 	function dpsp_settings_sanitize( $new_settings ) {
 
+		$new_settings = dpsp_array_strip_script_tags( $new_settings );
+		
 		return $new_settings;
 
 	}

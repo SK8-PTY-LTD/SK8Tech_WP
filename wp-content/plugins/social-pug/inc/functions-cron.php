@@ -98,63 +98,31 @@
 		 * settings page and get network share counts
 		 *
 		 */
-		$posts 	   	  = get_posts( array( 'post_type' => $post_types, 'numberposts' => -1 ) );
-		$top_posts 	  = array();
+		$args = array( 'post_type' => $post_types, 'numberposts' => 200 );
+		
+		// Get posts
+		$posts = get_posts( $args );
 
-		if( !empty( $posts ) ) {
-			foreach( $posts as $post_object ) {
 
-				$dpsp_networks_shares = get_post_meta( $post_object->ID, 'dpsp_networks_shares', true );
+		// Exit execution for following statements
+		if( empty( $posts ) )
+			return;
 
-				if( empty( $dpsp_networks_shares ) )
-					$dpsp_networks_shares = array();
+		if( empty( $social_networks ) )
+			return;
 
-				if( !empty( $social_networks ) ) {
-					foreach( $social_networks as $network_slug ) {
 
-						if( !in_array( $network_slug, dpsp_get_networks_with_social_count() ) )
-							continue;
+		// Continue if we reach this point
+		foreach( $posts as $post_object ) {
 
-						$share_count = dpsp_get_post_network_share_count( $post_object->ID, $network_slug );
+			// Get social shares from the networks
+			$share_counts 	= dpsp_pull_post_share_counts( $post_object->ID );
 
-						if( $share_count !== false )
-							$dpsp_networks_shares[$network_slug] = $share_count;
+			// Update share counts in the db
+			$shares_updated = dpsp_update_post_share_counts( $post_object->ID, $share_counts );
 
-					}
-				}
 
-				// Update post meta with all shares
-				update_post_meta( $post_object->ID, 'dpsp_networks_shares', $dpsp_networks_shares );
-
-				// Get total shares and save top posts
-				$total_shares = 0;
-
-				if( !empty( $dpsp_networks_shares ) ) {
-					foreach( $dpsp_networks_shares as $network_slug => $share_count )
-						$total_shares += $share_count;
-				}
-				
-				$top_posts[$post_object->post_type][$post_object->ID] = $total_shares;
-
-			}
-
-			// Filter top posts array
-			foreach( $post_types as $key => $post_type ) {
-				if( isset( $top_posts[$post_type] ) && !empty( $top_posts[$post_type] ) ) {
-
-					// Sort descending
-					arsort( $top_posts[$post_type] );
-
-					// Get only first ten
-					$top_posts[$post_type] = array_slice( $top_posts[$post_type], 0, 10, true );
-
-				}
-			}
-
-			// Update top posts
-			update_option( 'dpsp_top_shared_posts', json_encode( $top_posts ) );
-
-		}
+		} // End of posts loop
 		
 	}
 	add_action( 'dpsp_cron_get_posts_networks_share_count', 'dpsp_cron_get_posts_networks_share_count' );

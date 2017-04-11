@@ -5,14 +5,15 @@ Tags: social, social share, social media, social network, social share buttons, 
 
 
 Requires at least: 3.1
-Tested up to: 4.7
-Stable tag: 1.2.6
+Tested up to: 4.7.3
+Stable tag: 1.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Social share buttons with style that will increase your social shares and user interaction with your website.
 
 == Description ==
+[Homepage](https://devpups.com/) | [Documentation](http://docs.devpups.com/) | [Premium Version](https://devpups.com/social-pug/)
 
 **Social Share Buttons with Style**
 
@@ -70,6 +71,19 @@ http://www.devpups.com/
 
 
 == Changelog ==
+= 1.3.3 =
+* New: Added Facebook App ID field in the settings page in order for posts to pass Facebook's App ID validation
+
+= 1.3.2 =
+* Fixed: Performed a security audit and fixed security issues
+
+= 1.3.1 =
+* Fixed: Fatal error on some websites.
+
+= 1.3.0 =
+* New: Social share counts are pulled asynchronous for each post after the post loads
+* Misc: Refactored social share system
+
 = 1.2.6 =
 * Fixed: XSS vulnerability in plugin settings pages
 

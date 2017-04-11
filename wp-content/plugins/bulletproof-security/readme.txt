@@ -4,7 +4,7 @@ Donate link: https://wordpress.org/support/view/plugin-reviews/bulletproof-secur
 Tags: 400, 401, 403, 404, 405, 410, 503, apache, antivirus, attack, auth cookie, authenticate, authentication, authentication cookie, author, author id, auto-logout, automatic, backdoor, backup, ban, base64, block, blocked, Bot, brute force, bruteforce, bulletproof, chmod, code, coming soon, cookie, cookie expiration, crack, cracking, crlf, csrf, database backup, database table prefix, db backup, db table backup, db table prefix, developer, development, directory traversal, dos, ddos, dump, empty plugin, encode, enumeration, error log, event listener, expire, exploit, exploitation, file inclusion, firewall, hack, hackers, hidden file, hidden plugin, htaccess, http log, idle, idle logout, idle time, idle user, idle session, inactive logout, inactive time, inactive user, inactive session, infect, infected, infection, injection, lfi, linux, litespeed, lock, log, log off, logging, login alerts, login security, login, maintenance mode, maintenance, malicious, malware, multisite, mysql, mysql backup, network, offline, optimize, optimization, path traversal, performance, permissions, pingback, prevent, prevention, privacy, private, protection, remember me, rfi, safe, safety, schedule backup, script, secure, security log, security, session, signout, spam, spammers, speed increase, speed boost, sql injection, system information, system info, timeout, trackback, unavailable, under construction, user id, user account, user role, username, users, virus, viruses, vulnerable, vulnerability, website backup, wordpress backup, website security, windows, wordpress security, xmlrpc, xml-rpc, xss
 Requires at least: 3.7 
 Tested up to: 4.7
-Stable tag: .54.4
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -368,6 +368,7 @@ Extensive Help Info can be found on the <a href="https://forum.ait-pro.com/forum
 * Security|HTTP Error Logging: 400|403|404|405|410 HTTP Status Codes
 * Security Log: Add|Remove User Agents|Bots to Ignore|Not Log or Allow|Log
 * Security Log: Turn On|Turn Off|Delete Log
+* Security Log: Limit POST Request Body Data - capture or do not capture hacker scripts used in attacks. Note: See BPS POST Request Attack Protection Bonus Custom Code
 * Security Log Automation: Automatically zipped, emailed and replaced based on file size
 * Automatic .htaccess file updating on BPS upgrade installation
 * New .htaccess security filters automatically added during upgrade
@@ -376,19 +377,17 @@ Extensive Help Info can be found on the <a href="https://forum.ait-pro.com/forum
 * Anti Comment Spambot .htaccess code - Forbid Empty Referrer Spambots
 * Author ID|User ID|Username Bot Probe Protection
 * Custom Code feature: Add|Edit|Modify|Save|Export|Import additional Bonus or personal custom .htaccess code
-* WordPress readme.html and /wp-admin/install.php protected with .htaccess security protection
-* wp-config.php and bb-config.php files protected with .htaccess security protection
-* php.ini and php5.ini files protected with .htaccess security protection
-* WordPress database errors turned off - Verification and function insurance
-* WordPress version is not displayed/not shown - WordPress version is removed
-* WP Generator Meta Tag filtered|not displayed|not shown
-* WP DB default admin username|account check
-* System Info: PHP|MySQL|OS|Server|Memory Usage|IP|SAPI|WP Filesystem API Method|DNS|Apache Modules|Directives Compatibility Checks|Max Upload|Zend Engine Version|Zend Guard|Loader|Optimizer|ionCube Loader|Suhosin|APC|eAccelerator|XCache|Varnish|cURL|Memcache|Memcached|Plugins|Versions Installed|Activated|Get Plugins List|Browser Compression|GD Library|ImageMagick|OpenSSL
-* File and Folder Permission Checking: CGI|DSO|SAPI check|display
+* WordPress and other files protected with .htaccess security protection: readme.html, /wp-admin/install.php, wp-config.php, bb-config.php, php.ini and php5.ini files
 * Help & FAQ page: links to BPS Guide and other detailed Help & Info pages
-* Extensive jQuery Dialog Read Me Help buttons throughout the BulletProof Security plugin pages
+* Extensive jQuery UI Dialog Read Me Help buttons throughout the BulletProof Security plugin pages
 * HUD Success|Error message display
-* i18n Language Translation coding
+
+= BulletProof Security System Info =
+
+* PHP|MySQL|MySQLi|OS|Server|Memory Usage and Limits|IP|SAPI|WP Filesystem API Method|DNS|Apache Modules|Directives Compatibility Checks|Max Upload|Zend Engine Version|Zend Guard|Loader|Optimizer|ionCube Loader|Suhosin|APC|eAccelerator|XCache|Varnish|cURL|OpenSSL Library|cURL OpenSSL Version|Memcache|Memcached|Plugins|Versions Installed|Activated|Get Plugins List|Browser Compression|GD Library|ImageMagick|WP Temp Dir|PHP Temp Dir|PHP Upload Temp Dir|Session Save Path|WP_TEMP_DIR constant|php.ini file path, etc.
+* File|Folder Permissions (CGI or DSO)|Script Owner User ID (UID)|File Owner User ID
+* PHP Server|PHP.ini|PHP directives Info
+* Website Headers Check Tool: Check your website Headers or another website's Headers remotely by making a GET or HEAD Request
 
 = BulletProof Security Hidden Plugin Folders|Files Cron (HPF) =
 

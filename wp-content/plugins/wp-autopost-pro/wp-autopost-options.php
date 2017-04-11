@@ -16,8 +16,7 @@ jQuery(function($){
 <div class="wrap">
  <div class="icon32" id="icon-wp-autopost"><br/></div>
  <h2>Auto Post - <?php echo __('Options','wp-autopost'); ?></h2>
- <div class="clear"></div>
- <br/>
+
 <?php
  if(isset($_POST['submit1'])&&$_POST['submit1']!=''){
    update_option('wp_autopost_updateMethod', $_POST['updateMethod']);
@@ -35,11 +34,31 @@ jQuery(function($){
    
    if(!preg_match("/^\+?[1-9][0-9]*$/",$t))$t=0;
    
-   if($t<0)$t=0;
-   
+   if($t<0)$t=0;  
    update_option('wp_autopost_pauseTime', $t);
+   
+    
+   //echo $_POST['time_d_negative'].$_POST['time_d_hour'].$_POST['time_d_minute'];
+
+   $time_d_s=$_POST['time_d_hour']*60*60+$_POST['time_d_minute']*60;
+   if($_POST['time_d_negative']==1)$time_d_s = $time_d_s*-1;
+   update_option('wp_autopost_differenceTime', $time_d_s); 
+   
+
+   if(trim($_POST['limitIPs'])!=''){
+     $limitIPs = explode("\r\n",stripslashes($_POST['limitIPs']));
+     $wp_autopost_limit_ip = array();
+     foreach($limitIPs as $limitIP){
+       if(trim($limitIP)!=''||$limitIP!=NULL)$wp_autopost_limit_ip[] = $limitIP;
+     }
+     update_option('wp_autopost_limit_ip', json_encode($wp_autopost_limit_ip));
+   }else{
+     update_option('wp_autopost_limit_ip', '');
+   }
 
 
+   
+   $showTab='tab1';
    echo '<div id="message" class="updated fade"><p>'.__('Updated!','wp-autopost').'</p></div>';       
  }
  elseif(isset($_POST['submit2'])&&$_POST['submit2']!=''){
@@ -72,7 +91,8 @@ jQuery(function($){
    update_option('wp_autopost_downImgThumbnail', $_POST['downImgThumbnail']);  
    update_option('wp_autopost_downImgRelativeURL', $_POST['downImgRelativeURL']); 
    update_option('wp_autopost_downFileOrganize', $_POST['downFileOrganize']);
-
+   
+   $showTab='tab2';
    echo '<div id="message" class="updated fade"><p>'.__('Updated!','wp-autopost').'</p></div>';       
  }
  elseif(isset($_POST['submit3'])&&$_POST['submit3']!=''){
@@ -82,7 +102,7 @@ jQuery(function($){
    update_option('wp_autopost_delAttrStyle', $_POST['delAttrStyle']);
    //update_option('wp_autopost_delEmptyTag', $_POST['delEmptyTag']);
    
-
+   $showTab='tab3';
    echo '<div id="message" class="updated fade"><p>'.__('Updated!','wp-autopost').'</p></div>';       
  }
  elseif(isset($_POST['submit4'])&&$_POST['submit4']!=''){
@@ -93,54 +113,29 @@ jQuery(function($){
    }
 
    update_option('wp_autopost_download_types', json_encode($wp_autopost_download_types));
-
+   
+   $showTab='tab2';
    echo '<div id="message" class="updated fade"><p>'.__('Updated!','wp-autopost').'</p></div>';  
- }
- elseif($_POST['submit5']!=''){
-
-   update_option('wp_autopost_cdkey', $_POST['cdkey']);
-
-   echo '<div id="message" class="updated fade"><p>'.__('Updated!','wp-autopost').'</p></div>';  
- }
- elseif($_POST['submitReset']!=''){
-	 deleteflickr();
-	 echo '<div id="message" class="updated fade"><p>'.__('Updated!','wp-autopost').'</p></div>';  
  }
 ?> 
- <form id="myform" method="post" action="admin.php?page=wp-autopost-pro/wp-autopost-options.php">
- 
-  <div class="postbox">
-  <h3 class="hndle" style="cursor:pointer;"><?php echo __('Authorization Option','wp-autopost'); ?></h3>
-  <div class="inside">
-	 <table width="100%"> 	         	  
-	   <tr>
-         <td width="170"><?php echo __('Authorization Code','wp-autopost'); ?>:</td>
-		 <td><input type="text" name="cdkey" id="cdkey" value="<?php echo get_option('wp_autopost_cdkey'); ?>" size="30" />
-		 </td>
-	   </tr>
-	   <tr>
-         <td colspan="2">
-		   <input type="submit" class="button-primary"  name="submit5"  value="<?php echo __('Save Changes'); ?>" />
-		 </td>
-	   </tr>
-    </table>
-  </div>
-  </div>
-  
-  <div class="postbox">
-	<div class="inside">
-		<table width="100%">
-			<tr>
-				<td width="170"><?php echo __('Reset','wp-autopost'); ?>:</td>
-					<td><input type="submit" class="button-primary"  name="submitReset"  value="<?php echo __('Reset','wp-autopost')."(如果出现采集错误请尝试点击此按钮)"; ?>" />
-				</td>
-			</tr>
-		</table>
-	</div>
-  </div>
 
-  <div class="postbox">
-  <h3 class="hndle" style="cursor:pointer;"><?php echo __('Update Option','wp-autopost'); ?></h3>
+
+
+
+ 
+ <h2 class="nav-tab-wrapper">
+  <a class="nav-tab" href='javascript:;' id="tab-title-tab1"><?php echo __('Update Option','wp-autopost'); ?></a>
+  <a class="nav-tab" href='javascript:;' id="tab-title-tab2"><?php echo __('Download Option','wp-autopost'); ?></a>
+  <a class="nav-tab" href='javascript:;' id="tab-title-tab3"><?php echo __('Other Option','wp-autopost'); ?></a>				
+ </h2>
+
+
+ <form id="myform" method="post" action="admin.php?page=wp-autopost-pro/wp-autopost-options.php">
+
+ <div id="tab-tab1" class="div-tab hidden">
+ <br/>
+ <div class="postbox">
+  <!--<h3 class="hndle" style="cursor:pointer;">&nbsp;</h3>-->
   <div class="inside">
 	 <table width="100%"> 	         	  
        <tr> 
@@ -168,6 +163,33 @@ jQuery(function($){
 		 </div>
 		 </td>
 	   </tr>
+       
+
+	   <tr>
+         <td width="20%"><?php echo __('IP Address Limit on Updates','wp-autopost'); ?>:</td>
+		 <td>
+           
+		   <span class="gray"><?php echo __('You can add multiple IP Address, each begin at a new line','wp-autopost'); ?></span>
+		   <br/>
+		   <span class="gray"><?php echo __('If set, only when the access come form those IP address can trigger the update process','wp-autopost'); ?></span>
+		    <br/>
+		    <textarea name="limitIPs" id="limitIPs" rows="3" style="width:100%"><?php 
+			   
+			  $wp_autopost_limit_ips = get_option('wp_autopost_limit_ip'); 
+
+			  if( $wp_autopost_limit_ips!=NULL ){
+				$wp_autopost_limit_ips = json_decode($wp_autopost_limit_ips);
+				foreach($wp_autopost_limit_ips as $wp_autopost_limit_ip)echo $wp_autopost_limit_ip."\n"; 
+			  
+			  } 
+			  
+			  ?></textarea>
+
+		 </td>
+	   </tr>
+       
+
+
 	   <tr>
          <td width="20%"><?php echo __('Time Limit on Updates','wp-autopost'); ?>:</td>
 		 <td><input type="text" name="timeLimit" id="timeLimit" value="<?php echo get_option('wp_autopost_timeLimit'); ?>" size="10" /> <?php echo __(' seconds','wp-autopost'); ?>
@@ -193,26 +215,82 @@ jQuery(function($){
 		 <span class="gray">( <?php echo __('After extracted one article, sleep some seconds then begin next extraction','wp-autopost'); ?> )</span>
 		 </td>
 	   </tr>
-
+     </table>
+	 <hr/>
+	 <table width="100%">
 	   <tr>
-         <td colspan="2">
-		   <input type="submit" class="button-primary"  name="submit1"  value="<?php echo __('Save Changes'); ?>" />
+         <td width="20%" style="vertical-align: top;"><?php echo __('Time difference setting','wp-autopost'); ?>:</td>
+		 <td style="vertical-align: top;">
+		     
+             <?php
+			   $differenceTime = get_option('wp_autopost_differenceTime');
+			   
+			   $time_d_hour = intval($differenceTime/3600);
+			   $time_d_minute = ($differenceTime-$time_d_hour*3600)/60;
+			   
+			   $time_d_negative=false;
+			   if($differenceTime<0){
+			     $time_d_negative = true;
+                 $time_d_hour = -1*$time_d_hour;
+				 $time_d_minute = -1*$time_d_minute;
+			   }
+			 ?>
+
+			 <table width="100%">
+               <tr > 
+			     <td width="15%"><?php echo __('WordPress Time','wp-autopost'); ?>:</td>
+				 <td ><?php echo current_time('mysql'); ?></td>
+			   </tr>
+			   <tr>
+			     <td ><?php echo __('WP-AutoPost Time','wp-autopost'); ?>:</td>
+				 <td >
+				    <?php echo date('Y-m-d H:i:s',current_time('timestamp')+$differenceTime);?>   
+				 </td>
+			   </tr>
+               <tr>
+			     <td colspan="2">
+				   <strong> <?php echo __('If the two Date-times not equal, adjust the time difference, keep them equal','wp-autopost'); ?> </strong>
+				 </td>
+			   </tr>
+			   <tr>
+			     
+			     <td colspan="2">
+				   <select name="time_d_negative">
+				     <option value="0" >&nbsp; + &nbsp;</option>
+					 <option value="1" <?php if($time_d_negative)echo "selected='true'";  ?> >&nbsp; - &nbsp;</option>
+				   </select>
+				   <input type="text" size="1" name="time_d_hour" value="<?php echo $time_d_hour;?>" /> <?php echo __('Hour'); ?>
+				   <input type="text" size="1" name="time_d_minute" value="<?php echo $time_d_minute;?>" /> <?php echo __('Minute'); ?>
+				 </td>
+			   </tr>
+			 </table>
+
 		 </td>
 	   </tr>
     </table>
+
+
+	<p><input type="submit" class="button-primary"  name="submit1"  value="<?php echo __('Save Changes'); ?>" /></p>
   </div>
   </div>
 
+ </div><!-- end id="tab-tab1" -->
+
+ <div id="tab-tab2" class="div-tab hidden">
+  <br/>
   <div class="postbox">
   <h3 class="hndle" style="cursor:pointer;"><?php echo __('Remote Images Download Option','wp-autopost'); ?></h3>
   <div class="inside">
 	 <table width="100%"> 	         	  
+	   
+	   <!--
 	   <tr>
          <td width="260"><?php echo __('Min Width Image to Download','wp-autopost'); ?>:</td>
 		 <td><input type="text" name="imgMinWidth" id="imgMinWidth" value="<?php echo get_option('wp_autopost_downImgMinWidth'); ?>" size="10" />  px
 		 </td>
 	   </tr>
-	   
+	   -->
+
 	   <tr>
          <td width="260"><?php echo __('Download timeout','wp-autopost'); ?>:</td>
 		 <td><input type="text" name="downImgTimeOut" id="downImgTimeOut" value="<?php echo get_option('wp_autopost_downImgTimeOut'); ?>" size="10" /> <?php echo __(' seconds','wp-autopost'); ?>
@@ -232,7 +310,8 @@ jQuery(function($){
 		 
 		 </td>
 	   </tr>
-
+      
+	  <!--
 	   <tr>
          <td width="260"><?php echo __('When download images fails will not post','wp-autopost'); ?>:</td>
 		 <td>
@@ -244,8 +323,9 @@ jQuery(function($){
 		 
 		 </td>
 	   </tr>
-
-
+      -->
+      
+	  <!--
 	   <tr>
          <td width="260"><?php echo __('All downloaded images generate thumbnail','wp-autopost'); ?>:</td>
 		 <td>
@@ -257,8 +337,9 @@ jQuery(function($){
 		 <span class="gray"><?php echo __('Only take effect when choose save the images to wordpress media library','wp-autopost'); ?></span>
 		 </td>
 	   </tr>
-
-
+      -->
+      
+	  <!--
 	   <tr>
          <td width="260"><?php echo __('Downloaded Images Size Optimization','wp-autopost'); ?>:</td>
 		 <td>
@@ -279,12 +360,11 @@ jQuery(function($){
 		         <span class="gray"><?php _e( 'ranges from 1 (worst quality, smaller file) to 100 (best quality, biggest file)', 'wp-autopost' );?></span>
 			   </td>
 			 </tr>
-
 		   </table>
 		   	 
 		 </td>
 	   </tr>
-
+      -->
 
 	   <tr>
          <td colspan="2">
@@ -307,8 +387,7 @@ jQuery(function($){
     </table>
   </div>
   </div>
-  
-  
+
   <div class="postbox">
   <h3 class="hndle" style="cursor:pointer;"><a name="RemoteAttachmentDownloadOption"></a><?php echo __('Remote Attachment Download Option','wp-autopost'); ?></h3>
   <div class="inside">
@@ -350,6 +429,10 @@ jQuery(function($){
   </div>
   </div>
 
+ </div><!-- end  id="tab-tab2" -->
+
+ <div id="tab-tab3" class="div-tab hidden"> 
+  <br/>
   <div class="postbox">
   <h3 class="hndle" style="cursor:pointer;"><?php echo __('Other Option','wp-autopost'); ?></h3>
   <div class="inside">
@@ -439,10 +522,37 @@ jQuery(function($){
     </table>
   </div>
   </div>
-
-  
+ 
+ </div><!-- end  id="tab-tab3" -->
 
  </form>
+
+<script type="text/javascript">
+  jQuery('div.div-tab').hide();
+			//���õ�һ����ʾ
+ <?php 
+      if(!isset($showTab)):
+ ?>		
+	   jQuery('h2 a.nav-tab').first().addClass('nav-tab-active');
+	   jQuery('div.div-tab').first().show();
+ <?php else:?>
+       jQuery('#tab-title-<?php echo $showTab; ?>').addClass('nav-tab-active');
+       jQuery('#tab-<?php echo $showTab; ?>').show();
+ <?php endif;?>
+
+  jQuery(function($){
+    $('h2 a.nav-tab').on('click',function(){
+     $('h2 a.nav-tab').removeClass('nav-tab-active');
+     $(this).addClass('nav-tab-active');
+	 $('div.div-tab').hide();
+     $('#'+jQuery(this)[0].id.replace('title-','')).show();
+	 $('#current_tab').val($(this)[0].id.replace('tab-title-',''));
+	});
+  });
+</script>
+
+
+ 
 </div>
 
 <script type="text/javascript">

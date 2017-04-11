@@ -352,11 +352,20 @@ function bpsPro_count_network_activated_plugins($count) {
 
 	echo '<strong><span class="sysinfo-label-text">'.__('cURL', 'bulletproof-security').':</span></strong> ';
 	if ( extension_loaded('curl') ) {
-		_e('cURL Extension is Loaded', 'bulletproof-security');
+		_e('cURL Extension is Loaded Version: ', 'bulletproof-security');
+		$curl_version = curl_version();	
+		echo $curl_version['version'].'<br>';
+		echo '<strong><span class="sysinfo-label-text">'.__('cURL OpenSSL Version (Used by PayPal, etc.)', 'bulletproof-security').':</span></strong> ';
+		echo $curl_version['ssl_version'].'<br>';
 	} else {
-		_e('cURL Extension is Not Loaded', 'bulletproof-security');
+		_e('cURL Extension is Not Loaded', 'bulletproof-security').'<br>';
 	}
-	echo '<br>';
+
+	echo '<strong><span class="sysinfo-label-text">'.__('OpenSSL Library', 'bulletproof-security').':</span></strong> ';
+	if ( defined('OPENSSL_VERSION_TEXT') ) {
+	echo OPENSSL_VERSION_TEXT . '<br>';
+	}
+
 	echo '<strong><span class="sysinfo-label-text">'.__('Zend Engine Version', 'bulletproof-security').':</span></strong> ' . zend_version() . '</strong><br>'; 
 	echo '<strong><span class="sysinfo-label-text">'.__('Zend Guard|Optimizer', 'bulletproof-security').':</span></strong> ';
 	if ( extension_loaded('Zend Optimizer+') && ini_get('zend_optimizerplus.enable') == 1 || ini_get('zend_optimizerplus.enable') == 'On' ) {
@@ -545,6 +554,12 @@ echo '<strong><span class="sysinfo-label-text">'.__('ionCube Loader', 'bulletpro
 	 $permalink_structure = get_option('permalink_structure'); 
 	echo $permalink_structure.'<br>';
 	
+	if ( defined('DISABLE_WP_CRON') && DISABLE_WP_CRON === true ) {
+		echo '<strong><span class="sysinfo-label-text">'.__('DISABLE_WP_CRON constant', 'bulletproof-security').':</span></strong> '.__('Standard WP Crons are disabled on your website.', 'bulletproof-security').'<br>';
+	} else {
+		echo '<strong><span class="sysinfo-label-text">'.__('DISABLE_WP_CRON constant', 'bulletproof-security').':</span></strong> '.__('Standard WP Crons are not disabled on your website.', 'bulletproof-security').'<br>';
+	}
+
 	echo '<strong><span class="sysinfo-label-text">'.__('Total Plugins Installed', 'bulletproof-security').':</span></strong> ';
 	echo bpsPro_count_installed_plugins($count).'<br>';
 	echo '<strong><span class="sysinfo-label-text">'.__('Total Plugins Activated', 'bulletproof-security').':</span></strong> ';
@@ -584,12 +599,8 @@ echo '<strong><span class="sysinfo-label-text">'.__('ionCube Loader', 'bulletpro
 	} else {
 		_e('ImageMagick Extension is Not Loaded', 'bulletproof-security');
 	}	
-	echo '<br>';
-	echo '<strong><span class="sysinfo-label-text">'.__('OpenSSL', 'bulletproof-security').':</span></strong> ';
-	if ( defined('OPENSSL_VERSION_TEXT') ) {
-	echo OPENSSL_VERSION_TEXT . '<br>';
-	}
-	
+	echo '<br><br>';
+
 	echo '</span>';
 	?>
      
@@ -1024,6 +1035,7 @@ global $bps_topDiv, $bps_bottomDiv;
 		curl_setopt($ch, CURLOPT_USERAGENT, $useragent);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		@curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+		curl_setopt($ch, CURLOPT_MAXREDIRS, 9);
 		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 15);
 		curl_setopt($ch, CURLOPT_VERBOSE, true);
 		curl_setopt($ch, CURLOPT_FILETIME, true);

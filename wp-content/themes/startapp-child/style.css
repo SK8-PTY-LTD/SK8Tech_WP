@@ -12,3 +12,19 @@ License URI:      http://www.gnu.org/licenses/gpl-2.0.html
 Tags:             grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, flexible-header, footer-widgets, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce, portfolio
 Text Domain:      startapp-child
 */
+
+.page-title h1{
+font-size:30px;
+}
+
+@media(max-width:800px){
+  .page-title{
+ 	padding:0px
+  }
+}
+
+@media(min-width:800px){
+.vc_custom_1490418975230{
+padding-top:30px;
+}
+}

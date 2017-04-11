@@ -117,7 +117,7 @@ $bps_auto_write_secure_file = WP_PLUGIN_DIR . '/bulletproof-security/admin/htacc
 
 $bpsFailMessageSec = '<font color="#fb0101"><strong>'.__('The file ', 'bulletproof-security').$bps_auto_write_secure_file.__(' is not writable or does not exist.', 'bulletproof-security').'</strong></font><br><strong>'.__('Check that the file is named secure.htaccess and that the file exists in the /bulletproof-security/admin/htaccess master folder. If this is not the problem click', 'bulletproof-security').' <a href="https://forum.ait-pro.com/read-me-first/" target="_blank">'.__('HERE', 'bulletproof-security').'</a>'.__(' to go the the BulletProof Security Forum.', 'bulletproof-security').'</strong><br>';
 
-$bps_secure_content_top = "#   BULLETPROOF $bps_version >>>>>>> SECURE .HTACCESS     \n\n";
+$bps_secure_content_top = "#   BULLETPROOF $bps_version SECURE .HTACCESS     \n\n";
 
 if ( $BPSCustomCodeOptions['bps_customcode_one'] != '' ) {
 $bps_secure_phpini_cache = "# CUSTOM CODE TOP PHP/PHP.INI HANDLER/CACHE CODE\n" . htmlspecialchars_decode( $BPSCustomCodeOptions['bps_customcode_one'], ENT_QUOTES ) . "\n\n";

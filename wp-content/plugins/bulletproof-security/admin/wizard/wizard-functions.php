@@ -144,7 +144,7 @@ RewriteRule . index.php [L]
 }
 }
 
-$bps_secure_content_top = "#   BULLETPROOF $bps_version >>>>>>> SECURE .HTACCESS     \n\n";
+$bps_secure_content_top = "#   BULLETPROOF $bps_version SECURE .HTACCESS     \n\n";
 
 if ( $BPSCustomCodeOptions['bps_customcode_one'] != '' ) {
 $bps_secure_phpini_cache = "# CUSTOM CODE TOP PHP/PHP.INI HANDLER/CACHE CODE\n" . htmlspecialchars_decode( $BPSCustomCodeOptions['bps_customcode_one'], ENT_QUOTES ) . "\n\n";

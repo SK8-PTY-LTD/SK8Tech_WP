@@ -1,9 +1,9 @@
 === WordPress to Buffer ===
 Contributors: n7studios,wpzinc
 Donate link: https://www.wpzinc.com/plugins/wordpress-to-buffer-pro
-Tags: buffer, bufferapp, buffer app, buffer my post, buffer old post, buffer post, post to buffer, promote old posts, promote posts, promote custom posts, promote selected posts, share posts, bulk share posts, share old posts, social, media, sharing, social media, social sharing, schedule, auto post, auto publish, facebook, facebook post, facebook selected posts, facebook plugin, auto facebook post, post facebook, post to facebook, twitter, twitter post, tweet post twitter selected posts, tweet selected posts twitter plugin, auto twitter post, auto tweet post post twitter, post to twitter, linkedin, linkedin post, linkedin selected posts, linkedin plugin, auto linkedin post, post linkedin, post to linkedin, google, google post, google selected posts, google plugin, auto google post, post google, post to google, pinterest, pinterest post, pinterest selected posts, pinterest plugin, auto pinterest post, post pinterest, post to pinterest, best wordpress social plugin, best wordpress social sharing plugin, best social plugin, best social sharing plugin, best facebook social plugin, best twitter social plugin, best linkedin social plugin, best pinterest social plugin, best google+ social plugin
+Tags: buffer, bufferapp, buffer app, buffer my post, buffer old post, buffer post, post to buffer, promote old posts, promote posts, promote custom posts, promote selected posts, share posts, bulk share posts, share old posts, social, media, sharing, social media, social sharing, schedule, auto post, auto publish, facebook, facebook post, facebook selected posts, facebook plugin, auto facebook post, post facebook, post to facebook, twitter, twitter post, tweet post twitter selected posts, tweet selected posts twitter plugin, auto twitter post, auto tweet post post twitter, post to twitter, linkedin, linkedin post, linkedin selected posts, linkedin plugin, auto linkedin post, post linkedin, post to linkedin, google, google post, google selected posts, google plugin, auto google post, post google, post to google, pinterest, pinterest post, pinterest selected posts, pinterest plugin, auto pinterest post, post pinterest, post to pinterest, best wordpress social plugin, best wordpress social sharing plugin, best social plugin, best social sharing plugin, best facebook social plugin, best twitter social plugin, best linkedin social plugin, best pinterest social plugin, best google+ social plugin, instagram, pinterest
 Requires at least: 3.6
-Tested up to: 4.7.2
+Tested up to: 4.7.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -66,6 +66,33 @@ Find out more about us at <a href="https://www.wpzinc.com" rel="friend" title="P
 4. Post level settings meta box.
 
 == Changelog ==
+
+= 3.2.7 =
+* Fix: Always attach Featured Image to status if available (per 3.0.5 and below)
+
+= 3.2.6 =
+* Fix: Undefined variable errors
+
+= 3.2.5 =
+* Fix: Only display Review Helper for Super Admin and Admin
+
+= 3.2.4 =
+* Added: Review Helper to check if the user needs help
+* Updated: Dashboard Submodule
+
+= 3.2.3 =
+* Fix: Removed "Shorten Twitter status to 140 characters" in 3.2.1; too many bugs. Users will need to revert back to ensuring their Twitter statuses are short to avoid Buffer API errors.
+
+= 3.2.2 =
+* Added: User-Agent to wp_remote_get and wp_remote_post on Buffer API calls, to potentially resolve timeout connection issues for one edge case.
+* Fix: Conditionally load sortable and datepicker listeners to avoid JS errors
+
+= 3.2.1 =
+* Added: Version bump to match Pro version, using same core codebase and UI for basic features. Fixes several oustanding bugs.
+* Added: Tooltips to Profile Tabs, to show the profile service and name
+* Added: Contextual Documentation links in Tabs
+* Fix: Shorten Twitter status to 140 characters, excluding first URL, to prevent 400 errors from Buffer when a Twitter status message is too long.
+* Fix: Removed unused image library code
 
 = 3.0.5 =
 * Fix: Changed branding from WP Cube to WP Zinc
