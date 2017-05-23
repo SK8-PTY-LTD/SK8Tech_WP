@@ -632,3 +632,21 @@ HTTP_REFERER:
 REQUEST_URI: /wp-content/plugins/versionpress/temp/security-check.txt
 QUERY_STRING: 
 HTTP_USER_AGENT: 
+
+[403 GET Request: May 23, 2017 - 10:05 pm]
+BPS: 1.1
+WP: 4.7.5
+Event Code: BFHS - Blocked/Forbidden Hacker or Spammer
+Solution: N/A - Hacker/Spammer Blocked/Forbidden
+REMOTE_ADDR: 2001:19f0:5801:43c:5400:ff:fe69:5858
+Host Name: 2001:19f0:5801:43c:5400:ff:fe69:5858
+SERVER_PROTOCOL: HTTP/1.0
+HTTP_CLIENT_IP: 
+HTTP_FORWARDED: 
+HTTP_X_FORWARDED_FOR: 2001:19f0:5801:043c:5400:00ff:fe69:5858, 2001:19f0:5801:43c:5400:ff:fe69:5858
+HTTP_X_CLUSTER_CLIENT_IP: 
+REQUEST_METHOD: GET
+HTTP_REFERER: 
+REQUEST_URI: /wp-content/plugins/versionpress/temp/security-check.txt
+QUERY_STRING: 
+HTTP_USER_AGENT: 
