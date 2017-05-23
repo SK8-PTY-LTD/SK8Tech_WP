@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 4.7.x - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-01-12 08:05:36+0000\n"
+"PO-Revision-Date: 2017-05-10 16:26:52+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -930,7 +930,7 @@ msgstr "La hora universal (%1$s) es %2$s."
 msgid "There is a pending change of the admin email to %s."
 msgstr "Hay un cambio pendiente del correo electrónico del administrador a %s."
 
-#: wp-admin/install.php:390
+#: wp-admin/install.php:376
 msgid "WordPress has been installed. Thank you, and enjoy!"
 msgstr "WordPress ya está instalado. ¡Gracias y disfrútalo!"
 
@@ -1583,7 +1583,7 @@ msgstr "Cabecera del tema"
 
 #: wp-admin/includes/file.php:18
 msgid "Theme Footer"
-msgstr "Pié de página del tema"
+msgstr "Pie de página del tema"
 
 #. translators: date and time format for recent posts on the dashboard, from a
 #. different calendar year, see https://secure.php.net/date
@@ -3724,19 +3724,19 @@ msgstr "Los menús se pueden mostrar en distintas ubicaciones definidas por tu t
 msgid "Your theme does not natively support menus, but you can use them in sidebars by adding a &#8220;Custom Menu&#8221; widget on the <a href=\"%s\">Widgets</a> screen."
 msgstr "Tu tema no soporta menús de manera nativa pero puedes usarlos en las barras laterales añadiendo un widget de &#8220;Menú personalizado&#8221; en la pantalla de <a href=\"%s\">Widgets</a>."
 
-#: wp-admin/install.php:369
+#: wp-admin/install.php:365
 msgid "Sorry, that isn&#8217;t a valid email address. Email addresses look like <code>username@example.com</code>."
 msgstr "Lo siento, no es una dirección de correo electrónica válida. Las direcciones de correo electrónico deben parecerse a <code>usuario@ejemplo.com</code>."
 
-#: wp-admin/install.php:364
+#: wp-admin/install.php:361
 msgid "You must provide an email address."
 msgstr "Debes facilitar una dirección de correo electrónico"
 
-#: wp-admin/install.php:359
+#: wp-admin/install.php:357
 msgid "Your passwords do not match. Please try again."
 msgstr "Tus contraseñas no coinciden. Inténtalo de nuevo."
 
-#: wp-admin/install.php:354
+#: wp-admin/install.php:353
 msgid "The username you provided has invalid characters."
 msgstr "El nombre de usuario que has facilitado tiene caracteres no válidos."
 
@@ -4061,11 +4061,11 @@ msgstr "Menú asignado"
 
 #: wp-admin/nav-menus.php:620
 msgid "Theme Location"
-msgstr "Ubicación del Tema"
+msgstr "Ubicación en el tema"
 
 #: wp-admin/nav-menus.php:597
 msgid "Manage Locations"
-msgstr "Gestionar lugares"
+msgstr "Gestionar ubicaciones"
 
 #: wp-admin/nav-menus.php:595
 msgid "Edit Menus"
@@ -4941,7 +4941,7 @@ msgstr "Editar comentario"
 
 #: wp-admin/about.php:28
 msgid "About"
-msgstr "Sobre"
+msgstr "Acerca de"
 
 #: wp-admin/includes/plugin-install.php:283
 #: wp-admin/includes/theme-install.php:67
@@ -5386,8 +5386,8 @@ msgstr "Desarrolladores colaboradores"
 #: wp-admin/about.php:272
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
-msgstr[0] "<strong>Versión %1$s</strong> soluciona el bug %2$s."
-msgstr[1] "<strong>Versión %1$s</strong> soluciona %2$s bugs."
+msgstr[0] "<strong>Versión %1$s</strong> soluciona el fallo %2$s."
+msgstr[1] "<strong>Versión %1$s</strong> soluciona %2$s fallos."
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. More
 #. than one security issue.
@@ -5482,7 +5482,7 @@ msgstr "Añadir plugins"
 
 #: wp-admin/edit.php:222
 msgid "You can also edit or move multiple posts to the trash at once. Select the posts you want to act on using the checkboxes, then select the action you want to take from the Bulk Actions menu and click Apply."
-msgstr "También puedes editar o mover varias entradas a la basura a la vez. Selecciona los mensajes sobre los que deseas actuar utilizando las casillas de verificación. A continuaciónselecciona la acción a realizar en el menú Acciones en Bloque y haz clic en Aplicar."
+msgstr "También puedes editar o mover varias entradas a la basura a la vez. Selecciona los mensajes sobre los que deseas actuar utilizando las casillas de verificación. A continuación selecciona la acción a realizar en el menú Acciones en bloque y haz clic en Aplicar."
 
 #: wp-admin/edit.php:192
 msgid "This screen provides access to all of your posts. You can customize the display of this screen to suit your workflow."
@@ -6091,7 +6091,7 @@ msgstr "Personalizando esta pantalla"
 
 #: wp-admin/edit-form-advanced.php:391
 msgid "About Pages"
-msgstr "Sobre las páginas"
+msgstr "Acerca de las páginas"
 
 #: wp-admin/install.php:192 wp-admin/options-reading.php:118
 msgid "Note: Neither of these options blocks access to your site &mdash; it is up to search engines to honor your request."
@@ -8754,7 +8754,7 @@ msgstr "Añadir nuevo"
 msgid "Add New Link"
 msgstr "Añadir enlace"
 
-#: wp-admin/install.php:388
+#: wp-admin/install.php:374
 msgid "Success!"
 msgstr "¡Lo lograste!"
 
@@ -10521,7 +10521,7 @@ msgstr "El nombre es cómo aparecerá en tu sitio."
 
 #: wp-admin/edit-link-form.php:113
 msgid "This will be shown when someone hovers over the link in the blogroll, or optionally below the link."
-msgstr "Esto se mostrará cuando alguien pase el cursor sobre el enlace en los sitios de interés, u opcionalmente, debajo del enlace."
+msgstr "Esto se mostrará cuando alguien pase el cursor sobre el enlace en los sitios de interés u, opcionalmente, debajo del enlace."
 
 #: wp-admin/edit-link-form.php:105
 msgid "Example: <code>http://wordpress.org/</code> &#8212; don&#8217;t forget the <code>http://</code>"

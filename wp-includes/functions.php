@@ -2366,7 +2366,8 @@ function wp_get_image_mime( $file ) {
 	 */
 	try {
 		if ( is_callable( 'exif_imagetype' ) ) {
-			$mime = image_type_to_mime_type( exif_imagetype( $file ) );
+			$imagetype = exif_imagetype( $file );
+			$mime = ( $imagetype ) ? image_type_to_mime_type( $imagetype ) : false;
 		} elseif ( function_exists( 'getimagesize' ) ) {
 			$imagesize = getimagesize( $file );
 			$mime = ( isset( $imagesize['mime'] ) ) ? $imagesize['mime'] : false;
@@ -5648,8 +5649,8 @@ function wp_getElementByCSS($d,$c,$charset,$outer,$index) {
 	} else {
 		$elements = $d->find($c);
 		$i=0;
-		if($index>=1)$j = $index-1;
-		elseif($index<0)$j = count($elements)+$index;
+		if($index>=1)$i = $index-1;
+		elseif($index<0)$i = count($elements)+$index;
 		$e = $elements[$i];
 		if($e!=null) {
 			if($outer==1) $s .= $e->outertext;

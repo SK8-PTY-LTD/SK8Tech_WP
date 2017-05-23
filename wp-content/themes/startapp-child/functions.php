@@ -19,3 +19,4 @@ function startapp_child_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'startapp_child_scripts', 12 );
 
+add_filter( 'auto_update_plugin', '__return_true' );

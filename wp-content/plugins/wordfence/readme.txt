@@ -2,8 +2,8 @@
 Contributors: mmaunder 
 Tags: security, secure, security plugin, wordpress security, login security, firewall, malware, antivirus, web application firewall, block hackers, country blocking
 Requires at least: 3.9
-Tested up to: 4.7.3
-Stable tag: 6.3.6
+Tested up to: 4.7.5
+Stable tag: 6.3.9
 
 Secure your website with the most comprehensive WordPress security plugin. Firewall, malware scan, blocking, live traffic, login security & more.
 
@@ -159,6 +159,35 @@ Secure your website with Wordfence.
 7. The Advanced Options page allows technically-minded users fine-tune their security settings.
 
 == Changelog ==
+
+= 6.3.9 =
+* Improvement: Malware signature checking has been better optimized to improve overall speed.
+* Improvement: Updated the bundled GeoIP database.
+* Improvement: The memory tester now tests up to the configured scan limit rather than a fixed value.
+* Improvement: Added a test to the diagnostics page that verifies permissions to the WAF config location.
+* Improvement: The diagnostics page now contains a callback test for the server itself.
+* Improvement: Updated the styling of dashboard notifications for better separation.
+* Improvement: Added additional constants to the diagnostics page.
+* Change: Wordfence now enters a read-only mode with its configuration files when run via the 'cli' PHP SAPI on a misconfigured web server to avoid file ownership changing.
+* Change: Changed how administrator accounts are detected to compensate for managed WordPress sites that do not have the standard permissions.
+* Change: The table list on the diagnostics page is now limited in length to avoid being exceedingly large on big multisite installations.
+* Fix: Improved updating of WAF config values to minimize writing to disk.
+* Fix: The blacklist's blocked IP records are now correctly trimmed when expired.
+* Fix: Added error suppression to the WAF attack data functions to prevent corrupt records from breaking the no-cache headers.
+* Fix: Fixed some incorrect documentation links on the diagnostics page.
+* Fix: Fixed a typo in a constant on the diagnostics page.
+
+= 6.3.8 =
+* Fix: Addressed an issue that could cause scans to time out on sites with tens of thousands of potential URLs in files, comments, and posts.
+
+= 6.3.7 =
+* Improvement: All URLs are now checked against the Wordfence Domain Blacklist in addition to Google's.
+* Improvement: Better page load performance for multisite installations with thousands of tables.
+* Improvement: Updated the bundled GeoIP database.
+* Improvement: Integrated blacklist blocking statistics into the dashboard for Premium users.
+* Fix: Added locking to the automatic update process to ensure non-standard crons don't break Wordfence.
+* Fix: Fixed an activation error on multisite installations on very old WordPress versions.
+* Fix: Adjusted the behavior of the blacklist toggle for Free users.
 
 = 6.3.6 =
 * Improvement: Optimized the malware signature scan to reduce memory usage.

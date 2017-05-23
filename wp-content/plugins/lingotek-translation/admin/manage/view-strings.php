@@ -1,4 +1,4 @@
-<h3 style="padding-top:0; margin-top:0; margin-bottom:-25px;"><?php _e('Strings', 'lingotek-translation'); ?> <a href="options-general.php?page=mlang&amp;tab=strings" title="<?php _e('Edit on Polylang Strings Translation page', 'lingotek-translation'); ?>" class="dashicons dashicons-edit"></a></h3>
+<h3 style="padding-top:10px; margin-top:10px; margin-bottom:-25px;"><?php _e('Strings', 'lingotek-translation'); ?> <a href="admin.php?page=mlang_strings" title="<?php _e('Edit on Polylang Strings Translation page', 'lingotek-translation'); ?>" class="dashicons dashicons-edit"></a></h3>
 
 <?php
 $listlanguages = $GLOBALS['polylang']->model->get_languages_list();
@@ -40,7 +40,7 @@ $string_table = new Lingotek_Table_String(compact('languages', 'groups', 'select
 $string_table->prepare_items($data); ?>
 
 <div class="form-wrap">
-	<form id="string-translation" method="post" action="admin.php?page=mlang&amp;tab=strings&amp;noheader=true">
+	<form id="string-translation" method="post" action="admin.php?page=mlang_strings&amp;noheader=true">
 		<input type="hidden" name="pll_action" value="string-translation" /><?php
 		$string_table->search_box(__('Search translations', 'lingotek-translation'), 'translations' );
 		wp_nonce_field('string-translation', '_wpnonce_string-translation');

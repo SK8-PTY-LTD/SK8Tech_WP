@@ -125,7 +125,10 @@
 		switch( $network_slug ) {
 
 			case 'facebook':
-				$url = 'https://graph.facebook.com/?id=' . $page_url;
+				if( empty( $settings['facebook_app_access_token'] ) )
+					$url = 'https://graph.facebook.com/?id=' . $page_url;
+				else
+					$url = 'https://graph.facebook.com/v2.7/?id=' . $page_url . '&access_token=' . $settings['facebook_app_access_token'];
 				break;
 
 			case 'twitter':

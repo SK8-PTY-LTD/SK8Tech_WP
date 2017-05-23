@@ -1,0 +1,188 @@
+0000.004 () Opened log file at time: Fri, 12 May 2017 02:58:33 +0000 on https://sk8.tech
+0000.004 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.13.1 WP: 4.7.4 PHP: 7.1.4 (fpm-fcgi, Linux 127.0.0.1localhostlocalhost.localdomainsk8.tech 4.4.0-77-generic #98-Ubuntu SMP Wed Apr 26 08:34:02 UTC 2017 x86_64) MySQL: 5.7.18 WPLANG: en_US Server: Apache/2.4.25 (Unix) OpenSSL/1.0.2g safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 19.3M | 4M) multisite: N openssl: OpenSSL 1.0.2g  1 Mar 2016 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.004 () Free space on disk containing Updraft's temporary directory: 10593.2 MB
+0000.005 () Restore job started. Entities to restore: db. Restore options: {"updraft_restorer_replacesiteurl":false,"updraft_encryptionphrase":"","updraft_restorer_wpcore_includewpconfig":false}
+0000.017 () Entity: db
+0000.017 () restore_backup(backup_file=backup_2017-05-11-1640_SK8Tech_056dd1fe6731-db.gz, type=db, info=a:0:{}, last_one=1)
+0000.017 () Unpacking backup... (backup_2017-05-11-1640_SK8Tech_056dd1fe6731-db.gz, 5.5 Mb)
+0000.030 () Database successfully unpacked
+0000.030 () Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.030 () Using direct MySQL access; value of use_mysqli is: 1
+0000.060 () Tried to raise max_allowed_packet from 16 MB to 32 MB, but failed (Access denied; you need (at least one of) the SUPER privilege(s) for this operation, b:0;)
+0000.060 () Max packet size: 16 MB
+0000.060 () Entering maintenance mode
+0000.060 () Enabling Maintenance mode&#8230;
+0000.060 () Backup of: http://sk8.tech
+0000.075 () Site home: https://sk8.tech
+0000.075 () Content URL: http://sk8.tech/wp-content
+0000.075 () Uploads URL: https://sk8.tech/wp-content/uploads
+0000.075 () Old table prefix: wp_
+0000.075 () Site information: multisite=0
+0000.076 () New table prefix: wp_
+0000.091 () Processing table (InnoDB): wp_options
+0000.854 () Restoring prior UD configuration (table: wp_options; keys: 89)
+0001.270 () Processing table (InnoDB): wp_users
+0001.306 () Processing table (InnoDB): wp_usermeta
+0001.346 () Processing table (InnoDB): wp_commentmeta
+0001.390 () Processing table (InnoDB): wp_comments
+0001.427 () Processing table (InnoDB): wp_links
+0001.485 () Processing table (InnoDB): wp_postmeta
+0002.840 () Processing table (InnoDB): wp_posts
+0003.860 () Database queries processed: 50 in 3.83 seconds
+0005.500 () Processing table (InnoDB): wp_term_relationships
+0005.685 () Processing table (InnoDB): wp_term_taxonomy
+0005.834 () Processing table (InnoDB): wp_termmeta
+0005.856 () Processing table (InnoDB): wp_terms
+0006.003 () Processing table (MyISAM): wp_ap_config
+0006.017 () Database queries processed: 100 in 5.99 seconds
+0006.018 () Processing table (MyISAM): wp_ap_config_group
+0006.023 () Processing table (MyISAM): wp_ap_config_option
+0006.029 () Processing table (MyISAM): wp_ap_config_url_list
+0006.034 () Processing table (MyISAM): wp_ap_download_img_temp
+0006.042 () Processing table (MyISAM): wp_ap_flickr_img
+0006.045 () Processing table (MyISAM): wp_ap_flickr_oauth
+0006.049 () Processing table (MyISAM): wp_ap_log
+0006.567 () Processing table (MyISAM): wp_ap_more_content
+0006.571 () Processing table (MyISAM): wp_ap_qiniu_img
+0006.575 () Processing table (MyISAM): wp_ap_updated_record
+0006.702 () Processing table (MyISAM): wp_ap_upyun_img
+0006.707 () Processing table (MyISAM): wp_ap_watermark
+0006.721 () Processing table (InnoDB): wp_ariadminer_connections
+0006.731 () Processing table (MyISAM): wp_autolink
+0006.746 () Processing table (InnoDB): wp_bpspro_db_backup
+0006.761 () Processing table (InnoDB): wp_bpspro_login_security
+0006.782 () Processing table (InnoDB): wp_bpspro_seclog_ignore
+0006.798 () Processing table (InnoDB): wp_cpm_file_relationship
+0006.817 () Processing table (InnoDB): wp_cpm_project_items
+0006.833 () Database queries processed: 150 in 6.80 seconds
+0006.844 () Processing table (InnoDB): wp_cpm_tasks
+0006.869 () Processing table (InnoDB): wp_cpm_user_role
+0006.894 () Processing table (InnoDB): wp_erp_ac_banks
+0006.921 () Processing table (InnoDB): wp_erp_ac_chart_classes
+0006.968 () Processing table (InnoDB): wp_erp_ac_chart_types
+0007.002 () Processing table (InnoDB): wp_erp_ac_journals
+0007.038 () Processing table (InnoDB): wp_erp_ac_ledger
+0007.086 () Processing table (InnoDB): wp_erp_ac_payments
+0007.108 () Processing table (InnoDB): wp_erp_ac_tax
+0007.128 () Processing table (InnoDB): wp_erp_ac_tax_items
+0007.154 () Processing table (InnoDB): wp_erp_ac_transaction_items
+0007.189 () Processing table (InnoDB): wp_erp_ac_transactions
+0007.277 () Processing table (InnoDB): wp_erp_audit_log
+0007.334 () Processing table (InnoDB): wp_erp_company_locations
+0007.382 () Processing table (InnoDB): wp_erp_crm_activities_task
+0007.405 () Processing table (InnoDB): wp_erp_crm_campaign_group
+0007.425 () Processing table (InnoDB): wp_erp_crm_campaigns
+0007.445 () Processing table (InnoDB): wp_erp_crm_contact_group
+0007.458 () Processing table (InnoDB): wp_erp_crm_contact_subscriber
+0007.475 () Processing table (InnoDB): wp_erp_crm_customer_activities
+0007.486 () Processing table (InnoDB): wp_erp_crm_customer_companies
+0007.500 () Database queries processed: 200 in 7.47 seconds
+0007.501 () Processing table (InnoDB): wp_erp_crm_save_email_replies
+0007.517 () Processing table (InnoDB): wp_erp_crm_save_search
+0007.533 () Processing table (InnoDB): wp_erp_hr_announcement
+0007.547 () Processing table (InnoDB): wp_erp_hr_dependents
+0007.563 () Processing table (InnoDB): wp_erp_hr_depts
+0007.574 () Processing table (InnoDB): wp_erp_hr_designations
+0007.587 () Processing table (InnoDB): wp_erp_hr_education
+0007.604 () Processing table (InnoDB): wp_erp_hr_employee_history
+0007.618 () Processing table (InnoDB): wp_erp_hr_employee_notes
+0007.642 () Processing table (InnoDB): wp_erp_hr_employee_performance
+0007.659 () Processing table (InnoDB): wp_erp_hr_employees
+0007.681 () Processing table (InnoDB): wp_erp_hr_holiday
+0007.696 () Processing table (InnoDB): wp_erp_hr_leave_entitlements
+0007.714 () Processing table (InnoDB): wp_erp_hr_leave_policies
+0007.729 () Processing table (InnoDB): wp_erp_hr_leave_requests
+0007.746 () Processing table (InnoDB): wp_erp_hr_leaves
+0007.760 () Processing table (InnoDB): wp_erp_hr_work_exp
+0007.775 () Processing table (InnoDB): wp_erp_people_type_relations
+0007.790 () Processing table (InnoDB): wp_erp_people_types
+0007.809 () Processing table (InnoDB): wp_erp_peoplemeta
+0007.834 () Processing table (InnoDB): wp_erp_peoples
+0007.851 () Processing table (InnoDB): wp_ewwwio_images
+0008.431 () Processing table (InnoDB): wp_grp_google_place
+0008.441 () Database queries processed: 250 in 8.41 seconds
+0008.451 () Processing table (InnoDB): wp_grp_google_review
+0008.471 () Processing table (InnoDB): wp_learnpress_order_itemmeta
+0008.490 () Processing table (InnoDB): wp_learnpress_order_items
+0008.505 () Processing table (InnoDB): wp_learnpress_question_answers
+0008.518 () Processing table (InnoDB): wp_learnpress_quiz_questions
+0008.533 () Processing table (InnoDB): wp_learnpress_review_logs
+0008.548 () Processing table (InnoDB): wp_learnpress_section_items
+0008.564 () Processing table (InnoDB): wp_learnpress_sections
+0008.582 () Processing table (InnoDB): wp_learnpress_sessions
+0008.601 () Processing table (InnoDB): wp_learnpress_user_itemmeta
+0008.615 () Processing table (InnoDB): wp_learnpress_user_items
+0008.629 () Processing table (InnoDB): wp_lifterlms_product_to_voucher
+0008.649 () Processing table (InnoDB): wp_lifterlms_user_postmeta
+0008.663 () Processing table (InnoDB): wp_lifterlms_voucher_code_redemptions
+0008.680 () Processing table (InnoDB): wp_lifterlms_vouchers_codes
+0008.697 () Processing table (InnoDB): wp_p2p
+0008.729 () Processing table (InnoDB): wp_p2pmeta
+0008.746 () Processing table (InnoDB): wp_revslider_css
+0008.785 () Processing table (InnoDB): wp_revslider_layer_animations
+0008.800 () Processing table (InnoDB): wp_revslider_navigations
+0008.815 () Processing table (InnoDB): wp_revslider_sliders
+0008.831 () Processing table (InnoDB): wp_revslider_slides
+0008.845 () Processing table (InnoDB): wp_revslider_static_slides
+0008.861 () Processing table (InnoDB): wp_ualp_user_activity
+0009.144 () Processing table (InnoDB): wp_w3tc_cdn_queue
+0009.163 () Processing table (InnoDB): wp_webpages_data
+0009.193 () Processing table (InnoDB): wp_wfBadLeechers
+0009.242 () Processing table (InnoDB): wp_wfBlockedIPLog
+0009.406 () Processing table (InnoDB): wp_wfBlocks
+0009.424 () Processing table (InnoDB): wp_wfBlocksAdv
+0009.444 () Processing table (InnoDB): wp_wfConfig
+0009.557 () Processing table (InnoDB): wp_wfCrawlers
+0009.586 () Processing table (InnoDB): wp_wfFileMods
+0010.127 () Processing table (InnoDB): wp_wfHits
+0010.561 () Processing table (InnoDB): wp_wfHoover
+0010.735 () Processing table (InnoDB): wp_wfIssues
+0010.752 () Processing table (InnoDB): wp_wfKnownFileList
+0011.020 () Processing table (InnoDB): wp_wfLeechers
+0011.113 () Processing table (InnoDB): wp_wfLockedOut
+0011.127 () Processing table (InnoDB): wp_wfLocs
+0011.141 () Processing table (InnoDB): wp_wfLogins
+0011.220 () Processing table (InnoDB): wp_wfNet404s
+0011.238 () Processing table (InnoDB): wp_wfNotifications
+0011.257 () Processing table (InnoDB): wp_wfPendingIssues
+0011.270 () Processing table (InnoDB): wp_wfReverseCache
+0011.287 () Processing table (InnoDB): wp_wfSNIPCache
+0011.302 () Processing table (InnoDB): wp_wfScanners
+0011.322 () Processing table (InnoDB): wp_wfStatus
+0011.454 () Processing table (InnoDB): wp_wfThrottleLog
+0011.469 () Processing table (InnoDB): wp_wfVulnScanners
+0011.485 () Processing table (InnoDB): wp_woocommerce_api_keys
+0011.502 () Processing table (InnoDB): wp_woocommerce_attribute_taxonomies
+0011.518 () Processing table (InnoDB): wp_woocommerce_downloadable_product_permissions
+0011.536 () Processing table (InnoDB): wp_woocommerce_order_itemmeta
+0011.550 () Processing table (InnoDB): wp_woocommerce_order_items
+0011.567 () Processing table (InnoDB): wp_woocommerce_payment_tokenmeta
+0011.583 () Processing table (InnoDB): wp_woocommerce_payment_tokens
+0011.598 () Processing table (InnoDB): wp_woocommerce_sessions
+0011.615 () Processing table (InnoDB): wp_woocommerce_shipping_zone_locations
+0011.630 () Processing table (InnoDB): wp_woocommerce_shipping_zone_methods
+0011.643 () Processing table (InnoDB): wp_woocommerce_shipping_zones
+0011.657 () Processing table (InnoDB): wp_woocommerce_tax_rate_locations
+0011.675 () Processing table (InnoDB): wp_woocommerce_tax_rates
+0011.695 () Processing table (InnoDB): wp_wpefc_coupons
+0011.713 () Processing table (InnoDB): wp_wpefc_fields
+0011.755 () Processing table (InnoDB): wp_wpefc_forms
+0011.781 () Processing table (InnoDB): wp_wpefc_items
+0011.808 () Processing table (InnoDB): wp_wpefc_links
+0011.830 () Processing table (InnoDB): wp_wpefc_logs
+0011.851 () Processing table (InnoDB): wp_wpefc_redirConditions
+0011.864 () Processing table (InnoDB): wp_wpefc_settings
+0011.880 () Processing table (InnoDB): wp_wpefc_steps
+0011.891 () Processing table (MyISAM): wp_wx_message
+0011.896 () Processing table (MyISAM): wp_wx_user
+0011.908 () Processing table (InnoDB): wp_xh_social_channel_qq
+0011.935 () Processing table (InnoDB): wp_xh_social_channel_wechat
+0011.976 () Processing table (InnoDB): wp_xh_social_channel_weibo
+0012.001 () Processing table (InnoDB): wp_xh_social_sessions
+0012.021 () Processing table (InnoDB): wp_yikes_easy_mc_forms
+0012.029 () Unlocking database and leaving maintenance mode
+0012.029 () Disabling Maintenance mode&#8230;
+0012.030 () Finished: lines processed: 485 in 12.00 seconds
+0012.030 () Cleaning up rubbish...
+0012.061 () Restore successful!
+0012.061 () Restore successful

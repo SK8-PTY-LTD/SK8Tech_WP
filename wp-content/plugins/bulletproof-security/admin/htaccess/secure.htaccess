@@ -1,8 +1,27 @@
 #   BULLETPROOF 1.1 SECURE .HTACCESS     
 
-# PHP/PHP.INI HANDLER/CACHE CODE
-# Use BPS Custom Code to add php/php.ini Handler and Cache htaccess code and to save it permanently.
-# Most Hosts do not have/use/require php/php.ini Handler htaccess code
+# CUSTOM CODE TOP PHP/PHP.INI HANDLER/CACHE CODE
+# BEGIN W3TC Page Cache core
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{HTTPS} =on
+    RewriteRule .* - [E=W3TC_SSL:_ssl]
+    RewriteCond %{SERVER_PORT} =443
+    RewriteRule .* - [E=W3TC_SSL:_ssl]
+    RewriteCond %{HTTP:Accept-Encoding} gzip
+    RewriteRule .* - [E=W3TC_ENC:_gzip]
+    RewriteCond %{HTTP_COOKIE} w3tc_preview [NC]
+    RewriteRule .* - [E=W3TC_PREVIEW:_preview]
+    RewriteCond %{REQUEST_METHOD} !=POST
+    RewriteCond %{QUERY_STRING} =""
+    RewriteCond %{REQUEST_URI} \/$
+    RewriteCond %{HTTP_COOKIE} !(comment_author|wp\-postpass|w3tc_logged_out|wordpress_logged_in|wptouch_switch_toggle) [NC]
+    RewriteCond "%{DOCUMENT_ROOT}/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_SSL}%{ENV:W3TC_PREVIEW}.html%{ENV:W3TC_ENC}" -f
+    RewriteRule .* "/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_SSL}%{ENV:W3TC_PREVIEW}.html%{ENV:W3TC_ENC}" [L]
+</IfModule>
+# END W3TC Page Cache core
+
 
 # TURN OFF YOUR SERVER SIGNATURE
 # Suppresses the footer line server version number and ServerName of the serving virtual host
@@ -29,7 +48,7 @@ DirectoryIndex index.php index.html /index.php
 # BRUTE FORCE LOGIN PAGE PROTECTION
 # PLACEHOLDER ONLY
 # Use BPS Custom Code to add Brute Force Login protection code and to save it permanently.
-# See this link: http://forum.ait-pro.com/forums/topic/protect-login-page-from-brute-force-login-attacks/
+# See this link: https://forum.ait-pro.com/forums/topic/protect-login-page-from-brute-force-login-attacks/
 # for more information.
 
 # BPS ERROR LOGGING AND TRACKING
@@ -70,10 +89,17 @@ RewriteRule ^wp-includes/[^/]+\.php$ - [F]
 RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F]
 RewriteRule ^wp-includes/theme-compat/ - [F]
 
+# CUSTOM CODE WP REWRITE LOOP START
 # WP REWRITE LOOP START
+# Rewrite|Redirect http to https|SSL & www to non-www
 RewriteEngine On
 RewriteBase /
+RewriteCond %{HTTPS} !=on
+RewriteCond %{SERVER_PORT} ^80
+RewriteCond %{HTTP_HOST} ^www\.sk8\.tech$ [NC]
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
 RewriteRule ^index\.php$ - [L]
+
 
 # REQUEST METHODS FILTERED
 # If you want to allow HEAD Requests use BPS Custom Code and copy 
@@ -135,7 +161,7 @@ RewriteRule .* index.php [F]
 # Example: Whitelist additional misc files: (example\.php|another-file\.php|phpthumb\.php|thumb\.php|thumbs\.php)
 RewriteCond %{REQUEST_URI} (timthumb\.php|phpthumb\.php|thumb\.php|thumbs\.php) [NC]
 # Example: Whitelist additional website domains: RewriteCond %{HTTP_REFERER} ^.*(YourWebsite.com|AnotherWebsite.com).*
-RewriteCond %{HTTP_REFERER} ^.*demo2.local.*
+RewriteCond %{HTTP_REFERER} ^.*sk8.tech.*
 RewriteRule . - [S=1]
 
 # BEGIN BPSQSE BPS QUERY STRING EXPLOITS

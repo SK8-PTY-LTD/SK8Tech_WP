@@ -1,0 +1,1629 @@
+0000.001 (0) Opened log file at time: Sun, 07 May 2017 06:40:47 +0000 on https://sk8.tech
+0000.008 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.12.40 WP: 4.7.4 PHP: 7.1.4 (fpm-fcgi, Linux ubuntu-1024mb-syd1-clients 4.4.0-72-generic #93-Ubuntu SMP Fri Mar 31 14:07:41 UTC 2017 x86_64) MySQL: 5.7.18 WPLANG: en_US Server: Apache/2.4.25 (Unix) OpenSSL/1.0.2g safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 10.7M | 12M) multisite: N openssl: OpenSSL 1.0.2g  1 Mar 2016 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.010 (0) Free space on disk containing Updraft's temporary directory: 10595 MB
+0000.016 (0) Tasks: Backup files: 1 (schedule: weekly) Backup DB:  (schedule: daily)
+0000.020 (0) Processed schedules. Combining jobs from co-inciding events. Tasks now: Backup files: 1 Backup DB: 1
+0000.034 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1493534344, seconds_ago=604903)
+0000.040 (0) Set semaphore last lock (fd) time to 2017-05-07 06:40:47
+0000.041 (0) Semaphore lock (fd) complete
+0000.049 (0) Backup run: resumption=0, nonce=69c8651eb609, begun at=1494139247 (0s ago), job type=backup
+0000.054 (0) Scheduling a resumption (1) after 300 seconds (1494139547) in case this run gets aborted
+0000.066 (0) Checking if we have a zip executable available
+0000.070 (0) Testing: /usr/bin/zip
+0000.078 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.081 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.083 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.085 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.088 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.093 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.096 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.105 (0) Working binary zip found: /usr/bin/zip
+0000.110 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.112 (0) Creation of backups of directories: beginning
+0000.119 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0000.860 (0) Total entities for the zip file: 2030 directories, 14289 files (0 skipped as non-modified), 201.8 MB
+0000.868 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0000.873 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0000.881 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0000.885 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0000.893 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0000.896 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7.3 MB, 14289 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0001.742 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: size is now: 3.70 MB
+0001.746 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 600 files added (on-disk size: 3808 KB)
+0001.750 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 700 files added (on-disk size: 3808 KB)
+0001.752 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 800 files added (on-disk size: 3808 KB)
+0001.755 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 900 files added (on-disk size: 3808 KB)
+0001.758 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 1000 files added (on-disk size: 3808 KB)
+0001.761 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.9 MB, 14289 files batched, 501 (1002) added so far); re-opening (prior size: 3808 KB)
+0001.987 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: size is now: 4.70 MB
+0001.992 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 1100 files added (on-disk size: 4764.6 KB)
+0001.996 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 1200 files added (on-disk size: 4764.6 KB)
+0001.999 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 1300 files added (on-disk size: 4764.6 KB)
+0002.002 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 1400 files added (on-disk size: 4764.6 KB)
+0002.005 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 1500 files added (on-disk size: 4764.6 KB)
+0002.007 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (9.1 MB, 14289 files batched, 501 (1503) added so far); re-opening (prior size: 4764.6 KB)
+0002.526 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: size is now: 8.30 MB
+0002.534 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 1600 files added (on-disk size: 8489.6 KB)
+0002.537 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 1700 files added (on-disk size: 8489.6 KB)
+0002.541 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 1800 files added (on-disk size: 8489.6 KB)
+0002.544 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 1900 files added (on-disk size: 8489.6 KB)
+0002.547 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 2000 files added (on-disk size: 8489.6 KB)
+0002.549 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7 MB, 14289 files batched, 501 (2004) added so far); re-opening (prior size: 8489.6 KB)
+0003.241 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: size is now: 10.30 MB
+0003.250 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 2100 files added (on-disk size: 10531.1 KB)
+0003.253 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 2200 files added (on-disk size: 10531.1 KB)
+0003.257 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 2300 files added (on-disk size: 10531.1 KB)
+0003.260 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 2400 files added (on-disk size: 10531.1 KB)
+0003.263 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 2500 files added (on-disk size: 10531.1 KB)
+0003.265 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (11.2 MB, 14289 files batched, 501 (2505) added so far); re-opening (prior size: 10531.1 KB)
+0003.909 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: size is now: 14.10 MB
+0003.921 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 2600 files added (on-disk size: 14428.5 KB)
+0003.925 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 2700 files added (on-disk size: 14428.5 KB)
+0003.929 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 2800 files added (on-disk size: 14428.5 KB)
+0003.937 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 2900 files added (on-disk size: 14428.5 KB)
+0003.945 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 3000 files added (on-disk size: 14428.5 KB)
+0003.951 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5 MB, 14289 files batched, 501 (3006) added so far); re-opening (prior size: 14428.5 KB)
+0004.467 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 3100 files added (on-disk size: 16241.9 KB)
+0004.473 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 3200 files added (on-disk size: 16241.9 KB)
+0004.477 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 3300 files added (on-disk size: 16241.9 KB)
+0004.481 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 3400 files added (on-disk size: 16241.9 KB)
+0004.484 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 3500 files added (on-disk size: 16241.9 KB)
+0004.486 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.6 MB, 14289 files batched, 501 (3507) added so far); re-opening (prior size: 16241.9 KB)
+0005.031 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 3600 files added (on-disk size: 18116.1 KB)
+0005.035 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 3700 files added (on-disk size: 18116.1 KB)
+0005.038 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 3800 files added (on-disk size: 18116.1 KB)
+0005.040 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 3900 files added (on-disk size: 18116.1 KB)
+0005.044 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 4000 files added (on-disk size: 18116.1 KB)
+0005.046 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.4 MB, 14289 files batched, 501 (4008) added so far); re-opening (prior size: 18116.1 KB)
+0005.514 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 4100 files added (on-disk size: 19544.6 KB)
+0005.520 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 4200 files added (on-disk size: 19544.6 KB)
+0005.525 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 4300 files added (on-disk size: 19544.6 KB)
+0005.531 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 4400 files added (on-disk size: 19544.6 KB)
+0005.535 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 4500 files added (on-disk size: 19544.6 KB)
+0005.538 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.5 MB, 14289 files batched, 501 (4509) added so far); re-opening (prior size: 19544.6 KB)
+0006.034 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 4600 files added (on-disk size: 21720.5 KB)
+0006.037 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 4700 files added (on-disk size: 21720.5 KB)
+0006.041 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 4800 files added (on-disk size: 21720.5 KB)
+0006.044 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 4900 files added (on-disk size: 21720.5 KB)
+0006.048 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 5000 files added (on-disk size: 21720.5 KB)
+0006.049 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6 MB, 14289 files batched, 501 (5010) added so far); re-opening (prior size: 21720.5 KB)
+0006.528 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 5100 files added (on-disk size: 24526.2 KB)
+0006.534 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 5200 files added (on-disk size: 24526.2 KB)
+0006.540 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 5300 files added (on-disk size: 24526.2 KB)
+0006.546 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 5400 files added (on-disk size: 24526.2 KB)
+0006.551 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 5500 files added (on-disk size: 24526.2 KB)
+0006.554 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (11 MB, 14289 files batched, 501 (5511) added so far); re-opening (prior size: 24526.2 KB)
+0007.443 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 5600 files added (on-disk size: 29058.6 KB)
+0007.447 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 5700 files added (on-disk size: 29058.6 KB)
+0007.450 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 5800 files added (on-disk size: 29058.6 KB)
+0007.453 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 5900 files added (on-disk size: 29058.6 KB)
+0007.456 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 6000 files added (on-disk size: 29058.6 KB)
+0007.458 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (15.6 MB, 14289 files batched, 501 (6012) added so far); re-opening (prior size: 29058.6 KB)
+0008.382 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: size is now: 34.60 MB
+0008.393 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 6100 files added (on-disk size: 35461.7 KB)
+0008.396 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 6200 files added (on-disk size: 35461.7 KB)
+0008.401 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 6300 files added (on-disk size: 35461.7 KB)
+0008.405 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 6400 files added (on-disk size: 35461.7 KB)
+0008.410 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 6500 files added (on-disk size: 35461.7 KB)
+0008.412 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.9 MB, 14289 files batched, 501 (6513) added so far); re-opening (prior size: 35461.7 KB)
+0008.834 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 6600 files added (on-disk size: 37524.9 KB)
+0008.837 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 6700 files added (on-disk size: 37524.9 KB)
+0008.840 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 6800 files added (on-disk size: 37524.9 KB)
+0008.843 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 6900 files added (on-disk size: 37524.9 KB)
+0008.846 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 7000 files added (on-disk size: 37524.9 KB)
+0008.848 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.3 MB, 14289 files batched, 501 (7014) added so far); re-opening (prior size: 37524.9 KB)
+0009.180 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 7100 files added (on-disk size: 39784.3 KB)
+0009.185 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 7200 files added (on-disk size: 39784.3 KB)
+0009.191 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 7300 files added (on-disk size: 39784.3 KB)
+0009.196 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 7400 files added (on-disk size: 39784.3 KB)
+0009.202 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 7500 files added (on-disk size: 39784.3 KB)
+0009.205 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.1 MB, 14289 files batched, 501 (7515) added so far); re-opening (prior size: 39784.3 KB)
+0009.599 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 7600 files added (on-disk size: 40888.4 KB)
+0009.603 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 7700 files added (on-disk size: 40888.4 KB)
+0009.607 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 7800 files added (on-disk size: 40888.4 KB)
+0009.611 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 7900 files added (on-disk size: 40888.4 KB)
+0009.614 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 8000 files added (on-disk size: 40888.4 KB)
+0009.616 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.5 MB, 14289 files batched, 501 (8016) added so far); re-opening (prior size: 40888.4 KB)
+0010.063 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 8100 files added (on-disk size: 42243.2 KB)
+0010.067 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 8200 files added (on-disk size: 42243.2 KB)
+0010.070 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 8300 files added (on-disk size: 42243.2 KB)
+0010.075 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 8400 files added (on-disk size: 42243.2 KB)
+0010.079 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 8500 files added (on-disk size: 42243.2 KB)
+0010.081 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.7 MB, 14289 files batched, 501 (8517) added so far); re-opening (prior size: 42243.2 KB)
+0010.552 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 8600 files added (on-disk size: 43434.5 KB)
+0010.556 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 8700 files added (on-disk size: 43434.5 KB)
+0010.559 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 8800 files added (on-disk size: 43434.5 KB)
+0010.562 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 8900 files added (on-disk size: 43434.5 KB)
+0010.565 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 9000 files added (on-disk size: 43434.5 KB)
+0010.566 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.8 MB, 14289 files batched, 501 (9018) added so far); re-opening (prior size: 43434.5 KB)
+0011.129 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 9100 files added (on-disk size: 45521.4 KB)
+0011.133 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 9200 files added (on-disk size: 45521.4 KB)
+0011.136 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 9300 files added (on-disk size: 45521.4 KB)
+0011.139 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 9400 files added (on-disk size: 45521.4 KB)
+0011.142 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 9500 files added (on-disk size: 45521.4 KB)
+0011.144 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.5 MB, 14289 files batched, 501 (9519) added so far); re-opening (prior size: 45521.4 KB)
+0011.912 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 9600 files added (on-disk size: 48497.7 KB)
+0011.916 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 9700 files added (on-disk size: 48497.7 KB)
+0011.924 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 9800 files added (on-disk size: 48497.7 KB)
+0011.928 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 9900 files added (on-disk size: 48497.7 KB)
+0011.933 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 10000 files added (on-disk size: 48497.7 KB)
+0011.937 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.3 MB, 14289 files batched, 501 (10020) added so far); re-opening (prior size: 48497.7 KB)
+0012.495 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 10100 files added (on-disk size: 50531.1 KB)
+0012.504 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 10200 files added (on-disk size: 50531.1 KB)
+0012.508 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 10300 files added (on-disk size: 50531.1 KB)
+0012.512 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 10400 files added (on-disk size: 50531.1 KB)
+0012.518 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 10500 files added (on-disk size: 50531.1 KB)
+0012.520 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4 MB, 14289 files batched, 501 (10521) added so far); re-opening (prior size: 50531.1 KB)
+0013.223 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 10600 files added (on-disk size: 51880.9 KB)
+0013.228 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 10700 files added (on-disk size: 51880.9 KB)
+0013.232 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 10800 files added (on-disk size: 51880.9 KB)
+0013.235 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 10900 files added (on-disk size: 51880.9 KB)
+0013.238 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 11000 files added (on-disk size: 51880.9 KB)
+0013.240 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.4 MB, 14289 files batched, 501 (11022) added so far); re-opening (prior size: 51880.9 KB)
+0013.920 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 11100 files added (on-disk size: 53698.4 KB)
+0013.925 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 11200 files added (on-disk size: 53698.4 KB)
+0013.930 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 11300 files added (on-disk size: 53698.4 KB)
+0013.934 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 11400 files added (on-disk size: 53698.4 KB)
+0013.939 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 11500 files added (on-disk size: 53698.4 KB)
+0013.942 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.3 MB, 14289 files batched, 501 (11523) added so far); re-opening (prior size: 53698.4 KB)
+0014.412 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 11600 files added (on-disk size: 54622.1 KB)
+0014.416 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 11700 files added (on-disk size: 54622.1 KB)
+0014.419 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 11800 files added (on-disk size: 54622.1 KB)
+0014.422 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 11900 files added (on-disk size: 54622.1 KB)
+0014.425 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 12000 files added (on-disk size: 54622.1 KB)
+0014.427 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (18.4 MB, 14289 files batched, 501 (12024) added so far); re-opening (prior size: 54622.1 KB)
+0015.750 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 12100 files added (on-disk size: 60128.7 KB)
+0015.754 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 12200 files added (on-disk size: 60128.7 KB)
+0015.758 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 12300 files added (on-disk size: 60128.7 KB)
+0015.763 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 12400 files added (on-disk size: 60128.7 KB)
+0015.766 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 12500 files added (on-disk size: 60128.7 KB)
+0015.769 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (11.2 MB, 14289 files batched, 501 (12525) added so far); re-opening (prior size: 60128.7 KB)
+0016.817 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 12600 files added (on-disk size: 65574.5 KB)
+0016.821 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 12700 files added (on-disk size: 65574.5 KB)
+0016.824 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 12800 files added (on-disk size: 65574.5 KB)
+0016.827 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 12900 files added (on-disk size: 65574.5 KB)
+0016.830 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 13000 files added (on-disk size: 65574.5 KB)
+0016.834 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.4 MB, 14289 files batched, 501 (13026) added so far); re-opening (prior size: 65574.5 KB)
+0017.549 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 13100 files added (on-disk size: 67859.5 KB)
+0017.556 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 13200 files added (on-disk size: 67859.5 KB)
+0017.561 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 13300 files added (on-disk size: 67859.5 KB)
+0017.566 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 13400 files added (on-disk size: 67859.5 KB)
+0017.571 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 13500 files added (on-disk size: 67859.5 KB)
+0017.574 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (20.2 MB, 14289 files batched, 501 (13527) added so far); re-opening (prior size: 67859.5 KB)
+0019.222 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 13600 files added (on-disk size: 77071.5 KB)
+0019.226 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 13700 files added (on-disk size: 77071.5 KB)
+0019.229 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 13800 files added (on-disk size: 77071.5 KB)
+0019.232 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 13900 files added (on-disk size: 77071.5 KB)
+0019.236 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 14000 files added (on-disk size: 77071.5 KB)
+0019.238 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.2 MB, 14289 files batched, 501 (14028) added so far); re-opening (prior size: 77071.5 KB)
+0019.804 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 14100 files added (on-disk size: 78267.5 KB)
+0019.808 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip.tmp: 14200 files added (on-disk size: 78267.5 KB)
+0021.332 (0) Created plugins zip (0) - 81332.5 KB in 21.2 s (3834.7 KB/s) (sha1: a1466b8128f673bffb60bb4288fa1f8dddc39722, sha256: 90891fbe172dc1a84e8a269f07271549522a2e1c2bdbe00179ef0a0530f6221e)
+0021.337 (0) Beginning creation of dump of themes (split every: 400 MB)
+0021.357 (0) Total entities for the zip file: 56 directories, 291 files (0 skipped as non-modified), 22.8 MB
+0021.361 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0021.364 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0021.818 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-themes.zip.tmp: size is now: 16.50 MB
+0022.044 (0) Created themes zip (0) - 16846.3 KB in 0.7 s (23893.8 KB/s) (sha1: fece03aab56aa5d56ee6ec38e4ef8bf33648f2a2, sha256: e81078e266eaba2897bfd98c79ba9bcbfaade9c1ffa9db232ffa39df239b8a93)
+0022.050 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0022.052 (0) Looking for candidates to back up in: /srv/users/serverpilot/apps/sk8tech/public/wp-content/uploads
+0022.054 (0) finding files: wp-migrate-db: adding to list (1)
+0022.055 (0) finding files: wc-logs: adding to list (2)
+0022.057 (0) finding files: woocommerce_uploads: adding to list (3)
+0022.059 (0) finding files: js_composer: adding to list (4)
+0022.061 (0) finding files: mc4wp-debug-log.php: adding to list (5)
+0022.063 (0) finding files: revslider: adding to list (6)
+0022.065 (0) finding files: 2017: adding to list (7)
+0022.067 (0) finding files: learn-press-logs: adding to list (8)
+0022.069 (0) finding files: GeoIPv6.dat: adding to list (9)
+0022.071 (0) finding files: llms-logs: adding to list (10)
+0022.073 (0) finding files: startapp: adding to list (11)
+0022.075 (0) finding files: CostEstimationPayment: adding to list (12)
+0022.077 (0) finding files: GeoIP.dat: adding to list (13)
+0022.079 (0) finding files: 2016: adding to list (14)
+0022.081 (0) finding files: profiles: adding to list (15)
+0022.083 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0022.191 (0) Total entities for the zip file: 131 directories, 4453 files (0 skipped as non-modified), 621.8 MB
+0022.196 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 100 files added (on-disk size: 0 KB)
+0022.201 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 200 files added (on-disk size: 0 KB)
+0022.204 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 300 files added (on-disk size: 0 KB)
+0022.207 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 MB added on this batch (45.4 MB, 4453 files batched, 343 (343) added so far); re-opening (prior size: 0 KB)
+0022.715 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: size is now: 45.50 MB
+0022.719 (0) A useful amount of data was added after this amount of zip processing: 0.8 s (normalised: 0.4 s, rate: 60178.1 KB/s)
+0022.722 (0) Performance is good - will increase the amount of data we attempt to batch (time=0.77205896377563, normalised_time=0.42540364457493, max_time=-1, data points known=0, old_max_bytes=26214400, new_max_bytes=209715200)
+0022.726 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 400 files added (on-disk size: 46570.9 KB)
+0022.730 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 500 files added (on-disk size: 46570.9 KB)
+0022.732 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 600 files added (on-disk size: 46570.9 KB)
+0022.735 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 700 files added (on-disk size: 46570.9 KB)
+0022.738 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 800 files added (on-disk size: 46570.9 KB)
+0022.740 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (30.2 MB, 4453 files batched, 501 (844) added so far); re-opening (prior size: 46570.9 KB)
+0023.343 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: size is now: 75.80 MB
+0023.350 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 900 files added (on-disk size: 77657.3 KB)
+0023.354 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 1000 files added (on-disk size: 77657.3 KB)
+0023.357 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 1100 files added (on-disk size: 77657.3 KB)
+0023.360 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 1200 files added (on-disk size: 77657.3 KB)
+0023.363 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 1300 files added (on-disk size: 77657.3 KB)
+0023.365 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (64.6 MB, 4453 files batched, 501 (1345) added so far); re-opening (prior size: 77657.3 KB)
+0024.461 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: size is now: 140.30 MB
+0024.468 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 1400 files added (on-disk size: 143621.9 KB)
+0024.472 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 1500 files added (on-disk size: 143621.9 KB)
+0024.475 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 1600 files added (on-disk size: 143621.9 KB)
+0024.478 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 1700 files added (on-disk size: 143621.9 KB)
+0024.481 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 1800 files added (on-disk size: 143621.9 KB)
+0024.483 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (91.6 MB, 4453 files batched, 501 (1846) added so far); re-opening (prior size: 143621.9 KB)
+0026.422 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: size is now: 231.60 MB
+0026.428 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 1900 files added (on-disk size: 237156.1 KB)
+0026.431 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 2000 files added (on-disk size: 237156.1 KB)
+0026.435 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 2100 files added (on-disk size: 237156.1 KB)
+0026.439 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 2200 files added (on-disk size: 237156.1 KB)
+0026.444 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 2300 files added (on-disk size: 237156.1 KB)
+0026.447 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (111.2 MB, 4453 files batched, 501 (2347) added so far); re-opening (prior size: 237156.1 KB)
+0029.266 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: size is now: 342.80 MB
+0029.275 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 2400 files added (on-disk size: 351063 KB)
+0029.279 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 2500 files added (on-disk size: 351063 KB)
+0029.282 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 2600 files added (on-disk size: 351063 KB)
+0029.285 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: 2700 files added (on-disk size: 351063 KB)
+0029.289 (0) Adding batch to zip file (UpdraftPlus_BinZip): possibly approaching split limit (52 MB, 434 (2781) files added so far); last ratio: 1; re-opening (prior size: 351063 KB)
+0031.900 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip.tmp: size is now: 394.70 MB
+0031.917 (0) Zip size is at/near split limit (394.7 MB / 400 MB) - bumping index (from: 0)
+0037.126 (0) Created uploads zip (0) - 404198.1 KB in 9.8 s (41108.1 KB/s) (checksums: sha1: f6ab3eb3750eb97994dba671707e8f80d6992509, sha256: 38cfc7b2bca799cf1d4d34f6875d255cfaace66084232218da996875ca2c702c)
+0037.132 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 2.0 seconds have passed since the last write (0.1 MB, 1 (2782) files added so far); re-opening (prior size: 0 KB)
+0037.143 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: size is now: 0.10 MB
+0037.147 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: 2800 files added (on-disk size: 151.6 KB)
+0037.152 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: 2900 files added (on-disk size: 151.6 KB)
+0037.155 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: 3000 files added (on-disk size: 151.6 KB)
+0037.159 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: 3100 files added (on-disk size: 151.6 KB)
+0037.162 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: 3200 files added (on-disk size: 151.6 KB)
+0037.166 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (74.8 MB, 4453 files batched, 501 (3283) added so far); re-opening (prior size: 151.6 KB)
+0038.472 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: size is now: 73.70 MB
+0038.477 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: 3300 files added (on-disk size: 75493.1 KB)
+0038.481 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: 3400 files added (on-disk size: 75493.1 KB)
+0038.485 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: 3500 files added (on-disk size: 75493.1 KB)
+0038.489 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: 3600 files added (on-disk size: 75493.1 KB)
+0038.493 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: 3700 files added (on-disk size: 75493.1 KB)
+0038.499 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (135.3 MB, 4453 files batched, 501 (3784) added so far); re-opening (prior size: 75493.1 KB)
+0042.888 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: size is now: 204.70 MB
+0042.896 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: 3800 files added (on-disk size: 209583.6 KB)
+0042.901 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: 3900 files added (on-disk size: 209583.6 KB)
+0042.906 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: 4000 files added (on-disk size: 209583.6 KB)
+0042.911 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: 4100 files added (on-disk size: 209583.6 KB)
+0042.915 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: 4200 files added (on-disk size: 209583.6 KB)
+0042.918 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (10 MB, 4453 files batched, 501 (4285) added so far); re-opening (prior size: 209583.6 KB)
+0044.297 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: 4300 files added (on-disk size: 219952.5 KB)
+0044.304 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip.tmp: 4400 files added (on-disk size: 219952.5 KB)
+0048.450 (0) Created uploads zip (1) - 224876.9 KB in 11.3 s (19861.9 KB/s) (sha1: db0ab6eececc5c62d2922aa69dfc7dea4a9331e8, sha256: 31418e53408b0a7c859617df7d4c661563b8437f369a2760c21596ee558ae9fa)
+0048.456 (0) Beginning backup of other directories found in the content directory (index: 0)
+0048.457 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0048.459 (0) Looking for candidates to back up in: /srv/users/serverpilot/apps/sk8tech/public/wp-content
+0048.461 (0) finding files: mu-plugins: adding to list (1)
+0048.463 (0) finding files: temp-write-test-1489070610: adding to list (2)
+0048.467 (0) finding files: plugins: skipping: this is the plugins directory
+0048.469 (0) finding files: upgrade: skipping: excluded by options
+0048.471 (0) finding files: temp-write-test-1486454526: adding to list (3)
+0048.473 (0) finding files: db.php: adding to list (4)
+0048.475 (0) finding files: temp-write-test-1489126815: adding to list (5)
+0048.477 (0) finding files: index.php: adding to list (6)
+0048.479 (0) finding files: cache: skipping: excluded by options
+0048.481 (0) finding files: wflogs: adding to list (7)
+0048.483 (0) finding files: object-cache.php: adding to list (8)
+0048.485 (0) finding files: temp-write-test-1488986948: adding to list (9)
+0048.487 (0) finding files: temp-write-test-1489071334: adding to list (10)
+0048.489 (0) finding files: advanced-cache.php: adding to list (11)
+0048.490 (0) finding files: ewww: adding to list (12)
+0048.492 (0) finding files: ai1wm-backups: skipping: excluded by options (glob)
+0048.494 (0) finding files: uploads: skipping: this is the uploads directory
+0048.496 (0) finding files: cache2: adding to list (13)
+0048.498 (0) finding files: ari-adminer-config.php: adding to list (14)
+0048.501 (0) finding files: languages: adding to list (15)
+0048.502 (0) finding files: w3tc-config: adding to list (16)
+0048.504 (0) finding files: updraft: skipping: this is the updraft directory
+0048.506 (0) finding files: bps-backup: adding to list (17)
+0048.508 (0) finding files: themes: skipping: this is the themes directory
+0048.522 (0) Total entities for the zip file: 11 directories, 124 files (0 skipped as non-modified), 17.5 MB
+0048.526 (0) Zip: backup_2017-05-07-1640_SK8Tech_69c8651eb609-others.zip.tmp: 100 files added (on-disk size: 0 KB)
+0049.597 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-others.zip.tmp: size is now: 5.60 MB
+0049.673 (0) Created others zip (0) - 5768.6 KB in 1.2 s (4973.2 KB/s) (sha1: c9f9e9b6e75b53cb28689878511b2acc1b8a8e79, sha256: 9002c6f0cd4e9269d1ff41f7e15c83e978ffbe4d3470368dc90d03ffe641fb45)
+0049.685 (0) Saving backup status to database (elements: 9)
+0049.707 (0) Beginning creation of database dump (WordPress DB)
+0049.719 (0) Testing: /usr/bin/mysqldump
+0050.225 (0) Output: /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;\n/*!40103 SET TIME_ZONE='+00:00' */;\n/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;\n/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;\n/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;\n/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;\nDROP TABLE IF EXISTS `wp_options`;\n/*!40101 SET @saved_cs_client     = @@character_set_client */;\n/*!40101 SET character_set_client = utf8 */;\nCRE (truncated - 1172 bytes total)
+0050.230 (0) Working binary mysqldump found: /usr/bin/mysqldump
+0050.275 (0) Table wp_options: Total expected rows (approximate): 2929
+0050.519 (0) Table wp_options: Total rows added: 3031 in 0.24 seconds
+0050.552 (0) Table wp_options: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_options.table.gz - 411.1 KB)
+0050.559 (0) Table wp_users: Total expected rows (approximate): 2
+0050.563 (0) Table wp_users: Total rows added: 2 in 0.00 seconds
+0050.567 (0) Table wp_users: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_users.table.gz - 0.7 KB)
+0050.577 (0) Table wp_usermeta: Total expected rows (approximate): 111
+0050.581 (0) Table wp_usermeta: Total rows added: 111 in 0.00 seconds
+0050.584 (0) Table wp_usermeta: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_usermeta.table.gz - 3.5 KB)
+0050.590 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0050.594 (0) Table wp_commentmeta: Total rows added: 0 in 0.00 seconds
+0050.596 (0) Table wp_commentmeta: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_commentmeta.table.gz - 0.4 KB)
+0050.602 (0) Table wp_comments: Total expected rows (approximate): 9
+0050.606 (0) Table wp_comments: Total rows added: 9 in 0.00 seconds
+0050.608 (0) Table wp_comments: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_comments.table.gz - 1.2 KB)
+0050.619 (0) Table wp_links: Total expected rows (approximate): 0
+0050.625 (0) Table wp_links: Total rows added: 0 in 0.00 seconds
+0050.628 (0) Table wp_links: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_links.table.gz - 0.4 KB)
+0050.635 (0) Table wp_postmeta: Total expected rows (approximate): 7479
+0050.789 (0) Table wp_postmeta: Total rows added: 8639 in 0.15 seconds
+0050.792 (0) Table wp_postmeta: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_postmeta.table.gz - 156.2 KB)
+0050.799 (0) Table wp_posts: Total expected rows (approximate): 2830
+0051.778 (0) Table wp_posts: Total rows added: 3984 in 0.98 seconds
+0051.781 (0) Table wp_posts: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_posts.table.gz - 2410.4 KB)
+0051.787 (0) Table wp_term_relationships: Total expected rows (approximate): 8364
+0052.210 (0) Table wp_term_relationships: binary mysqldump finished (writes: 30) in 0.42 seconds
+0052.214 (0) Table wp_term_relationships: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_term_relationships.table.gz - 22 KB)
+0052.220 (0) Table wp_term_taxonomy: Total expected rows (approximate): 899
+0052.233 (0) Table wp_term_taxonomy: Total rows added: 899 in 0.01 seconds
+0052.236 (0) Table wp_term_taxonomy: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_term_taxonomy.table.gz - 18 KB)
+0052.242 (0) Table wp_termmeta: Total expected rows (approximate): 0
+0052.244 (0) Table wp_termmeta: Total rows added: 0 in 0.00 seconds
+0052.246 (0) Table wp_termmeta: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_termmeta.table.gz - 0.4 KB)
+0052.252 (0) Table wp_terms: Total expected rows (approximate): 899
+0052.264 (0) Table wp_terms: Total rows added: 899 in 0.01 seconds
+0052.267 (0) Table wp_terms: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_terms.table.gz - 17.2 KB)
+0052.273 (0) Table wp_ap_config: Total expected rows (approximate): 6
+0052.278 (0) Table wp_ap_config: Total rows added: 6 in 0.00 seconds
+0052.281 (0) Table wp_ap_config: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_config.table.gz - 1.7 KB)
+0052.288 (0) Table wp_ap_config_group: Total expected rows (approximate): 4
+0052.291 (0) Table wp_ap_config_group: Total rows added: 4 in 0.00 seconds
+0052.294 (0) Table wp_ap_config_group: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_config_group.table.gz - 0.4 KB)
+0052.301 (0) Table wp_ap_config_option: Total expected rows (approximate): 20
+0052.306 (0) Table wp_ap_config_option: Total rows added: 20 in 0.00 seconds
+0052.310 (0) Table wp_ap_config_option: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_config_option.table.gz - 0.6 KB)
+0052.316 (0) Table wp_ap_config_url_list: Total expected rows (approximate): 5
+0052.319 (0) Table wp_ap_config_url_list: Total rows added: 5 in 0.00 seconds
+0052.321 (0) Table wp_ap_config_url_list: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_config_url_list.table.gz - 0.5 KB)
+0052.329 (0) Table wp_ap_download_img_temp: Total expected rows (approximate): 32
+0052.336 (0) Table wp_ap_download_img_temp: Total rows added: 32 in 0.00 seconds
+0052.340 (0) Table wp_ap_download_img_temp: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_download_img_temp.table.gz - 2.1 KB)
+0052.347 (0) Table wp_ap_flickr_img: Total expected rows (approximate): 0
+0052.350 (0) Table wp_ap_flickr_img: Total rows added: 0 in 0.00 seconds
+0052.351 (0) Table wp_ap_flickr_img: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_flickr_img.table.gz - 0.4 KB)
+0052.359 (0) Table wp_ap_flickr_oauth: Total expected rows (approximate): 0
+0052.362 (0) Table wp_ap_flickr_oauth: Total rows added: 0 in 0.00 seconds
+0052.363 (0) Table wp_ap_flickr_oauth: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_flickr_oauth.table.gz - 0.3 KB)
+0052.369 (0) Table wp_ap_log: Total expected rows (approximate): 4245
+0052.418 (0) Table wp_ap_log: Total rows added: 4245 in 0.05 seconds
+0052.421 (0) Table wp_ap_log: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_log.table.gz - 104 KB)
+0052.427 (0) Table wp_ap_more_content: Total expected rows (approximate): 0
+0052.430 (0) Table wp_ap_more_content: Total rows added: 0 in 0.00 seconds
+0052.431 (0) Table wp_ap_more_content: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_more_content.table.gz - 0.3 KB)
+0052.437 (0) Table wp_ap_qiniu_img: Total expected rows (approximate): 0
+0052.441 (0) Table wp_ap_qiniu_img: Total rows added: 0 in 0.00 seconds
+0052.443 (0) Table wp_ap_qiniu_img: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_qiniu_img.table.gz - 0.3 KB)
+0052.450 (0) Table wp_ap_updated_record: Total expected rows (approximate): 908
+0052.471 (0) Table wp_ap_updated_record: Total rows added: 908 in 0.02 seconds
+0052.474 (0) Table wp_ap_updated_record: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_updated_record.table.gz - 64.1 KB)
+0052.480 (0) Table wp_ap_upyun_img: Total expected rows (approximate): 0
+0052.484 (0) Table wp_ap_upyun_img: Total rows added: 0 in 0.00 seconds
+0052.486 (0) Table wp_ap_upyun_img: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_upyun_img.table.gz - 0.3 KB)
+0052.496 (0) Table wp_ap_watermark: Total expected rows (approximate): 1
+0052.500 (0) Table wp_ap_watermark: Total rows added: 1 in 0.00 seconds
+0052.502 (0) Table wp_ap_watermark: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_watermark.table.gz - 0.6 KB)
+0052.509 (0) Table wp_ariadminer_connections: Total expected rows (approximate): 0
+0052.512 (0) Table wp_ariadminer_connections: Total rows added: 0 in 0.00 seconds
+0052.514 (0) Table wp_ariadminer_connections: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ariadminer_connections.table.gz - 0.5 KB)
+0052.520 (0) Table wp_autolink: Total expected rows (approximate): 39
+0052.523 (0) Table wp_autolink: Total rows added: 39 in 0.00 seconds
+0052.525 (0) Table wp_autolink: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_autolink.table.gz - 1 KB)
+0052.530 (0) Table wp_bpspro_db_backup: Total expected rows (approximate): 0
+0052.533 (0) Table wp_bpspro_db_backup: Total rows added: 0 in 0.00 seconds
+0052.535 (0) Table wp_bpspro_db_backup: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_bpspro_db_backup.table.gz - 0.4 KB)
+0052.541 (0) Table wp_bpspro_login_security: Total expected rows (approximate): 6
+0052.544 (0) Table wp_bpspro_login_security: Total rows added: 6 in 0.00 seconds
+0052.546 (0) Table wp_bpspro_login_security: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_bpspro_login_security.table.gz - 0.7 KB)
+0052.553 (0) Table wp_bpspro_seclog_ignore: Total expected rows (approximate): 0
+0052.557 (0) Table wp_bpspro_seclog_ignore: Total rows added: 0 in 0.00 seconds
+0052.560 (0) Table wp_bpspro_seclog_ignore: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_bpspro_seclog_ignore.table.gz - 0.3 KB)
+0052.567 (0) Table wp_cpm_file_relationship: Total expected rows (approximate): 0
+0052.571 (0) Table wp_cpm_file_relationship: Total rows added: 0 in 0.00 seconds
+0052.573 (0) Table wp_cpm_file_relationship: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_cpm_file_relationship.table.gz - 0.5 KB)
+0052.580 (0) Table wp_cpm_project_items: Total expected rows (approximate): 2
+0052.584 (0) Table wp_cpm_project_items: Total rows added: 3 in 0.00 seconds
+0052.586 (0) Table wp_cpm_project_items: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_cpm_project_items.table.gz - 0.5 KB)
+0052.592 (0) Table wp_cpm_tasks: Total expected rows (approximate): 0
+0052.596 (0) Table wp_cpm_tasks: Total rows added: 2 in 0.00 seconds
+0052.598 (0) Table wp_cpm_tasks: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_cpm_tasks.table.gz - 0.4 KB)
+0052.604 (0) Table wp_cpm_user_role: Total expected rows (approximate): 0
+0052.607 (0) Table wp_cpm_user_role: Total rows added: 1 in 0.00 seconds
+0052.609 (0) Table wp_cpm_user_role: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_cpm_user_role.table.gz - 0.3 KB)
+0052.617 (0) Table wp_erp_ac_banks: Total expected rows (approximate): 2
+0052.622 (0) Table wp_erp_ac_banks: Total rows added: 2 in 0.00 seconds
+0052.624 (0) Table wp_erp_ac_banks: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_banks.table.gz - 0.4 KB)
+0052.632 (0) Table wp_erp_ac_chart_classes: Total expected rows (approximate): 5
+0052.635 (0) Table wp_erp_ac_chart_classes: Total rows added: 5 in 0.00 seconds
+0052.637 (0) Table wp_erp_ac_chart_classes: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_chart_classes.table.gz - 0.4 KB)
+0052.643 (0) Table wp_erp_ac_chart_types: Total expected rows (approximate): 16
+0052.648 (0) Table wp_erp_ac_chart_types: Total rows added: 16 in 0.00 seconds
+0052.650 (0) Table wp_erp_ac_chart_types: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_chart_types.table.gz - 0.5 KB)
+0052.656 (0) Table wp_erp_ac_journals: Total expected rows (approximate): 0
+0052.661 (0) Table wp_erp_ac_journals: Total rows added: 0 in 0.00 seconds
+0052.663 (0) Table wp_erp_ac_journals: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_journals.table.gz - 0.4 KB)
+0052.670 (0) Table wp_erp_ac_ledger: Total expected rows (approximate): 62
+0052.674 (0) Table wp_erp_ac_ledger: Total rows added: 62 in 0.00 seconds
+0052.677 (0) Table wp_erp_ac_ledger: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_ledger.table.gz - 1.5 KB)
+0052.683 (0) Table wp_erp_ac_payments: Total expected rows (approximate): 0
+0052.686 (0) Table wp_erp_ac_payments: Total rows added: 0 in 0.00 seconds
+0052.687 (0) Table wp_erp_ac_payments: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_payments.table.gz - 0.3 KB)
+0052.696 (0) Table wp_erp_ac_tax: Total expected rows (approximate): 0
+0052.700 (0) Table wp_erp_ac_tax: Total rows added: 0 in 0.00 seconds
+0052.702 (0) Table wp_erp_ac_tax: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_tax.table.gz - 0.3 KB)
+0052.711 (0) Table wp_erp_ac_tax_items: Total expected rows (approximate): 0
+0052.715 (0) Table wp_erp_ac_tax_items: Total rows added: 0 in 0.00 seconds
+0052.718 (0) Table wp_erp_ac_tax_items: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_tax_items.table.gz - 0.3 KB)
+0052.732 (0) Table wp_erp_ac_transaction_items: Total expected rows (approximate): 0
+0052.736 (0) Table wp_erp_ac_transaction_items: Total rows added: 0 in 0.00 seconds
+0052.739 (0) Table wp_erp_ac_transaction_items: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_transaction_items.table.gz - 0.5 KB)
+0052.749 (0) Table wp_erp_ac_transactions: Total expected rows (approximate): 0
+0052.755 (0) Table wp_erp_ac_transactions: Total rows added: 0 in 0.00 seconds
+0052.757 (0) Table wp_erp_ac_transactions: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_transactions.table.gz - 0.6 KB)
+0052.767 (0) Table wp_erp_audit_log: Total expected rows (approximate): 0
+0052.771 (0) Table wp_erp_audit_log: Total rows added: 0 in 0.00 seconds
+0052.773 (0) Table wp_erp_audit_log: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_audit_log.table.gz - 0.4 KB)
+0052.780 (0) Table wp_erp_company_locations: Total expected rows (approximate): 0
+0052.784 (0) Table wp_erp_company_locations: Total rows added: 0 in 0.00 seconds
+0052.786 (0) Table wp_erp_company_locations: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_company_locations.table.gz - 0.4 KB)
+0052.796 (0) Table wp_erp_crm_activities_task: Total expected rows (approximate): 0
+0052.799 (0) Table wp_erp_crm_activities_task: Total rows added: 0 in 0.00 seconds
+0052.801 (0) Table wp_erp_crm_activities_task: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_activities_task.table.gz - 0.3 KB)
+0052.807 (0) Table wp_erp_crm_campaign_group: Total expected rows (approximate): 0
+0052.810 (0) Table wp_erp_crm_campaign_group: Total rows added: 0 in 0.00 seconds
+0052.812 (0) Table wp_erp_crm_campaign_group: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_campaign_group.table.gz - 0.3 KB)
+0052.820 (0) Table wp_erp_crm_campaigns: Total expected rows (approximate): 0
+0052.822 (0) Table wp_erp_crm_campaigns: Total rows added: 0 in 0.00 seconds
+0052.825 (0) Table wp_erp_crm_campaigns: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_campaigns.table.gz - 0.3 KB)
+0052.832 (0) Table wp_erp_crm_contact_group: Total expected rows (approximate): 0
+0052.838 (0) Table wp_erp_crm_contact_group: Total rows added: 0 in 0.00 seconds
+0052.840 (0) Table wp_erp_crm_contact_group: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_contact_group.table.gz - 0.4 KB)
+0052.848 (0) Table wp_erp_crm_contact_subscriber: Total expected rows (approximate): 0
+0052.851 (0) Table wp_erp_crm_contact_subscriber: Total rows added: 0 in 0.00 seconds
+0052.853 (0) Table wp_erp_crm_contact_subscriber: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_contact_subscriber.table.gz - 0.4 KB)
+0052.860 (0) Table wp_erp_crm_customer_activities: Total expected rows (approximate): 0
+0052.864 (0) Table wp_erp_crm_customer_activities: Total rows added: 0 in 0.00 seconds
+0052.866 (0) Table wp_erp_crm_customer_activities: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_customer_activities.table.gz - 0.4 KB)
+0052.872 (0) Table wp_erp_crm_customer_companies: Total expected rows (approximate): 0
+0052.875 (0) Table wp_erp_crm_customer_companies: Total rows added: 0 in 0.00 seconds
+0052.877 (0) Table wp_erp_crm_customer_companies: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_customer_companies.table.gz - 0.3 KB)
+0052.884 (0) Table wp_erp_crm_save_email_replies: Total expected rows (approximate): 0
+0052.888 (0) Table wp_erp_crm_save_email_replies: Total rows added: 0 in 0.00 seconds
+0052.890 (0) Table wp_erp_crm_save_email_replies: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_save_email_replies.table.gz - 0.3 KB)
+0052.896 (0) Table wp_erp_crm_save_search: Total expected rows (approximate): 0
+0052.900 (0) Table wp_erp_crm_save_search: Total rows added: 0 in 0.00 seconds
+0052.902 (0) Table wp_erp_crm_save_search: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_save_search.table.gz - 0.4 KB)
+0052.908 (0) Table wp_erp_hr_announcement: Total expected rows (approximate): 0
+0052.912 (0) Table wp_erp_hr_announcement: Total rows added: 0 in 0.00 seconds
+0052.914 (0) Table wp_erp_hr_announcement: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_announcement.table.gz - 0.3 KB)
+0052.920 (0) Table wp_erp_hr_dependents: Total expected rows (approximate): 0
+0052.927 (0) Table wp_erp_hr_dependents: Total rows added: 0 in 0.00 seconds
+0052.933 (0) Table wp_erp_hr_dependents: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_dependents.table.gz - 0.4 KB)
+0052.955 (0) Table wp_erp_hr_depts: Total expected rows (approximate): 0
+0052.968 (0) Table wp_erp_hr_depts: Total rows added: 0 in 0.01 seconds
+0052.974 (0) Table wp_erp_hr_depts: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_depts.table.gz - 0.4 KB)
+0052.994 (0) Table wp_erp_hr_designations: Total expected rows (approximate): 0
+0053.004 (0) Table wp_erp_hr_designations: Total rows added: 0 in 0.01 seconds
+0053.007 (0) Table wp_erp_hr_designations: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_designations.table.gz - 0.4 KB)
+0053.014 (0) Table wp_erp_hr_education: Total expected rows (approximate): 0
+0053.019 (0) Table wp_erp_hr_education: Total rows added: 0 in 0.00 seconds
+0053.021 (0) Table wp_erp_hr_education: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_education.table.gz - 0.4 KB)
+0053.030 (0) Table wp_erp_hr_employee_history: Total expected rows (approximate): 0
+0053.035 (0) Table wp_erp_hr_employee_history: Total rows added: 0 in 0.00 seconds
+0053.038 (0) Table wp_erp_hr_employee_history: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_employee_history.table.gz - 0.4 KB)
+0053.050 (0) Table wp_erp_hr_employee_notes: Total expected rows (approximate): 0
+0053.054 (0) Table wp_erp_hr_employee_notes: Total rows added: 0 in 0.00 seconds
+0053.055 (0) Table wp_erp_hr_employee_notes: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_employee_notes.table.gz - 0.4 KB)
+0053.063 (0) Table wp_erp_hr_employee_performance: Total expected rows (approximate): 0
+0053.068 (0) Table wp_erp_hr_employee_performance: Total rows added: 0 in 0.00 seconds
+0053.070 (0) Table wp_erp_hr_employee_performance: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_employee_performance.table.gz - 0.5 KB)
+0053.077 (0) Table wp_erp_hr_employees: Total expected rows (approximate): 0
+0053.081 (0) Table wp_erp_hr_employees: Total rows added: 0 in 0.00 seconds
+0053.083 (0) Table wp_erp_hr_employees: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_employees.table.gz - 0.5 KB)
+0053.088 (0) Table wp_erp_hr_holiday: Total expected rows (approximate): 0
+0053.091 (0) Table wp_erp_hr_holiday: Total rows added: 0 in 0.00 seconds
+0053.093 (0) Table wp_erp_hr_holiday: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_holiday.table.gz - 0.4 KB)
+0053.101 (0) Table wp_erp_hr_leave_entitlements: Total expected rows (approximate): 0
+0053.107 (0) Table wp_erp_hr_leave_entitlements: Total rows added: 0 in 0.00 seconds
+0053.109 (0) Table wp_erp_hr_leave_entitlements: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_leave_entitlements.table.gz - 0.4 KB)
+0053.117 (0) Table wp_erp_hr_leave_policies: Total expected rows (approximate): 0
+0053.121 (0) Table wp_erp_hr_leave_policies: Total rows added: 0 in 0.00 seconds
+0053.123 (0) Table wp_erp_hr_leave_policies: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_leave_policies.table.gz - 0.5 KB)
+0053.132 (0) Table wp_erp_hr_leave_requests: Total expected rows (approximate): 0
+0053.138 (0) Table wp_erp_hr_leave_requests: Total rows added: 0 in 0.00 seconds
+0053.140 (0) Table wp_erp_hr_leave_requests: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_leave_requests.table.gz - 0.4 KB)
+0053.146 (0) Table wp_erp_hr_leaves: Total expected rows (approximate): 0
+0053.150 (0) Table wp_erp_hr_leaves: Total rows added: 0 in 0.00 seconds
+0053.151 (0) Table wp_erp_hr_leaves: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_leaves.table.gz - 0.4 KB)
+0053.159 (0) Table wp_erp_hr_work_exp: Total expected rows (approximate): 0
+0053.163 (0) Table wp_erp_hr_work_exp: Total rows added: 0 in 0.00 seconds
+0053.165 (0) Table wp_erp_hr_work_exp: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_work_exp.table.gz - 0.4 KB)
+0053.171 (0) Table wp_erp_people_type_relations: Total expected rows (approximate): 0
+0053.174 (0) Table wp_erp_people_type_relations: Total rows added: 0 in 0.00 seconds
+0053.176 (0) Table wp_erp_people_type_relations: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_people_type_relations.table.gz - 0.3 KB)
+0053.182 (0) Table wp_erp_people_types: Total expected rows (approximate): 4
+0053.185 (0) Table wp_erp_people_types: Total rows added: 4 in 0.00 seconds
+0053.187 (0) Table wp_erp_people_types: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_people_types.table.gz - 0.4 KB)
+0053.195 (0) Table wp_erp_peoplemeta: Total expected rows (approximate): 0
+0053.200 (0) Table wp_erp_peoplemeta: Total rows added: 0 in 0.00 seconds
+0053.202 (0) Table wp_erp_peoplemeta: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_peoplemeta.table.gz - 0.4 KB)
+0053.208 (0) Table wp_erp_peoples: Total expected rows (approximate): 0
+0053.215 (0) Table wp_erp_peoples: Total rows added: 0 in 0.00 seconds
+0053.217 (0) Table wp_erp_peoples: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_peoples.table.gz - 0.5 KB)
+0053.226 (0) Table wp_ewwwio_images: Total expected rows (approximate): 2406
+0053.296 (0) Table wp_ewwwio_images: Total rows added: 2408 in 0.07 seconds
+0053.299 (0) Table wp_ewwwio_images: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ewwwio_images.table.gz - 66 KB)
+0053.309 (0) Table wp_grp_google_place: Total expected rows (approximate): 0
+0053.315 (0) Table wp_grp_google_place: Total rows added: 1 in 0.00 seconds
+0053.318 (0) Table wp_grp_google_place: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_grp_google_place.table.gz - 0.6 KB)
+0053.326 (0) Table wp_grp_google_review: Total expected rows (approximate): 5
+0053.330 (0) Table wp_grp_google_review: Total rows added: 5 in 0.00 seconds
+0053.333 (0) Table wp_grp_google_review: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_grp_google_review.table.gz - 1.6 KB)
+0053.339 (0) Table wp_learnpress_order_itemmeta: Total expected rows (approximate): 0
+0053.343 (0) Table wp_learnpress_order_itemmeta: Total rows added: 0 in 0.00 seconds
+0053.346 (0) Table wp_learnpress_order_itemmeta: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_order_itemmeta.table.gz - 0.4 KB)
+0053.351 (0) Table wp_learnpress_order_items: Total expected rows (approximate): 0
+0053.355 (0) Table wp_learnpress_order_items: Total rows added: 0 in 0.00 seconds
+0053.357 (0) Table wp_learnpress_order_items: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_order_items.table.gz - 0.3 KB)
+0053.364 (0) Table wp_learnpress_question_answers: Total expected rows (approximate): 0
+0053.368 (0) Table wp_learnpress_question_answers: Total rows added: 0 in 0.00 seconds
+0053.371 (0) Table wp_learnpress_question_answers: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_question_answers.table.gz - 0.3 KB)
+0053.378 (0) Table wp_learnpress_quiz_questions: Total expected rows (approximate): 0
+0053.385 (0) Table wp_learnpress_quiz_questions: Total rows added: 0 in 0.00 seconds
+0053.388 (0) Table wp_learnpress_quiz_questions: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_quiz_questions.table.gz - 0.3 KB)
+0053.394 (0) Table wp_learnpress_review_logs: Total expected rows (approximate): 0
+0053.398 (0) Table wp_learnpress_review_logs: Total rows added: 0 in 0.00 seconds
+0053.400 (0) Table wp_learnpress_review_logs: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_review_logs.table.gz - 0.4 KB)
+0053.408 (0) Table wp_learnpress_section_items: Total expected rows (approximate): 0
+0053.413 (0) Table wp_learnpress_section_items: Total rows added: 0 in 0.00 seconds
+0053.415 (0) Table wp_learnpress_section_items: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_section_items.table.gz - 0.3 KB)
+0053.422 (0) Table wp_learnpress_sections: Total expected rows (approximate): 0
+0053.426 (0) Table wp_learnpress_sections: Total rows added: 0 in 0.00 seconds
+0053.429 (0) Table wp_learnpress_sections: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_sections.table.gz - 0.4 KB)
+0053.436 (0) Table wp_learnpress_sessions: Total expected rows (approximate): 0
+0053.440 (0) Table wp_learnpress_sessions: Total rows added: 0 in 0.00 seconds
+0053.442 (0) Table wp_learnpress_sessions: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_sessions.table.gz - 0.3 KB)
+0053.451 (0) Table wp_learnpress_user_itemmeta: Total expected rows (approximate): 0
+0053.454 (0) Table wp_learnpress_user_itemmeta: Total rows added: 0 in 0.00 seconds
+0053.456 (0) Table wp_learnpress_user_itemmeta: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_user_itemmeta.table.gz - 0.3 KB)
+0053.462 (0) Table wp_learnpress_user_items: Total expected rows (approximate): 0
+0053.465 (0) Table wp_learnpress_user_items: Total rows added: 0 in 0.00 seconds
+0053.468 (0) Table wp_learnpress_user_items: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_user_items.table.gz - 0.4 KB)
+0053.479 (0) Table wp_lifterlms_product_to_voucher: Total expected rows (approximate): 0
+0053.483 (0) Table wp_lifterlms_product_to_voucher: Total rows added: 0 in 0.00 seconds
+0053.485 (0) Table wp_lifterlms_product_to_voucher: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_lifterlms_product_to_voucher.table.gz - 0.3 KB)
+0053.490 (0) Table wp_lifterlms_user_postmeta: Total expected rows (approximate): 0
+0053.497 (0) Table wp_lifterlms_user_postmeta: Total rows added: 0 in 0.00 seconds
+0053.499 (0) Table wp_lifterlms_user_postmeta: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_lifterlms_user_postmeta.table.gz - 0.4 KB)
+0053.506 (0) Table wp_lifterlms_voucher_code_redemptions: Total expected rows (approximate): 0
+0053.511 (0) Table wp_lifterlms_voucher_code_redemptions: Total rows added: 0 in 0.00 seconds
+0053.513 (0) Table wp_lifterlms_voucher_code_redemptions: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_lifterlms_voucher_code_redemptions.table.gz - 0.3 KB)
+0053.520 (0) Table wp_lifterlms_vouchers_codes: Total expected rows (approximate): 0
+0053.525 (0) Table wp_lifterlms_vouchers_codes: Total rows added: 0 in 0.00 seconds
+0053.527 (0) Table wp_lifterlms_vouchers_codes: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_lifterlms_vouchers_codes.table.gz - 0.4 KB)
+0053.534 (0) Table wp_p2p: Total expected rows (approximate): 0
+0053.538 (0) Table wp_p2p: Total rows added: 0 in 0.00 seconds
+0053.539 (0) Table wp_p2p: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_p2p.table.gz - 0.3 KB)
+0053.547 (0) Table wp_p2pmeta: Total expected rows (approximate): 0
+0053.551 (0) Table wp_p2pmeta: Total rows added: 0 in 0.00 seconds
+0053.553 (0) Table wp_p2pmeta: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_p2pmeta.table.gz - 0.4 KB)
+0053.559 (0) Table wp_revslider_css: Total expected rows (approximate): 109
+0053.570 (0) Table wp_revslider_css: Total rows added: 109 in 0.01 seconds
+0053.572 (0) Table wp_revslider_css: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_revslider_css.table.gz - 4.8 KB)
+0053.578 (0) Table wp_revslider_layer_animations: Total expected rows (approximate): 0
+0053.581 (0) Table wp_revslider_layer_animations: Total rows added: 0 in 0.00 seconds
+0053.583 (0) Table wp_revslider_layer_animations: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_revslider_layer_animations.table.gz - 0.3 KB)
+0053.588 (0) Table wp_revslider_navigations: Total expected rows (approximate): 0
+0053.592 (0) Table wp_revslider_navigations: Total rows added: 0 in 0.00 seconds
+0053.594 (0) Table wp_revslider_navigations: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_revslider_navigations.table.gz - 0.3 KB)
+0053.600 (0) Table wp_revslider_sliders: Total expected rows (approximate): 0
+0053.603 (0) Table wp_revslider_sliders: Total rows added: 0 in 0.00 seconds
+0053.605 (0) Table wp_revslider_sliders: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_revslider_sliders.table.gz - 0.3 KB)
+0053.613 (0) Table wp_revslider_slides: Total expected rows (approximate): 0
+0053.617 (0) Table wp_revslider_slides: Total rows added: 0 in 0.00 seconds
+0053.618 (0) Table wp_revslider_slides: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_revslider_slides.table.gz - 0.3 KB)
+0053.624 (0) Table wp_revslider_static_slides: Total expected rows (approximate): 0
+0053.628 (0) Table wp_revslider_static_slides: Total rows added: 0 in 0.00 seconds
+0053.630 (0) Table wp_revslider_static_slides: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_revslider_static_slides.table.gz - 0.3 KB)
+0053.635 (0) Table wp_ualp_user_activity: Total expected rows (approximate): 2055
+0053.677 (0) Table wp_ualp_user_activity: Total rows added: 2055 in 0.04 seconds
+0053.680 (0) Table wp_ualp_user_activity: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ualp_user_activity.table.gz - 33.8 KB)
+0053.686 (0) Table wp_w3tc_cdn_queue: Total expected rows (approximate): 0
+0053.689 (0) Table wp_w3tc_cdn_queue: Total rows added: 0 in 0.00 seconds
+0053.691 (0) Table wp_w3tc_cdn_queue: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_w3tc_cdn_queue.table.gz - 0.4 KB)
+0053.698 (0) Table wp_webpages_data: Total expected rows (approximate): 0
+0053.701 (0) Table wp_webpages_data: Total rows added: 0 in 0.00 seconds
+0053.703 (0) Table wp_webpages_data: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_webpages_data.table.gz - 0.4 KB)
+0053.710 (0) Table wp_wfBadLeechers: Total expected rows (approximate): 0
+0053.713 (0) Table wp_wfBadLeechers: Total rows added: 0 in 0.00 seconds
+0053.714 (0) Table wp_wfBadLeechers: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfBadLeechers.table.gz - 0.3 KB)
+0053.720 (0) Table wp_wfBlockedIPLog: Total expected rows (approximate): 1359
+0053.733 (0) Table wp_wfBlockedIPLog: Total rows added: 1366 in 0.01 seconds
+0053.736 (0) Table wp_wfBlockedIPLog: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfBlockedIPLog.table.gz - 11.1 KB)
+0053.741 (0) Table wp_wfBlocks: Total expected rows (approximate): 1
+0053.743 (0) Table wp_wfBlocks: Total rows added: 1 in 0.00 seconds
+0053.745 (0) Table wp_wfBlocks: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfBlocks.table.gz - 0.4 KB)
+0053.750 (0) Table wp_wfBlocksAdv: Total expected rows (approximate): 0
+0053.753 (0) Table wp_wfBlocksAdv: Total rows added: 0 in 0.00 seconds
+0053.754 (0) Table wp_wfBlocksAdv: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfBlocksAdv.table.gz - 0.3 KB)
+0053.759 (0) Table wp_wfConfig: Total expected rows (approximate): 180
+0053.795 (0) Table wp_wfConfig: Total rows added: 180 in 0.03 seconds
+0053.798 (0) Table wp_wfConfig: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfConfig.table.gz - 233.5 KB)
+0053.805 (0) Table wp_wfCrawlers: Total expected rows (approximate): 48
+0053.808 (0) Table wp_wfCrawlers: Total rows added: 50 in 0.00 seconds
+0053.811 (0) Table wp_wfCrawlers: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfCrawlers.table.gz - 1.1 KB)
+0053.817 (0) Table wp_wfFileMods: Total expected rows (approximate): 16763
+0054.417 (0) Table wp_wfFileMods: binary mysqldump finished (writes: 38) in 0.60 seconds
+0054.421 (0) Table wp_wfFileMods: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfFileMods.table.gz - 1611 KB)
+0054.432 (0) Table wp_wfHits: Total expected rows (approximate): 1887
+0054.507 (0) Table wp_wfHits: Total rows added: 1907 in 0.07 seconds
+0054.510 (0) Table wp_wfHits: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfHits.table.gz - 78.2 KB)
+0054.517 (0) Table wp_wfHoover: Total expected rows (approximate): 0
+0054.520 (0) Table wp_wfHoover: Total rows added: 0 in 0.00 seconds
+0054.521 (0) Table wp_wfHoover: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfHoover.table.gz - 0.3 KB)
+0054.527 (0) Table wp_wfIssues: Total expected rows (approximate): 3
+0054.530 (0) Table wp_wfIssues: Total rows added: 3 in 0.00 seconds
+0054.532 (0) Table wp_wfIssues: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfIssues.table.gz - 0.9 KB)
+0054.537 (0) Table wp_wfKnownFileList: Total expected rows (approximate): 16863
+0054.693 (0) Table wp_wfKnownFileList: binary mysqldump finished (writes: 29) in 0.15 seconds
+0054.696 (0) Table wp_wfKnownFileList: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfKnownFileList.table.gz - 238.4 KB)
+0054.702 (0) Table wp_wfLeechers: Total expected rows (approximate): 484
+0054.708 (0) Table wp_wfLeechers: Total rows added: 484 in 0.00 seconds
+0054.710 (0) Table wp_wfLeechers: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfLeechers.table.gz - 3.6 KB)
+0054.715 (0) Table wp_wfLockedOut: Total expected rows (approximate): 0
+0054.718 (0) Table wp_wfLockedOut: Total rows added: 0 in 0.00 seconds
+0054.719 (0) Table wp_wfLockedOut: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfLockedOut.table.gz - 0.3 KB)
+0054.725 (0) Table wp_wfLocs: Total expected rows (approximate): 0
+0054.730 (0) Table wp_wfLocs: Total rows added: 0 in 0.00 seconds
+0054.732 (0) Table wp_wfLocs: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfLocs.table.gz - 0.4 KB)
+0054.739 (0) Table wp_wfLogins: Total expected rows (approximate): 249
+0054.749 (0) Table wp_wfLogins: Total rows added: 272 in 0.01 seconds
+0054.752 (0) Table wp_wfLogins: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfLogins.table.gz - 7.3 KB)
+0054.758 (0) Table wp_wfNet404s: Total expected rows (approximate): 1
+0054.761 (0) Table wp_wfNet404s: Total rows added: 1 in 0.00 seconds
+0054.763 (0) Table wp_wfNet404s: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfNet404s.table.gz - 0.4 KB)
+0054.769 (0) Table wp_wfNotifications: Total expected rows (approximate): 24
+0054.772 (0) Table wp_wfNotifications: Total rows added: 24 in 0.00 seconds
+0054.774 (0) Table wp_wfNotifications: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfNotifications.table.gz - 0.8 KB)
+0054.779 (0) Table wp_wfPendingIssues: Total expected rows (approximate): 0
+0054.785 (0) Table wp_wfPendingIssues: Total rows added: 1 in 0.00 seconds
+0054.787 (0) Table wp_wfPendingIssues: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfPendingIssues.table.gz - 0.6 KB)
+0054.793 (0) Table wp_wfReverseCache: Total expected rows (approximate): 7
+0054.797 (0) Table wp_wfReverseCache: Total rows added: 8 in 0.00 seconds
+0054.799 (0) Table wp_wfReverseCache: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfReverseCache.table.gz - 0.5 KB)
+0054.805 (0) Table wp_wfSNIPCache: Total expected rows (approximate): 0
+0054.808 (0) Table wp_wfSNIPCache: Total rows added: 0 in 0.00 seconds
+0054.810 (0) Table wp_wfSNIPCache: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfSNIPCache.table.gz - 0.4 KB)
+0054.815 (0) Table wp_wfScanners: Total expected rows (approximate): 55
+0054.818 (0) Table wp_wfScanners: Total rows added: 55 in 0.00 seconds
+0054.821 (0) Table wp_wfScanners: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfScanners.table.gz - 0.8 KB)
+0054.827 (0) Table wp_wfStatus: Total expected rows (approximate): 1776
+0054.851 (0) Table wp_wfStatus: Total rows added: 1776 in 0.02 seconds
+0054.854 (0) Table wp_wfStatus: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfStatus.table.gz - 30.2 KB)
+0054.860 (0) Table wp_wfThrottleLog: Total expected rows (approximate): 0
+0054.864 (0) Table wp_wfThrottleLog: Total rows added: 0 in 0.00 seconds
+0054.866 (0) Table wp_wfThrottleLog: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfThrottleLog.table.gz - 0.3 KB)
+0054.873 (0) Table wp_wfVulnScanners: Total expected rows (approximate): 0
+0054.875 (0) Table wp_wfVulnScanners: Total rows added: 0 in 0.00 seconds
+0054.877 (0) Table wp_wfVulnScanners: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfVulnScanners.table.gz - 0.3 KB)
+0054.883 (0) Table wp_woocommerce_api_keys: Total expected rows (approximate): 0
+0054.885 (0) Table wp_woocommerce_api_keys: Total rows added: 0 in 0.00 seconds
+0054.887 (0) Table wp_woocommerce_api_keys: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_api_keys.table.gz - 0.4 KB)
+0054.893 (0) Table wp_woocommerce_attribute_taxonomies: Total expected rows (approximate): 0
+0054.897 (0) Table wp_woocommerce_attribute_taxonomies: Total rows added: 0 in 0.00 seconds
+0054.899 (0) Table wp_woocommerce_attribute_taxonomies: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_attribute_taxonomies.table.gz - 0.4 KB)
+0054.904 (0) Table wp_woocommerce_downloadable_product_permissions: Total expected rows (approximate): 0
+0054.910 (0) Table wp_woocommerce_downloadable_product_permissions: Total rows added: 0 in 0.00 seconds
+0054.916 (0) Table wp_woocommerce_downloadable_product_permissions: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_downloadable_product_permissions.table.gz - 0.5 KB)
+0054.932 (0) Table wp_woocommerce_order_itemmeta: Total expected rows (approximate): 0
+0054.937 (0) Table wp_woocommerce_order_itemmeta: Total rows added: 0 in 0.00 seconds
+0054.939 (0) Table wp_woocommerce_order_itemmeta: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_order_itemmeta.table.gz - 0.4 KB)
+0054.949 (0) Table wp_woocommerce_order_items: Total expected rows (approximate): 0
+0054.951 (0) Table wp_woocommerce_order_items: Total rows added: 0 in 0.00 seconds
+0054.953 (0) Table wp_woocommerce_order_items: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_order_items.table.gz - 0.3 KB)
+0054.958 (0) Table wp_woocommerce_payment_tokenmeta: Total expected rows (approximate): 0
+0054.961 (0) Table wp_woocommerce_payment_tokenmeta: Total rows added: 0 in 0.00 seconds
+0054.963 (0) Table wp_woocommerce_payment_tokenmeta: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_payment_tokenmeta.table.gz - 0.4 KB)
+0054.969 (0) Table wp_woocommerce_payment_tokens: Total expected rows (approximate): 0
+0054.972 (0) Table wp_woocommerce_payment_tokens: Total rows added: 0 in 0.00 seconds
+0054.974 (0) Table wp_woocommerce_payment_tokens: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_payment_tokens.table.gz - 0.4 KB)
+0054.980 (0) Table wp_woocommerce_sessions: Total expected rows (approximate): 0
+0054.984 (0) Table wp_woocommerce_sessions: Total rows added: 1 in 0.00 seconds
+0054.986 (0) Table wp_woocommerce_sessions: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_sessions.table.gz - 0.6 KB)
+0054.991 (0) Table wp_woocommerce_shipping_zone_locations: Total expected rows (approximate): 0
+0054.996 (0) Table wp_woocommerce_shipping_zone_locations: Total rows added: 0 in 0.00 seconds
+0054.998 (0) Table wp_woocommerce_shipping_zone_locations: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_shipping_zone_locations.table.gz - 0.4 KB)
+0055.004 (0) Table wp_woocommerce_shipping_zone_methods: Total expected rows (approximate): 0
+0055.007 (0) Table wp_woocommerce_shipping_zone_methods: Total rows added: 0 in 0.00 seconds
+0055.009 (0) Table wp_woocommerce_shipping_zone_methods: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_shipping_zone_methods.table.gz - 0.4 KB)
+0055.016 (0) Table wp_woocommerce_shipping_zones: Total expected rows (approximate): 0
+0055.019 (0) Table wp_woocommerce_shipping_zones: Total rows added: 0 in 0.00 seconds
+0055.021 (0) Table wp_woocommerce_shipping_zones: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_shipping_zones.table.gz - 0.3 KB)
+0055.027 (0) Table wp_woocommerce_tax_rate_locations: Total expected rows (approximate): 0
+0055.031 (0) Table wp_woocommerce_tax_rate_locations: Total rows added: 0 in 0.00 seconds
+0055.033 (0) Table wp_woocommerce_tax_rate_locations: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_tax_rate_locations.table.gz - 0.4 KB)
+0055.041 (0) Table wp_woocommerce_tax_rates: Total expected rows (approximate): 0
+0055.044 (0) Table wp_woocommerce_tax_rates: Total rows added: 0 in 0.00 seconds
+0055.045 (0) Table wp_woocommerce_tax_rates: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_tax_rates.table.gz - 0.4 KB)
+0055.051 (0) Table wp_wpefc_coupons: Total expected rows (approximate): 0
+0055.055 (0) Table wp_wpefc_coupons: Total rows added: 0 in 0.00 seconds
+0055.056 (0) Table wp_wpefc_coupons: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_coupons.table.gz - 0.4 KB)
+0055.064 (0) Table wp_wpefc_fields: Total expected rows (approximate): 2
+0055.067 (0) Table wp_wpefc_fields: Total rows added: 2 in 0.00 seconds
+0055.069 (0) Table wp_wpefc_fields: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_fields.table.gz - 0.5 KB)
+0055.074 (0) Table wp_wpefc_forms: Total expected rows (approximate): 1
+0055.083 (0) Table wp_wpefc_forms: Total rows added: 1 in 0.01 seconds
+0055.085 (0) Table wp_wpefc_forms: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_forms.table.gz - 3.9 KB)
+0055.092 (0) Table wp_wpefc_items: Total expected rows (approximate): 54
+0055.100 (0) Table wp_wpefc_items: Total rows added: 54 in 0.01 seconds
+0055.103 (0) Table wp_wpefc_items: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_items.table.gz - 2.8 KB)
+0055.108 (0) Table wp_wpefc_links: Total expected rows (approximate): 11
+0055.111 (0) Table wp_wpefc_links: Total rows added: 11 in 0.00 seconds
+0055.113 (0) Table wp_wpefc_links: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_links.table.gz - 0.5 KB)
+0055.119 (0) Table wp_wpefc_logs: Total expected rows (approximate): 2
+0055.127 (0) Table wp_wpefc_logs: Total rows added: 3 in 0.01 seconds
+0055.129 (0) Table wp_wpefc_logs: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_logs.table.gz - 2.6 KB)
+0055.135 (0) Table wp_wpefc_redirConditions: Total expected rows (approximate): 0
+0055.138 (0) Table wp_wpefc_redirConditions: Total rows added: 0 in 0.00 seconds
+0055.140 (0) Table wp_wpefc_redirConditions: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_redirConditions.table.gz - 0.3 KB)
+0055.146 (0) Table wp_wpefc_settings: Total expected rows (approximate): 1
+0055.148 (0) Table wp_wpefc_settings: Total rows added: 1 in 0.00 seconds
+0055.150 (0) Table wp_wpefc_settings: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_settings.table.gz - 0.4 KB)
+0055.156 (0) Table wp_wpefc_steps: Total expected rows (approximate): 10
+0055.161 (0) Table wp_wpefc_steps: Total rows added: 10 in 0.00 seconds
+0055.163 (0) Table wp_wpefc_steps: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_steps.table.gz - 0.9 KB)
+0055.168 (0) Table wp_wx_message: Total expected rows (approximate): 0
+0055.171 (0) Table wp_wx_message: Total rows added: 0 in 0.00 seconds
+0055.172 (0) Table wp_wx_message: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wx_message.table.gz - 0.3 KB)
+0055.178 (0) Table wp_wx_user: Total expected rows (approximate): 0
+0055.180 (0) Table wp_wx_user: Total rows added: 0 in 0.00 seconds
+0055.182 (0) Table wp_wx_user: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wx_user.table.gz - 0.5 KB)
+0055.189 (0) Table wp_xh_social_channel_qq: Total expected rows (approximate): 0
+0055.192 (0) Table wp_xh_social_channel_qq: Total rows added: 0 in 0.00 seconds
+0055.194 (0) Table wp_xh_social_channel_qq: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_xh_social_channel_qq.table.gz - 0.4 KB)
+0055.204 (0) Table wp_xh_social_channel_wechat: Total expected rows (approximate): 0
+0055.211 (0) Table wp_xh_social_channel_wechat: Total rows added: 0 in 0.00 seconds
+0055.213 (0) Table wp_xh_social_channel_wechat: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_xh_social_channel_wechat.table.gz - 0.5 KB)
+0055.222 (0) Table wp_xh_social_channel_weibo: Total expected rows (approximate): 0
+0055.225 (0) Table wp_xh_social_channel_weibo: Total rows added: 0 in 0.00 seconds
+0055.227 (0) Table wp_xh_social_channel_weibo: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_xh_social_channel_weibo.table.gz - 0.5 KB)
+0055.232 (0) Table wp_xh_social_sessions: Total expected rows (approximate): 0
+0055.236 (0) Table wp_xh_social_sessions: Total rows added: 1 in 0.00 seconds
+0055.237 (0) Table wp_xh_social_sessions: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_xh_social_sessions.table.gz - 0.4 KB)
+0055.244 (0) Table wp_yikes_easy_mc_forms: Total expected rows (approximate): 0
+0055.247 (0) Table wp_yikes_easy_mc_forms: Total rows added: 0 in 0.00 seconds
+0055.249 (0) Table wp_yikes_easy_mc_forms: finishing file (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_yikes_easy_mc_forms.table.gz - 0.4 KB)
+0055.255 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_options.table.gz (1/155): adding to final database dump
+0055.339 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_users.table.gz (2/155): adding to final database dump
+0055.343 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_usermeta.table.gz (3/155): adding to final database dump
+0055.345 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_commentmeta.table.gz (4/155): adding to final database dump
+0055.347 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_comments.table.gz (5/155): adding to final database dump
+0055.349 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_links.table.gz (6/155): adding to final database dump
+0055.351 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_postmeta.table.gz (7/155): adding to final database dump
+0055.396 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_posts.table.gz (8/155): adding to final database dump
+0055.849 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_term_relationships.table.gz (9/155): adding to final database dump
+0055.857 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_term_taxonomy.table.gz (10/155): adding to final database dump
+0055.863 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_termmeta.table.gz (11/155): adding to final database dump
+0055.864 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_terms.table.gz (12/155): adding to final database dump
+0055.870 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_config.table.gz (13/155): adding to final database dump
+0055.872 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_config_group.table.gz (14/155): adding to final database dump
+0055.874 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_config_option.table.gz (15/155): adding to final database dump
+0055.877 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_config_url_list.table.gz (16/155): adding to final database dump
+0055.878 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_download_img_temp.table.gz (17/155): adding to final database dump
+0055.881 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_flickr_img.table.gz (18/155): adding to final database dump
+0055.883 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_flickr_oauth.table.gz (19/155): adding to final database dump
+0055.885 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_log.table.gz (20/155): adding to final database dump
+0055.912 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_more_content.table.gz (21/155): adding to final database dump
+0055.915 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_qiniu_img.table.gz (22/155): adding to final database dump
+0055.918 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_updated_record.table.gz (23/155): adding to final database dump
+0055.932 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_upyun_img.table.gz (24/155): adding to final database dump
+0055.935 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ap_watermark.table.gz (25/155): adding to final database dump
+0055.937 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ariadminer_connections.table.gz (26/155): adding to final database dump
+0055.939 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_autolink.table.gz (27/155): adding to final database dump
+0055.941 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_bpspro_db_backup.table.gz (28/155): adding to final database dump
+0055.943 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_bpspro_login_security.table.gz (29/155): adding to final database dump
+0055.945 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_bpspro_seclog_ignore.table.gz (30/155): adding to final database dump
+0055.947 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_cpm_file_relationship.table.gz (31/155): adding to final database dump
+0055.949 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_cpm_project_items.table.gz (32/155): adding to final database dump
+0055.951 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_cpm_tasks.table.gz (33/155): adding to final database dump
+0055.953 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_cpm_user_role.table.gz (34/155): adding to final database dump
+0055.955 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_banks.table.gz (35/155): adding to final database dump
+0055.957 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_chart_classes.table.gz (36/155): adding to final database dump
+0055.959 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_chart_types.table.gz (37/155): adding to final database dump
+0055.961 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_journals.table.gz (38/155): adding to final database dump
+0055.962 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_ledger.table.gz (39/155): adding to final database dump
+0055.964 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_payments.table.gz (40/155): adding to final database dump
+0055.966 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_tax.table.gz (41/155): adding to final database dump
+0055.968 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_tax_items.table.gz (42/155): adding to final database dump
+0055.970 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_transaction_items.table.gz (43/155): adding to final database dump
+0055.971 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_ac_transactions.table.gz (44/155): adding to final database dump
+0055.973 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_audit_log.table.gz (45/155): adding to final database dump
+0055.975 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_company_locations.table.gz (46/155): adding to final database dump
+0055.977 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_activities_task.table.gz (47/155): adding to final database dump
+0055.979 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_campaign_group.table.gz (48/155): adding to final database dump
+0055.981 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_campaigns.table.gz (49/155): adding to final database dump
+0055.983 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_contact_group.table.gz (50/155): adding to final database dump
+0055.985 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_contact_subscriber.table.gz (51/155): adding to final database dump
+0055.987 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_customer_activities.table.gz (52/155): adding to final database dump
+0055.989 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_customer_companies.table.gz (53/155): adding to final database dump
+0055.990 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_save_email_replies.table.gz (54/155): adding to final database dump
+0055.993 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_crm_save_search.table.gz (55/155): adding to final database dump
+0055.994 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_announcement.table.gz (56/155): adding to final database dump
+0055.997 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_dependents.table.gz (57/155): adding to final database dump
+0055.998 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_depts.table.gz (58/155): adding to final database dump
+0056.000 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_designations.table.gz (59/155): adding to final database dump
+0056.002 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_education.table.gz (60/155): adding to final database dump
+0056.004 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_employee_history.table.gz (61/155): adding to final database dump
+0056.006 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_employee_notes.table.gz (62/155): adding to final database dump
+0056.008 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_employee_performance.table.gz (63/155): adding to final database dump
+0056.010 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_employees.table.gz (64/155): adding to final database dump
+0056.011 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_holiday.table.gz (65/155): adding to final database dump
+0056.013 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_leave_entitlements.table.gz (66/155): adding to final database dump
+0056.015 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_leave_policies.table.gz (67/155): adding to final database dump
+0056.017 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_leave_requests.table.gz (68/155): adding to final database dump
+0056.019 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_leaves.table.gz (69/155): adding to final database dump
+0056.021 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_hr_work_exp.table.gz (70/155): adding to final database dump
+0056.023 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_people_type_relations.table.gz (71/155): adding to final database dump
+0056.025 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_people_types.table.gz (72/155): adding to final database dump
+0056.026 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_peoplemeta.table.gz (73/155): adding to final database dump
+0056.029 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_erp_peoples.table.gz (74/155): adding to final database dump
+0056.030 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ewwwio_images.table.gz (75/155): adding to final database dump
+0056.048 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_grp_google_place.table.gz (76/155): adding to final database dump
+0056.051 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_grp_google_review.table.gz (77/155): adding to final database dump
+0056.053 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_order_itemmeta.table.gz (78/155): adding to final database dump
+0056.055 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_order_items.table.gz (79/155): adding to final database dump
+0056.057 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_question_answers.table.gz (80/155): adding to final database dump
+0056.059 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_quiz_questions.table.gz (81/155): adding to final database dump
+0056.061 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_review_logs.table.gz (82/155): adding to final database dump
+0056.063 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_section_items.table.gz (83/155): adding to final database dump
+0056.065 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_sections.table.gz (84/155): adding to final database dump
+0056.067 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_sessions.table.gz (85/155): adding to final database dump
+0056.069 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_user_itemmeta.table.gz (86/155): adding to final database dump
+0056.070 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_learnpress_user_items.table.gz (87/155): adding to final database dump
+0056.072 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_lifterlms_product_to_voucher.table.gz (88/155): adding to final database dump
+0056.074 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_lifterlms_user_postmeta.table.gz (89/155): adding to final database dump
+0056.076 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_lifterlms_voucher_code_redemptions.table.gz (90/155): adding to final database dump
+0056.078 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_lifterlms_vouchers_codes.table.gz (91/155): adding to final database dump
+0056.079 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_p2p.table.gz (92/155): adding to final database dump
+0056.082 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_p2pmeta.table.gz (93/155): adding to final database dump
+0056.084 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_revslider_css.table.gz (94/155): adding to final database dump
+0056.087 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_revslider_layer_animations.table.gz (95/155): adding to final database dump
+0056.089 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_revslider_navigations.table.gz (96/155): adding to final database dump
+0056.091 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_revslider_sliders.table.gz (97/155): adding to final database dump
+0056.093 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_revslider_slides.table.gz (98/155): adding to final database dump
+0056.095 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_revslider_static_slides.table.gz (99/155): adding to final database dump
+0056.098 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_ualp_user_activity.table.gz (100/155): adding to final database dump
+0056.108 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_w3tc_cdn_queue.table.gz (101/155): adding to final database dump
+0056.110 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_webpages_data.table.gz (102/155): adding to final database dump
+0056.112 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfBadLeechers.table.gz (103/155): adding to final database dump
+0056.114 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfBlockedIPLog.table.gz (104/155): adding to final database dump
+0056.119 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfBlocks.table.gz (105/155): adding to final database dump
+0056.121 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfBlocksAdv.table.gz (106/155): adding to final database dump
+0056.123 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfConfig.table.gz (107/155): adding to final database dump
+0056.137 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfCrawlers.table.gz (108/155): adding to final database dump
+0056.140 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfFileMods.table.gz (109/155): adding to final database dump
+0056.304 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfHits.table.gz (110/155): adding to final database dump
+0056.322 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfHoover.table.gz (111/155): adding to final database dump
+0056.324 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfIssues.table.gz (112/155): adding to final database dump
+0056.326 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfKnownFileList.table.gz (113/155): adding to final database dump
+0056.370 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfLeechers.table.gz (114/155): adding to final database dump
+0056.374 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfLockedOut.table.gz (115/155): adding to final database dump
+0056.376 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfLocs.table.gz (116/155): adding to final database dump
+0056.379 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfLogins.table.gz (117/155): adding to final database dump
+0056.383 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfNet404s.table.gz (118/155): adding to final database dump
+0056.385 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfNotifications.table.gz (119/155): adding to final database dump
+0056.387 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfPendingIssues.table.gz (120/155): adding to final database dump
+0056.389 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfReverseCache.table.gz (121/155): adding to final database dump
+0056.391 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfSNIPCache.table.gz (122/155): adding to final database dump
+0056.394 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfScanners.table.gz (123/155): adding to final database dump
+0056.395 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfStatus.table.gz (124/155): adding to final database dump
+0056.403 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfThrottleLog.table.gz (125/155): adding to final database dump
+0056.405 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wfVulnScanners.table.gz (126/155): adding to final database dump
+0056.407 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_api_keys.table.gz (127/155): adding to final database dump
+0056.409 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_attribute_taxonomies.table.gz (128/155): adding to final database dump
+0056.411 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_downloadable_product_permissions.table.gz (129/155): adding to final database dump
+0056.413 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_order_itemmeta.table.gz (130/155): adding to final database dump
+0056.415 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_order_items.table.gz (131/155): adding to final database dump
+0056.417 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_payment_tokenmeta.table.gz (132/155): adding to final database dump
+0056.419 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_payment_tokens.table.gz (133/155): adding to final database dump
+0056.421 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_sessions.table.gz (134/155): adding to final database dump
+0056.422 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_shipping_zone_locations.table.gz (135/155): adding to final database dump
+0056.425 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_shipping_zone_methods.table.gz (136/155): adding to final database dump
+0056.426 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_shipping_zones.table.gz (137/155): adding to final database dump
+0056.429 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_tax_rate_locations.table.gz (138/155): adding to final database dump
+0056.430 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_woocommerce_tax_rates.table.gz (139/155): adding to final database dump
+0056.432 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_coupons.table.gz (140/155): adding to final database dump
+0056.434 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_fields.table.gz (141/155): adding to final database dump
+0056.436 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_forms.table.gz (142/155): adding to final database dump
+0056.439 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_items.table.gz (143/155): adding to final database dump
+0056.442 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_links.table.gz (144/155): adding to final database dump
+0056.443 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_logs.table.gz (145/155): adding to final database dump
+0056.446 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_redirConditions.table.gz (146/155): adding to final database dump
+0056.448 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_settings.table.gz (147/155): adding to final database dump
+0056.451 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wpefc_steps.table.gz (148/155): adding to final database dump
+0056.454 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wx_message.table.gz (149/155): adding to final database dump
+0056.456 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_wx_user.table.gz (150/155): adding to final database dump
+0056.460 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_xh_social_channel_qq.table.gz (151/155): adding to final database dump
+0056.464 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_xh_social_channel_wechat.table.gz (152/155): adding to final database dump
+0056.466 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_xh_social_channel_weibo.table.gz (153/155): adding to final database dump
+0056.470 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_xh_social_sessions.table.gz (154/155): adding to final database dump
+0056.472 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db-table-wp_yikes_easy_mc_forms.table.gz (155/155): adding to final database dump
+0056.475 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db.gz: finished writing out complete database file (5552 KB)
+0056.624 (0) Total database tables backed up: 155 (backup_2017-05-07-1640_SK8Tech_69c8651eb609-db.gz, size: 5693850, sha256)
+0056.648 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0056.651 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0056.654 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0056.656 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip: uploads: This file has not yet been successfully uploaded: will queue
+0056.658 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-others.zip: others: This file has not yet been successfully uploaded: will queue
+0056.660 (0) backup_2017-05-07-1640_SK8Tech_69c8651eb609-db.gz: db: This file has not yet been successfully uploaded: will queue
+0056.663 (0) Saving backup history. Total backup size: 721.3 MB
+0056.676 (0) Requesting upload of the files that have not yet been successfully uploaded (6)
+0056.687 (0) Cloud backup selection (1/1): ftp (last)
+0056.695 (0) Beginning dispatch of backup to remote (ftp)
+0057.132 (0) FTP upload attempt: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip -> ftp://sk8tech-backup@sk8.asia@27.124.120.1//backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip
+0057.552 (0) Ftp chunked upload: 0.6 % uploaded
+0057.653 (0) Ftp chunked upload: 1.3 % uploaded
+0057.708 (0) Ftp chunked upload: 1.9 % uploaded
+0057.759 (0) Ftp chunked upload: 2.5 % uploaded
+0057.859 (0) Ftp chunked upload: 3.8 % uploaded
+0057.913 (0) Ftp chunked upload: 5.1 % uploaded
+0058.111 (0) Ftp chunked upload: 7.6 % uploaded
+0058.215 (0) Ftp chunked upload: 10.1 % uploaded
+0058.273 (0) Ftp chunked upload: 12.6 % uploaded
+0058.331 (0) Ftp chunked upload: 15.2 % uploaded
+0058.397 (0) Ftp chunked upload: 17.7 % uploaded
+0058.455 (0) Ftp chunked upload: 20.2 % uploaded
+0058.508 (0) Ftp chunked upload: 22.7 % uploaded
+0058.561 (0) Ftp chunked upload: 25.2 % uploaded
+0058.608 (0) Ftp chunked upload: 27.8 % uploaded
+0058.658 (0) Ftp chunked upload: 30.3 % uploaded
+0058.711 (0) Ftp chunked upload: 32.8 % uploaded
+0058.766 (0) Ftp chunked upload: 35.3 % uploaded
+0058.816 (0) Ftp chunked upload: 37.9 % uploaded
+0058.868 (0) Ftp chunked upload: 40.4 % uploaded
+0058.925 (0) Ftp chunked upload: 42.9 % uploaded
+0058.974 (0) Ftp chunked upload: 45.4 % uploaded
+0059.025 (0) Ftp chunked upload: 47.9 % uploaded
+0059.074 (0) Ftp chunked upload: 50.5 % uploaded
+0059.124 (0) Ftp chunked upload: 53 % uploaded
+0059.175 (0) Ftp chunked upload: 55.5 % uploaded
+0059.225 (0) Ftp chunked upload: 58 % uploaded
+0059.278 (0) Ftp chunked upload: 60.6 % uploaded
+0059.328 (0) Ftp chunked upload: 63.1 % uploaded
+0059.379 (0) Ftp chunked upload: 65.6 % uploaded
+0059.428 (0) Ftp chunked upload: 68.1 % uploaded
+0059.478 (0) Ftp chunked upload: 70.6 % uploaded
+0059.537 (0) Ftp chunked upload: 73.2 % uploaded
+0059.586 (0) Ftp chunked upload: 75.7 % uploaded
+0059.650 (0) Ftp chunked upload: 78.2 % uploaded
+0059.699 (0) Ftp chunked upload: 80.7 % uploaded
+0059.749 (0) Ftp chunked upload: 83.3 % uploaded
+0059.799 (0) Ftp chunked upload: 85.8 % uploaded
+0059.850 (0) Ftp chunked upload: 88.3 % uploaded
+0059.901 (0) Ftp chunked upload: 90.8 % uploaded
+0059.952 (0) Ftp chunked upload: 93.3 % uploaded
+0060.002 (0) Ftp chunked upload: 95.9 % uploaded
+0060.054 (0) Ftp chunked upload: 98.4 % uploaded
+0060.139 (0) FTP upload attempt successful (81332.5KB in 3s)
+0060.143 (0) Recording as successfully uploaded: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip (296dc245095afae3193707f9b98978ff)
+0060.155 (0) Deleting local file: backup_2017-05-07-1640_SK8Tech_69c8651eb609-plugins.zip: OK
+0060.158 (0) FTP upload attempt: backup_2017-05-07-1640_SK8Tech_69c8651eb609-themes.zip -> ftp://sk8tech-backup@sk8.asia@27.124.120.1//backup_2017-05-07-1640_SK8Tech_69c8651eb609-themes.zip
+0060.582 (0) Ftp chunked upload: 3.1 % uploaded
+0060.690 (0) Ftp chunked upload: 6.1 % uploaded
+0060.790 (0) Ftp chunked upload: 9.2 % uploaded
+0060.843 (0) Ftp chunked upload: 12.2 % uploaded
+0060.948 (0) Ftp chunked upload: 18.3 % uploaded
+0061.038 (0) Ftp chunked upload: 24.5 % uploaded
+0061.245 (0) Ftp chunked upload: 36.6 % uploaded
+0061.354 (0) Ftp chunked upload: 48.8 % uploaded
+0061.453 (0) Ftp chunked upload: 61 % uploaded
+0061.512 (0) Ftp chunked upload: 73.2 % uploaded
+0061.568 (0) Ftp chunked upload: 85.3 % uploaded
+0061.624 (0) Ftp chunked upload: 97.5 % uploaded
+0061.697 (0) FTP upload attempt successful (16846.3KB in 1.54s)
+0061.702 (0) Recording as successfully uploaded: backup_2017-05-07-1640_SK8Tech_69c8651eb609-themes.zip (d056b1afd15b2eb4bc2b45b831e52748)
+0061.711 (0) Deleting local file: backup_2017-05-07-1640_SK8Tech_69c8651eb609-themes.zip: OK
+0061.713 (0) FTP upload attempt: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip -> ftp://sk8tech-backup@sk8.asia@27.124.120.1//backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip
+0062.137 (0) Ftp chunked upload: 0.1 % uploaded
+0062.293 (0) Ftp chunked upload: 0.3 % uploaded
+0062.395 (0) Ftp chunked upload: 0.4 % uploaded
+0062.448 (0) Ftp chunked upload: 0.5 % uploaded
+0062.552 (0) Ftp chunked upload: 0.8 % uploaded
+0062.654 (0) Ftp chunked upload: 1 % uploaded
+0062.817 (0) Ftp chunked upload: 1.5 % uploaded
+0062.966 (0) Ftp chunked upload: 2 % uploaded
+0063.066 (0) Ftp chunked upload: 2.5 % uploaded
+0063.127 (0) Ftp chunked upload: 3 % uploaded
+0063.190 (0) Ftp chunked upload: 3.6 % uploaded
+0063.241 (0) Ftp chunked upload: 4.1 % uploaded
+0063.295 (0) Ftp chunked upload: 4.6 % uploaded
+0063.345 (0) Ftp chunked upload: 5.1 % uploaded
+0063.396 (0) Ftp chunked upload: 5.6 % uploaded
+0063.449 (0) Ftp chunked upload: 6.1 % uploaded
+0063.500 (0) Ftp chunked upload: 6.6 % uploaded
+0063.552 (0) Ftp chunked upload: 7.1 % uploaded
+0063.606 (0) Ftp chunked upload: 7.6 % uploaded
+0063.657 (0) Ftp chunked upload: 8.1 % uploaded
+0063.708 (0) Ftp chunked upload: 8.6 % uploaded
+0063.760 (0) Ftp chunked upload: 9.1 % uploaded
+0063.822 (0) Ftp chunked upload: 9.6 % uploaded
+0063.872 (0) Ftp chunked upload: 10.2 % uploaded
+0063.923 (0) Ftp chunked upload: 10.7 % uploaded
+0063.979 (0) Ftp chunked upload: 11.2 % uploaded
+0064.030 (0) Ftp chunked upload: 11.7 % uploaded
+0064.081 (0) Ftp chunked upload: 12.2 % uploaded
+0064.133 (0) Ftp chunked upload: 12.7 % uploaded
+0064.184 (0) Ftp chunked upload: 13.2 % uploaded
+0064.245 (0) Ftp chunked upload: 13.7 % uploaded
+0064.298 (0) Ftp chunked upload: 14.2 % uploaded
+0064.349 (0) Ftp chunked upload: 14.7 % uploaded
+0064.409 (0) Ftp chunked upload: 15.2 % uploaded
+0064.471 (0) Ftp chunked upload: 15.7 % uploaded
+0064.524 (0) Ftp chunked upload: 16.2 % uploaded
+0064.575 (0) Ftp chunked upload: 16.8 % uploaded
+0064.626 (0) Ftp chunked upload: 17.3 % uploaded
+0064.677 (0) Ftp chunked upload: 17.8 % uploaded
+0064.728 (0) Ftp chunked upload: 18.3 % uploaded
+0064.779 (0) Ftp chunked upload: 18.8 % uploaded
+0064.829 (0) Ftp chunked upload: 19.3 % uploaded
+0064.881 (0) Ftp chunked upload: 19.8 % uploaded
+0064.937 (0) Ftp chunked upload: 20.3 % uploaded
+0064.996 (0) Ftp chunked upload: 20.8 % uploaded
+0065.049 (0) Ftp chunked upload: 21.3 % uploaded
+0065.100 (0) Ftp chunked upload: 21.8 % uploaded
+0065.155 (0) Ftp chunked upload: 22.3 % uploaded
+0065.220 (0) Ftp chunked upload: 22.8 % uploaded
+0065.273 (0) Ftp chunked upload: 23.4 % uploaded
+0065.327 (0) Ftp chunked upload: 23.9 % uploaded
+0065.381 (0) Ftp chunked upload: 24.4 % uploaded
+0065.433 (0) Ftp chunked upload: 24.9 % uploaded
+0065.486 (0) Ftp chunked upload: 25.4 % uploaded
+0065.538 (0) Ftp chunked upload: 25.9 % uploaded
+0065.592 (0) Ftp chunked upload: 26.4 % uploaded
+0065.645 (0) Ftp chunked upload: 26.9 % uploaded
+0065.696 (0) Ftp chunked upload: 27.4 % uploaded
+0065.746 (0) Ftp chunked upload: 27.9 % uploaded
+0065.800 (0) Ftp chunked upload: 28.4 % uploaded
+0065.851 (0) Ftp chunked upload: 28.9 % uploaded
+0065.902 (0) Ftp chunked upload: 29.4 % uploaded
+0065.956 (0) Ftp chunked upload: 29.9 % uploaded
+0066.008 (0) Ftp chunked upload: 30.5 % uploaded
+0066.061 (0) Ftp chunked upload: 31 % uploaded
+0066.116 (0) Ftp chunked upload: 31.5 % uploaded
+0066.179 (0) Ftp chunked upload: 32 % uploaded
+0066.231 (0) Ftp chunked upload: 32.5 % uploaded
+0066.284 (0) Ftp chunked upload: 33 % uploaded
+0066.336 (0) Ftp chunked upload: 33.5 % uploaded
+0066.415 (0) Ftp chunked upload: 34 % uploaded
+0066.476 (0) Ftp chunked upload: 34.5 % uploaded
+0066.533 (0) Ftp chunked upload: 35 % uploaded
+0066.584 (0) Ftp chunked upload: 35.5 % uploaded
+0066.634 (0) Ftp chunked upload: 36 % uploaded
+0066.686 (0) Ftp chunked upload: 36.5 % uploaded
+0066.738 (0) Ftp chunked upload: 37.1 % uploaded
+0066.790 (0) Ftp chunked upload: 37.6 % uploaded
+0066.846 (0) Ftp chunked upload: 38.1 % uploaded
+0066.900 (0) Ftp chunked upload: 38.6 % uploaded
+0066.955 (0) Ftp chunked upload: 39.1 % uploaded
+0067.006 (0) Ftp chunked upload: 39.6 % uploaded
+0067.058 (0) Ftp chunked upload: 40.1 % uploaded
+0067.113 (0) Ftp chunked upload: 40.6 % uploaded
+0067.164 (0) Ftp chunked upload: 41.1 % uploaded
+0067.215 (0) Ftp chunked upload: 41.6 % uploaded
+0067.268 (0) Ftp chunked upload: 42.1 % uploaded
+0067.323 (0) Ftp chunked upload: 42.6 % uploaded
+0067.378 (0) Ftp chunked upload: 43.1 % uploaded
+0067.429 (0) Ftp chunked upload: 43.7 % uploaded
+0067.480 (0) Ftp chunked upload: 44.2 % uploaded
+0067.526 (0) Ftp chunked upload: 44.7 % uploaded
+0067.577 (0) Ftp chunked upload: 45.2 % uploaded
+0067.628 (0) Ftp chunked upload: 45.7 % uploaded
+0067.685 (0) Ftp chunked upload: 46.2 % uploaded
+0067.739 (0) Ftp chunked upload: 46.7 % uploaded
+0067.804 (0) Ftp chunked upload: 47.2 % uploaded
+0067.856 (0) Ftp chunked upload: 47.7 % uploaded
+0067.918 (0) Ftp chunked upload: 48.2 % uploaded
+0067.970 (0) Ftp chunked upload: 48.7 % uploaded
+0068.022 (0) Ftp chunked upload: 49.2 % uploaded
+0068.075 (0) Ftp chunked upload: 49.7 % uploaded
+0068.126 (0) Ftp chunked upload: 50.3 % uploaded
+0068.179 (0) Ftp chunked upload: 50.8 % uploaded
+0068.236 (0) Ftp chunked upload: 51.3 % uploaded
+0068.299 (0) Ftp chunked upload: 51.8 % uploaded
+0068.349 (0) Ftp chunked upload: 52.3 % uploaded
+0068.403 (0) Ftp chunked upload: 52.8 % uploaded
+0068.460 (0) Ftp chunked upload: 53.3 % uploaded
+0068.518 (0) Ftp chunked upload: 53.8 % uploaded
+0068.575 (0) Ftp chunked upload: 54.3 % uploaded
+0068.634 (0) Ftp chunked upload: 54.8 % uploaded
+0068.685 (0) Ftp chunked upload: 55.3 % uploaded
+0068.736 (0) Ftp chunked upload: 55.8 % uploaded
+0068.786 (0) Ftp chunked upload: 56.3 % uploaded
+0068.836 (0) Ftp chunked upload: 56.8 % uploaded
+0068.889 (0) Ftp chunked upload: 57.4 % uploaded
+0068.941 (0) Ftp chunked upload: 57.9 % uploaded
+0068.994 (0) Ftp chunked upload: 58.4 % uploaded
+0069.046 (0) Ftp chunked upload: 58.9 % uploaded
+0069.096 (0) Ftp chunked upload: 59.4 % uploaded
+0069.149 (0) Ftp chunked upload: 59.9 % uploaded
+0069.201 (0) Ftp chunked upload: 60.4 % uploaded
+0069.253 (0) Ftp chunked upload: 60.9 % uploaded
+0069.307 (0) Ftp chunked upload: 61.4 % uploaded
+0069.359 (0) Ftp chunked upload: 61.9 % uploaded
+0069.428 (0) Ftp chunked upload: 62.4 % uploaded
+0069.480 (0) Ftp chunked upload: 62.9 % uploaded
+0069.533 (0) Ftp chunked upload: 63.4 % uploaded
+0069.584 (0) Ftp chunked upload: 64 % uploaded
+0069.636 (0) Ftp chunked upload: 64.5 % uploaded
+0069.688 (0) Ftp chunked upload: 65 % uploaded
+0069.739 (0) Ftp chunked upload: 65.5 % uploaded
+0069.791 (0) Ftp chunked upload: 66 % uploaded
+0069.843 (0) Ftp chunked upload: 66.5 % uploaded
+0069.894 (0) Ftp chunked upload: 67 % uploaded
+0069.946 (0) Ftp chunked upload: 67.5 % uploaded
+0069.999 (0) Ftp chunked upload: 68 % uploaded
+0070.052 (0) Ftp chunked upload: 68.5 % uploaded
+0070.103 (0) Ftp chunked upload: 69 % uploaded
+0070.154 (0) Ftp chunked upload: 69.5 % uploaded
+0070.205 (0) Ftp chunked upload: 70 % uploaded
+0070.255 (0) Ftp chunked upload: 70.6 % uploaded
+0070.309 (0) Ftp chunked upload: 71.1 % uploaded
+0070.364 (0) Ftp chunked upload: 71.6 % uploaded
+0070.416 (0) Ftp chunked upload: 72.1 % uploaded
+0070.468 (0) Ftp chunked upload: 72.6 % uploaded
+0070.520 (0) Ftp chunked upload: 73.1 % uploaded
+0070.587 (0) Ftp chunked upload: 73.6 % uploaded
+0070.646 (0) Ftp chunked upload: 74.1 % uploaded
+0070.697 (0) Ftp chunked upload: 74.6 % uploaded
+0070.751 (0) Ftp chunked upload: 75.1 % uploaded
+0070.802 (0) Ftp chunked upload: 75.6 % uploaded
+0070.861 (0) Ftp chunked upload: 76.1 % uploaded
+0070.912 (0) Ftp chunked upload: 76.6 % uploaded
+0070.985 (0) Ftp chunked upload: 77.2 % uploaded
+0071.046 (0) Ftp chunked upload: 77.7 % uploaded
+0071.110 (0) Ftp chunked upload: 78.2 % uploaded
+0071.161 (0) Ftp chunked upload: 78.7 % uploaded
+0071.214 (0) Ftp chunked upload: 79.2 % uploaded
+0071.265 (0) Ftp chunked upload: 79.7 % uploaded
+0071.325 (0) Ftp chunked upload: 80.2 % uploaded
+0071.383 (0) Ftp chunked upload: 80.7 % uploaded
+0071.434 (0) Ftp chunked upload: 81.2 % uploaded
+0071.486 (0) Ftp chunked upload: 81.7 % uploaded
+0071.549 (0) Ftp chunked upload: 82.2 % uploaded
+0071.620 (0) Ftp chunked upload: 82.7 % uploaded
+0071.695 (0) Ftp chunked upload: 83.2 % uploaded
+0071.765 (0) Ftp chunked upload: 83.7 % uploaded
+0071.841 (0) Ftp chunked upload: 84.3 % uploaded
+0071.928 (0) Ftp chunked upload: 84.8 % uploaded
+0072.033 (0) Ftp chunked upload: 85.3 % uploaded
+0072.130 (0) Ftp chunked upload: 85.8 % uploaded
+0072.215 (0) Ftp chunked upload: 86.3 % uploaded
+0072.308 (0) Ftp chunked upload: 86.8 % uploaded
+0072.404 (0) Ftp chunked upload: 87.3 % uploaded
+0072.495 (0) Ftp chunked upload: 87.8 % uploaded
+0072.578 (0) Ftp chunked upload: 88.3 % uploaded
+0072.697 (0) Ftp chunked upload: 88.8 % uploaded
+0072.801 (0) Ftp chunked upload: 89.3 % uploaded
+0072.883 (0) Ftp chunked upload: 89.8 % uploaded
+0072.947 (0) Ftp chunked upload: 90.3 % uploaded
+0073.006 (0) Ftp chunked upload: 90.9 % uploaded
+0073.056 (0) Ftp chunked upload: 91.4 % uploaded
+0073.108 (0) Ftp chunked upload: 91.9 % uploaded
+0073.160 (0) Ftp chunked upload: 92.4 % uploaded
+0073.211 (0) Ftp chunked upload: 92.9 % uploaded
+0073.264 (0) Ftp chunked upload: 93.4 % uploaded
+0073.315 (0) Ftp chunked upload: 93.9 % uploaded
+0073.368 (0) Ftp chunked upload: 94.4 % uploaded
+0073.425 (0) Ftp chunked upload: 94.9 % uploaded
+0073.506 (0) Ftp chunked upload: 95.4 % uploaded
+0073.557 (0) Ftp chunked upload: 95.9 % uploaded
+0073.616 (0) Ftp chunked upload: 96.4 % uploaded
+0073.667 (0) Ftp chunked upload: 96.9 % uploaded
+0073.718 (0) Ftp chunked upload: 97.5 % uploaded
+0073.770 (0) Ftp chunked upload: 98 % uploaded
+0073.821 (0) Ftp chunked upload: 98.5 % uploaded
+0073.874 (0) Ftp chunked upload: 99 % uploaded
+0073.926 (0) Ftp chunked upload: 99.5 % uploaded
+0073.976 (0) Ftp chunked upload: 100 % uploaded
+0074.037 (0) FTP upload attempt successful (404198.1KB in 12.32s)
+0074.041 (0) Recording as successfully uploaded: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip (2f912410d2291460950b5d4948500748)
+0074.063 (0) Deleting local file: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads.zip: OK
+0074.065 (0) FTP upload attempt: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip -> ftp://sk8tech-backup@sk8.asia@27.124.120.1//backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip
+0074.441 (0) Ftp chunked upload: 0.2 % uploaded
+0074.593 (0) Ftp chunked upload: 0.5 % uploaded
+0074.697 (0) Ftp chunked upload: 0.7 % uploaded
+0074.751 (0) Ftp chunked upload: 0.9 % uploaded
+0074.901 (0) Ftp chunked upload: 1.4 % uploaded
+0074.958 (0) Ftp chunked upload: 1.8 % uploaded
+0075.161 (0) Ftp chunked upload: 2.7 % uploaded
+0075.271 (0) Ftp chunked upload: 3.7 % uploaded
+0075.373 (0) Ftp chunked upload: 4.6 % uploaded
+0075.439 (0) Ftp chunked upload: 5.5 % uploaded
+0075.519 (0) Ftp chunked upload: 6.4 % uploaded
+0075.572 (0) Ftp chunked upload: 7.3 % uploaded
+0075.623 (0) Ftp chunked upload: 8.2 % uploaded
+0075.674 (0) Ftp chunked upload: 9.1 % uploaded
+0075.725 (0) Ftp chunked upload: 10 % uploaded
+0075.776 (0) Ftp chunked upload: 11 % uploaded
+0075.830 (0) Ftp chunked upload: 11.9 % uploaded
+0075.881 (0) Ftp chunked upload: 12.8 % uploaded
+0075.935 (0) Ftp chunked upload: 13.7 % uploaded
+0075.990 (0) Ftp chunked upload: 14.6 % uploaded
+0076.041 (0) Ftp chunked upload: 15.5 % uploaded
+0076.091 (0) Ftp chunked upload: 16.4 % uploaded
+0076.149 (0) Ftp chunked upload: 17.3 % uploaded
+0076.200 (0) Ftp chunked upload: 18.3 % uploaded
+0076.256 (0) Ftp chunked upload: 19.2 % uploaded
+0076.309 (0) Ftp chunked upload: 20.1 % uploaded
+0076.362 (0) Ftp chunked upload: 21 % uploaded
+0076.413 (0) Ftp chunked upload: 21.9 % uploaded
+0076.470 (0) Ftp chunked upload: 22.8 % uploaded
+0076.521 (0) Ftp chunked upload: 23.7 % uploaded
+0076.571 (0) Ftp chunked upload: 24.6 % uploaded
+0076.622 (0) Ftp chunked upload: 25.6 % uploaded
+0076.673 (0) Ftp chunked upload: 26.5 % uploaded
+0076.723 (0) Ftp chunked upload: 27.4 % uploaded
+0076.774 (0) Ftp chunked upload: 28.3 % uploaded
+0076.835 (0) Ftp chunked upload: 29.2 % uploaded
+0076.891 (0) Ftp chunked upload: 30.1 % uploaded
+0076.948 (0) Ftp chunked upload: 31 % uploaded
+0077.006 (0) Ftp chunked upload: 31.9 % uploaded
+0077.056 (0) Ftp chunked upload: 32.8 % uploaded
+0077.108 (0) Ftp chunked upload: 33.8 % uploaded
+0077.159 (0) Ftp chunked upload: 34.7 % uploaded
+0077.212 (0) Ftp chunked upload: 35.6 % uploaded
+0077.265 (0) Ftp chunked upload: 36.5 % uploaded
+0077.317 (0) Ftp chunked upload: 37.4 % uploaded
+0077.370 (0) Ftp chunked upload: 38.3 % uploaded
+0077.424 (0) Ftp chunked upload: 39.2 % uploaded
+0077.478 (0) Ftp chunked upload: 40.1 % uploaded
+0077.530 (0) Ftp chunked upload: 41.1 % uploaded
+0077.585 (0) Ftp chunked upload: 42 % uploaded
+0077.639 (0) Ftp chunked upload: 42.9 % uploaded
+0077.700 (0) Ftp chunked upload: 43.8 % uploaded
+0077.760 (0) Ftp chunked upload: 44.7 % uploaded
+0077.819 (0) Ftp chunked upload: 45.6 % uploaded
+0077.870 (0) Ftp chunked upload: 46.5 % uploaded
+0077.922 (0) Ftp chunked upload: 47.4 % uploaded
+0077.975 (0) Ftp chunked upload: 48.4 % uploaded
+0078.024 (0) Ftp chunked upload: 49.3 % uploaded
+0078.075 (0) Ftp chunked upload: 50.2 % uploaded
+0078.128 (0) Ftp chunked upload: 51.1 % uploaded
+0078.178 (0) Ftp chunked upload: 52 % uploaded
+0078.230 (0) Ftp chunked upload: 52.9 % uploaded
+0078.291 (0) Ftp chunked upload: 53.8 % uploaded
+0078.342 (0) Ftp chunked upload: 54.7 % uploaded
+0078.393 (0) Ftp chunked upload: 55.7 % uploaded
+0078.445 (0) Ftp chunked upload: 56.6 % uploaded
+0078.496 (0) Ftp chunked upload: 57.5 % uploaded
+0078.548 (0) Ftp chunked upload: 58.4 % uploaded
+0078.603 (0) Ftp chunked upload: 59.3 % uploaded
+0078.660 (0) Ftp chunked upload: 60.2 % uploaded
+0078.710 (0) Ftp chunked upload: 61.1 % uploaded
+0078.765 (0) Ftp chunked upload: 62 % uploaded
+0078.819 (0) Ftp chunked upload: 63 % uploaded
+0078.872 (0) Ftp chunked upload: 63.9 % uploaded
+0078.924 (0) Ftp chunked upload: 64.8 % uploaded
+0078.976 (0) Ftp chunked upload: 65.7 % uploaded
+0079.030 (0) Ftp chunked upload: 66.6 % uploaded
+0079.081 (0) Ftp chunked upload: 67.5 % uploaded
+0079.132 (0) Ftp chunked upload: 68.4 % uploaded
+0079.185 (0) Ftp chunked upload: 69.3 % uploaded
+0079.239 (0) Ftp chunked upload: 70.3 % uploaded
+0079.290 (0) Ftp chunked upload: 71.2 % uploaded
+0079.342 (0) Ftp chunked upload: 72.1 % uploaded
+0079.392 (0) Ftp chunked upload: 73 % uploaded
+0079.445 (0) Ftp chunked upload: 73.9 % uploaded
+0079.496 (0) Ftp chunked upload: 74.8 % uploaded
+0079.547 (0) Ftp chunked upload: 75.7 % uploaded
+0079.598 (0) Ftp chunked upload: 76.6 % uploaded
+0079.656 (0) Ftp chunked upload: 77.6 % uploaded
+0079.707 (0) Ftp chunked upload: 78.5 % uploaded
+0079.758 (0) Ftp chunked upload: 79.4 % uploaded
+0079.810 (0) Ftp chunked upload: 80.3 % uploaded
+0079.866 (0) Ftp chunked upload: 81.2 % uploaded
+0079.920 (0) Ftp chunked upload: 82.1 % uploaded
+0079.971 (0) Ftp chunked upload: 83 % uploaded
+0080.023 (0) Ftp chunked upload: 83.9 % uploaded
+0080.076 (0) Ftp chunked upload: 84.8 % uploaded
+0080.127 (0) Ftp chunked upload: 85.8 % uploaded
+0080.178 (0) Ftp chunked upload: 86.7 % uploaded
+0080.231 (0) Ftp chunked upload: 87.6 % uploaded
+0080.282 (0) Ftp chunked upload: 88.5 % uploaded
+0080.335 (0) Ftp chunked upload: 89.4 % uploaded
+0080.386 (0) Ftp chunked upload: 90.3 % uploaded
+0080.438 (0) Ftp chunked upload: 91.2 % uploaded
+0080.488 (0) Ftp chunked upload: 92.1 % uploaded
+0080.552 (0) Ftp chunked upload: 93.1 % uploaded
+0080.602 (0) Ftp chunked upload: 94 % uploaded
+0080.654 (0) Ftp chunked upload: 94.9 % uploaded
+0080.706 (0) Ftp chunked upload: 95.8 % uploaded
+0080.757 (0) Ftp chunked upload: 96.7 % uploaded
+0080.823 (0) Ftp chunked upload: 97.6 % uploaded
+0080.873 (0) Ftp chunked upload: 98.5 % uploaded
+0080.929 (0) Ftp chunked upload: 99.4 % uploaded
+0081.012 (0) FTP upload attempt successful (224876.9KB in 6.94s)
+0081.017 (0) Recording as successfully uploaded: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip (f61bf098f24cbaebd5506ca70bee1cb4)
+0081.041 (0) Deleting local file: backup_2017-05-07-1640_SK8Tech_69c8651eb609-uploads2.zip: OK
+0081.044 (0) FTP upload attempt: backup_2017-05-07-1640_SK8Tech_69c8651eb609-others.zip -> ftp://sk8tech-backup@sk8.asia@27.124.120.1//backup_2017-05-07-1640_SK8Tech_69c8651eb609-others.zip
+0081.469 (0) Ftp chunked upload: 8.9 % uploaded
+0081.623 (0) Ftp chunked upload: 17.9 % uploaded
+0081.725 (0) Ftp chunked upload: 26.8 % uploaded
+0081.778 (0) Ftp chunked upload: 35.8 % uploaded
+0081.883 (0) Ftp chunked upload: 53.6 % uploaded
+0081.936 (0) Ftp chunked upload: 71.4 % uploaded
+0082.246 (0) FTP upload attempt successful (5768.6KB in 1.2s)
+0082.251 (0) Recording as successfully uploaded: backup_2017-05-07-1640_SK8Tech_69c8651eb609-others.zip (4aa4b4bcfc7e04287bbb4f64ef21376c)
+0082.256 (0) Deleting local file: backup_2017-05-07-1640_SK8Tech_69c8651eb609-others.zip: OK
+0082.258 (0) FTP upload attempt: backup_2017-05-07-1640_SK8Tech_69c8651eb609-db.gz -> ftp://sk8tech-backup@sk8.asia@27.124.120.1//backup_2017-05-07-1640_SK8Tech_69c8651eb609-db.gz
+0082.676 (0) Ftp chunked upload: 9.3 % uploaded
+0082.778 (0) Ftp chunked upload: 18.6 % uploaded
+0082.879 (0) Ftp chunked upload: 27.8 % uploaded
+0082.931 (0) Ftp chunked upload: 37.1 % uploaded
+0083.033 (0) Ftp chunked upload: 55.6 % uploaded
+0083.130 (0) Ftp chunked upload: 74.1 % uploaded
+0083.434 (0) FTP upload attempt successful (5560.4KB in 1.17s)
+0083.438 (0) Recording as successfully uploaded: backup_2017-05-07-1640_SK8Tech_69c8651eb609-db.gz (cf0f35cc7bc1e7176f1196dd152eafe4)
+0083.443 (0) Deleting local file: backup_2017-05-07-1640_SK8Tech_69c8651eb609-db.gz: OK
+0083.447 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=52, retain_db=365
+0083.450 (0) Number of backup sets in history: 62; groups (db): 1
+0083.451 (0) Examining (for databases) backup set with group_id=0, nonce=69c8651eb609, datestamp=1494139247 (May 07 2017 06:40:47)
+0083.454 (0) This backup set is the backup set just made, so will not be deleted.
+0083.455 (0) Examining (for databases) backup set with group_id=0, nonce=db35c7d88d96, datestamp=1494052768 (May 06 2017 06:39:28)
+0083.457 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.459 (0) Examining (for databases) backup set with group_id=0, nonce=ff46e87699e8, datestamp=1493966439 (May 05 2017 06:40:39)
+0083.461 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.463 (0) Examining (for databases) backup set with group_id=0, nonce=ca8e016c19e2, datestamp=1493881061 (May 04 2017 06:57:41)
+0083.465 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.467 (0) Examining (for databases) backup set with group_id=0, nonce=5043dd5e4ef8, datestamp=1493793705 (May 03 2017 06:41:45)
+0083.469 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.470 (0) Examining (for databases) backup set with group_id=0, nonce=e9e7588f0a57, datestamp=1493708178 (May 02 2017 06:56:18)
+0083.472 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.474 (0) Examining (for databases) backup set with group_id=0, nonce=26bfeb61f1d7, datestamp=1493620829 (May 01 2017 06:40:29)
+0083.476 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.478 (0) Examining (for databases) backup set with group_id=0, nonce=9d980871a14a, datestamp=1493534450 (Apr 30 2017 06:40:50)
+0083.479 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.481 (0) Examining (for databases) backup set with group_id=0, nonce=63dab9c16f06, datestamp=1493534344 (Apr 30 2017 06:39:04)
+0083.483 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.486 (0) Examining (for databases) backup set with group_id=0, nonce=e1f5beee05e8, datestamp=1493447988 (Apr 29 2017 06:39:48)
+0083.487 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.490 (0) Examining (for databases) backup set with group_id=0, nonce=af49362b066a, datestamp=1493361552 (Apr 28 2017 06:39:12)
+0083.492 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.494 (0) Examining (for databases) backup set with group_id=0, nonce=4aa7ed33200c, datestamp=1493275130 (Apr 27 2017 06:38:50)
+0083.496 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.499 (0) Examining (for databases) backup set with group_id=0, nonce=66602dc9c0d0, datestamp=1493188715 (Apr 26 2017 06:38:35)
+0083.501 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.503 (0) Examining (for databases) backup set with group_id=0, nonce=445305f86312, datestamp=1493102298 (Apr 25 2017 06:38:18)
+0083.505 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.507 (0) Examining (for databases) backup set with group_id=0, nonce=c1afea8f9487, datestamp=1493015905 (Apr 24 2017 06:38:25)
+0083.509 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.511 (0) Examining (for databases) backup set with group_id=0, nonce=cce932975ec8, datestamp=1492929794 (Apr 23 2017 06:43:14)
+0083.513 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.514 (0) Examining (for databases) backup set with group_id=0, nonce=3a4b13ab0e04, datestamp=1492843216 (Apr 22 2017 06:40:16)
+0083.517 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.519 (0) Examining (for databases) backup set with group_id=0, nonce=66d7413a7e42, datestamp=1492756863 (Apr 21 2017 06:41:03)
+0083.521 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.522 (0) Examining (for databases) backup set with group_id=0, nonce=9f2d83473367, datestamp=1492670314 (Apr 20 2017 06:38:34)
+0083.525 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.526 (0) Examining (for databases) backup set with group_id=0, nonce=39708e67509b, datestamp=1492583901 (Apr 19 2017 06:38:21)
+0083.528 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.530 (0) Examining (for databases) backup set with group_id=0, nonce=424e80d2ff57, datestamp=1492497765 (Apr 18 2017 06:42:45)
+0083.532 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.534 (0) Examining (for databases) backup set with group_id=0, nonce=b8e2a3359744, datestamp=1492411241 (Apr 17 2017 06:40:41)
+0083.536 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.538 (0) Examining (for databases) backup set with group_id=0, nonce=c4a0b238ac44, datestamp=1492238451 (Apr 15 2017 06:40:51)
+0083.539 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.542 (0) Examining (for databases) backup set with group_id=0, nonce=f00d3468e2d9, datestamp=1492151962 (Apr 14 2017 06:39:22)
+0083.543 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.546 (0) Examining (for databases) backup set with group_id=0, nonce=8d6d41a4285d, datestamp=1492065598 (Apr 13 2017 06:39:58)
+0083.547 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.549 (0) Examining (for databases) backup set with group_id=0, nonce=3f04cb68af92, datestamp=1491979219 (Apr 12 2017 06:40:19)
+0083.551 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.553 (0) Examining (for databases) backup set with group_id=0, nonce=2874400235fe, datestamp=1491892801 (Apr 11 2017 06:40:01)
+0083.555 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.557 (0) Examining (for databases) backup set with group_id=0, nonce=54f3ebd0a270, datestamp=1491839423 (Apr 10 2017 15:50:23)
+0083.559 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.561 (0) Examining (for databases) backup set with group_id=0, nonce=4098bd69bdcd, datestamp=1491633494 (Apr 08 2017 06:38:14)
+0083.563 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.565 (0) Examining (for databases) backup set with group_id=0, nonce=87099e0bc8e0, datestamp=1491547177 (Apr 07 2017 06:39:37)
+0083.566 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.569 (0) Examining (for databases) backup set with group_id=0, nonce=4e7078ec7213, datestamp=1491460755 (Apr 06 2017 06:39:15)
+0083.570 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.573 (0) Examining (for databases) backup set with group_id=0, nonce=4ee741ea0671, datestamp=1491375061 (Apr 05 2017 06:51:01)
+0083.575 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.577 (0) Examining (for databases) backup set with group_id=0, nonce=12aed18d3913, datestamp=1491287983 (Apr 04 2017 06:39:43)
+0083.578 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.580 (0) Examining (for databases) backup set with group_id=0, nonce=f1d21bbdb2b4, datestamp=1491201541 (Apr 03 2017 06:39:01)
+0083.582 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.584 (0) Examining (for databases) backup set with group_id=0, nonce=8c611f616638, datestamp=1491115314 (Apr 02 2017 06:41:54)
+0083.586 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.588 (0) Examining (for databases) backup set with group_id=0, nonce=110fc8829924, datestamp=1491028807 (Apr 01 2017 06:40:07)
+0083.590 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.593 (0) Examining (for databases) backup set with group_id=0, nonce=afa050fae9fb, datestamp=1490942406 (Mar 31 2017 06:40:06)
+0083.595 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.597 (0) Examining (for databases) backup set with group_id=0, nonce=4a0c42746032, datestamp=1490855917 (Mar 30 2017 06:38:37)
+0083.599 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.601 (0) Examining (for databases) backup set with group_id=0, nonce=cce4d94da1fe, datestamp=1490769554 (Mar 29 2017 06:39:14)
+0083.602 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.605 (0) Examining (for databases) backup set with group_id=0, nonce=c4b19a3bf510, datestamp=1490683440 (Mar 28 2017 06:44:00)
+0083.606 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.608 (0) Examining (for databases) backup set with group_id=0, nonce=67a295d2539e, datestamp=1490596700 (Mar 27 2017 06:38:20)
+0083.610 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.613 (0) Examining (for databases) backup set with group_id=0, nonce=c297b2dbe83b, datestamp=1490510736 (Mar 26 2017 06:45:36)
+0083.614 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.616 (0) Examining (for databases) backup set with group_id=0, nonce=31d77df15385, datestamp=1490510399 (Mar 26 2017 06:39:59)
+0083.618 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.620 (0) Examining (for databases) backup set with group_id=0, nonce=58c65c235191, datestamp=1490423898 (Mar 25 2017 06:38:18)
+0083.622 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.624 (0) Examining (for databases) backup set with group_id=0, nonce=d022a8847532, datestamp=1490338008 (Mar 24 2017 06:46:48)
+0083.626 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.627 (0) Examining (for databases) backup set with group_id=0, nonce=31e0254700b3, datestamp=1490251112 (Mar 23 2017 06:38:32)
+0083.630 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.631 (0) Examining (for databases) backup set with group_id=0, nonce=f237442b9b4b, datestamp=1490164802 (Mar 22 2017 06:40:02)
+0083.633 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.635 (0) Examining (for databases) backup set with group_id=0, nonce=ba05572a7153, datestamp=1490078295 (Mar 21 2017 06:38:15)
+0083.637 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.639 (0) Examining (for databases) backup set with group_id=0, nonce=6eac5b356f8a, datestamp=1489992019 (Mar 20 2017 06:40:19)
+0083.641 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.643 (0) Examining (for databases) backup set with group_id=0, nonce=6f55011192d5, datestamp=1489905850 (Mar 19 2017 06:44:10)
+0083.645 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.647 (0) Examining (for databases) backup set with group_id=0, nonce=50a97a931956, datestamp=1489905513 (Mar 19 2017 06:38:33)
+0083.649 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.651 (0) Examining (for databases) backup set with group_id=0, nonce=0ac7fdaf9c60, datestamp=1489835167 (Mar 18 2017 11:06:07)
+0083.653 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.655 (0) Examining (for databases) backup set with group_id=0, nonce=19c387a80a2f, datestamp=1489819146 (Mar 18 2017 06:39:06)
+0083.658 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.659 (0) Examining (for databases) backup set with group_id=0, nonce=8430cbbf860a, datestamp=1489732705 (Mar 17 2017 06:38:25)
+0083.662 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.663 (0) Examining (for databases) backup set with group_id=0, nonce=1fc9eca764ee, datestamp=1489646517 (Mar 16 2017 06:41:57)
+0083.666 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.667 (0) Examining (for databases) backup set with group_id=0, nonce=ef570394ad46, datestamp=1489560111 (Mar 15 2017 06:41:51)
+0083.669 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.671 (0) Examining (for databases) backup set with group_id=0, nonce=6c3cde0d4e7e, datestamp=1489473527 (Mar 14 2017 06:38:47)
+0083.673 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.675 (0) Examining (for databases) backup set with group_id=0, nonce=09413c9784c9, datestamp=1489387095 (Mar 13 2017 06:38:15)
+0083.677 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.679 (0) Examining (for databases) backup set with group_id=0, nonce=6f40a7201b40, datestamp=1489300821 (Mar 12 2017 06:40:21)
+0083.681 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.683 (0) Examining (for databases) backup set with group_id=0, nonce=d83bceebe564, datestamp=1489300697 (Mar 12 2017 06:38:17)
+0083.685 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.687 (0) Examining (for databases) backup set with group_id=0, nonce=fece6acd009c, datestamp=1489124226 (Mar 10 2017 05:37:06)
+0083.689 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.691 (0) Examining (for databases) backup set with group_id=0, nonce=00369df68aff, datestamp=1489030440 (Mar 09 2017 03:34:00)
+0083.693 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.695 (0) Number of backup sets in history: 62; groups (files): 1
+0083.697 (0) Examining (for files) backup set with nonce=69c8651eb609, datestamp=1494139247 (May 07 2017 06:40:47)
+0083.698 (0) This backup set is the backup set just made, so will not be deleted.
+0083.701 (0) This backup set is the backup set just made, so will not be deleted.
+0083.701 (0) This backup set is the backup set just made, so will not be deleted.
+0083.701 (0) This backup set is the backup set just made, so will not be deleted.
+0083.701 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.702 (0) Examining (for files) backup set with nonce=db35c7d88d96, datestamp=1494052768 (May 06 2017 06:39:28)
+0083.704 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.706 (0) Examining (for files) backup set with nonce=ff46e87699e8, datestamp=1493966439 (May 05 2017 06:40:39)
+0083.708 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.710 (0) Examining (for files) backup set with nonce=ca8e016c19e2, datestamp=1493881061 (May 04 2017 06:57:41)
+0083.712 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.714 (0) Examining (for files) backup set with nonce=5043dd5e4ef8, datestamp=1493793705 (May 03 2017 06:41:45)
+0083.716 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.718 (0) Examining (for files) backup set with nonce=e9e7588f0a57, datestamp=1493708178 (May 02 2017 06:56:18)
+0083.720 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.721 (0) Examining (for files) backup set with nonce=26bfeb61f1d7, datestamp=1493620829 (May 01 2017 06:40:29)
+0083.723 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.725 (0) Examining (for files) backup set with nonce=9d980871a14a, datestamp=1493534450 (Apr 30 2017 06:40:50)
+0083.727 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.729 (0) Examining (for files) backup set with nonce=63dab9c16f06, datestamp=1493534344 (Apr 30 2017 06:39:04)
+0083.731 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.733 (0) Examining (for files) backup set with nonce=e1f5beee05e8, datestamp=1493447988 (Apr 29 2017 06:39:48)
+0083.735 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.737 (0) Examining (for files) backup set with nonce=af49362b066a, datestamp=1493361552 (Apr 28 2017 06:39:12)
+0083.739 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.742 (0) Examining (for files) backup set with nonce=4aa7ed33200c, datestamp=1493275130 (Apr 27 2017 06:38:50)
+0083.744 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.746 (0) Examining (for files) backup set with nonce=66602dc9c0d0, datestamp=1493188715 (Apr 26 2017 06:38:35)
+0083.749 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.750 (0) Examining (for files) backup set with nonce=445305f86312, datestamp=1493102298 (Apr 25 2017 06:38:18)
+0083.752 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.754 (0) Examining (for files) backup set with nonce=c1afea8f9487, datestamp=1493015905 (Apr 24 2017 06:38:25)
+0083.757 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.758 (0) Examining (for files) backup set with nonce=cce932975ec8, datestamp=1492929794 (Apr 23 2017 06:43:14)
+0083.761 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.763 (0) Examining (for files) backup set with nonce=3a4b13ab0e04, datestamp=1492843216 (Apr 22 2017 06:40:16)
+0083.766 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.768 (0) Examining (for files) backup set with nonce=66d7413a7e42, datestamp=1492756863 (Apr 21 2017 06:41:03)
+0083.770 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.772 (0) Examining (for files) backup set with nonce=9f2d83473367, datestamp=1492670314 (Apr 20 2017 06:38:34)
+0083.774 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.776 (0) Examining (for files) backup set with nonce=39708e67509b, datestamp=1492583901 (Apr 19 2017 06:38:21)
+0083.778 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.780 (0) Examining (for files) backup set with nonce=424e80d2ff57, datestamp=1492497765 (Apr 18 2017 06:42:45)
+0083.782 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.785 (0) Examining (for files) backup set with nonce=b8e2a3359744, datestamp=1492411241 (Apr 17 2017 06:40:41)
+0083.787 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.789 (0) Examining (for files) backup set with nonce=c4a0b238ac44, datestamp=1492238451 (Apr 15 2017 06:40:51)
+0083.791 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.794 (0) Examining (for files) backup set with nonce=f00d3468e2d9, datestamp=1492151962 (Apr 14 2017 06:39:22)
+0083.796 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.798 (0) Examining (for files) backup set with nonce=8d6d41a4285d, datestamp=1492065598 (Apr 13 2017 06:39:58)
+0083.800 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.802 (0) Examining (for files) backup set with nonce=3f04cb68af92, datestamp=1491979219 (Apr 12 2017 06:40:19)
+0083.805 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.807 (0) Examining (for files) backup set with nonce=2874400235fe, datestamp=1491892801 (Apr 11 2017 06:40:01)
+0083.809 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.811 (0) Examining (for files) backup set with nonce=54f3ebd0a270, datestamp=1491839423 (Apr 10 2017 15:50:23)
+0083.813 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.815 (0) Examining (for files) backup set with nonce=4098bd69bdcd, datestamp=1491633494 (Apr 08 2017 06:38:14)
+0083.817 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.819 (0) Examining (for files) backup set with nonce=87099e0bc8e0, datestamp=1491547177 (Apr 07 2017 06:39:37)
+0083.821 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.823 (0) Examining (for files) backup set with nonce=4e7078ec7213, datestamp=1491460755 (Apr 06 2017 06:39:15)
+0083.825 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.827 (0) Examining (for files) backup set with nonce=4ee741ea0671, datestamp=1491375061 (Apr 05 2017 06:51:01)
+0083.829 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.831 (0) Examining (for files) backup set with nonce=12aed18d3913, datestamp=1491287983 (Apr 04 2017 06:39:43)
+0083.833 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.834 (0) Examining (for files) backup set with nonce=f1d21bbdb2b4, datestamp=1491201541 (Apr 03 2017 06:39:01)
+0083.837 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.838 (0) Examining (for files) backup set with nonce=8c611f616638, datestamp=1491115314 (Apr 02 2017 06:41:54)
+0083.841 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.843 (0) Examining (for files) backup set with nonce=110fc8829924, datestamp=1491028807 (Apr 01 2017 06:40:07)
+0083.845 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.847 (0) Examining (for files) backup set with nonce=afa050fae9fb, datestamp=1490942406 (Mar 31 2017 06:40:06)
+0083.849 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.851 (0) Examining (for files) backup set with nonce=4a0c42746032, datestamp=1490855917 (Mar 30 2017 06:38:37)
+0083.853 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.854 (0) Examining (for files) backup set with nonce=cce4d94da1fe, datestamp=1490769554 (Mar 29 2017 06:39:14)
+0083.857 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.858 (0) Examining (for files) backup set with nonce=c4b19a3bf510, datestamp=1490683440 (Mar 28 2017 06:44:00)
+0083.861 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.862 (0) Examining (for files) backup set with nonce=67a295d2539e, datestamp=1490596700 (Mar 27 2017 06:38:20)
+0083.865 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.867 (0) Examining (for files) backup set with nonce=c297b2dbe83b, datestamp=1490510736 (Mar 26 2017 06:45:36)
+0083.869 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.871 (0) Examining (for files) backup set with nonce=31d77df15385, datestamp=1490510399 (Mar 26 2017 06:39:59)
+0083.873 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.875 (0) Examining (for files) backup set with nonce=58c65c235191, datestamp=1490423898 (Mar 25 2017 06:38:18)
+0083.878 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.879 (0) Examining (for files) backup set with nonce=d022a8847532, datestamp=1490338008 (Mar 24 2017 06:46:48)
+0083.881 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.883 (0) Examining (for files) backup set with nonce=31e0254700b3, datestamp=1490251112 (Mar 23 2017 06:38:32)
+0083.886 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.887 (0) Examining (for files) backup set with nonce=f237442b9b4b, datestamp=1490164802 (Mar 22 2017 06:40:02)
+0083.890 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.892 (0) Examining (for files) backup set with nonce=ba05572a7153, datestamp=1490078295 (Mar 21 2017 06:38:15)
+0083.894 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.896 (0) Examining (for files) backup set with nonce=6eac5b356f8a, datestamp=1489992019 (Mar 20 2017 06:40:19)
+0083.898 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.900 (0) Examining (for files) backup set with nonce=6f55011192d5, datestamp=1489905850 (Mar 19 2017 06:44:10)
+0083.902 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.903 (0) Examining (for files) backup set with nonce=50a97a931956, datestamp=1489905513 (Mar 19 2017 06:38:33)
+0083.906 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.908 (0) Examining (for files) backup set with nonce=0ac7fdaf9c60, datestamp=1489835167 (Mar 18 2017 11:06:07)
+0083.910 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.912 (0) Examining (for files) backup set with nonce=19c387a80a2f, datestamp=1489819146 (Mar 18 2017 06:39:06)
+0083.914 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.915 (0) Examining (for files) backup set with nonce=8430cbbf860a, datestamp=1489732705 (Mar 17 2017 06:38:25)
+0083.917 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.919 (0) Examining (for files) backup set with nonce=1fc9eca764ee, datestamp=1489646517 (Mar 16 2017 06:41:57)
+0083.921 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.923 (0) Examining (for files) backup set with nonce=ef570394ad46, datestamp=1489560111 (Mar 15 2017 06:41:51)
+0083.925 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.927 (0) Examining (for files) backup set with nonce=6c3cde0d4e7e, datestamp=1489473527 (Mar 14 2017 06:38:47)
+0083.929 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.931 (0) Examining (for files) backup set with nonce=09413c9784c9, datestamp=1489387095 (Mar 13 2017 06:38:15)
+0083.933 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.935 (0) Examining (for files) backup set with nonce=6f40a7201b40, datestamp=1489300821 (Mar 12 2017 06:40:21)
+0083.937 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0083.939 (0) Examining (for files) backup set with nonce=d83bceebe564, datestamp=1489300697 (Mar 12 2017 06:38:17)
+0083.941 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.943 (0) Examining (for files) backup set with nonce=fece6acd009c, datestamp=1489124226 (Mar 10 2017 05:37:06)
+0083.945 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.947 (0) Examining (for files) backup set with nonce=00369df68aff, datestamp=1489030440 (Mar 09 2017 03:34:00)
+0083.949 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.951 (0) Retain: saving new backup history (sets now: 62) and finishing retain operation
+0084.014 (0) Resume backup (69c8651eb609, 0): finish run
+0084.024 (0) Decremented the semaphore (fd) by 1
+0084.027 (0) Semaphore (fd) unlocked
+0084.031 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0084.037 (0) No email will/can be sent - the user has not configured an email address.
+0084.039 (0) The backup apparently succeeded and is now complete

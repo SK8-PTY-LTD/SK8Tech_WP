@@ -78,7 +78,7 @@ else {
 
 foreach ($data as $key => $item) {
 	// default profile is manual except for post
-	$data[$key]['profile'] = empty($content_types[$key]['profile']) ? ('post' == $key ? 'automatic' : 'manual') : $content_types[$key]['profile'];
+	$data[$key]['profile'] = empty($content_types[$key]['profile']) ? ('post' === $key ? 'automatic' : ('page' === $key ? 'manual' : 'disabled')) : $content_types[$key]['profile'];
 	$data[$key]['sources'] = empty($content_types[$key]['sources']) ? array() : $content_types[$key]['sources'];
 	if (!empty($content_types[$key]['fields']))
 		$data[$key]['fields']['value'] = $content_types[$key]['fields'];

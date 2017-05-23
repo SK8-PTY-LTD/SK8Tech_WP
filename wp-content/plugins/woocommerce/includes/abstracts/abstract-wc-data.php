@@ -132,6 +132,23 @@ abstract class WC_Data {
 	}
 
 	/**
+	 * When the object is cloned, make sure meta is duplicated correctly.
+	 *
+	 * @since 3.0.2
+	 */
+	public function __clone() {
+		$this->maybe_read_meta_data();
+		if ( ! empty( $this->meta_data ) ) {
+			foreach ( $this->meta_data as $array_key => $meta ) {
+				$this->meta_data[ $array_key ] = clone $meta;
+				if ( ! empty( $meta->id ) ) {
+					unset( $this->meta_data[ $array_key ]->id );
+				}
+			}
+		}
+	}
+
+	/**
 	 * Get the data store.
 	 *
 	 * @since  3.0.0
@@ -259,14 +276,16 @@ abstract class WC_Data {
 	 */
 	public function get_meta( $key = '', $single = true, $context = 'view' ) {
 		$this->maybe_read_meta_data();
-		$array_keys = array_keys( wp_list_pluck( $this->get_meta_data(), 'key' ), $key );
+		$meta_data  = $this->get_meta_data();
+		$array_keys = array_keys( wp_list_pluck( $meta_data, 'key' ), $key );
 		$value      = $single ? '' : array();
 
 		if ( ! empty( $array_keys ) ) {
+			// We don't use the $this->meta_data property directly here because we don't want meta with a null value (i.e. meta which has been deleted via $this->delete_meta_data())
 			if ( $single ) {
-				$value = $this->meta_data[ current( $array_keys ) ]->value;
+				$value = $meta_data[ current( $array_keys ) ]->value;
 			} else {
-				$value = array_intersect_key( $this->meta_data, array_flip( $array_keys ) );
+				$value = array_intersect_key( $meta_data, array_flip( $array_keys ) );
 			}
 
 			if ( 'view' === $context ) {
@@ -418,28 +437,23 @@ abstract class WC_Data {
 
 		if ( ! $force_read ) {
 			if ( ! empty( $this->cache_group ) ) {
-				$cached_meta = wp_cache_get( $cache_key, $this->cache_group );
-				if ( false !== $cached_meta ) {
-					$this->meta_data = $cached_meta;
-					$cache_loaded    = true;
-				}
+				$cached_meta  = wp_cache_get( $cache_key, $this->cache_group );
+				$cache_loaded = ! empty( $cached_meta );
 			}
 		}
 
-		if ( ! $cache_loaded ) {
-			$raw_meta_data   = $this->data_store->read_meta( $this );
-			if ( $raw_meta_data ) {
-				foreach ( $raw_meta_data as $meta ) {
-					$this->meta_data[] = (object) array(
-						'id'    => (int) $meta->meta_id,
-						'key'   => $meta->meta_key,
-						'value' => maybe_unserialize( $meta->meta_value ),
-					);
-				}
+		$raw_meta_data = $cache_loaded ? $cached_meta : $this->data_store->read_meta( $this );
+		if ( $raw_meta_data ) {
+			foreach ( $raw_meta_data as $meta ) {
+				$this->meta_data[] = (object) array(
+					'id'    => (int) $meta->meta_id,
+					'key'   => $meta->meta_key,
+					'value' => maybe_unserialize( $meta->meta_value ),
+				);
+			}
 
-				if ( ! empty( $this->cache_group ) ) {
-					wp_cache_set( $cache_key, $this->meta_data, $this->cache_group );
-				}
+			if ( ! $cache_loaded && ! empty( $this->cache_group ) ) {
+				wp_cache_set( $cache_key, $raw_meta_data, $this->cache_group );
 			}
 		}
 	}

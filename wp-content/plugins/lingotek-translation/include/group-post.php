@@ -263,7 +263,7 @@ class Lingotek_Group_Post extends Lingotek_Group {
 	public static function is_valid_auto_upload_post_status($post_status) {
 		$prefs = Lingotek_Model::get_prefs();
 		$valid_statuses = $prefs['auto_upload_post_statuses'];
-		$valid = array_key_exists($post_status, $valid_statuses) && $valid_statuses[$post_status];
+		$valid = isset( $valid_statuses[$post_status] ) && $valid_statuses[$post_status];
 		return $valid;
 	}
 
@@ -294,14 +294,15 @@ class Lingotek_Group_Post extends Lingotek_Group {
 
 		$client = new Lingotek_API();
 
-		if (false === ($translation = $client->get_translation($this->document_id, $locale, $this->source))) {
-			return;
-		}
+		$translation = $client->get_translation($this->document_id, $locale, $this->source);
+
+		if (!$translation || $this->translationNotReady( json_decode($translation, true) )) return; // If the request failed.
+
+		$translation = json_decode($translation, true); // wp_insert_post expects array
 
 		self::$creating_translation = true;
 		$prefs = Lingotek_Model::get_prefs(); // need an array by default
 
-		$translation = json_decode($translation, true); // wp_insert_post expects array
 		$tr_post = $translation['post'];
 
 		$post = get_post($this->source); // source post
@@ -379,6 +380,20 @@ class Lingotek_Group_Post extends Lingotek_Group {
 		// Adds content sanitization back in after Lingotek saves the translation
 		add_filter('content_save_pre', 'wp_filter_post_kses');
 		add_filter('content_filtered_save_pre', 'wp_filter_post_kses');
+	}
+
+	/**
+	* TMS will return an associative array with empty fields if the translation is not ready. 
+	*
+	* @param array $translation the array returned from TMS.
+	*/
+	private function translationNotReady($translation) {
+		$trimmed_title = trim( $translation['post']['post_title'] );
+		$trimmed_content = trim( $translation['post']['post_content'] );
+		$trimmed_excerpt = trim($translation['post']['post_excerpt'] );
+		return empty( $trimmed_title ) &&
+				empty( $trimmed_content ) &&
+				empty( $trimmed_excerpt );
 	}
 
 	/*

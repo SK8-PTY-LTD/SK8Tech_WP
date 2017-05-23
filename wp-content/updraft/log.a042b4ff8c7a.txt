@@ -1,0 +1,914 @@
+0000.002 (0) Opened log file at time: Mon, 08 May 2017 06:38:53 +0000 on https://sk8.tech
+0000.008 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.12.40 WP: 4.7.4 PHP: 7.1.4 (fpm-fcgi, Linux ubuntu-1024mb-syd1-clients 4.4.0-72-generic #93-Ubuntu SMP Fri Mar 31 14:07:41 UTC 2017 x86_64) MySQL: 5.7.18 WPLANG: en_US Server: Apache/2.4.25 (Unix) OpenSSL/1.0.2g safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 10.9M | 12M) multisite: N openssl: OpenSSL 1.0.2g  1 Mar 2016 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.011 (0) Free space on disk containing Updraft's temporary directory: 10898.6 MB
+0000.017 (0) Tasks: Backup files:  (schedule: weekly) Backup DB: 1 (schedule: daily)
+0000.019 (0) Processed schedules. Tasks now: Backup files:  Backup DB: 1
+0000.029 (0) Requesting semaphore lock (d) (apparently via scheduler: last_scheduled_action_called_at=1494052768, seconds_ago=172765)
+0000.035 (0) Set semaphore last lock (d) time to 2017-05-08 06:38:53
+0000.036 (0) Semaphore lock (d) complete
+0000.044 (0) Backup run: resumption=0, nonce=a042b4ff8c7a, begun at=1494225533 (0s ago), job type=backup
+0000.049 (0) Scheduling a resumption (1) after 300 seconds (1494225833) in case this run gets aborted
+0000.062 (0) This backup run is not intended for files - skipping
+0000.066 (0) Beginning creation of database dump (WordPress DB)
+0000.070 (0) Testing: /usr/bin/mysqldump
+0000.438 (0) Output: /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;\n/*!40103 SET TIME_ZONE='+00:00' */;\n/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;\n/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;\n/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;\n/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;\nDROP TABLE IF EXISTS `wp_options`;\n/*!40101 SET @saved_cs_client     = @@character_set_client */;\n/*!40101 SET character_set_client = utf8 */;\nCRE (truncated - 1172 bytes total)
+0000.447 (0) Working binary mysqldump found: /usr/bin/mysqldump
+0000.496 (0) Table wp_options: Total expected rows (approximate): 3452
+0000.716 (0) Table wp_options: Total rows added: 3787 in 0.22 seconds
+0000.728 (0) Table wp_options: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_options.table.gz - 437.3 KB)
+0000.741 (0) Table wp_users: Total expected rows (approximate): 2
+0000.744 (0) Table wp_users: Total rows added: 2 in 0.00 seconds
+0000.746 (0) Table wp_users: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_users.table.gz - 0.7 KB)
+0000.755 (0) Table wp_usermeta: Total expected rows (approximate): 111
+0000.760 (0) Table wp_usermeta: Total rows added: 111 in 0.00 seconds
+0000.764 (0) Table wp_usermeta: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_usermeta.table.gz - 3.5 KB)
+0000.773 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0000.778 (0) Table wp_commentmeta: Total rows added: 0 in 0.00 seconds
+0000.781 (0) Table wp_commentmeta: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_commentmeta.table.gz - 0.4 KB)
+0000.790 (0) Table wp_comments: Total expected rows (approximate): 9
+0000.796 (0) Table wp_comments: Total rows added: 9 in 0.00 seconds
+0000.800 (0) Table wp_comments: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_comments.table.gz - 1.2 KB)
+0000.815 (0) Table wp_links: Total expected rows (approximate): 0
+0000.822 (0) Table wp_links: Total rows added: 0 in 0.00 seconds
+0000.825 (0) Table wp_links: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_links.table.gz - 0.4 KB)
+0000.830 (0) Table wp_postmeta: Total expected rows (approximate): 7473
+0001.038 (0) Table wp_postmeta: Total rows added: 8633 in 0.21 seconds
+0001.048 (0) Table wp_postmeta: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_postmeta.table.gz - 156.2 KB)
+0001.054 (0) Table wp_posts: Total expected rows (approximate): 2827
+0002.074 (0) Table wp_posts: Total rows added: 3981 in 1.02 seconds
+0002.078 (0) Table wp_posts: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_posts.table.gz - 2410.4 KB)
+0002.082 (0) Table wp_term_relationships: Total expected rows (approximate): 8363
+0002.675 (0) Table wp_term_relationships: binary mysqldump finished (writes: 30) in 0.59 seconds
+0002.679 (0) Table wp_term_relationships: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_term_relationships.table.gz - 21.9 KB)
+0002.684 (0) Table wp_term_taxonomy: Total expected rows (approximate): 899
+0002.694 (0) Table wp_term_taxonomy: Total rows added: 899 in 0.01 seconds
+0002.697 (0) Table wp_term_taxonomy: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_term_taxonomy.table.gz - 18 KB)
+0002.703 (0) Table wp_termmeta: Total expected rows (approximate): 0
+0002.705 (0) Table wp_termmeta: Total rows added: 0 in 0.00 seconds
+0002.707 (0) Table wp_termmeta: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_termmeta.table.gz - 0.4 KB)
+0002.712 (0) Table wp_terms: Total expected rows (approximate): 899
+0002.721 (0) Table wp_terms: Total rows added: 899 in 0.01 seconds
+0002.723 (0) Table wp_terms: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_terms.table.gz - 17.2 KB)
+0002.729 (0) Table wp_ap_config: Total expected rows (approximate): 6
+0002.733 (0) Table wp_ap_config: Total rows added: 6 in 0.00 seconds
+0002.735 (0) Table wp_ap_config: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_config.table.gz - 1.7 KB)
+0002.745 (0) Table wp_ap_config_group: Total expected rows (approximate): 4
+0002.749 (0) Table wp_ap_config_group: Total rows added: 4 in 0.00 seconds
+0002.752 (0) Table wp_ap_config_group: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_config_group.table.gz - 0.4 KB)
+0002.758 (0) Table wp_ap_config_option: Total expected rows (approximate): 20
+0002.764 (0) Table wp_ap_config_option: Total rows added: 20 in 0.00 seconds
+0002.766 (0) Table wp_ap_config_option: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_config_option.table.gz - 0.6 KB)
+0002.773 (0) Table wp_ap_config_url_list: Total expected rows (approximate): 5
+0002.777 (0) Table wp_ap_config_url_list: Total rows added: 5 in 0.00 seconds
+0002.780 (0) Table wp_ap_config_url_list: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_config_url_list.table.gz - 0.5 KB)
+0002.785 (0) Table wp_ap_download_img_temp: Total expected rows (approximate): 32
+0002.789 (0) Table wp_ap_download_img_temp: Total rows added: 32 in 0.00 seconds
+0002.791 (0) Table wp_ap_download_img_temp: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_download_img_temp.table.gz - 2.1 KB)
+0002.797 (0) Table wp_ap_flickr_img: Total expected rows (approximate): 0
+0002.799 (0) Table wp_ap_flickr_img: Total rows added: 0 in 0.00 seconds
+0002.801 (0) Table wp_ap_flickr_img: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_flickr_img.table.gz - 0.4 KB)
+0002.807 (0) Table wp_ap_flickr_oauth: Total expected rows (approximate): 0
+0002.810 (0) Table wp_ap_flickr_oauth: Total rows added: 0 in 0.00 seconds
+0002.812 (0) Table wp_ap_flickr_oauth: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_flickr_oauth.table.gz - 0.3 KB)
+0002.818 (0) Table wp_ap_log: Total expected rows (approximate): 4294
+0002.869 (0) Table wp_ap_log: Total rows added: 4294 in 0.05 seconds
+0002.872 (0) Table wp_ap_log: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_log.table.gz - 105 KB)
+0002.878 (0) Table wp_ap_more_content: Total expected rows (approximate): 0
+0002.881 (0) Table wp_ap_more_content: Total rows added: 0 in 0.00 seconds
+0002.883 (0) Table wp_ap_more_content: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_more_content.table.gz - 0.3 KB)
+0002.888 (0) Table wp_ap_qiniu_img: Total expected rows (approximate): 0
+0002.891 (0) Table wp_ap_qiniu_img: Total rows added: 0 in 0.00 seconds
+0002.893 (0) Table wp_ap_qiniu_img: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_qiniu_img.table.gz - 0.3 KB)
+0002.901 (0) Table wp_ap_updated_record: Total expected rows (approximate): 908
+0002.921 (0) Table wp_ap_updated_record: Total rows added: 908 in 0.02 seconds
+0002.924 (0) Table wp_ap_updated_record: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_updated_record.table.gz - 64.1 KB)
+0002.930 (0) Table wp_ap_upyun_img: Total expected rows (approximate): 0
+0002.933 (0) Table wp_ap_upyun_img: Total rows added: 0 in 0.00 seconds
+0002.935 (0) Table wp_ap_upyun_img: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_upyun_img.table.gz - 0.3 KB)
+0002.942 (0) Table wp_ap_watermark: Total expected rows (approximate): 1
+0002.945 (0) Table wp_ap_watermark: Total rows added: 1 in 0.00 seconds
+0002.947 (0) Table wp_ap_watermark: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_watermark.table.gz - 0.6 KB)
+0002.955 (0) Table wp_ariadminer_connections: Total expected rows (approximate): 0
+0002.958 (0) Table wp_ariadminer_connections: Total rows added: 0 in 0.00 seconds
+0002.960 (0) Table wp_ariadminer_connections: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ariadminer_connections.table.gz - 0.5 KB)
+0002.966 (0) Table wp_autolink: Total expected rows (approximate): 39
+0002.969 (0) Table wp_autolink: Total rows added: 39 in 0.00 seconds
+0002.971 (0) Table wp_autolink: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_autolink.table.gz - 1 KB)
+0002.977 (0) Table wp_bpspro_db_backup: Total expected rows (approximate): 0
+0002.979 (0) Table wp_bpspro_db_backup: Total rows added: 0 in 0.00 seconds
+0002.981 (0) Table wp_bpspro_db_backup: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_bpspro_db_backup.table.gz - 0.4 KB)
+0002.987 (0) Table wp_bpspro_login_security: Total expected rows (approximate): 6
+0002.991 (0) Table wp_bpspro_login_security: Total rows added: 6 in 0.00 seconds
+0002.993 (0) Table wp_bpspro_login_security: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_bpspro_login_security.table.gz - 0.7 KB)
+0003.001 (0) Table wp_bpspro_seclog_ignore: Total expected rows (approximate): 0
+0003.005 (0) Table wp_bpspro_seclog_ignore: Total rows added: 0 in 0.00 seconds
+0003.007 (0) Table wp_bpspro_seclog_ignore: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_bpspro_seclog_ignore.table.gz - 0.3 KB)
+0003.013 (0) Table wp_cpm_file_relationship: Total expected rows (approximate): 0
+0003.019 (0) Table wp_cpm_file_relationship: Total rows added: 0 in 0.00 seconds
+0003.021 (0) Table wp_cpm_file_relationship: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_cpm_file_relationship.table.gz - 0.5 KB)
+0003.028 (0) Table wp_cpm_project_items: Total expected rows (approximate): 2
+0003.035 (0) Table wp_cpm_project_items: Total rows added: 3 in 0.01 seconds
+0003.038 (0) Table wp_cpm_project_items: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_cpm_project_items.table.gz - 0.5 KB)
+0003.043 (0) Table wp_cpm_tasks: Total expected rows (approximate): 0
+0003.050 (0) Table wp_cpm_tasks: Total rows added: 2 in 0.00 seconds
+0003.053 (0) Table wp_cpm_tasks: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_cpm_tasks.table.gz - 0.4 KB)
+0003.058 (0) Table wp_cpm_user_role: Total expected rows (approximate): 0
+0003.063 (0) Table wp_cpm_user_role: Total rows added: 1 in 0.00 seconds
+0003.065 (0) Table wp_cpm_user_role: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_cpm_user_role.table.gz - 0.3 KB)
+0003.070 (0) Table wp_erp_ac_banks: Total expected rows (approximate): 2
+0003.075 (0) Table wp_erp_ac_banks: Total rows added: 2 in 0.00 seconds
+0003.077 (0) Table wp_erp_ac_banks: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_banks.table.gz - 0.4 KB)
+0003.083 (0) Table wp_erp_ac_chart_classes: Total expected rows (approximate): 5
+0003.087 (0) Table wp_erp_ac_chart_classes: Total rows added: 5 in 0.00 seconds
+0003.089 (0) Table wp_erp_ac_chart_classes: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_chart_classes.table.gz - 0.4 KB)
+0003.095 (0) Table wp_erp_ac_chart_types: Total expected rows (approximate): 16
+0003.101 (0) Table wp_erp_ac_chart_types: Total rows added: 16 in 0.00 seconds
+0003.103 (0) Table wp_erp_ac_chart_types: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_chart_types.table.gz - 0.5 KB)
+0003.109 (0) Table wp_erp_ac_journals: Total expected rows (approximate): 0
+0003.115 (0) Table wp_erp_ac_journals: Total rows added: 0 in 0.00 seconds
+0003.118 (0) Table wp_erp_ac_journals: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_journals.table.gz - 0.4 KB)
+0003.123 (0) Table wp_erp_ac_ledger: Total expected rows (approximate): 62
+0003.130 (0) Table wp_erp_ac_ledger: Total rows added: 62 in 0.00 seconds
+0003.132 (0) Table wp_erp_ac_ledger: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_ledger.table.gz - 1.5 KB)
+0003.142 (0) Table wp_erp_ac_payments: Total expected rows (approximate): 0
+0003.148 (0) Table wp_erp_ac_payments: Total rows added: 0 in 0.00 seconds
+0003.150 (0) Table wp_erp_ac_payments: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_payments.table.gz - 0.3 KB)
+0003.157 (0) Table wp_erp_ac_tax: Total expected rows (approximate): 0
+0003.163 (0) Table wp_erp_ac_tax: Total rows added: 0 in 0.00 seconds
+0003.165 (0) Table wp_erp_ac_tax: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_tax.table.gz - 0.3 KB)
+0003.173 (0) Table wp_erp_ac_tax_items: Total expected rows (approximate): 0
+0003.179 (0) Table wp_erp_ac_tax_items: Total rows added: 0 in 0.00 seconds
+0003.181 (0) Table wp_erp_ac_tax_items: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_tax_items.table.gz - 0.3 KB)
+0003.188 (0) Table wp_erp_ac_transaction_items: Total expected rows (approximate): 0
+0003.192 (0) Table wp_erp_ac_transaction_items: Total rows added: 0 in 0.00 seconds
+0003.195 (0) Table wp_erp_ac_transaction_items: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_transaction_items.table.gz - 0.5 KB)
+0003.216 (0) Table wp_erp_ac_transactions: Total expected rows (approximate): 0
+0003.226 (0) Table wp_erp_ac_transactions: Total rows added: 0 in 0.01 seconds
+0003.229 (0) Table wp_erp_ac_transactions: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_transactions.table.gz - 0.6 KB)
+0003.236 (0) Table wp_erp_audit_log: Total expected rows (approximate): 0
+0003.247 (0) Table wp_erp_audit_log: Total rows added: 0 in 0.01 seconds
+0003.250 (0) Table wp_erp_audit_log: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_audit_log.table.gz - 0.4 KB)
+0003.257 (0) Table wp_erp_company_locations: Total expected rows (approximate): 0
+0003.263 (0) Table wp_erp_company_locations: Total rows added: 0 in 0.00 seconds
+0003.265 (0) Table wp_erp_company_locations: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_company_locations.table.gz - 0.4 KB)
+0003.271 (0) Table wp_erp_crm_activities_task: Total expected rows (approximate): 0
+0003.277 (0) Table wp_erp_crm_activities_task: Total rows added: 0 in 0.00 seconds
+0003.279 (0) Table wp_erp_crm_activities_task: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_activities_task.table.gz - 0.3 KB)
+0003.287 (0) Table wp_erp_crm_campaign_group: Total expected rows (approximate): 0
+0003.293 (0) Table wp_erp_crm_campaign_group: Total rows added: 0 in 0.00 seconds
+0003.295 (0) Table wp_erp_crm_campaign_group: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_campaign_group.table.gz - 0.3 KB)
+0003.303 (0) Table wp_erp_crm_campaigns: Total expected rows (approximate): 0
+0003.308 (0) Table wp_erp_crm_campaigns: Total rows added: 0 in 0.00 seconds
+0003.311 (0) Table wp_erp_crm_campaigns: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_campaigns.table.gz - 0.3 KB)
+0003.320 (0) Table wp_erp_crm_contact_group: Total expected rows (approximate): 0
+0003.324 (0) Table wp_erp_crm_contact_group: Total rows added: 0 in 0.00 seconds
+0003.326 (0) Table wp_erp_crm_contact_group: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_contact_group.table.gz - 0.4 KB)
+0003.333 (0) Table wp_erp_crm_contact_subscriber: Total expected rows (approximate): 0
+0003.339 (0) Table wp_erp_crm_contact_subscriber: Total rows added: 0 in 0.00 seconds
+0003.342 (0) Table wp_erp_crm_contact_subscriber: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_contact_subscriber.table.gz - 0.4 KB)
+0003.349 (0) Table wp_erp_crm_customer_activities: Total expected rows (approximate): 0
+0003.359 (0) Table wp_erp_crm_customer_activities: Total rows added: 0 in 0.01 seconds
+0003.361 (0) Table wp_erp_crm_customer_activities: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_customer_activities.table.gz - 0.4 KB)
+0003.370 (0) Table wp_erp_crm_customer_companies: Total expected rows (approximate): 0
+0003.388 (0) Table wp_erp_crm_customer_companies: Total rows added: 0 in 0.01 seconds
+0003.397 (0) Table wp_erp_crm_customer_companies: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_customer_companies.table.gz - 0.3 KB)
+0003.410 (0) Table wp_erp_crm_save_email_replies: Total expected rows (approximate): 0
+0003.415 (0) Table wp_erp_crm_save_email_replies: Total rows added: 0 in 0.00 seconds
+0003.418 (0) Table wp_erp_crm_save_email_replies: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_save_email_replies.table.gz - 0.3 KB)
+0003.426 (0) Table wp_erp_crm_save_search: Total expected rows (approximate): 0
+0003.435 (0) Table wp_erp_crm_save_search: Total rows added: 0 in 0.01 seconds
+0003.438 (0) Table wp_erp_crm_save_search: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_save_search.table.gz - 0.4 KB)
+0003.444 (0) Table wp_erp_hr_announcement: Total expected rows (approximate): 0
+0003.449 (0) Table wp_erp_hr_announcement: Total rows added: 0 in 0.00 seconds
+0003.451 (0) Table wp_erp_hr_announcement: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_announcement.table.gz - 0.3 KB)
+0003.459 (0) Table wp_erp_hr_dependents: Total expected rows (approximate): 0
+0003.465 (0) Table wp_erp_hr_dependents: Total rows added: 0 in 0.00 seconds
+0003.469 (0) Table wp_erp_hr_dependents: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_dependents.table.gz - 0.4 KB)
+0003.478 (0) Table wp_erp_hr_depts: Total expected rows (approximate): 0
+0003.486 (0) Table wp_erp_hr_depts: Total rows added: 0 in 0.01 seconds
+0003.489 (0) Table wp_erp_hr_depts: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_depts.table.gz - 0.4 KB)
+0003.495 (0) Table wp_erp_hr_designations: Total expected rows (approximate): 0
+0003.501 (0) Table wp_erp_hr_designations: Total rows added: 0 in 0.00 seconds
+0003.503 (0) Table wp_erp_hr_designations: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_designations.table.gz - 0.4 KB)
+0003.509 (0) Table wp_erp_hr_education: Total expected rows (approximate): 0
+0003.513 (0) Table wp_erp_hr_education: Total rows added: 0 in 0.00 seconds
+0003.515 (0) Table wp_erp_hr_education: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_education.table.gz - 0.4 KB)
+0003.522 (0) Table wp_erp_hr_employee_history: Total expected rows (approximate): 0
+0003.526 (0) Table wp_erp_hr_employee_history: Total rows added: 0 in 0.00 seconds
+0003.528 (0) Table wp_erp_hr_employee_history: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_employee_history.table.gz - 0.4 KB)
+0003.535 (0) Table wp_erp_hr_employee_notes: Total expected rows (approximate): 0
+0003.538 (0) Table wp_erp_hr_employee_notes: Total rows added: 0 in 0.00 seconds
+0003.541 (0) Table wp_erp_hr_employee_notes: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_employee_notes.table.gz - 0.4 KB)
+0003.547 (0) Table wp_erp_hr_employee_performance: Total expected rows (approximate): 0
+0003.551 (0) Table wp_erp_hr_employee_performance: Total rows added: 0 in 0.00 seconds
+0003.553 (0) Table wp_erp_hr_employee_performance: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_employee_performance.table.gz - 0.5 KB)
+0003.559 (0) Table wp_erp_hr_employees: Total expected rows (approximate): 0
+0003.563 (0) Table wp_erp_hr_employees: Total rows added: 0 in 0.00 seconds
+0003.566 (0) Table wp_erp_hr_employees: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_employees.table.gz - 0.5 KB)
+0003.571 (0) Table wp_erp_hr_holiday: Total expected rows (approximate): 0
+0003.577 (0) Table wp_erp_hr_holiday: Total rows added: 0 in 0.00 seconds
+0003.580 (0) Table wp_erp_hr_holiday: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_holiday.table.gz - 0.4 KB)
+0003.587 (0) Table wp_erp_hr_leave_entitlements: Total expected rows (approximate): 0
+0003.590 (0) Table wp_erp_hr_leave_entitlements: Total rows added: 0 in 0.00 seconds
+0003.592 (0) Table wp_erp_hr_leave_entitlements: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_leave_entitlements.table.gz - 0.4 KB)
+0003.599 (0) Table wp_erp_hr_leave_policies: Total expected rows (approximate): 0
+0003.604 (0) Table wp_erp_hr_leave_policies: Total rows added: 0 in 0.00 seconds
+0003.606 (0) Table wp_erp_hr_leave_policies: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_leave_policies.table.gz - 0.5 KB)
+0003.617 (0) Table wp_erp_hr_leave_requests: Total expected rows (approximate): 0
+0003.622 (0) Table wp_erp_hr_leave_requests: Total rows added: 0 in 0.00 seconds
+0003.624 (0) Table wp_erp_hr_leave_requests: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_leave_requests.table.gz - 0.4 KB)
+0003.631 (0) Table wp_erp_hr_leaves: Total expected rows (approximate): 0
+0003.636 (0) Table wp_erp_hr_leaves: Total rows added: 0 in 0.00 seconds
+0003.638 (0) Table wp_erp_hr_leaves: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_leaves.table.gz - 0.4 KB)
+0003.651 (0) Table wp_erp_hr_work_exp: Total expected rows (approximate): 0
+0003.656 (0) Table wp_erp_hr_work_exp: Total rows added: 0 in 0.00 seconds
+0003.658 (0) Table wp_erp_hr_work_exp: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_work_exp.table.gz - 0.4 KB)
+0003.665 (0) Table wp_erp_people_type_relations: Total expected rows (approximate): 0
+0003.672 (0) Table wp_erp_people_type_relations: Total rows added: 0 in 0.01 seconds
+0003.674 (0) Table wp_erp_people_type_relations: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_people_type_relations.table.gz - 0.3 KB)
+0003.681 (0) Table wp_erp_people_types: Total expected rows (approximate): 4
+0003.692 (0) Table wp_erp_people_types: Total rows added: 4 in 0.01 seconds
+0003.694 (0) Table wp_erp_people_types: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_people_types.table.gz - 0.4 KB)
+0003.701 (0) Table wp_erp_peoplemeta: Total expected rows (approximate): 0
+0003.706 (0) Table wp_erp_peoplemeta: Total rows added: 0 in 0.00 seconds
+0003.708 (0) Table wp_erp_peoplemeta: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_peoplemeta.table.gz - 0.4 KB)
+0003.715 (0) Table wp_erp_peoples: Total expected rows (approximate): 0
+0003.722 (0) Table wp_erp_peoples: Total rows added: 0 in 0.01 seconds
+0003.724 (0) Table wp_erp_peoples: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_peoples.table.gz - 0.5 KB)
+0003.729 (0) Table wp_ewwwio_images: Total expected rows (approximate): 2406
+0003.819 (0) Table wp_ewwwio_images: Total rows added: 2408 in 0.09 seconds
+0003.822 (0) Table wp_ewwwio_images: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ewwwio_images.table.gz - 66 KB)
+0003.827 (0) Table wp_grp_google_place: Total expected rows (approximate): 0
+0003.832 (0) Table wp_grp_google_place: Total rows added: 1 in 0.00 seconds
+0003.834 (0) Table wp_grp_google_place: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_grp_google_place.table.gz - 0.6 KB)
+0003.841 (0) Table wp_grp_google_review: Total expected rows (approximate): 5
+0003.847 (0) Table wp_grp_google_review: Total rows added: 5 in 0.00 seconds
+0003.850 (0) Table wp_grp_google_review: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_grp_google_review.table.gz - 1.6 KB)
+0003.856 (0) Table wp_learnpress_order_itemmeta: Total expected rows (approximate): 0
+0003.860 (0) Table wp_learnpress_order_itemmeta: Total rows added: 0 in 0.00 seconds
+0003.862 (0) Table wp_learnpress_order_itemmeta: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_order_itemmeta.table.gz - 0.4 KB)
+0003.867 (0) Table wp_learnpress_order_items: Total expected rows (approximate): 0
+0003.871 (0) Table wp_learnpress_order_items: Total rows added: 0 in 0.00 seconds
+0003.873 (0) Table wp_learnpress_order_items: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_order_items.table.gz - 0.3 KB)
+0003.891 (0) Table wp_learnpress_question_answers: Total expected rows (approximate): 0
+0003.898 (0) Table wp_learnpress_question_answers: Total rows added: 0 in 0.00 seconds
+0003.900 (0) Table wp_learnpress_question_answers: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_question_answers.table.gz - 0.3 KB)
+0003.907 (0) Table wp_learnpress_quiz_questions: Total expected rows (approximate): 0
+0003.913 (0) Table wp_learnpress_quiz_questions: Total rows added: 0 in 0.00 seconds
+0003.916 (0) Table wp_learnpress_quiz_questions: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_quiz_questions.table.gz - 0.3 KB)
+0003.925 (0) Table wp_learnpress_review_logs: Total expected rows (approximate): 0
+0003.931 (0) Table wp_learnpress_review_logs: Total rows added: 0 in 0.00 seconds
+0003.933 (0) Table wp_learnpress_review_logs: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_review_logs.table.gz - 0.4 KB)
+0003.940 (0) Table wp_learnpress_section_items: Total expected rows (approximate): 0
+0003.945 (0) Table wp_learnpress_section_items: Total rows added: 0 in 0.00 seconds
+0003.948 (0) Table wp_learnpress_section_items: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_section_items.table.gz - 0.3 KB)
+0003.954 (0) Table wp_learnpress_sections: Total expected rows (approximate): 0
+0003.959 (0) Table wp_learnpress_sections: Total rows added: 0 in 0.00 seconds
+0003.962 (0) Table wp_learnpress_sections: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_sections.table.gz - 0.4 KB)
+0003.968 (0) Table wp_learnpress_sessions: Total expected rows (approximate): 0
+0003.972 (0) Table wp_learnpress_sessions: Total rows added: 0 in 0.00 seconds
+0003.975 (0) Table wp_learnpress_sessions: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_sessions.table.gz - 0.3 KB)
+0003.983 (0) Table wp_learnpress_user_itemmeta: Total expected rows (approximate): 0
+0003.988 (0) Table wp_learnpress_user_itemmeta: Total rows added: 0 in 0.00 seconds
+0003.990 (0) Table wp_learnpress_user_itemmeta: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_user_itemmeta.table.gz - 0.3 KB)
+0003.996 (0) Table wp_learnpress_user_items: Total expected rows (approximate): 0
+0004.001 (0) Table wp_learnpress_user_items: Total rows added: 0 in 0.00 seconds
+0004.004 (0) Table wp_learnpress_user_items: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_user_items.table.gz - 0.4 KB)
+0004.009 (0) Table wp_lifterlms_product_to_voucher: Total expected rows (approximate): 0
+0004.015 (0) Table wp_lifterlms_product_to_voucher: Total rows added: 0 in 0.00 seconds
+0004.018 (0) Table wp_lifterlms_product_to_voucher: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_lifterlms_product_to_voucher.table.gz - 0.3 KB)
+0004.023 (0) Table wp_lifterlms_user_postmeta: Total expected rows (approximate): 0
+0004.029 (0) Table wp_lifterlms_user_postmeta: Total rows added: 0 in 0.00 seconds
+0004.031 (0) Table wp_lifterlms_user_postmeta: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_lifterlms_user_postmeta.table.gz - 0.4 KB)
+0004.037 (0) Table wp_lifterlms_voucher_code_redemptions: Total expected rows (approximate): 0
+0004.043 (0) Table wp_lifterlms_voucher_code_redemptions: Total rows added: 0 in 0.00 seconds
+0004.047 (0) Table wp_lifterlms_voucher_code_redemptions: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_lifterlms_voucher_code_redemptions.table.gz - 0.3 KB)
+0004.055 (0) Table wp_lifterlms_vouchers_codes: Total expected rows (approximate): 0
+0004.060 (0) Table wp_lifterlms_vouchers_codes: Total rows added: 0 in 0.00 seconds
+0004.062 (0) Table wp_lifterlms_vouchers_codes: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_lifterlms_vouchers_codes.table.gz - 0.4 KB)
+0004.070 (0) Table wp_p2p: Total expected rows (approximate): 0
+0004.076 (0) Table wp_p2p: Total rows added: 0 in 0.00 seconds
+0004.078 (0) Table wp_p2p: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_p2p.table.gz - 0.3 KB)
+0004.085 (0) Table wp_p2pmeta: Total expected rows (approximate): 0
+0004.089 (0) Table wp_p2pmeta: Total rows added: 0 in 0.00 seconds
+0004.091 (0) Table wp_p2pmeta: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_p2pmeta.table.gz - 0.4 KB)
+0004.097 (0) Table wp_revslider_css: Total expected rows (approximate): 109
+0004.109 (0) Table wp_revslider_css: Total rows added: 109 in 0.01 seconds
+0004.112 (0) Table wp_revslider_css: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_revslider_css.table.gz - 4.8 KB)
+0004.120 (0) Table wp_revslider_layer_animations: Total expected rows (approximate): 0
+0004.128 (0) Table wp_revslider_layer_animations: Total rows added: 0 in 0.01 seconds
+0004.130 (0) Table wp_revslider_layer_animations: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_revslider_layer_animations.table.gz - 0.3 KB)
+0004.137 (0) Table wp_revslider_navigations: Total expected rows (approximate): 0
+0004.143 (0) Table wp_revslider_navigations: Total rows added: 0 in 0.00 seconds
+0004.146 (0) Table wp_revslider_navigations: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_revslider_navigations.table.gz - 0.3 KB)
+0004.153 (0) Table wp_revslider_sliders: Total expected rows (approximate): 0
+0004.158 (0) Table wp_revslider_sliders: Total rows added: 0 in 0.00 seconds
+0004.160 (0) Table wp_revslider_sliders: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_revslider_sliders.table.gz - 0.3 KB)
+0004.167 (0) Table wp_revslider_slides: Total expected rows (approximate): 0
+0004.173 (0) Table wp_revslider_slides: Total rows added: 0 in 0.00 seconds
+0004.175 (0) Table wp_revslider_slides: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_revslider_slides.table.gz - 0.3 KB)
+0004.182 (0) Table wp_revslider_static_slides: Total expected rows (approximate): 0
+0004.189 (0) Table wp_revslider_static_slides: Total rows added: 0 in 0.00 seconds
+0004.191 (0) Table wp_revslider_static_slides: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_revslider_static_slides.table.gz - 0.3 KB)
+0004.199 (0) Table wp_ualp_user_activity: Total expected rows (approximate): 2055
+0004.244 (0) Table wp_ualp_user_activity: Total rows added: 2055 in 0.04 seconds
+0004.246 (0) Table wp_ualp_user_activity: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ualp_user_activity.table.gz - 33.8 KB)
+0004.254 (0) Table wp_w3tc_cdn_queue: Total expected rows (approximate): 0
+0004.258 (0) Table wp_w3tc_cdn_queue: Total rows added: 0 in 0.00 seconds
+0004.260 (0) Table wp_w3tc_cdn_queue: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_w3tc_cdn_queue.table.gz - 0.4 KB)
+0004.267 (0) Table wp_webpages_data: Total expected rows (approximate): 0
+0004.273 (0) Table wp_webpages_data: Total rows added: 0 in 0.00 seconds
+0004.275 (0) Table wp_webpages_data: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_webpages_data.table.gz - 0.4 KB)
+0004.282 (0) Table wp_wfBadLeechers: Total expected rows (approximate): 0
+0004.290 (0) Table wp_wfBadLeechers: Total rows added: 0 in 0.01 seconds
+0004.292 (0) Table wp_wfBadLeechers: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfBadLeechers.table.gz - 0.3 KB)
+0004.298 (0) Table wp_wfBlockedIPLog: Total expected rows (approximate): 1358
+0004.311 (0) Table wp_wfBlockedIPLog: Total rows added: 1369 in 0.01 seconds
+0004.314 (0) Table wp_wfBlockedIPLog: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfBlockedIPLog.table.gz - 11.1 KB)
+0004.319 (0) Table wp_wfBlocks: Total expected rows (approximate): 2
+0004.322 (0) Table wp_wfBlocks: Total rows added: 2 in 0.00 seconds
+0004.324 (0) Table wp_wfBlocks: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfBlocks.table.gz - 0.5 KB)
+0004.329 (0) Table wp_wfBlocksAdv: Total expected rows (approximate): 0
+0004.331 (0) Table wp_wfBlocksAdv: Total rows added: 0 in 0.00 seconds
+0004.333 (0) Table wp_wfBlocksAdv: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfBlocksAdv.table.gz - 0.3 KB)
+0004.338 (0) Table wp_wfConfig: Total expected rows (approximate): 180
+0004.353 (0) Table wp_wfConfig: Total rows added: 180 in 0.01 seconds
+0004.356 (0) Table wp_wfConfig: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfConfig.table.gz - 233.6 KB)
+0004.362 (0) Table wp_wfCrawlers: Total expected rows (approximate): 54
+0004.367 (0) Table wp_wfCrawlers: Total rows added: 54 in 0.00 seconds
+0004.371 (0) Table wp_wfCrawlers: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfCrawlers.table.gz - 1.1 KB)
+0004.378 (0) Table wp_wfFileMods: Total expected rows (approximate): 16312
+0005.263 (0) Table wp_wfFileMods: binary mysqldump finished (writes: 38) in 0.88 seconds
+0005.266 (0) Table wp_wfFileMods: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfFileMods.table.gz - 1659.5 KB)
+0005.273 (0) Table wp_wfHits: Total expected rows (approximate): 1906
+0005.333 (0) Table wp_wfHits: Total rows added: 1891 in 0.06 seconds
+0005.335 (0) Table wp_wfHits: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfHits.table.gz - 75 KB)
+0005.342 (0) Table wp_wfHoover: Total expected rows (approximate): 0
+0005.349 (0) Table wp_wfHoover: Total rows added: 0 in 0.00 seconds
+0005.351 (0) Table wp_wfHoover: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfHoover.table.gz - 0.3 KB)
+0005.360 (0) Table wp_wfIssues: Total expected rows (approximate): 3
+0005.365 (0) Table wp_wfIssues: Total rows added: 3 in 0.00 seconds
+0005.367 (0) Table wp_wfIssues: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfIssues.table.gz - 0.9 KB)
+0005.421 (0) Table wp_wfKnownFileList: Total expected rows (approximate): 17442
+0005.968 (0) Table wp_wfKnownFileList: binary mysqldump finished (writes: 29) in 0.54 seconds
+0005.971 (0) Table wp_wfKnownFileList: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfKnownFileList.table.gz - 242.8 KB)
+0005.977 (0) Table wp_wfLeechers: Total expected rows (approximate): 596
+0005.984 (0) Table wp_wfLeechers: Total rows added: 596 in 0.01 seconds
+0005.987 (0) Table wp_wfLeechers: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfLeechers.table.gz - 4.1 KB)
+0005.993 (0) Table wp_wfLockedOut: Total expected rows (approximate): 0
+0005.995 (0) Table wp_wfLockedOut: Total rows added: 0 in 0.00 seconds
+0005.997 (0) Table wp_wfLockedOut: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfLockedOut.table.gz - 0.3 KB)
+0006.002 (0) Table wp_wfLocs: Total expected rows (approximate): 0
+0006.008 (0) Table wp_wfLocs: Total rows added: 0 in 0.00 seconds
+0006.010 (0) Table wp_wfLocs: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfLocs.table.gz - 0.4 KB)
+0006.016 (0) Table wp_wfLogins: Total expected rows (approximate): 249
+0006.023 (0) Table wp_wfLogins: Total rows added: 272 in 0.01 seconds
+0006.025 (0) Table wp_wfLogins: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfLogins.table.gz - 7.3 KB)
+0006.031 (0) Table wp_wfNet404s: Total expected rows (approximate): 0
+0006.038 (0) Table wp_wfNet404s: Total rows added: 0 in 0.00 seconds
+0006.041 (0) Table wp_wfNet404s: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfNet404s.table.gz - 0.3 KB)
+0006.047 (0) Table wp_wfNotifications: Total expected rows (approximate): 23
+0006.052 (0) Table wp_wfNotifications: Total rows added: 25 in 0.00 seconds
+0006.055 (0) Table wp_wfNotifications: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfNotifications.table.gz - 0.8 KB)
+0006.061 (0) Table wp_wfPendingIssues: Total expected rows (approximate): 0
+0006.067 (0) Table wp_wfPendingIssues: Total rows added: 1 in 0.00 seconds
+0006.070 (0) Table wp_wfPendingIssues: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfPendingIssues.table.gz - 0.6 KB)
+0006.077 (0) Table wp_wfReverseCache: Total expected rows (approximate): 9
+0006.081 (0) Table wp_wfReverseCache: Total rows added: 9 in 0.00 seconds
+0006.084 (0) Table wp_wfReverseCache: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfReverseCache.table.gz - 0.5 KB)
+0006.090 (0) Table wp_wfSNIPCache: Total expected rows (approximate): 0
+0006.095 (0) Table wp_wfSNIPCache: Total rows added: 0 in 0.00 seconds
+0006.097 (0) Table wp_wfSNIPCache: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfSNIPCache.table.gz - 0.4 KB)
+0006.104 (0) Table wp_wfScanners: Total expected rows (approximate): 47
+0006.108 (0) Table wp_wfScanners: Total rows added: 50 in 0.00 seconds
+0006.110 (0) Table wp_wfScanners: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfScanners.table.gz - 0.7 KB)
+0006.115 (0) Table wp_wfStatus: Total expected rows (approximate): 874
+0006.133 (0) Table wp_wfStatus: Total rows added: 874 in 0.02 seconds
+0006.135 (0) Table wp_wfStatus: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfStatus.table.gz - 15.9 KB)
+0006.143 (0) Table wp_wfThrottleLog: Total expected rows (approximate): 0
+0006.150 (0) Table wp_wfThrottleLog: Total rows added: 0 in 0.00 seconds
+0006.152 (0) Table wp_wfThrottleLog: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfThrottleLog.table.gz - 0.3 KB)
+0006.160 (0) Table wp_wfVulnScanners: Total expected rows (approximate): 0
+0006.163 (0) Table wp_wfVulnScanners: Total rows added: 0 in 0.00 seconds
+0006.165 (0) Table wp_wfVulnScanners: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfVulnScanners.table.gz - 0.3 KB)
+0006.170 (0) Table wp_woocommerce_api_keys: Total expected rows (approximate): 0
+0006.174 (0) Table wp_woocommerce_api_keys: Total rows added: 0 in 0.00 seconds
+0006.176 (0) Table wp_woocommerce_api_keys: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_api_keys.table.gz - 0.4 KB)
+0006.182 (0) Table wp_woocommerce_attribute_taxonomies: Total expected rows (approximate): 0
+0006.188 (0) Table wp_woocommerce_attribute_taxonomies: Total rows added: 0 in 0.00 seconds
+0006.190 (0) Table wp_woocommerce_attribute_taxonomies: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_attribute_taxonomies.table.gz - 0.4 KB)
+0006.197 (0) Table wp_woocommerce_downloadable_product_permissions: Total expected rows (approximate): 0
+0006.201 (0) Table wp_woocommerce_downloadable_product_permissions: Total rows added: 0 in 0.00 seconds
+0006.203 (0) Table wp_woocommerce_downloadable_product_permissions: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_downloadable_product_permissions.table.gz - 0.5 KB)
+0006.209 (0) Table wp_woocommerce_order_itemmeta: Total expected rows (approximate): 0
+0006.214 (0) Table wp_woocommerce_order_itemmeta: Total rows added: 0 in 0.00 seconds
+0006.216 (0) Table wp_woocommerce_order_itemmeta: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_order_itemmeta.table.gz - 0.4 KB)
+0006.222 (0) Table wp_woocommerce_order_items: Total expected rows (approximate): 0
+0006.227 (0) Table wp_woocommerce_order_items: Total rows added: 0 in 0.00 seconds
+0006.229 (0) Table wp_woocommerce_order_items: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_order_items.table.gz - 0.3 KB)
+0006.238 (0) Table wp_woocommerce_payment_tokenmeta: Total expected rows (approximate): 0
+0006.247 (0) Table wp_woocommerce_payment_tokenmeta: Total rows added: 0 in 0.00 seconds
+0006.249 (0) Table wp_woocommerce_payment_tokenmeta: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_payment_tokenmeta.table.gz - 0.4 KB)
+0006.255 (0) Table wp_woocommerce_payment_tokens: Total expected rows (approximate): 0
+0006.260 (0) Table wp_woocommerce_payment_tokens: Total rows added: 0 in 0.00 seconds
+0006.262 (0) Table wp_woocommerce_payment_tokens: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_payment_tokens.table.gz - 0.4 KB)
+0006.269 (0) Table wp_woocommerce_sessions: Total expected rows (approximate): 0
+0006.274 (0) Table wp_woocommerce_sessions: Total rows added: 1 in 0.00 seconds
+0006.276 (0) Table wp_woocommerce_sessions: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_sessions.table.gz - 0.6 KB)
+0006.286 (0) Table wp_woocommerce_shipping_zone_locations: Total expected rows (approximate): 0
+0006.290 (0) Table wp_woocommerce_shipping_zone_locations: Total rows added: 0 in 0.00 seconds
+0006.292 (0) Table wp_woocommerce_shipping_zone_locations: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_shipping_zone_locations.table.gz - 0.4 KB)
+0006.297 (0) Table wp_woocommerce_shipping_zone_methods: Total expected rows (approximate): 0
+0006.302 (0) Table wp_woocommerce_shipping_zone_methods: Total rows added: 0 in 0.00 seconds
+0006.304 (0) Table wp_woocommerce_shipping_zone_methods: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_shipping_zone_methods.table.gz - 0.4 KB)
+0006.310 (0) Table wp_woocommerce_shipping_zones: Total expected rows (approximate): 0
+0006.315 (0) Table wp_woocommerce_shipping_zones: Total rows added: 0 in 0.00 seconds
+0006.318 (0) Table wp_woocommerce_shipping_zones: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_shipping_zones.table.gz - 0.3 KB)
+0006.324 (0) Table wp_woocommerce_tax_rate_locations: Total expected rows (approximate): 0
+0006.330 (0) Table wp_woocommerce_tax_rate_locations: Total rows added: 0 in 0.00 seconds
+0006.332 (0) Table wp_woocommerce_tax_rate_locations: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_tax_rate_locations.table.gz - 0.4 KB)
+0006.340 (0) Table wp_woocommerce_tax_rates: Total expected rows (approximate): 0
+0006.346 (0) Table wp_woocommerce_tax_rates: Total rows added: 0 in 0.00 seconds
+0006.348 (0) Table wp_woocommerce_tax_rates: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_tax_rates.table.gz - 0.4 KB)
+0006.353 (0) Table wp_wpefc_coupons: Total expected rows (approximate): 0
+0006.358 (0) Table wp_wpefc_coupons: Total rows added: 0 in 0.00 seconds
+0006.360 (0) Table wp_wpefc_coupons: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_coupons.table.gz - 0.4 KB)
+0006.366 (0) Table wp_wpefc_fields: Total expected rows (approximate): 2
+0006.401 (0) Table wp_wpefc_fields: Total rows added: 2 in 0.03 seconds
+0006.404 (0) Table wp_wpefc_fields: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_fields.table.gz - 0.5 KB)
+0006.410 (0) Table wp_wpefc_forms: Total expected rows (approximate): 1
+0006.421 (0) Table wp_wpefc_forms: Total rows added: 1 in 0.01 seconds
+0006.423 (0) Table wp_wpefc_forms: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_forms.table.gz - 3.9 KB)
+0006.429 (0) Table wp_wpefc_items: Total expected rows (approximate): 54
+0006.438 (0) Table wp_wpefc_items: Total rows added: 54 in 0.01 seconds
+0006.441 (0) Table wp_wpefc_items: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_items.table.gz - 2.8 KB)
+0006.446 (0) Table wp_wpefc_links: Total expected rows (approximate): 11
+0006.451 (0) Table wp_wpefc_links: Total rows added: 11 in 0.00 seconds
+0006.453 (0) Table wp_wpefc_links: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_links.table.gz - 0.5 KB)
+0006.459 (0) Table wp_wpefc_logs: Total expected rows (approximate): 2
+0006.467 (0) Table wp_wpefc_logs: Total rows added: 3 in 0.01 seconds
+0006.469 (0) Table wp_wpefc_logs: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_logs.table.gz - 2.6 KB)
+0006.475 (0) Table wp_wpefc_redirConditions: Total expected rows (approximate): 0
+0006.480 (0) Table wp_wpefc_redirConditions: Total rows added: 0 in 0.00 seconds
+0006.482 (0) Table wp_wpefc_redirConditions: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_redirConditions.table.gz - 0.3 KB)
+0006.487 (0) Table wp_wpefc_settings: Total expected rows (approximate): 1
+0006.490 (0) Table wp_wpefc_settings: Total rows added: 1 in 0.00 seconds
+0006.492 (0) Table wp_wpefc_settings: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_settings.table.gz - 0.4 KB)
+0006.497 (0) Table wp_wpefc_steps: Total expected rows (approximate): 10
+0006.503 (0) Table wp_wpefc_steps: Total rows added: 10 in 0.00 seconds
+0006.505 (0) Table wp_wpefc_steps: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_steps.table.gz - 0.9 KB)
+0006.512 (0) Table wp_wx_message: Total expected rows (approximate): 0
+0006.515 (0) Table wp_wx_message: Total rows added: 0 in 0.00 seconds
+0006.517 (0) Table wp_wx_message: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wx_message.table.gz - 0.3 KB)
+0006.522 (0) Table wp_wx_user: Total expected rows (approximate): 0
+0006.524 (0) Table wp_wx_user: Total rows added: 0 in 0.00 seconds
+0006.526 (0) Table wp_wx_user: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wx_user.table.gz - 0.5 KB)
+0006.533 (0) Table wp_xh_social_channel_qq: Total expected rows (approximate): 0
+0006.537 (0) Table wp_xh_social_channel_qq: Total rows added: 0 in 0.00 seconds
+0006.539 (0) Table wp_xh_social_channel_qq: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_xh_social_channel_qq.table.gz - 0.4 KB)
+0006.547 (0) Table wp_xh_social_channel_wechat: Total expected rows (approximate): 0
+0006.551 (0) Table wp_xh_social_channel_wechat: Total rows added: 0 in 0.00 seconds
+0006.553 (0) Table wp_xh_social_channel_wechat: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_xh_social_channel_wechat.table.gz - 0.5 KB)
+0006.561 (0) Table wp_xh_social_channel_weibo: Total expected rows (approximate): 0
+0006.565 (0) Table wp_xh_social_channel_weibo: Total rows added: 0 in 0.00 seconds
+0006.567 (0) Table wp_xh_social_channel_weibo: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_xh_social_channel_weibo.table.gz - 0.5 KB)
+0006.573 (0) Table wp_xh_social_sessions: Total expected rows (approximate): 0
+0006.578 (0) Table wp_xh_social_sessions: Total rows added: 1 in 0.00 seconds
+0006.581 (0) Table wp_xh_social_sessions: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_xh_social_sessions.table.gz - 0.4 KB)
+0006.586 (0) Table wp_yikes_easy_mc_forms: Total expected rows (approximate): 0
+0006.593 (0) Table wp_yikes_easy_mc_forms: Total rows added: 0 in 0.00 seconds
+0006.594 (0) Table wp_yikes_easy_mc_forms: finishing file (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_yikes_easy_mc_forms.table.gz - 0.4 KB)
+0006.600 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_options.table.gz (1/155): adding to final database dump
+0006.685 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_users.table.gz (2/155): adding to final database dump
+0006.688 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_usermeta.table.gz (3/155): adding to final database dump
+0006.690 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_commentmeta.table.gz (4/155): adding to final database dump
+0006.692 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_comments.table.gz (5/155): adding to final database dump
+0006.694 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_links.table.gz (6/155): adding to final database dump
+0006.696 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_postmeta.table.gz (7/155): adding to final database dump
+0006.736 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_posts.table.gz (8/155): adding to final database dump
+0007.180 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_term_relationships.table.gz (9/155): adding to final database dump
+0007.189 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_term_taxonomy.table.gz (10/155): adding to final database dump
+0007.195 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_termmeta.table.gz (11/155): adding to final database dump
+0007.197 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_terms.table.gz (12/155): adding to final database dump
+0007.202 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_config.table.gz (13/155): adding to final database dump
+0007.205 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_config_group.table.gz (14/155): adding to final database dump
+0007.206 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_config_option.table.gz (15/155): adding to final database dump
+0007.208 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_config_url_list.table.gz (16/155): adding to final database dump
+0007.210 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_download_img_temp.table.gz (17/155): adding to final database dump
+0007.213 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_flickr_img.table.gz (18/155): adding to final database dump
+0007.215 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_flickr_oauth.table.gz (19/155): adding to final database dump
+0007.217 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_log.table.gz (20/155): adding to final database dump
+0007.243 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_more_content.table.gz (21/155): adding to final database dump
+0007.246 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_qiniu_img.table.gz (22/155): adding to final database dump
+0007.248 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_updated_record.table.gz (23/155): adding to final database dump
+0007.262 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_upyun_img.table.gz (24/155): adding to final database dump
+0007.265 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ap_watermark.table.gz (25/155): adding to final database dump
+0007.267 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ariadminer_connections.table.gz (26/155): adding to final database dump
+0007.269 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_autolink.table.gz (27/155): adding to final database dump
+0007.271 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_bpspro_db_backup.table.gz (28/155): adding to final database dump
+0007.272 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_bpspro_login_security.table.gz (29/155): adding to final database dump
+0007.274 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_bpspro_seclog_ignore.table.gz (30/155): adding to final database dump
+0007.276 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_cpm_file_relationship.table.gz (31/155): adding to final database dump
+0007.278 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_cpm_project_items.table.gz (32/155): adding to final database dump
+0007.280 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_cpm_tasks.table.gz (33/155): adding to final database dump
+0007.282 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_cpm_user_role.table.gz (34/155): adding to final database dump
+0007.284 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_banks.table.gz (35/155): adding to final database dump
+0007.286 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_chart_classes.table.gz (36/155): adding to final database dump
+0007.288 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_chart_types.table.gz (37/155): adding to final database dump
+0007.290 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_journals.table.gz (38/155): adding to final database dump
+0007.292 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_ledger.table.gz (39/155): adding to final database dump
+0007.294 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_payments.table.gz (40/155): adding to final database dump
+0007.296 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_tax.table.gz (41/155): adding to final database dump
+0007.297 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_tax_items.table.gz (42/155): adding to final database dump
+0007.299 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_transaction_items.table.gz (43/155): adding to final database dump
+0007.301 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_ac_transactions.table.gz (44/155): adding to final database dump
+0007.303 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_audit_log.table.gz (45/155): adding to final database dump
+0007.306 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_company_locations.table.gz (46/155): adding to final database dump
+0007.308 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_activities_task.table.gz (47/155): adding to final database dump
+0007.309 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_campaign_group.table.gz (48/155): adding to final database dump
+0007.311 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_campaigns.table.gz (49/155): adding to final database dump
+0007.313 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_contact_group.table.gz (50/155): adding to final database dump
+0007.315 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_contact_subscriber.table.gz (51/155): adding to final database dump
+0007.317 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_customer_activities.table.gz (52/155): adding to final database dump
+0007.319 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_customer_companies.table.gz (53/155): adding to final database dump
+0007.321 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_save_email_replies.table.gz (54/155): adding to final database dump
+0007.323 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_crm_save_search.table.gz (55/155): adding to final database dump
+0007.325 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_announcement.table.gz (56/155): adding to final database dump
+0007.326 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_dependents.table.gz (57/155): adding to final database dump
+0007.328 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_depts.table.gz (58/155): adding to final database dump
+0007.330 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_designations.table.gz (59/155): adding to final database dump
+0007.332 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_education.table.gz (60/155): adding to final database dump
+0007.334 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_employee_history.table.gz (61/155): adding to final database dump
+0007.336 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_employee_notes.table.gz (62/155): adding to final database dump
+0007.338 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_employee_performance.table.gz (63/155): adding to final database dump
+0007.340 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_employees.table.gz (64/155): adding to final database dump
+0007.342 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_holiday.table.gz (65/155): adding to final database dump
+0007.344 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_leave_entitlements.table.gz (66/155): adding to final database dump
+0007.345 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_leave_policies.table.gz (67/155): adding to final database dump
+0007.356 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_leave_requests.table.gz (68/155): adding to final database dump
+0007.358 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_leaves.table.gz (69/155): adding to final database dump
+0007.360 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_hr_work_exp.table.gz (70/155): adding to final database dump
+0007.362 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_people_type_relations.table.gz (71/155): adding to final database dump
+0007.364 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_people_types.table.gz (72/155): adding to final database dump
+0007.366 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_peoplemeta.table.gz (73/155): adding to final database dump
+0007.368 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_erp_peoples.table.gz (74/155): adding to final database dump
+0007.370 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ewwwio_images.table.gz (75/155): adding to final database dump
+0007.391 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_grp_google_place.table.gz (76/155): adding to final database dump
+0007.394 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_grp_google_review.table.gz (77/155): adding to final database dump
+0007.396 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_order_itemmeta.table.gz (78/155): adding to final database dump
+0007.397 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_order_items.table.gz (79/155): adding to final database dump
+0007.399 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_question_answers.table.gz (80/155): adding to final database dump
+0007.401 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_quiz_questions.table.gz (81/155): adding to final database dump
+0007.403 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_review_logs.table.gz (82/155): adding to final database dump
+0007.405 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_section_items.table.gz (83/155): adding to final database dump
+0007.407 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_sections.table.gz (84/155): adding to final database dump
+0007.409 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_sessions.table.gz (85/155): adding to final database dump
+0007.411 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_user_itemmeta.table.gz (86/155): adding to final database dump
+0007.413 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_learnpress_user_items.table.gz (87/155): adding to final database dump
+0007.414 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_lifterlms_product_to_voucher.table.gz (88/155): adding to final database dump
+0007.417 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_lifterlms_user_postmeta.table.gz (89/155): adding to final database dump
+0007.419 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_lifterlms_voucher_code_redemptions.table.gz (90/155): adding to final database dump
+0007.421 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_lifterlms_vouchers_codes.table.gz (91/155): adding to final database dump
+0007.423 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_p2p.table.gz (92/155): adding to final database dump
+0007.425 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_p2pmeta.table.gz (93/155): adding to final database dump
+0007.426 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_revslider_css.table.gz (94/155): adding to final database dump
+0007.431 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_revslider_layer_animations.table.gz (95/155): adding to final database dump
+0007.433 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_revslider_navigations.table.gz (96/155): adding to final database dump
+0007.434 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_revslider_sliders.table.gz (97/155): adding to final database dump
+0007.436 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_revslider_slides.table.gz (98/155): adding to final database dump
+0007.438 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_revslider_static_slides.table.gz (99/155): adding to final database dump
+0007.441 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_ualp_user_activity.table.gz (100/155): adding to final database dump
+0007.452 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_w3tc_cdn_queue.table.gz (101/155): adding to final database dump
+0007.454 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_webpages_data.table.gz (102/155): adding to final database dump
+0007.456 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfBadLeechers.table.gz (103/155): adding to final database dump
+0007.458 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfBlockedIPLog.table.gz (104/155): adding to final database dump
+0007.463 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfBlocks.table.gz (105/155): adding to final database dump
+0007.465 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfBlocksAdv.table.gz (106/155): adding to final database dump
+0007.467 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfConfig.table.gz (107/155): adding to final database dump
+0007.481 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfCrawlers.table.gz (108/155): adding to final database dump
+0007.484 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfFileMods.table.gz (109/155): adding to final database dump
+0007.683 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfHits.table.gz (110/155): adding to final database dump
+0007.700 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfHoover.table.gz (111/155): adding to final database dump
+0007.702 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfIssues.table.gz (112/155): adding to final database dump
+0007.705 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfKnownFileList.table.gz (113/155): adding to final database dump
+0007.747 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfLeechers.table.gz (114/155): adding to final database dump
+0007.751 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfLockedOut.table.gz (115/155): adding to final database dump
+0007.753 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfLocs.table.gz (116/155): adding to final database dump
+0007.755 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfLogins.table.gz (117/155): adding to final database dump
+0007.758 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfNet404s.table.gz (118/155): adding to final database dump
+0007.760 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfNotifications.table.gz (119/155): adding to final database dump
+0007.762 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfPendingIssues.table.gz (120/155): adding to final database dump
+0007.764 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfReverseCache.table.gz (121/155): adding to final database dump
+0007.766 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfSNIPCache.table.gz (122/155): adding to final database dump
+0007.768 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfScanners.table.gz (123/155): adding to final database dump
+0007.770 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfStatus.table.gz (124/155): adding to final database dump
+0007.775 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfThrottleLog.table.gz (125/155): adding to final database dump
+0007.777 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wfVulnScanners.table.gz (126/155): adding to final database dump
+0007.779 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_api_keys.table.gz (127/155): adding to final database dump
+0007.781 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_attribute_taxonomies.table.gz (128/155): adding to final database dump
+0007.783 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_downloadable_product_permissions.table.gz (129/155): adding to final database dump
+0007.785 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_order_itemmeta.table.gz (130/155): adding to final database dump
+0007.787 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_order_items.table.gz (131/155): adding to final database dump
+0007.789 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_payment_tokenmeta.table.gz (132/155): adding to final database dump
+0007.791 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_payment_tokens.table.gz (133/155): adding to final database dump
+0007.793 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_sessions.table.gz (134/155): adding to final database dump
+0007.795 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_shipping_zone_locations.table.gz (135/155): adding to final database dump
+0007.797 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_shipping_zone_methods.table.gz (136/155): adding to final database dump
+0007.799 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_shipping_zones.table.gz (137/155): adding to final database dump
+0007.801 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_tax_rate_locations.table.gz (138/155): adding to final database dump
+0007.802 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_woocommerce_tax_rates.table.gz (139/155): adding to final database dump
+0007.804 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_coupons.table.gz (140/155): adding to final database dump
+0007.806 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_fields.table.gz (141/155): adding to final database dump
+0007.808 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_forms.table.gz (142/155): adding to final database dump
+0007.810 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_items.table.gz (143/155): adding to final database dump
+0007.813 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_links.table.gz (144/155): adding to final database dump
+0007.814 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_logs.table.gz (145/155): adding to final database dump
+0007.817 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_redirConditions.table.gz (146/155): adding to final database dump
+0007.819 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_settings.table.gz (147/155): adding to final database dump
+0007.821 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wpefc_steps.table.gz (148/155): adding to final database dump
+0007.823 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wx_message.table.gz (149/155): adding to final database dump
+0007.825 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_wx_user.table.gz (150/155): adding to final database dump
+0007.827 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_xh_social_channel_qq.table.gz (151/155): adding to final database dump
+0007.829 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_xh_social_channel_wechat.table.gz (152/155): adding to final database dump
+0007.831 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_xh_social_channel_weibo.table.gz (153/155): adding to final database dump
+0007.833 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_xh_social_sessions.table.gz (154/155): adding to final database dump
+0007.835 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db-table-wp_yikes_easy_mc_forms.table.gz (155/155): adding to final database dump
+0007.837 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db.gz: finished writing out complete database file (5592 KB)
+0007.918 (0) Total database tables backed up: 155 (backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db.gz, size: 5756405, sha256)
+0007.938 (0) backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db.gz: db: This file has not yet been successfully uploaded: will queue
+0007.940 (0) Saving backup history. Total backup size: 5.5 MB
+0007.955 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0007.961 (0) Cloud backup selection (1/1): ftp (last)
+0007.962 (0) Beginning dispatch of backup to remote (ftp)
+0008.470 (0) FTP upload attempt: backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db.gz -> ftp://sk8tech-backup@sk8.asia@27.124.120.1//backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db.gz
+0008.913 (0) Ftp chunked upload: 9.2 % uploaded
+0009.024 (0) Ftp chunked upload: 18.4 % uploaded
+0009.135 (0) Ftp chunked upload: 27.5 % uploaded
+0009.238 (0) Ftp chunked upload: 36.7 % uploaded
+0009.353 (0) Ftp chunked upload: 55 % uploaded
+0009.454 (0) Ftp chunked upload: 73.3 % uploaded
+0009.784 (0) FTP upload attempt successful (5621.5KB in 1.31s)
+0009.790 (0) Recording as successfully uploaded: backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db.gz (3e45efb2d71a661beb0c558286fa4416)
+0009.797 (0) Deleting local file: backup_2017-05-08-1638_SK8Tech_a042b4ff8c7a-db.gz: OK
+0009.800 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=52, retain_db=365
+0009.803 (0) Number of backup sets in history: 63; groups (db): 1
+0009.804 (0) Examining (for databases) backup set with group_id=0, nonce=a042b4ff8c7a, datestamp=1494225533 (May 08 2017 06:38:53)
+0009.806 (0) This backup set is the backup set just made, so will not be deleted.
+0009.808 (0) Examining (for databases) backup set with group_id=0, nonce=69c8651eb609, datestamp=1494139247 (May 07 2017 06:40:47)
+0009.810 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0009.813 (0) Examining (for databases) backup set with group_id=0, nonce=db35c7d88d96, datestamp=1494052768 (May 06 2017 06:39:28)
+0009.815 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.817 (0) Examining (for databases) backup set with group_id=0, nonce=ff46e87699e8, datestamp=1493966439 (May 05 2017 06:40:39)
+0009.819 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.821 (0) Examining (for databases) backup set with group_id=0, nonce=ca8e016c19e2, datestamp=1493881061 (May 04 2017 06:57:41)
+0009.823 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.825 (0) Examining (for databases) backup set with group_id=0, nonce=5043dd5e4ef8, datestamp=1493793705 (May 03 2017 06:41:45)
+0009.827 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.829 (0) Examining (for databases) backup set with group_id=0, nonce=e9e7588f0a57, datestamp=1493708178 (May 02 2017 06:56:18)
+0009.831 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.833 (0) Examining (for databases) backup set with group_id=0, nonce=26bfeb61f1d7, datestamp=1493620829 (May 01 2017 06:40:29)
+0009.835 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.837 (0) Examining (for databases) backup set with group_id=0, nonce=9d980871a14a, datestamp=1493534450 (Apr 30 2017 06:40:50)
+0009.839 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.841 (0) Examining (for databases) backup set with group_id=0, nonce=63dab9c16f06, datestamp=1493534344 (Apr 30 2017 06:39:04)
+0009.843 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0009.845 (0) Examining (for databases) backup set with group_id=0, nonce=e1f5beee05e8, datestamp=1493447988 (Apr 29 2017 06:39:48)
+0009.847 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.849 (0) Examining (for databases) backup set with group_id=0, nonce=af49362b066a, datestamp=1493361552 (Apr 28 2017 06:39:12)
+0009.851 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.853 (0) Examining (for databases) backup set with group_id=0, nonce=4aa7ed33200c, datestamp=1493275130 (Apr 27 2017 06:38:50)
+0009.855 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.857 (0) Examining (for databases) backup set with group_id=0, nonce=66602dc9c0d0, datestamp=1493188715 (Apr 26 2017 06:38:35)
+0009.859 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.861 (0) Examining (for databases) backup set with group_id=0, nonce=445305f86312, datestamp=1493102298 (Apr 25 2017 06:38:18)
+0009.863 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.865 (0) Examining (for databases) backup set with group_id=0, nonce=c1afea8f9487, datestamp=1493015905 (Apr 24 2017 06:38:25)
+0009.867 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.869 (0) Examining (for databases) backup set with group_id=0, nonce=cce932975ec8, datestamp=1492929794 (Apr 23 2017 06:43:14)
+0009.871 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0009.873 (0) Examining (for databases) backup set with group_id=0, nonce=3a4b13ab0e04, datestamp=1492843216 (Apr 22 2017 06:40:16)
+0009.875 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.877 (0) Examining (for databases) backup set with group_id=0, nonce=66d7413a7e42, datestamp=1492756863 (Apr 21 2017 06:41:03)
+0009.879 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.881 (0) Examining (for databases) backup set with group_id=0, nonce=9f2d83473367, datestamp=1492670314 (Apr 20 2017 06:38:34)
+0009.883 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.885 (0) Examining (for databases) backup set with group_id=0, nonce=39708e67509b, datestamp=1492583901 (Apr 19 2017 06:38:21)
+0009.887 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.892 (0) Examining (for databases) backup set with group_id=0, nonce=424e80d2ff57, datestamp=1492497765 (Apr 18 2017 06:42:45)
+0009.894 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.897 (0) Examining (for databases) backup set with group_id=0, nonce=b8e2a3359744, datestamp=1492411241 (Apr 17 2017 06:40:41)
+0009.898 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.901 (0) Examining (for databases) backup set with group_id=0, nonce=c4a0b238ac44, datestamp=1492238451 (Apr 15 2017 06:40:51)
+0009.902 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.904 (0) Examining (for databases) backup set with group_id=0, nonce=f00d3468e2d9, datestamp=1492151962 (Apr 14 2017 06:39:22)
+0009.906 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.908 (0) Examining (for databases) backup set with group_id=0, nonce=8d6d41a4285d, datestamp=1492065598 (Apr 13 2017 06:39:58)
+0009.910 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.913 (0) Examining (for databases) backup set with group_id=0, nonce=3f04cb68af92, datestamp=1491979219 (Apr 12 2017 06:40:19)
+0009.914 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.917 (0) Examining (for databases) backup set with group_id=0, nonce=2874400235fe, datestamp=1491892801 (Apr 11 2017 06:40:01)
+0009.919 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.922 (0) Examining (for databases) backup set with group_id=0, nonce=54f3ebd0a270, datestamp=1491839423 (Apr 10 2017 15:50:23)
+0009.924 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.926 (0) Examining (for databases) backup set with group_id=0, nonce=4098bd69bdcd, datestamp=1491633494 (Apr 08 2017 06:38:14)
+0009.928 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.930 (0) Examining (for databases) backup set with group_id=0, nonce=87099e0bc8e0, datestamp=1491547177 (Apr 07 2017 06:39:37)
+0009.932 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.934 (0) Examining (for databases) backup set with group_id=0, nonce=4e7078ec7213, datestamp=1491460755 (Apr 06 2017 06:39:15)
+0009.936 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.938 (0) Examining (for databases) backup set with group_id=0, nonce=4ee741ea0671, datestamp=1491375061 (Apr 05 2017 06:51:01)
+0009.940 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.942 (0) Examining (for databases) backup set with group_id=0, nonce=12aed18d3913, datestamp=1491287983 (Apr 04 2017 06:39:43)
+0009.944 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.946 (0) Examining (for databases) backup set with group_id=0, nonce=f1d21bbdb2b4, datestamp=1491201541 (Apr 03 2017 06:39:01)
+0009.948 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.950 (0) Examining (for databases) backup set with group_id=0, nonce=8c611f616638, datestamp=1491115314 (Apr 02 2017 06:41:54)
+0009.952 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0009.954 (0) Examining (for databases) backup set with group_id=0, nonce=110fc8829924, datestamp=1491028807 (Apr 01 2017 06:40:07)
+0009.956 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.957 (0) Examining (for databases) backup set with group_id=0, nonce=afa050fae9fb, datestamp=1490942406 (Mar 31 2017 06:40:06)
+0009.959 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.961 (0) Examining (for databases) backup set with group_id=0, nonce=4a0c42746032, datestamp=1490855917 (Mar 30 2017 06:38:37)
+0009.963 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.965 (0) Examining (for databases) backup set with group_id=0, nonce=cce4d94da1fe, datestamp=1490769554 (Mar 29 2017 06:39:14)
+0009.967 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.969 (0) Examining (for databases) backup set with group_id=0, nonce=c4b19a3bf510, datestamp=1490683440 (Mar 28 2017 06:44:00)
+0009.971 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.973 (0) Examining (for databases) backup set with group_id=0, nonce=67a295d2539e, datestamp=1490596700 (Mar 27 2017 06:38:20)
+0009.975 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.977 (0) Examining (for databases) backup set with group_id=0, nonce=c297b2dbe83b, datestamp=1490510736 (Mar 26 2017 06:45:36)
+0009.978 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.980 (0) Examining (for databases) backup set with group_id=0, nonce=31d77df15385, datestamp=1490510399 (Mar 26 2017 06:39:59)
+0009.982 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0009.984 (0) Examining (for databases) backup set with group_id=0, nonce=58c65c235191, datestamp=1490423898 (Mar 25 2017 06:38:18)
+0009.986 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.989 (0) Examining (for databases) backup set with group_id=0, nonce=d022a8847532, datestamp=1490338008 (Mar 24 2017 06:46:48)
+0009.993 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0009.995 (0) Examining (for databases) backup set with group_id=0, nonce=31e0254700b3, datestamp=1490251112 (Mar 23 2017 06:38:32)
+0009.997 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.000 (0) Examining (for databases) backup set with group_id=0, nonce=f237442b9b4b, datestamp=1490164802 (Mar 22 2017 06:40:02)
+0010.001 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.003 (0) Examining (for databases) backup set with group_id=0, nonce=ba05572a7153, datestamp=1490078295 (Mar 21 2017 06:38:15)
+0010.005 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.007 (0) Examining (for databases) backup set with group_id=0, nonce=6eac5b356f8a, datestamp=1489992019 (Mar 20 2017 06:40:19)
+0010.009 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.011 (0) Examining (for databases) backup set with group_id=0, nonce=6f55011192d5, datestamp=1489905850 (Mar 19 2017 06:44:10)
+0010.013 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.015 (0) Examining (for databases) backup set with group_id=0, nonce=50a97a931956, datestamp=1489905513 (Mar 19 2017 06:38:33)
+0010.017 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0010.018 (0) Examining (for databases) backup set with group_id=0, nonce=0ac7fdaf9c60, datestamp=1489835167 (Mar 18 2017 11:06:07)
+0010.020 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.022 (0) Examining (for databases) backup set with group_id=0, nonce=19c387a80a2f, datestamp=1489819146 (Mar 18 2017 06:39:06)
+0010.024 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.026 (0) Examining (for databases) backup set with group_id=0, nonce=8430cbbf860a, datestamp=1489732705 (Mar 17 2017 06:38:25)
+0010.028 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.030 (0) Examining (for databases) backup set with group_id=0, nonce=1fc9eca764ee, datestamp=1489646517 (Mar 16 2017 06:41:57)
+0010.032 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.034 (0) Examining (for databases) backup set with group_id=0, nonce=ef570394ad46, datestamp=1489560111 (Mar 15 2017 06:41:51)
+0010.036 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.038 (0) Examining (for databases) backup set with group_id=0, nonce=6c3cde0d4e7e, datestamp=1489473527 (Mar 14 2017 06:38:47)
+0010.040 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.042 (0) Examining (for databases) backup set with group_id=0, nonce=09413c9784c9, datestamp=1489387095 (Mar 13 2017 06:38:15)
+0010.044 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.045 (0) Examining (for databases) backup set with group_id=0, nonce=6f40a7201b40, datestamp=1489300821 (Mar 12 2017 06:40:21)
+0010.047 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.049 (0) Examining (for databases) backup set with group_id=0, nonce=d83bceebe564, datestamp=1489300697 (Mar 12 2017 06:38:17)
+0010.051 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0010.053 (0) Examining (for databases) backup set with group_id=0, nonce=fece6acd009c, datestamp=1489124226 (Mar 10 2017 05:37:06)
+0010.055 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0010.057 (0) Examining (for databases) backup set with group_id=0, nonce=00369df68aff, datestamp=1489030440 (Mar 09 2017 03:34:00)
+0010.059 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0010.061 (0) Number of backup sets in history: 63; groups (files): 1
+0010.063 (0) Examining (for files) backup set with nonce=a042b4ff8c7a, datestamp=1494225533 (May 08 2017 06:38:53)
+0010.065 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.067 (0) Examining (for files) backup set with nonce=69c8651eb609, datestamp=1494139247 (May 07 2017 06:40:47)
+0010.069 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0010.071 (0) Examining (for files) backup set with nonce=db35c7d88d96, datestamp=1494052768 (May 06 2017 06:39:28)
+0010.073 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.083 (0) Examining (for files) backup set with nonce=ff46e87699e8, datestamp=1493966439 (May 05 2017 06:40:39)
+0010.087 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.089 (0) Examining (for files) backup set with nonce=ca8e016c19e2, datestamp=1493881061 (May 04 2017 06:57:41)
+0010.091 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.093 (0) Examining (for files) backup set with nonce=5043dd5e4ef8, datestamp=1493793705 (May 03 2017 06:41:45)
+0010.095 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.097 (0) Examining (for files) backup set with nonce=e9e7588f0a57, datestamp=1493708178 (May 02 2017 06:56:18)
+0010.100 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.102 (0) Examining (for files) backup set with nonce=26bfeb61f1d7, datestamp=1493620829 (May 01 2017 06:40:29)
+0010.104 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.106 (0) Examining (for files) backup set with nonce=9d980871a14a, datestamp=1493534450 (Apr 30 2017 06:40:50)
+0010.109 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.111 (0) Examining (for files) backup set with nonce=63dab9c16f06, datestamp=1493534344 (Apr 30 2017 06:39:04)
+0010.113 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0010.116 (0) Examining (for files) backup set with nonce=e1f5beee05e8, datestamp=1493447988 (Apr 29 2017 06:39:48)
+0010.118 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.121 (0) Examining (for files) backup set with nonce=af49362b066a, datestamp=1493361552 (Apr 28 2017 06:39:12)
+0010.123 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.125 (0) Examining (for files) backup set with nonce=4aa7ed33200c, datestamp=1493275130 (Apr 27 2017 06:38:50)
+0010.127 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.130 (0) Examining (for files) backup set with nonce=66602dc9c0d0, datestamp=1493188715 (Apr 26 2017 06:38:35)
+0010.132 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.134 (0) Examining (for files) backup set with nonce=445305f86312, datestamp=1493102298 (Apr 25 2017 06:38:18)
+0010.137 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.139 (0) Examining (for files) backup set with nonce=c1afea8f9487, datestamp=1493015905 (Apr 24 2017 06:38:25)
+0010.141 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.144 (0) Examining (for files) backup set with nonce=cce932975ec8, datestamp=1492929794 (Apr 23 2017 06:43:14)
+0010.146 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0010.148 (0) Examining (for files) backup set with nonce=3a4b13ab0e04, datestamp=1492843216 (Apr 22 2017 06:40:16)
+0010.151 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.153 (0) Examining (for files) backup set with nonce=66d7413a7e42, datestamp=1492756863 (Apr 21 2017 06:41:03)
+0010.155 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.158 (0) Examining (for files) backup set with nonce=9f2d83473367, datestamp=1492670314 (Apr 20 2017 06:38:34)
+0010.160 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.162 (0) Examining (for files) backup set with nonce=39708e67509b, datestamp=1492583901 (Apr 19 2017 06:38:21)
+0010.165 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.167 (0) Examining (for files) backup set with nonce=424e80d2ff57, datestamp=1492497765 (Apr 18 2017 06:42:45)
+0010.169 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.171 (0) Examining (for files) backup set with nonce=b8e2a3359744, datestamp=1492411241 (Apr 17 2017 06:40:41)
+0010.173 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.175 (0) Examining (for files) backup set with nonce=c4a0b238ac44, datestamp=1492238451 (Apr 15 2017 06:40:51)
+0010.177 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.179 (0) Examining (for files) backup set with nonce=f00d3468e2d9, datestamp=1492151962 (Apr 14 2017 06:39:22)
+0010.181 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.184 (0) Examining (for files) backup set with nonce=8d6d41a4285d, datestamp=1492065598 (Apr 13 2017 06:39:58)
+0010.185 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.187 (0) Examining (for files) backup set with nonce=3f04cb68af92, datestamp=1491979219 (Apr 12 2017 06:40:19)
+0010.189 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.191 (0) Examining (for files) backup set with nonce=2874400235fe, datestamp=1491892801 (Apr 11 2017 06:40:01)
+0010.193 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.195 (0) Examining (for files) backup set with nonce=54f3ebd0a270, datestamp=1491839423 (Apr 10 2017 15:50:23)
+0010.197 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.199 (0) Examining (for files) backup set with nonce=4098bd69bdcd, datestamp=1491633494 (Apr 08 2017 06:38:14)
+0010.201 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.203 (0) Examining (for files) backup set with nonce=87099e0bc8e0, datestamp=1491547177 (Apr 07 2017 06:39:37)
+0010.205 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.207 (0) Examining (for files) backup set with nonce=4e7078ec7213, datestamp=1491460755 (Apr 06 2017 06:39:15)
+0010.209 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.210 (0) Examining (for files) backup set with nonce=4ee741ea0671, datestamp=1491375061 (Apr 05 2017 06:51:01)
+0010.212 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.214 (0) Examining (for files) backup set with nonce=12aed18d3913, datestamp=1491287983 (Apr 04 2017 06:39:43)
+0010.216 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.218 (0) Examining (for files) backup set with nonce=f1d21bbdb2b4, datestamp=1491201541 (Apr 03 2017 06:39:01)
+0010.220 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.222 (0) Examining (for files) backup set with nonce=8c611f616638, datestamp=1491115314 (Apr 02 2017 06:41:54)
+0010.224 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0010.226 (0) Examining (for files) backup set with nonce=110fc8829924, datestamp=1491028807 (Apr 01 2017 06:40:07)
+0010.228 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.230 (0) Examining (for files) backup set with nonce=afa050fae9fb, datestamp=1490942406 (Mar 31 2017 06:40:06)
+0010.232 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.234 (0) Examining (for files) backup set with nonce=4a0c42746032, datestamp=1490855917 (Mar 30 2017 06:38:37)
+0010.237 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.238 (0) Examining (for files) backup set with nonce=cce4d94da1fe, datestamp=1490769554 (Mar 29 2017 06:39:14)
+0010.241 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.242 (0) Examining (for files) backup set with nonce=c4b19a3bf510, datestamp=1490683440 (Mar 28 2017 06:44:00)
+0010.244 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.246 (0) Examining (for files) backup set with nonce=67a295d2539e, datestamp=1490596700 (Mar 27 2017 06:38:20)
+0010.248 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.250 (0) Examining (for files) backup set with nonce=c297b2dbe83b, datestamp=1490510736 (Mar 26 2017 06:45:36)
+0010.252 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.254 (0) Examining (for files) backup set with nonce=31d77df15385, datestamp=1490510399 (Mar 26 2017 06:39:59)
+0010.256 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0010.258 (0) Examining (for files) backup set with nonce=58c65c235191, datestamp=1490423898 (Mar 25 2017 06:38:18)
+0010.260 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.262 (0) Examining (for files) backup set with nonce=d022a8847532, datestamp=1490338008 (Mar 24 2017 06:46:48)
+0010.264 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.266 (0) Examining (for files) backup set with nonce=31e0254700b3, datestamp=1490251112 (Mar 23 2017 06:38:32)
+0010.268 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.270 (0) Examining (for files) backup set with nonce=f237442b9b4b, datestamp=1490164802 (Mar 22 2017 06:40:02)
+0010.272 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.274 (0) Examining (for files) backup set with nonce=ba05572a7153, datestamp=1490078295 (Mar 21 2017 06:38:15)
+0010.276 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.277 (0) Examining (for files) backup set with nonce=6eac5b356f8a, datestamp=1489992019 (Mar 20 2017 06:40:19)
+0010.279 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.281 (0) Examining (for files) backup set with nonce=6f55011192d5, datestamp=1489905850 (Mar 19 2017 06:44:10)
+0010.283 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.285 (0) Examining (for files) backup set with nonce=50a97a931956, datestamp=1489905513 (Mar 19 2017 06:38:33)
+0010.287 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0010.289 (0) Examining (for files) backup set with nonce=0ac7fdaf9c60, datestamp=1489835167 (Mar 18 2017 11:06:07)
+0010.290 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.293 (0) Examining (for files) backup set with nonce=19c387a80a2f, datestamp=1489819146 (Mar 18 2017 06:39:06)
+0010.294 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.296 (0) Examining (for files) backup set with nonce=8430cbbf860a, datestamp=1489732705 (Mar 17 2017 06:38:25)
+0010.298 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.300 (0) Examining (for files) backup set with nonce=1fc9eca764ee, datestamp=1489646517 (Mar 16 2017 06:41:57)
+0010.302 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.305 (0) Examining (for files) backup set with nonce=ef570394ad46, datestamp=1489560111 (Mar 15 2017 06:41:51)
+0010.307 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.309 (0) Examining (for files) backup set with nonce=6c3cde0d4e7e, datestamp=1489473527 (Mar 14 2017 06:38:47)
+0010.311 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.313 (0) Examining (for files) backup set with nonce=09413c9784c9, datestamp=1489387095 (Mar 13 2017 06:38:15)
+0010.315 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.317 (0) Examining (for files) backup set with nonce=6f40a7201b40, datestamp=1489300821 (Mar 12 2017 06:40:21)
+0010.320 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0010.322 (0) Examining (for files) backup set with nonce=d83bceebe564, datestamp=1489300697 (Mar 12 2017 06:38:17)
+0010.325 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0010.327 (0) Examining (for files) backup set with nonce=fece6acd009c, datestamp=1489124226 (Mar 10 2017 05:37:06)
+0010.329 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0010.331 (0) Examining (for files) backup set with nonce=00369df68aff, datestamp=1489030440 (Mar 09 2017 03:34:00)
+0010.333 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0010.336 (0) Retain: saving new backup history (sets now: 63) and finishing retain operation
+0010.399 (0) Resume backup (a042b4ff8c7a, 0): finish run
+0010.409 (0) Decremented the semaphore (d) by 1
+0010.412 (0) Semaphore (d) unlocked
+0010.413 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0010.420 (0) No email will/can be sent - the user has not configured an email address.
+0010.422 (0) The backup apparently succeeded and is now complete

@@ -262,11 +262,12 @@ class WC_Gateway_Stripe extends WC_Payment_Gateway_CC {
 	 * @version 3.1.0
 	 */
 	public function init_apple_pay() {
-		if ( 
-			is_admin() && 
-			isset( $_GET['page'] ) && 'wc-settings' === $_GET['page'] && 
+		if (
+			is_admin() &&
+			isset( $_GET['page'] ) && 'wc-settings' === $_GET['page'] &&
 			isset( $_GET['tab'] ) && 'checkout' === $_GET['tab'] &&
-			isset( $_GET['section'] ) && 'stripe' === $_GET['section']
+			isset( $_GET['section'] ) && 'stripe' === $_GET['section'] &&
+			$this->apple_pay
 		) {
 			$this->process_apple_pay_verification();
 		}
@@ -301,7 +302,7 @@ class WC_Gateway_Stripe extends WC_Payment_Gateway_CC {
 		) );
 
 		if ( is_wp_error( $response ) ) {
-			throw new Exception( sprintf( __( 'Unable to verify domain - %s', 'woocommerce-gateway-stripe' ), $response->get_error_message() ) ); 
+			throw new Exception( sprintf( __( 'Unable to verify domain - %s', 'woocommerce-gateway-stripe' ), $response->get_error_message() ) );
 		}
 
 		if ( 200 !== $response['response']['code'] ) {
@@ -385,7 +386,7 @@ class WC_Gateway_Stripe extends WC_Payment_Gateway_CC {
 		}
 
 		/**
-		 * Apple pay is enabled by default and domain verification initializes 
+		 * Apple pay is enabled by default and domain verification initializes
 		 * when setting screen is displayed. So if domain verification is not set,
 		 * something went wrong so lets notify user.
 		 */
@@ -474,7 +475,7 @@ class WC_Gateway_Stripe extends WC_Payment_Gateway_CC {
 		if ( ! $this->stripe_checkout ) {
 			$this->form();
 
-			if ( $display_tokenization ) {
+			if ( apply_filters( 'wc_stripe_display_save_payment_method_checkbox', $display_tokenization ) ) {
 				$this->save_payment_method_checkbox();
 			}
 		}
@@ -529,7 +530,7 @@ class WC_Gateway_Stripe extends WC_Payment_Gateway_CC {
 				'missing_secret_key'     => __( 'Missing Secret Key. Please set the secret key field above and re-try.', 'woocommerce-gateway-stripe' ),
 			),
 			'ajaxurl'            => admin_url( 'admin-ajax.php' ),
-			'nonce'              => array( 
+			'nonce'              => array(
 				'apple_pay_domain_nonce' => wp_create_nonce( '_wc_stripe_apple_pay_domain_nonce' ),
 			),
 		);
@@ -650,6 +651,7 @@ class WC_Gateway_Stripe extends WC_Payment_Gateway_CC {
 	 */
 	protected function get_source( $user_id, $force_customer = false ) {
 		$stripe_customer = new WC_Stripe_Customer( $user_id );
+		$force_customer  = apply_filters( 'wc_stripe_force_customer_creation', $force_customer, $stripe_customer );
 		$stripe_source   = false;
 		$token_id        = false;
 
@@ -750,6 +752,9 @@ class WC_Gateway_Stripe extends WC_Payment_Gateway_CC {
 
 			// Store source to order meta.
 			$this->save_source( $order, $source );
+
+			// Result from Stripe API request.
+			$response = null;
 
 			// Handle payment.
 			if ( $order->get_total() > 0 ) {

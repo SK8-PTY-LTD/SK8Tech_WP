@@ -130,8 +130,8 @@ class Lingotek_Model {
 			}
 		}
 
-		// default profile is manual except for post
-		$default = 'post' == $type ? 'automatic' : 'manual';
+		// default profile is manual except for post. Custom types are set to disabled by default.
+		$default = 'post' == $type ? 'automatic' : ('page' === $type ? 'manual' : 'disabled');
 
 		$profile = isset($content_types[$type]['sources'][$language->slug]) ?
 			$content_types[$type]['sources'][$language->slug] :
@@ -644,7 +644,7 @@ class Lingotek_Model {
 
 			// if a post is not a target, then it is source
 			$sources[$language->slug] = $n - $targets[$language->slug];
-			$sources[$language->slug] -= $disabled[$language->slug];
+			// $sources[$language->slug] -= $disabled[$language->slug];
 		}
 
 		// untranslated posts have no associated translation group in DB
@@ -665,7 +665,7 @@ class Lingotek_Model {
 		// total of posts translations groups = untranslated + number of translation groups stored in DB
 		$count_posts = (array) wp_count_posts($post_type);
 		unset($count_posts['trash'], $count_posts['auto-draft']); // don't count trash and auto-draft
-		$total = array_sum($count_posts) - $n_translated + count($groups) - array_sum($disabled);
+		$total = array_sum($count_posts) - $n_translated + count($groups);
 
 		return $r[$post_type] = compact('sources', 'targets', 'total');
 	}
@@ -738,7 +738,7 @@ class Lingotek_Model {
 
 			// if a term is not a target, then it is a source
 			$sources[$language->slug] = $n - $targets[$language->slug];
-			$sources[$language->slug] -= $disabled[$language->slug];
+			// $sources[$language->slug] -= $disabled[$language->slug];
 		}
 
 		$total = count($groups);
@@ -773,7 +773,7 @@ class Lingotek_Model {
 			}
 		}
 
-		$total -= array_sum($disabled);
+		// $total -= array_sum($disabled);
 		return $r[$taxonomy] = compact('sources', 'targets', 'total');
 	}
 }

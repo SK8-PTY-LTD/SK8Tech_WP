@@ -97,7 +97,7 @@ do_action( 'rss_tag_pre', 'rss2-comments' );
 	/**
 	 * Fires at the end of each RSS2 comment feed item.
 	 *
-	 * @since 2.1.01492568935@
+	 * @since 2.1.01495870232@
 	 *
 	 * @param int $comment->comment_ID The ID of the comment being displayed.
 	 * @param int $comment_post->ID    The ID of the post the comment is connected to.

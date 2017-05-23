@@ -5,8 +5,8 @@ Tags: social, social share, social media, social network, social share buttons, 
 
 
 Requires at least: 3.1
-Tested up to: 4.7.3
-Stable tag: 1.3.3
+Tested up to: 4.7.4
+Stable tag: 1.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -71,6 +71,9 @@ http://www.devpups.com/
 
 
 == Changelog ==
+= 1.3.4 =
+* New: Added Favebook App Secret field in the settings page in order to unlock Facebook's default limitations when trying to grab the share counts for a post
+
 = 1.3.3 =
 * New: Added Facebook App ID field in the settings page in order for posts to pass Facebook's App ID validation
 

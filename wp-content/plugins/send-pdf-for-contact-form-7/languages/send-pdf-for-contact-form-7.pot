@@ -1,0 +1,427 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Contact Form 7 Send PDF\n"
+"POT-Creation-Date: 2017-05-08 18:56+0200\n"
+"PO-Revision-Date: 2015-03-19 11:19+0100\n"
+"Last-Translator: Florent Maillefaud <contact@restezconnectes.fr>\n"
+"Language-Team: Florent Maillefaud <contact@restezconnectes.fr>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.1\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: classes/send-pdf.php:59
+msgid "Settings"
+msgstr ""
+
+#: classes/send-pdf.php:123
+msgid "Please upload a valid .json file"
+msgstr ""
+
+#: classes/send-pdf.php:129
+msgid "Please upload a file to import"
+msgstr ""
+
+#: classes/send-pdf.php:138
+msgid "New settings imported successfully!"
+msgstr ""
+
+#: classes/send-pdf.php:205
+msgid "Options for CF7 Send PDF"
+msgstr ""
+
+#: classes/send-pdf.php:206
+msgid "Send PDF with CF7"
+msgstr ""
+
+#: classes/send-pdf.php:252
+msgid "Choose This Image"
+msgstr ""
+
+#: classes/send-pdf.php:253
+msgid "Choose Image"
+msgstr ""
+
+#: includes/shortcodes.php:28 views/send-pdf-admin.php:516
+msgid "Download your PDF"
+msgstr ""
+
+#: views/send-pdf-admin.php:19
+msgid "The upload folder has been deleted."
+msgstr ""
+
+#: views/send-pdf-admin.php:30
+msgid "Options saved."
+msgstr ""
+
+#: views/send-pdf-admin.php:38
+msgid "All the data has been deleted."
+msgstr ""
+
+#: views/send-pdf-admin.php:83
+msgid "Send PDF for Contact Form 7 - Settings"
+msgstr ""
+
+#: views/send-pdf-admin.php:94
+#, php-format
+msgid "No forms have not been found. %s"
+msgstr ""
+
+#: views/send-pdf-admin.php:94
+msgid "Create your first form here."
+msgstr ""
+
+#: views/send-pdf-admin.php:101
+msgid "* Select a form *"
+msgstr ""
+
+#: views/send-pdf-admin.php:120
+#, php-format
+msgid "Read %s here !"
+msgstr ""
+
+#: views/send-pdf-admin.php:120
+msgid "Tutorial"
+msgstr ""
+
+#: views/send-pdf-admin.php:124
+msgid "If you want Donate (French Paypal) for my current and future developments:"
+msgstr ""
+
+#: views/send-pdf-admin.php:127
+msgid "Donate now!"
+msgstr ""
+
+#: views/send-pdf-admin.php:285 views/send-pdf-admin.php:786
+msgid "Save settings"
+msgstr ""
+
+#: views/send-pdf-admin.php:291 views/send-pdf-admin.php:292
+#: views/send-pdf-admin.php:610 views/send-pdf-admin.php:611
+#: views/send-pdf-admin.php:794 views/send-pdf-admin.php:795
+#: views/send-pdf-admin.php:810 views/send-pdf-admin.php:811
+msgid "Click to toggle"
+msgstr ""
+
+#: views/send-pdf-admin.php:292
+msgid "General Settings"
+msgstr ""
+
+#: views/send-pdf-admin.php:300
+msgid "Disable generate PDF?"
+msgstr ""
+
+#: views/send-pdf-admin.php:305 views/send-pdf-admin.php:329
+#: views/send-pdf-admin.php:342 views/send-pdf-admin.php:356
+#: views/send-pdf-admin.php:410 views/send-pdf-admin.php:425
+#: views/send-pdf-admin.php:440 views/send-pdf-admin.php:487
+#: views/send-pdf-admin.php:503 views/send-pdf-admin.php:554
+#: views/send-pdf-admin.php:573 views/send-pdf-admin.php:590
+msgid "Yes"
+msgstr ""
+
+#: views/send-pdf-admin.php:307 views/send-pdf-admin.php:331
+#: views/send-pdf-admin.php:344 views/send-pdf-admin.php:358
+#: views/send-pdf-admin.php:412 views/send-pdf-admin.php:427
+#: views/send-pdf-admin.php:442 views/send-pdf-admin.php:489
+#: views/send-pdf-admin.php:505 views/send-pdf-admin.php:556
+#: views/send-pdf-admin.php:575 views/send-pdf-admin.php:592
+msgid "No"
+msgstr ""
+
+#: views/send-pdf-admin.php:313
+msgid "Who send the PDF file?"
+msgstr ""
+
+#: views/send-pdf-admin.php:316 views/send-pdf-admin.php:367
+#: views/send-pdf-admin.php:456
+msgid "Sender"
+msgstr ""
+
+#: views/send-pdf-admin.php:317 views/send-pdf-admin.php:368
+#: views/send-pdf-admin.php:457
+msgid "Recipient"
+msgstr ""
+
+#: views/send-pdf-admin.php:318 views/send-pdf-admin.php:369
+#: views/send-pdf-admin.php:458
+msgid "Both"
+msgstr ""
+
+#: views/send-pdf-admin.php:324
+msgid "Disable Insert subscribtion in database?"
+msgstr ""
+
+#: views/send-pdf-admin.php:337
+msgid "Truncate database?"
+msgstr ""
+
+#: views/send-pdf-admin.php:351
+msgid "Disable generate CSV file?"
+msgstr ""
+
+#: views/send-pdf-admin.php:364
+msgid "Who send the CSV file?"
+msgstr ""
+
+#: views/send-pdf-admin.php:376
+msgid "Enter a name for your PDF"
+msgstr ""
+
+#: views/send-pdf-admin.php:376
+msgid "By default, the file's name will be 'document-pdf'"
+msgstr ""
+
+#: views/send-pdf-admin.php:378
+msgid "Fill in the name of your PDF with your form tags"
+msgstr ""
+
+#: views/send-pdf-admin.php:378
+msgid "Enter your tags separated by commas"
+msgstr ""
+
+#: views/send-pdf-admin.php:380 views/send-pdf-admin.php:381
+#, php-format
+msgid "Use %s in the name of your PDF"
+msgstr ""
+
+#: views/send-pdf-admin.php:392
+msgid "Enter date format without space, -, /, _, etc.."
+msgstr ""
+
+#: views/send-pdf-admin.php:404
+msgid "Change uploads folder?"
+msgstr ""
+
+#: views/send-pdf-admin.php:404
+msgid "By default, the uploads folder's name is in /wp-content/uploads/*YEAR*/*MONTH*/"
+msgstr ""
+
+#: views/send-pdf-admin.php:419
+msgid "Delete all files into this uploads folder?"
+msgstr ""
+
+#: views/send-pdf-admin.php:434
+msgid "Delete each PDF file after send the email?"
+msgstr ""
+
+#: views/send-pdf-admin.php:449
+msgid "Other files attachments?"
+msgstr ""
+
+#: views/send-pdf-admin.php:449
+msgid "Enter one URL file by line"
+msgstr ""
+
+#: views/send-pdf-admin.php:453
+msgid "Who send the attachments file?"
+msgstr ""
+
+#: views/send-pdf-admin.php:465
+msgid "Select a page to display after sending the form (optional)"
+msgstr ""
+
+#: views/send-pdf-admin.php:474
+msgid "Please select a page"
+msgstr ""
+
+#: views/send-pdf-admin.php:481
+msgid "Send email without attachments?"
+msgstr ""
+
+#: views/send-pdf-admin.php:496
+msgid "Use a link in the redirect page for download PDF?"
+msgstr ""
+
+#: views/send-pdf-admin.php:497
+msgid "* Requires enable option \"insert into a database\""
+msgstr ""
+
+#: views/send-pdf-admin.php:512
+msgid "Enter the name for the link"
+msgstr ""
+
+#: views/send-pdf-admin.php:513
+msgid "Use this shortcode : [wpcf7pdf_download]"
+msgstr ""
+
+#: views/send-pdf-admin.php:524
+msgid "Select a date and time format"
+msgstr ""
+
+#: views/send-pdf-admin.php:524
+msgid "By default, the date format is defined in the admin settings"
+msgstr ""
+
+#: views/send-pdf-admin.php:524
+msgid "Formatting Date and Time"
+msgstr ""
+
+#: views/send-pdf-admin.php:538
+msgid "Date:"
+msgstr ""
+
+#: views/send-pdf-admin.php:539
+msgid "Time:"
+msgstr ""
+
+#: views/send-pdf-admin.php:547
+msgid "Desactivate line break auto?"
+msgstr ""
+
+#: views/send-pdf-admin.php:548
+msgid "This disables automatic line break replacement (\\n and \\r)"
+msgstr ""
+
+#: views/send-pdf-admin.php:566
+msgid "Protect your PDF file?"
+msgstr ""
+
+#: views/send-pdf-admin.php:567
+msgid "Use [pdf-password] tag in your emails."
+msgstr ""
+
+#: views/send-pdf-admin.php:582
+msgid "Generate and use a random password?"
+msgstr ""
+
+#: views/send-pdf-admin.php:583
+msgid "Example (not working in preview mode):"
+msgstr ""
+
+#: views/send-pdf-admin.php:584
+msgid "Or enter your unique password for all PDF files."
+msgstr ""
+
+#: views/send-pdf-admin.php:611
+msgid "Layout of your PDF"
+msgstr ""
+
+#: views/send-pdf-admin.php:618
+msgid "Image header"
+msgstr ""
+
+#: views/send-pdf-admin.php:623
+msgid "Enter a URL or upload an image."
+msgstr ""
+
+#: views/send-pdf-admin.php:624
+msgid "Select or Upload your picture"
+msgstr ""
+
+#: views/send-pdf-admin.php:627
+msgid "Left"
+msgstr ""
+
+#: views/send-pdf-admin.php:628
+msgid "Center"
+msgstr ""
+
+#: views/send-pdf-admin.php:629
+msgid "Right"
+msgstr ""
+
+#: views/send-pdf-admin.php:631
+msgid "Size"
+msgstr ""
+
+#: views/send-pdf-admin.php:641
+msgid "Original size is"
+msgstr ""
+
+#: views/send-pdf-admin.php:652
+msgid "Personalize your PDF"
+msgstr ""
+
+#: views/send-pdf-admin.php:657
+msgid "Page size & Orientation"
+msgstr ""
+
+#: views/send-pdf-admin.php:699
+msgid "Portrait"
+msgstr ""
+
+#: views/send-pdf-admin.php:700
+msgid "Landscape"
+msgstr ""
+
+#: views/send-pdf-admin.php:707
+msgid "For personalize your PDF you can in the following text field, use these mail-tags:"
+msgstr ""
+
+#: views/send-pdf-admin.php:711
+msgid "[addpage] is a simple tag to force a page break anywhere in your PDF."
+msgstr ""
+
+#: views/send-pdf-admin.php:714
+msgid "Use [date] and [time] to print the date and time anywhere in your PDF."
+msgstr ""
+
+#: views/send-pdf-admin.php:719
+msgid "[reference] is a simple mail-tag who is used for create unique PDF. It's also recorded in the database. Every PDF is named like this : name-pdf-uniqid() and it's uploaded in the upload folder of WordPress. For example : document-pdf-56BC4A3EF0752.pdf"
+msgstr ""
+
+#: views/send-pdf-admin.php:723
+#, php-format
+msgid "The <strong>[file]</strong> tags are for images? Enter them here to display them in images on your PDF and like this: %s"
+msgstr ""
+
+#: views/send-pdf-admin.php:723
+msgid "It will then be necessary to put them in the image HTML tag for the PDF layout."
+msgstr ""
+
+#: views/send-pdf-admin.php:751
+msgid "Preview your PDF"
+msgstr ""
+
+#: views/send-pdf-admin.php:776
+msgid "Export list"
+msgstr ""
+
+#: views/send-pdf-admin.php:776
+msgid "Export list in CSV file"
+msgstr ""
+
+#: views/send-pdf-admin.php:795
+msgid "Export Settings"
+msgstr ""
+
+#: views/send-pdf-admin.php:804
+msgid "Export"
+msgstr ""
+
+#: views/send-pdf-admin.php:811
+msgid "Import Settings"
+msgstr ""
+
+#: views/send-pdf-admin.php:813
+msgid "Import the plugin settings from a .json file. This file can be obtained by exporting the settings on another site using the form above."
+msgstr ""
+
+#: views/send-pdf-admin.php:823
+msgid "Import"
+msgstr ""
+
+#: views/send-pdf-admin.php:848
+#, php-format
+msgid "To work I need %s plugin, but it is apparently not installed or not enabled!"
+msgstr ""
+
+#: views/send-pdf-admin.php:852
+msgid "Send PDF for Contact Form 7 is brought to you by"
+msgstr ""
+
+#: views/send-pdf-admin.php:852
+msgid "If you found this plugin useful"
+msgstr ""
+
+#: views/send-pdf-admin.php:852
+msgid "give it 5 &#9733; on WordPress.org"
+msgstr ""

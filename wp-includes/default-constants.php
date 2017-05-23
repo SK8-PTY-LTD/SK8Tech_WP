@@ -48,7 +48,7 @@ function wp_initial_constants() {
 		} elseif ( -1 === $current_limit_int || $current_limit_int > 268435456 /* = 256M */ ) {
 			define( 'WP_MAX_MEMORY_LIMIT', $current_limit );
 		} else {
-			define( 'WP_MAX_MEMORY_LIMIT', '64M' );
+			define( 'WP_MAX_MEMORY_LIMIT', '256M' );
 		}
 	}
 
@@ -205,7 +205,7 @@ function wp_cookie_constants() {
 		if ( $siteurl )
 			define( 'COOKIEHASH', md5( $siteurl ) );
 		else
-			define( 'COOKIEHASH', md5( wp_guess_url() ) );
+			define( 'COOKIEHASH', '' );
 	}
 
 	/**

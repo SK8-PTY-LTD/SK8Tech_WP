@@ -1,62 +1,61 @@
 <div class="wrap">
-  <h2><?php _e('Settings', 'lingotek-translation'); ?></h2>
+  <h2><?php esc_html_e( 'Settings', 'lingotek-translation' ); ?></h2>
 
-  <?php
-  if (strlen($access_token)) {
-    ?>
+	<?php
+	if ( strlen( $access_token ) ) {
+		$sm = filter_input( INPUT_GET, 'sm' );
+		?>
 
-    <?php
+		<?php
 
-    $menu_items = array(
-      'account' => __('Account', 'lingotek-translation'),
-    );
+		$menu_items = array(
+		'account' => __( 'Account', 'lingotek-translation' ),
+		);
 
-    $community_required_menu_items = array(
-      'defaults' => __('Defaults', 'lingotek-translation'),
-      'preferences' => __('Preferences', 'lingotek-translation'),
-      //'advanced' => __('Advanced', 'lingotek-translation'),
-      //'logging' => __('Logging', 'lingotek-translation'),
-      'utilities' => __('Utilities', 'lingotek-translation'),
-    );
+		$community_required_menu_items = array(
+		'defaults' => __( 'Defaults', 'lingotek-translation' ),
+		'preferences' => __( 'Preferences', 'lingotek-translation' ),
+		'utilities' => __( 'Utilities', 'lingotek-translation' ),
+		);
 
-    if($community_id !== FALSE){
-      $menu_items = array_merge($menu_items, $community_required_menu_items);
-    }
+		if ( false !== $community_id ) {
+			$menu_items = array_merge( $menu_items, $community_required_menu_items );
+		}
 
-    ?>
+		?>
 
-    <h3 class="nav-tab-wrapper">
-      <?php
-      $menu_item_index = 0;
-      foreach ($menu_items as $menu_item_key => $menu_item_label) {
-        $use_as_default = ($menu_item_index === 0 && !isset($_GET['sm'])) ? TRUE : FALSE;
-        $alias = NULL;
-        // custom sub sub-menus
-        if(isset($_GET['sm']) && $_GET['sm'] == "edit-profile") {
-          $alias = "profiles";
-        }
-        ?>
+		<h3 class="nav-tab-wrapper">
+		<?php
+		$menu_item_index = 0;
+		foreach ( $menu_items as $menu_item_key => $menu_item_label ) {
+			$use_as_default = (0 === $menu_item_index  && empty( $sm )) ? true : false;
+			$alias = null;
+			// custom sub sub-menus.
+			if ( ! empty( $sm ) && 'edit-profile' === $sm ) {
+				$alias = 'profiles';
+			}
+			?>
 
-        <a class="nav-tab <?php if ($use_as_default || (isset($_GET['sm']) && $_GET['sm'] == $menu_item_key) || $alias == $menu_item_key): ?> nav-tab-active<?php endif; ?>"
-           href="admin.php?page=<?php echo $_GET['page']; ?>&amp;sm=<?php echo $menu_item_key; ?>"><?php echo $menu_item_label; ?></a>
-           <?php
-           $menu_item_index++;
-         }
-         ?>
-    </h3>
+		  <a class="nav-tab <?php if ( $use_as_default || ( ! empty( $sm ) && $sm === $menu_item_key) || $alias === $menu_item_key ) : ?> nav-tab-active<?php endif; ?>"
+		   href="admin.php?page=<?php echo filter_input( INPUT_GET, 'page' ); ?>&amp;sm=<?php echo esc_html( $menu_item_key ); ?>"><?php echo esc_html( $menu_item_label ); ?></a>
+			<?php
+			 $menu_item_index++;
+		}
+			?>
+		</h3>
 
-    <?php
-    settings_errors();
-    $submenu = isset($_GET['sm']) ? sanitize_text_field($_GET['sm']) : 'account';
-    $dir = dirname(__FILE__) . '/settings/';
-    $filename = $dir . 'view-' . $submenu . ".php";
-    if (file_exists($filename))
-      include $filename;
-    else
-      echo "TO-DO: create <i>" . 'settings/view-' . $submenu . ".php</i>";
-    ?>
+		<?php
+		settings_errors();
+		$submenu = ! empty( $sm ) ? sanitize_text_field( $sm ) : 'account';
+		$dir = dirname( __FILE__ ) . '/settings/';
+		$filename = $dir . 'view-' . $submenu . '.php';
+		if ( file_exists( $filename ) ) {
+			include $filename;
+		} else { echo 'TO-DO: create <i>settings/view-' . esc_html( $submenu ) . '.php</i>';
+		}
+		?>
 
-    <?php
-  }
-  ?>
+		<?php
+	}
+	?>
 </div>
