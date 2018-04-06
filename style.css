@@ -1,0 +1,32 @@
+/*
+Theme Name:       SK8Tech
+Theme URI:        https://sk8.tech
+Description:      This is the wordpress theme for SK8Tech
+Author:           SK8Tech
+Author URI:       https://sk8.tech
+Template:         startapp
+Version:          1.0.0
+Template Version: 1.0.0
+License:          GNU General Public License v2 or later
+License URI:      http://www.gnu.org/licenses/gpl-2.0.html
+Tags:             grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, flexible-header, footer-widgets, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce, portfolio
+Text Domain:      sk8tech
+*/
+
+/* .page-title h1{
+font-size:30px;
+}
+
+@media(max-width:800px){
+  .page-title{
+ 	padding:0px
+  }
+}
+*/
+
+@media(min-width:800px){
+.vc_custom_1490418975230{
+padding-top:30px;
+}
+} 
+.huge-text h1 { font-size: 72px; } .split-section { padding-left: 96px; padding-right: 96px; } @media screen and (max-width: 1440px) { .hide-on-1440 { display: none; } } @media screen and (max-width: 1200px) { .split-section { padding-left: 48px; padding-right: 48px; } } @media screen and (max-width: 768px) { .huge-text h1 { font-size: 60px; } }

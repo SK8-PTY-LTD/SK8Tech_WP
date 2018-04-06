@@ -1,1 +1,0 @@
- window.location.href = "admin.php?page=agile_dashboard&status=successful";
