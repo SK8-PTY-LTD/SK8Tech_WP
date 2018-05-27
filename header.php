@@ -8,55 +8,46 @@
  */
 
 ?><!DOCTYPE html>
-<html itemscope itemtype="http://schema.org/WebPage" <?php language_attributes(); ?>>
+<html itemscope itemtype="http://schema.org/WebPage" <?php language_attributes();?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset');?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<?php wp_head(); ?>
+	<?php wp_head();?>
 <script>
 /**
  * Add FullStory Integration
  * @author Jack
  * @see https://help.fullstory.com/integrate/wordpress
+ * @see https://help.fullstory.com/technical-questions/fs-namespacing-issue
  */
 window['_fs_debug'] = false;
-window['_fs_host'] = 'sk8.tech';
+window['_fs_host'] = 'fullstory.com';
 window['_fs_org'] = '48ZFD';
-window['_fs_namespace'] = 'FS';
+window['_fs_namespace'] = 'FullStory';
 (function(m,n,e,t,l,o,g,y){
-    if (e in m && m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'); return;}
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
     g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
     o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
     y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
     g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
+    g.consent=function(a){g("consent",!arguments.length||a)};
     g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
-    g.clearUserCookie=function(c,d,i){if(!c || document.cookie.match('fs_uid=[`;`]*`[`;`]*`[`;`]*`')){
-    d=n.domain;while(1){n.cookie='fs_uid=;domain='+d+
-    ';path=/;expires='+new Date(0).toUTCString();i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}};
+    g.clearUserCookie=function(){};
 })(window,document,window['_fs_namespace'],'script','user');
-<?php if (is_user_logged_in()) { ?>
+<?php if (is_user_logged_in()) {
+	?>
 var wpEmail = "<?php $current_user = wp_get_current_user();
-echo $current_user->user_email; ?>";
-FS.identify(wpEmail, { "displayName": wpEmail,
+	echo $current_user->user_email;?>";
+FullStory.identify(wpEmail, { "displayName": wpEmail,
 "email": wpEmail });
-<?php } ?>
+<?php }?>
 </script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5S5G2PF');</script>
-<!-- End Google Tag Manager -->
+
 </head>
 
-<body <?php body_class(); ?>>
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5S5G2PF"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<body <?php body_class();?>>
 
 <?php
 /**
@@ -68,9 +59,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  * @see startapp_the_scroller()
  * @see startapp_offcanvas_menu()
  */
-do_action( 'startapp_header_before' );
+do_action('startapp_header_before');
 
-get_template_part( 'template-parts/headers/header', startapp_header_layout() );
+get_template_part('template-parts/headers/header', startapp_header_layout());
 
 /**
  * Fires right after the .site-header
@@ -78,4 +69,4 @@ get_template_part( 'template-parts/headers/header', startapp_header_layout() );
  * @see startapp_open_page_wrap() -1
  * @see startapp_page_title() 10
  */
-do_action( 'startapp_header_after' );
+do_action('startapp_header_after');

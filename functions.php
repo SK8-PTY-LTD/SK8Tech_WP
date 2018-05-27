@@ -51,7 +51,6 @@ function sdt_remove_ver_css_js($src) {
 	if (strpos($src, 'ver=')) {
 		$src = remove_query_arg('ver', $src);
 	}
-
 	return $src;
 }
 
@@ -70,3 +69,31 @@ function dez_filter_chinese_excerpt($output) {
 	return $output;
 }
 add_filter('get_the_excerpt', 'dez_filter_chinese_excerpt');
+
+/**
+ * Add a JQuery selector for SalesIQ, so a class can be added to pull up live chat window
+ * @author Jack
+ * @see https://wordpress.stackexchange.com/a/177160/134082
+ */
+function add_salesiq_jquery_class() {
+	wp_register_script(
+		'salesiq_script',
+		get_stylesheet_directory_uri() . '/assets/js/zoho-salesiq-live-chat.js',
+		array('jquery')
+	);
+	wp_enqueue_script('salesiq_script');
+}
+add_action('wp_enqueue_scripts', 'add_salesiq_jquery_class');
+
+/**
+ * Add Zoho CRM Adwords Tracking to page
+ * @author Jack
+ * @see https://www.zoho.com/crm/help/google-adwords/configure.html
+ */
+function add_zoho_crm_adwords_class() {
+	wp_enqueue_script(
+		'custom-script',
+		'//crm.zoho.com/crm/javascript/zcga.js'
+	);
+}
+add_action('wp_enqueue_scripts', 'add_zoho_crm_adwords_class');
