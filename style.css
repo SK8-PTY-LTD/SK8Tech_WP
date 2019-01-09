@@ -30,3 +30,16 @@ padding-top:30px;
 }
 } 
 .huge-text h1 { font-size: 72px; } .split-section { padding-left: 96px; padding-right: 96px; } @media screen and (max-width: 1440px) { .hide-on-1440 { display: none; } } @media screen and (max-width: 1200px) { .split-section { padding-left: 48px; padding-right: 48px; } } @media screen and (max-width: 768px) { .huge-text h1 { font-size: 60px; } }
+
+
+.navbar .main-navigation>.menu>li:hover>a{
+	cursor: default;
+}
+
+#home-btn-style-on-hover{
+	background:#fff;
+}
+
+#home-btn-style-on-hover:hover{
+	background:#e9e9cf;
+}
